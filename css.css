@@ -1,0 +1,92 @@
+body {
+    font-size: 13px;
+    font-family: helvetica;
+    color: #313131;
+}
+.layout-navbar-fixed .wrapper .content-wrapper {
+    margin-top: 0;
+}
+span.table__hl {
+    border: 0;
+    background: transparent;
+    padding: 0;
+} 
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: transparent;
+}
+
+.table td, .table th {
+    border-top: 1px solid #f1f1f1;
+    padding: .5rem;
+    line-height: .9rem;
+}
+
+.table img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.btn-primary {
+    background-color: #2196F3;
+    border-color: transparent;
+}
+
+a {
+    color: #2196F3;
+}
+
+.table thead.dark {
+    background-color: #e1e7ec;
+    border-radius: 5px 5px 0 0;
+}
+
+.table thead.dark th {
+    color: #333;
+    font-weight: bold;
+    font-size: 10px;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card {
+    border: 0;
+    box-shadow: none;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.card-footer {
+    background: #fff;
+}
+
+form .card-body {
+    background: #fff;
+}
+
+.page-item.active .page-link {
+    background-color: #2196F3;
+    border-color: transparent;
+}
+
+.page-link {
+    border-color: #fff;
+    background: #f4f6f9;
+    color: #525252;
+    border-radius: 5px;
+}
+
+.page-item.disabled .page-link {
+    border-color: transparent;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.form-control {
+    font-size: 13px;
+}

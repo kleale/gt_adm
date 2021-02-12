@@ -1,29 +1,33 @@
 {% set title = "Page Name" %}
 {% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
-{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
 {% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
 "Virtus.Pro"] %}
 {% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
 {% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set prize = ["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
 {% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
-{% set gamelogo = ["gl100","dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
-{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup 2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21", "CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ", "fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
+{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 — 2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
+
 {% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
-{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
-из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
-единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
-закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
-Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
-возникает вопрос: почему я не
-вижу результаты?»"] %}
 {% set date = ["1 января", "сегодня"] %}
-{% set flag = ["flag1", "flag2", "flag3"] %}
-{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
-дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
-Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
-друида...", "Миллиард процентов 322 !
-Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
-пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+{% set status = ["Прошедший", "Будущий", "Текущий"] %}
+{% set stagetype = ["Основная", "Группы", "Сетка"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly Final", "Weekly Survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier", "weekly-final", "weekly-survival"] %}
+
+{% set round = ["Resque", "Final", "Round 2", "Finals", "Phase 2","B-D","Group C","Table","Table","B-C", "A-C"] %}
+{% set bestof = ["1", "2", "3", "4", "1", "2"] %}
+{% set score = ["без очков","без очков","без очков","без очков","без очков", "3 очка", "3 очка", "3 очка за сухую + по числу побед", "с отниманием очков"] %}
+
+{% set subround = ["A-C", "Day 5", "B-C", "Day 1", "A-B", "A-B"] %}
+
 <!DOCTYPE html>
 <html style="height: auto;">
 {% include "./tpl/head.html" %}
@@ -83,7 +87,7 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
                                         class="fas fa-home"></i>Dashboard</a></strong></li>
-                        <li class="breadcrumb-item active">Стадии</li>
+                        <li class="breadcrumb-item active">Субраунды</li>
                     </ol>
                 </div>
             </div>
@@ -348,169 +352,44 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                                             data-target="sortable.table">
                                             <thead class="dark">
                                                 <tr>
-                                                    <th width="1%" class="text-center">ID #</th>
-                                                    <th width="120px">Дисциплина</th>
-                                                    <th width="10%">Турнир</th>
-                                                    <th width="15%">Cтадия</th>
-                                                    <th width="10%">Раунд</th>
-                                                    <th>Название</th>
+                                                    <th width="60px"></th>
+                                                    <th width="80px" class="text-center">ID #</th>
+                                                    <th width="120px">Субраунд</th>
+
+                                                    <th width="250px">Турнир</th>
+                                                    <th width="200px">Cтадия</th>
+                                                    <th width="">Раунд</th>
+                                                    
                                                     <th width="120px"></th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
-                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
-                                                <tr>
-                                                    <td><span class="table__hl"><strong>220</strong></span></td>
-                                                    <td>PUBG</td>
-                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
-                                                    </td>
-                                                    <td> 
-                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
-                                                    </td>
-                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
-                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_round_tabs/220/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_tournaments_round_tabs/220"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody class="sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
-                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
-                                                <tr>
-                                                    <td><span class="table__hl"><strong>220</strong></span></td>
-                                                    <td>PUBG</td>
-                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
-                                                    </td>
-                                                    <td> 
-                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
-                                                    </td>
-                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
-                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_round_tabs/220/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_tournaments_round_tabs/220"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody class="sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
-                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
-                                                <tr>
-                                                    <td><span class="table__hl"><strong>220</strong></span></td>
-                                                    <td>PUBG</td>
-                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
-                                                    </td>
-                                                    <td> 
-                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
-                                                    </td>
-                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
-                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_round_tabs/220/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_tournaments_round_tabs/220"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody class="sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
-                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
-                                                <tr>
-                                                    <td><span class="table__hl"><strong>220</strong></span></td>
-                                                    <td>PUBG</td>
-                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
-                                                    </td>
-                                                    <td> 
-                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
-                                                    </td>
-                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
-                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_round_tabs/220/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_tournaments_round_tabs/220"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody class="sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
-                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
-                                                <tr>
-                                                    <td><span class="table__hl"><strong>220</strong></span></td>
-                                                    <td>PUBG</td>
-                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
-                                                    </td>
-                                                    <td> 
-                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
-                                                    </td>
-                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
-                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_round_tabs/220/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_tournaments_round_tabs/220"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody class="sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
-                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
-                                                <tr>
-                                                    <td><span class="table__hl"><strong>220</strong></span></td>
-                                                    <td>PUBG</td>
-                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
-                                                    </td>
-                                                    <td> 
-                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
-                                                    </td>
-                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
-                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_round_tabs/220/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_tournaments_round_tabs/220"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody class="sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
-                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
-                                                <tr>
-                                                    <td><span class="table__hl"><strong>220</strong></span></td>
-                                                    <td>PUBG</td>
-                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
-                                                    </td>
-                                                    <td> 
-                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
-                                                    </td>
-                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
-                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_round_tabs/220/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_tournaments_round_tabs/220"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
+                                            {% for i in 5060..5090 %}
+                                                <tbody class="sortable-item movable-item nested-1"
+                                                    data-endpoint="gt_tournaments_round_tabs" data-id="{{i}}" data-order="2"
+                                                    data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                    <tr>
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/{{random(gamelogo)}}.svg" title="{{random(game)}}" alt="{{random(game)}}"/></td>
+                                                        <td class="text-center">{{i}}</td>
+                                                        <td><strong>{{random(subround)}}</strong></td>
+                                                        <td><a href="/gt_tournaments/{{i}}/edit">{{random(tour)}}</a>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">
+                                                            {{random(stage)}}</a>
+                                                        </td>
+                                                        <td>{{random(round)}}<br>
+                                                            <small>{{random(round)}}</small></small>
+                                                        </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_tournaments_round_tabs/220"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            {% endfor %}
                                             
                                         </table>
                                     </div>

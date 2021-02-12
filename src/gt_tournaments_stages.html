@@ -1,29 +1,27 @@
 {% set title = "Page Name" %}
 {% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
-{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
 {% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
 "Virtus.Pro"] %}
 {% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
 {% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set prize = ["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
 {% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
-{% set gamelogo = ["gl100","dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
-{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup 2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21", "CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ", "fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
+{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 — 2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
+
 {% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
-{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
-из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
-единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
-закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
-Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
-возникает вопрос: почему я не
-вижу результаты?»"] %}
 {% set date = ["1 января", "сегодня"] %}
-{% set flag = ["flag1", "flag2", "flag3"] %}
-{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
-дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
-Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
-друида...", "Миллиард процентов 322 !
-Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
-пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+{% set status = ["Прошедший", "Будущий", "Текущий"] %}
+{% set stagetype = ["Основная", "Группы", "Сетка"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly Final", "Weekly Survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier", "weekly-final", "weekly-survival"] %}
+
 <!DOCTYPE html>
 <html style="height: auto;">
 {% include "./tpl/head.html" %}
@@ -76,8 +74,6 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                 </nav>
             </div>
         </aside>
-
-
 
         <div class="content-wrapper">
             <div class="content-header">
@@ -357,27 +353,23 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                                             data-target="sortable.table">
                                             <thead class="dark">
                                                 <tr>
-                                                    <th width="1%" class="text-center">ID #</th>
-                                                    <th width="120px">Дисциплина</th>
-                                                    <th width="20%">Турнир</th>
-                                                    <th width="210px">Тип / Даты</th>
-                                                    <th>Полное название</th>
+                                                    <th width="60px"></th>
+                                                    <th width="80px" class="text-center">ID #</th>
+                                                    <th width="210px">Стадия</th>
+                                                    <th width="250px">Тип / Даты</th>
+                                                    <th >Турнир</th>
                                                     <th width="120px"></th>
                                                 </tr>
                                             </thead>
+                                            {% for i in 15800..15831 %}
                                             <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15831" data-order="3"
+                                                data-endpoint="gt_tournaments_stages" data-id="{{i}}" data-order="3"
                                                 data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15831</strong></span></td>
-                                                <td>LoL</td>
-                                                <td><a href="/gt_tournaments/4469/edit">LWC</a></td>
-                                                <td>
-                                                    Основная<br>
-                                                    <small>2021-01-20 — 2021-01-20</small>
-                                                </td>
+                                                <td class="text-center"><img class="gameicon" src="/img/svg/{{random(gamelogo)}}.svg" title="{{random(game)}}" alt="{{random(game)}}"/></td>
+                                                <td class="text-center">{{i}}</td>
                                                 <td>
                                                     <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15831"
+                                                        action="/api/v1/admin/gt_tournaments_stages/{{i}}"
                                                         accept-charset="UTF-8" data-remote="true" method="post"><input
                                                             type="hidden" name="_method" value="patch" /><input
                                                             type="hidden" name="authenticity_token"
@@ -385,334 +377,27 @@ Pit Minor", "Sayuw: «Стало легче играть с приходом Р�
                                                             name="gt_tournaments_stage[isq]" type="hidden"
                                                             value="0" /><input autocomplete="false"
                                                             data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15831"
+                                                            class="form-check-input" id="gt_tournaments_stage_isq_{{i}}"
                                                             type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />New One</form>
-                                                            <small class="ml-21px">New One / new-one</small>
+                                                            name="gt_tournaments_stage[isq]" /> 
+                                                            {{random(stage)}}<br>
+                                                    </form>
+                                                    <small class="ml-21px">{{random(stage)}} / {{random(stageurl)}}</small>
                                                 </td>
-                                                
-                                                
+                                                <td>
+                                                    {{random(stagetype)}}<br>
+                                                    <small>{{random(dates)}}</small>
+                                                </td>
+                                                <td><a href="/gt_tournaments/{{i}}/edit">{{random(tour)}}</a></td>
                                                 <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15831/edit"><i
+                                                        href="/gt_tournaments_stages/{{i}}/edit"><i
                                                             class="fas fa-pencil-alt"></i></a><a
                                                         data-confirm="Вы уверены?"
                                                         class="btn btn-danger btn-sm" rel="nofollow"
                                                         data-method="delete" href="/gt_tournaments_stages/15831"><i
                                                             class="fas fa-trash"></i></a></td>
                                             </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15830" data-order="2"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15830</strong></span></td>
-                                                <td>LoL</td>
-                                                <td><a href="/gt_tournaments/4469/edit">LWC</a></td>
-                                                <td>Группы<br><small> — </small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15830"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="RkcYqV15Kc/5RFBGp7jjwKAOJmCgloorLlAWAz0tDm3Ujc4+Q2Aw0HIRwczz67fpjcnXtk5t5OXjPL7N0I9jUQ==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15830"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />Group Stage</form>
-                                                    <small class="ml-21px">Group Stage / group</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15830/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15830"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15829" data-order="1"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15829</strong></span></td>
-                                                <td>PUBG</td>
-                                                <td><a href="/gt_tournaments/4475/edit">TestforMege</a></td>
-                                                <td>Основная<br><small>2021-01-29 — 2021-01-29</small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15829"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="TXGQq6jOq0SgYKx6gkTawgbKaxKhX2RM8klHam1BLOJr/IxcgbhioxPIOOl/GDcIpuijV3NHHF5/eR7WDcJd3Q==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15829"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />Stage1</form>
-                                                            <small class="ml-21px">Stage1 / stage1</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15829/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15829"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15828" data-order="1"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15828</strong></span></td>
-                                                <td>Hearthstone</td>
-                                                
-                                                <td><a href="/gt_tournaments/4127/edit">HR Masters 2020 S2</a></td>
-                                                <td>Основная<br><small> — </small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15828"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="vbGimtLLowiGp2LnP8PX27JuLPFBwYpqtzkSXj+ERiKjzG6nWfFgP+4PM0GJHadfH2C64WqCEWlDL0fCi0CJeA==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15828"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />Main Event</form>
-                                                            <small class="ml-21px">Main Event / main-event</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15828/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15828"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15827" data-order="1"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15827</strong></span></td>
-                                                <td>PUBG</td>
-                                                <td><a href="/gt_tournaments/4474/edit">NT</a></td>
-                                                <td>Основная<br><small>2021-01-18 — 2021-01-18</small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15827"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="XZNe6+1Qa/WAmgzzyCQ2XNEbP7O2rmlTHx3Uf8NobbUdTpkpdPvFbbW3wQfsTUjKAC1ZEtlFCaAojsRuxbKW9w==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15827"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />Main Event</form>
-                                                            <small class="ml-21px">NT MAIN / main-event</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15827/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15827"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15826" data-order="2"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15826</strong></span></td>
-                                                <td>PUBG</td>
-                                                <td><a href="/gt_tournaments/4474/edit">NT</a></td>
-                                                <td>Группы<br><small>2020-12-16 — 2020-12-16</small></td>
-
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15826"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="/rq3KDA6bJqumghKYVNQZdkHx3JEJlldAGNB0WDfUHAaA9Zuu7+z5nYy6S/naoTd75yewgVPOrLlay4wZk9IRw==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15826"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />Stage 2</form><small class="ml-21px">NT Stage 2 / stage-2</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15826/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15826"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15805" data-order="1"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15805</strong></span></td>
-                                                <td>Fortnite</td>
-                                                <td><a href="/gt_tournaments/4471/edit">Six Masters 2021</a></td>
-                                                <td>Основная<br><small>2020-12-09 — 2020-12-13</small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15805"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="0w5P/XG++rgcVtYwRBBtgVQajUIg2L1/NCfK5lShbJcQQJ4/NQldwoPjIfN489hEaB1fcYUDEz4q6ho7/6lscg==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15805"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />Playoff</form>
-                                                            <small class="ml-21px">Playoff / playoff</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15805/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15805"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15800" data-order="3"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15800</strong></span></td>
-                                                <td>LoL</td>
-                                                <td><a href="/gt_tournaments/4448/edit">Academy Challenge S2</a></td>
-                                                <td>Группы<br><small>2020-12-09 — 2020-12-13</small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15800"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="MIYGOL7HQAePZmMOxaXzYELatULSdXUy81uDcStyu1CAXiGgmd2JSPT92xslG/KXuQfjx5tJFbhOTuZfKiwL3g==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15800"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />Group Stage</form>
-                                                            <small class="ml-21px">Play-In Group
-                                                            Stage / play-in </small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15800/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15800"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15798" data-order="1"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15798</strong></span></td>
-                                                <td>LoL</td>
-                                                <td><a href="/gt_tournaments/4469/edit">LWC</a></td>
-                                                <td>Основная<br><small> — </small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15798"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="NTxOggrNRKUPqTgnYpXaF1PAjzZo9vnNCuFp8ydhibsJt0yxgtABLiDYRUucQbxznY+hBl9jfWuEnT9qszCpuA==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15798"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />All Star Game</form>
-                                                            <small class="ml-21px">All Star Game Call / all-star-game</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15798/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15798"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                                <tr class="movable-item nested-2" data-endpoint="gt_tournaments_stages"
-                                                    data-id="15799" data-order="1" data-record="gt_tournaments_stage">
-                                                    <td><span class="table__hl"><strong>15799</strong></span></td>
-                                                    <td>LoL</td>
-                                                    <td><a href="/gt_tournaments/4469/edit">LWC</a></td>
-                                                    <td>Сетка<br><small>2020-12-14 — 2020-12-14</small></td>
-                                                    <td>
-                                                        <form class="form-check"
-                                                            action="/api/v1/admin/gt_tournaments_stages/15799"
-                                                            accept-charset="UTF-8" data-remote="true" method="post">
-                                                            <input type="hidden" name="_method" value="patch" /><input
-                                                                type="hidden" name="authenticity_token"
-                                                                value="jJuaA7AFDPS8MQSOGAmEfFF42UCiifXBB9VGXF3qRWZ99UpNEWLhwGsiKIQFz3/QFcnINbUJa1NeiCZ/sjUFBg==" /><input
-                                                                name="gt_tournaments_stage[isq]" type="hidden"
-                                                                value="0" /><input autocomplete="false"
-                                                                data-action="change-&gt;putable#submit_form"
-                                                                class="form-check-input"
-                                                                id="gt_tournaments_stage_isq_15799" type="checkbox"
-                                                                value="1" name="gt_tournaments_stage[isq]" />All Star
-                                                            Game: <strong>Playoff</strong>
-                                                        </form><small class="ml-21px">Playoff /
-                                                            all-star-game</small>
-                                                    </td>
-                                                   
-                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                            href="/gt_tournaments_stages/15799/edit"><i
-                                                                class="fas fa-pencil-alt"></i></a><a
-                                                            data-confirm="Вы уверены?"
-                                                            class="btn btn-danger btn-sm" rel="nofollow"
-                                                            data-method="delete" href="/gt_tournaments_stages/15799"><i
-                                                                class="fas fa-trash"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tbody class="with-main-row sortable-item movable-item nested-1"
-                                                data-endpoint="gt_tournaments_stages" data-id="15797" data-order="2"
-                                                data-record="gt_tournaments_stage" data-target="sortable.tbody">
-                                                <td><span class="table__hl"><strong>15797</strong></span></td>
-                                                <td>LoL</td>
-                                                <td><a href="/gt_tournaments/4454/edit">LPL All-Star 2020</a></td>
-                                                <td>Сетка<br><small> — </small></td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/15797"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="pTnxcS55XgxDTF5Mb6ZoCnOUFZOA+98Acjiwnf6jA4uGLsJewizVuf6AffJu+09GkxUTQ+1w6N34f5MQfTEJ+g==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
-                                                            data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_15797"
-                                                            type="checkbox" value="1"
-                                                            name="gt_tournaments_stage[isq]" />geh</form><small class="ml-21px">geh / geh</small>
-                                                </td>
-                                                
-                                                <td class="text-right"><a class="btn btn-primary btn-sm"
-                                                        href="/gt_tournaments_stages/15797/edit"><i
-                                                            class="fas fa-pencil-alt"></i></a><a
-                                                        data-confirm="Вы уверены?"
-                                                        class="btn btn-danger btn-sm" rel="nofollow"
-                                                        data-method="delete" href="/gt_tournaments_stages/15797"><i
-                                                            class="fas fa-trash"></i></a></td>
-                                            </tbody>
-                                            
+                                            {% endfor %}
                                         </table>
                                     </div>
                                 </div>

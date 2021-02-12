@@ -228,20 +228,19 @@
                       <thead class="dark">
                         <tr>
                           <th width="60px"></th>
-                          <th width="60px" class="text-center">ID #</th>
+                          <th width="80px" class="text-center">ID #</th>
                           <th class="text-center eventLogo"></th>
                           <th width="25%">Турнир</th>
-                          <th>Призовой, USD / Даты</th>
+                          <th width="200px">Призовой, USD / Даты</th>
                           <th>Серия</th>
                           <th width="120px"></th>
                         </tr>
                       </thead>
                       <tbody>
-                        {% for i in 1..21 %}
+                        {% for i in 12001..12021 %}
                           <tr id="row-374{{i}}">
-                            <td class="text-center"><img src="/img/svg/{{random(gamelogo)}}.svg" title="{{random(game)}}" alt=""></td>
-                            <td class="text-center"><span class="table__hl"><strong>374{{i}}</strong></span></td>
-                            
+                            <td class="text-center"><img class="gameicon" src="/img/svg/{{random(gamelogo)}}.svg" title="{{random(game)}}" alt=""></td>
+                            <td class="text-center">{{i}}</td>
                             <td class="text-center eventLogo"><img style="width: 60px; height: 60px; object-fit: contain;"
                               onerror="this.onerror=null; this.src=&#39;https://assets.esnadm.com/media/event/event.svg&#39;;"
                               src="./Decider Media Project_files/image_processing20201116-1-q3h5bo.png">
@@ -254,12 +253,8 @@
                             </td>
                             <td><span class="babki">${{random(prize)}}</span><br><small><span
                                   class="table__hl">{{random(status)}}</span></small>&nbsp;&nbsp;
-                                  <small>${{random(dates)}} — </small></td>
-                            
-                            
-                            
+                                  <small>{{random(dates)}} — </small></td>
                             <td>{{random(serie)}}</td>
-
                             <td class="text-right"><a class="btn btn-primary btn-sm"
                                 href="https://esnadm.com/gt_tournaments/3745/edit"><i class="fas fa-pencil-alt"></i></a><a
                                 data-confirm="Вы уверены?" class="btn btn-danger btn-sm" rel="nofollow"

@@ -1,0 +1,64 @@
+// my styles
+//@import "utils/libs";
+
+// html {
+//   line-height: $mainLineHeight;
+// 	font-size: $mainFontSize;
+// 	color: $mainFontColor;
+//   height: 100%;
+//   @media screen and (max-width: $xl) {
+// 		font-size: 16px;
+//   }
+//   @media screen and (max-width: $lg) {
+// 		font-size: 17px;
+//   }
+//   @media screen and (max-width: $sm) {
+// 		font-size: 18px;
+//   }
+// }
+
+// body {
+//   font-family: $mainFont;
+// 	font-size: $mainFontSize;
+//   font-weight: $mainFontWeight;
+//   color: $mainFontColor;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   margin: 0;
+//   padding: 0;
+//   background: $bg-body;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// body {
+//   background: rgb(30, 28, 39) url(/img/bg.png) 0 0 repeat;
+// }
+
+
+// *, *:before, *:after { box-sizing: border-box; }
+
+// h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+// a {
+// 	text-decoration: none;
+//   color: $link;
+
+//   &:hover {
+//     color: $linkH;
+//     text-decoration: underline;
+//   }
+//   &:focus,
+//   &:active{
+//     text-decoration: none;
+//   }
+// }
+
+// ul, li {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+@import "css";

@@ -1,0 +1,548 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["gl100","dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
+закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
+Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
+возникает вопрос: почему я не
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
+дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
+Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
+друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
+пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+<!DOCTYPE html>
+<html style="height: auto;">
+{% include "./tpl/head.html" %}
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
+                                        class="fas fa-home"></i>Dashboard</a></strong></li>
+                        <li class="breadcrumb-item active">Стадии</li>
+                    </ol>
+                </div>
+            </div>
+
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" id="gt_tournaments_round_tabs_filter">
+                                <div class="card-body" data-controller="filter-form">
+                                    <form novalidate="novalidate" class="simple_form search"
+                                        action="/gt_tournaments_round_tabs" accept-charset="UTF-8" data-remote="true"
+                                        method="get">
+                                        <div class="form-row" data-controller="select2" data-target="filter-form.form">
+                                            <div class="form-group col-sm-2 select2 required search_game"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-mirror="#gt_tournaments_round_tab_game"
+                                                    data-placeholder="Все дисциплины" data-allow-clear="true"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[game]"
+                                                    id="search_game" data-select2-id="search_game" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="103">Все дисциплины</option>
+                                                    <option value="100">PUBG</option>
+                                                    <option value="200">Valorant</option>
+                                                    <option value="300">Fortnite</option>
+                                                    <option value="313">LoL</option>
+                                                    <option value="582">Dota 2</option>
+                                                    <option value="600">Rainbow Six</option>
+                                                    <option value="704">CS:GO</option>
+                                                    <option value="755">Hearthstone</option>
+                                                    <option value="800">Overwatch</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-3 select2 required search_tournament"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments.json"
+                                                    data-related="#search_game"
+                                                    data-mirror="#gt_tournaments_round_tab_tournament"
+                                                    data-template-selection-name="template_with_icon"
+                                                    data-template-result-name="template_with_icon"
+                                                    data-placeholder="Все турниры" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax"
+                                                    name="search[tournament]" id="search_tournament"
+                                                    data-select2-id="search_tournament" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="105">Все турниры</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-3 select2 required search_stage"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments_stages.json"
+                                                    data-related="#search_tournament"
+                                                    data-mirror="#gt_tournaments_round_tab_stage"
+                                                    data-placeholder="Все стадии" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[stage]"
+                                                    id="search_stage" data-select2-id="search_stage" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="107">Все стадии</option>
+                                                </select></div>
+                                            <div class="form-group col-sm-2 select2 required search_round"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments_rounds.json"
+                                                    data-related="#search_stage"
+                                                    data-mirror="#gt_tournaments_round_tab_round"
+                                                    data-placeholder="Все раунды" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[round]"
+                                                    id="search_round" data-select2-id="search_round" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="109">Все раунды</option>
+                                                </select></div>
+                                            <div class="col-sm-2" style="white-space: nowrap;"><span
+                                                    class="span-link"><a class="btn btn-primary"
+                                                        data-title="Обратите внимание"
+                                                        data-message="URL скопирован в буфер обмена"
+                                                        data-target="filter-form.link"
+                                                        data-action="filter-form#copy_url" href="#"><i
+                                                            class="fas fa-copy"></i></a></span><span
+                                                    class="span-link"><button name="button" type="submit"
+                                                        class="btn btn-primary"><i
+                                                            class="fas fa-search"></i></button></span>
+
+                                                <!-- EDIT -->
+                                                <button class="btn btn-success float-right collapsed"
+                                                    data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree"
+                                                    title="Добавить"><i class="fas fa-plus"></i></button>
+                                                <!-- .EDIT -->
+
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- EDIT -->
+                            <div class="accordion" id="accordionExample">
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <form class="simple_form new_gt_tournaments_round_tab"
+                                        id="new_gt_tournaments_round_tab" autocomplete="off" novalidate="novalidate"
+                                        action="/gt_tournaments_round_tabs" accept-charset="UTF-8" data-remote="true"
+                                        method="post">
+                                        <div class="card">
+                                            <div class="card-body"><input value="new" type="hidden"
+                                                    name="gt_tournaments_round_tab[form_part]"
+                                                    id="gt_tournaments_round_tab_form_part">
+                                                <div data-controller="select2 autocomplete">
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_tab_game">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_tab_game">Дисциплина <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-placeholder="Выберите дисциплину"
+                                                                data-allow-clear="true"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round_tab[game]"
+                                                                id="gt_tournaments_round_tab_game"
+                                                                data-select2-id="gt_tournaments_round_tab_game"
+                                                                tabindex="-1" aria-hidden="true">
+                                                                <option value="" data-select2-id="111">Выберите
+                                                                    дисциплину
+                                                                </option>
+                                                                <option value="100">PUBG</option>
+                                                                <option value="200">Valorant</option>
+                                                                <option value="300">Fortnite</option>
+                                                                <option value="313">LoL</option>
+                                                                <option value="582">Dota 2</option>
+                                                                <option value="600">Rainbow Six</option>
+                                                                <option value="704">CS:GO</option>
+                                                                <option value="755">Hearthstone</option>
+                                                                <option value="800">Overwatch</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_tab_tournament">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_tab_tournament">Турнир <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_tournaments.json"
+                                                                data-related="#gt_tournaments_round_tab_game"
+                                                                data-template-selection-name="template_with_icon"
+                                                                data-template-result-name="template_with_icon"
+                                                                data-placeholder="Выберите турнир"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round_tab[tournament]"
+                                                                id="gt_tournaments_round_tab_tournament"
+                                                                data-select2-id="gt_tournaments_round_tab_tournament"
+                                                                tabindex="-1" aria-hidden="true"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_tab_stage">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_tab_stage">Стадия <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_tournaments_stages.json"
+                                                                data-related="#gt_tournaments_round_tab_tournament"
+                                                                data-placeholder="Выберите стадию"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round_tab[stage]"
+                                                                id="gt_tournaments_round_tab_stage"
+                                                                data-select2-id="gt_tournaments_round_tab_stage"
+                                                                tabindex="-1" aria-hidden="true"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_tab_parent_round">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_tab_round">Раунд <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_tournaments_rounds.json"
+                                                                data-related="#gt_tournaments_round_tab_stage"
+                                                                data-placeholder="Выберите раунд"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round_tab[round]"
+                                                                id="gt_tournaments_round_tab_round"
+                                                                data-select2-id="gt_tournaments_round_tab_round"
+                                                                tabindex="-1" aria-hidden="true"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string optional gt_tournaments_round_tab_short">
+                                                        <label class="col-sm-2 col-form-label string optional"
+                                                            for="gt_tournaments_round_tab_short">Сокращенное
+                                                            название</label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string optional" type="text"
+                                                                value="" name="gt_tournaments_round_tab[short]"
+                                                                id="gt_tournaments_round_tab_short"></div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string required gt_tournaments_round_tab_title">
+                                                        <label class="col-sm-2 col-form-label string required"
+                                                            for="gt_tournaments_round_tab_title">Название <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10">
+                                                            <div class="awesomplete"><input
+                                                                    class="form-control string required"
+                                                                    autocomplete="off" data-target="autocomplete.input"
+                                                                    data-endpoint="gt_tournaments_round_tabs/titles.json"
+                                                                    data-related="#gt_tournaments_round_tab_game"
+                                                                    data-getvalue="title" type="text"
+                                                                    name="gt_tournaments_round_tab[title]"
+                                                                    id="gt_tournaments_round_tab_title"
+                                                                    aria-expanded="false" aria-owns="awesomplete_list_5"
+                                                                    role="combobox">
+                                                                <ul hidden="" role="listbox" id="awesomplete_list_5">
+                                                                </ul><span class="visually-hidden" role="status"
+                                                                    aria-live="assertive" aria-atomic="true">Type 1 or
+                                                                    more characters for
+                                                                    results.</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="card-footer"><input type="submit" name="commit" value="Добавить"
+                                                    class="btn btn-primary"
+                                                    formaction="/gt_tournaments_round_tabs?action_after_create=index"
+                                                    data-disable-with="Добавить"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- .EDIT -->
+
+                            <div class="card" id="gt_tournaments_round_tabs_index">
+                                <div class="overlay dark" id="index-loader" style="display:none"><i
+                                        class="fas fa-3x fa-sync-alt fa-spin"></i></div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive" data-controller="sortable putable">
+                                        <table class="table table-valign-middle table-hover text-nowrap"
+                                            data-target="sortable.table">
+                                            <thead class="dark">
+                                                <tr>
+                                                    <th width="1%" class="text-center">ID #</th>
+                                                    <th width="120px">Дисциплина</th>
+                                                    <th width="10%">Турнир</th>
+                                                    <th width="15%">Cтадия</th>
+                                                    <th width="10%">Раунд</th>
+                                                    <th>Название</th>
+                                                    <th width="120px"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
+                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>220</strong></span></td>
+                                                    <td>PUBG</td>
+                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
+                                                    </td>
+                                                    <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
+                                                    </td>
+                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
+                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_round_tabs/220"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
+                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>220</strong></span></td>
+                                                    <td>PUBG</td>
+                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
+                                                    </td>
+                                                    <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
+                                                    </td>
+                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
+                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_round_tabs/220"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
+                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>220</strong></span></td>
+                                                    <td>PUBG</td>
+                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
+                                                    </td>
+                                                    <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
+                                                    </td>
+                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
+                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_round_tabs/220"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
+                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>220</strong></span></td>
+                                                    <td>PUBG</td>
+                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
+                                                    </td>
+                                                    <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
+                                                    </td>
+                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
+                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_round_tabs/220"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
+                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>220</strong></span></td>
+                                                    <td>PUBG</td>
+                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
+                                                    </td>
+                                                    <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
+                                                    </td>
+                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
+                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_round_tabs/220"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
+                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>220</strong></span></td>
+                                                    <td>PUBG</td>
+                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
+                                                    </td>
+                                                    <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
+                                                    </td>
+                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
+                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_round_tabs/220"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_round_tabs" data-id="220" data-order="2"
+                                                data-record="gt_tournaments_round_tab" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>220</strong></span></td>
+                                                    <td>PUBG</td>
+                                                    <td><a href="/gt_tournaments/4341/edit">DH Winter Showdown America</a>
+                                                    </td>
+                                                    <td> 
+                                                            <a href="/gt_tournaments_stages/15494/edit">North AmericaQualifier</a>
+                                                    </td>
+                                                    <td><a href="/gt_tournaments_rounds/49919/edit">B-C (BC)</a></td>
+                                                    <td><strong>A-C</strong><br><small>W7</small></small></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_round_tabs/220/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_round_tabs/220"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <nav class="pagination">
+                                        <li class="page-item active"><a data-remote="true" class="page-link">1</a></li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_tournaments_round_tabs?page=2">2</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_round_tabs?page=3">3</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_round_tabs?page=4">4</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_round_tabs?page=5">5</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_tournaments_round_tabs?page=2">Следующая ›</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_round_tabs?page=11">Последняя »</a></li>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    {% include "./tpl/devmenu.html" %}
+</body>
+</html>

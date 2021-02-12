@@ -1,0 +1,560 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "HEARTSTONE", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+{% set gamelogo = ["gl100","dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Overwatch Contenders 2019", "Kuala-Lumpur Major 2019", "LCK 2019 Spring", "Dream League 2019" ] %}
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set news = [" Менеджер проектов StarLadder: «Miracle получил визу, но не полетел в Китай
+из-за личных обстоятельств»", "Virtus.pro вылетела с квалификации на европейский майнор IEM Katowice Major без
+единой", "Нелепый отбор на майнор, читы, которых не было и другие новости утра", "Singularity и Kingdra прошли в
+закрытую европейскую квалификацию на Dota Pit Minor", "Winstrike и Pavaga Junior прошли в закрытую квалификацию на Dota
+Pit Minor", "Sayuw: «Стало легче играть с приходом Рината»", "Bafik про Na`Vi: «Когда я такие условия вижу, у меня
+возникает вопрос: почему я не
+вижу результаты?»"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set flag = ["flag1", "flag2", "flag3"] %}
+{% set com = ["С каких пор друид меняет атаку с ближней на дальнюю? выход с ульты это считается как с ближней на
+дальнюю? если да то почему, не считаете...", "Не понятно за что досталось дикому росту. Карта адекватна своей стоимости.
+Могли бы убрать взять карту после 10 кристаллов маны и оставить стоимость. А так нерф карты убывает почти все архетипы
+друида...", "Миллиард процентов 322 !
+Вчера выйграть инферно против ldlc ,обыграв их НА ПИКЕ ПРОТИВНИКИОВ со счетом 16-4,сегодня обыграть противников на их
+пике 16-4 и просрать инферно. ну-ну", "Рофло турик", "легкая для гамбит 2-0", "легкая для Team X, по прошлым играм."] %}
+<!DOCTYPE html>
+<html style="height: auto;">
+{% include "./tpl/head.html" %}
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
+                                        class="fas fa-home"></i>Dashboard</a></strong></li>
+                        <li class="breadcrumb-item active">Матчи</li>
+                    </ol>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" id="gt_match_lists_filter">
+                                <div class="card-body" data-controller="filter-form">
+                                    <form novalidate="novalidate" class="simple_form search" action="/gt_match_lists"
+                                        accept-charset="UTF-8" data-remote="true" method="get">
+                                        <div class="form-row" data-controller="select2" data-target="filter-form.form">
+                                            <div class="form-group col-sm-2 select2 required search_game"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-mirror="#gt_match_list_game_id"
+                                                    data-placeholder="Все дисциплины" data-allow-clear="true"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[game]"
+                                                    id="search_game" data-select2-id="search_game" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="134">Все дисциплины</option>
+                                                    <option value="100">PUBG</option>
+                                                    <option value="200">Valorant</option>
+                                                    <option value="300">Fortnite</option>
+                                                    <option value="313">LoL</option>
+                                                    <option value="582">Dota 2</option>
+                                                    <option value="600">Rainbow Six</option>
+                                                    <option value="704">CS:GO</option>
+                                                    <option value="755">Hearthstone</option>
+                                                    <option value="800">Overwatch</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 select2 required search_tournament">
+                                                <select class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments.json"
+                                                    data-related="#search_game" data-mirror="#gt_match_list_tid"
+                                                    data-template-selection-name="template_with_icon"
+                                                    data-template-result-name="template_with_icon"
+                                                    data-placeholder="Все турниры" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax"
+                                                    name="search[tournament]" id="search_tournament"
+                                                    data-select2-id="search_tournament" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="136">Все турниры</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 select2 required search_stage"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments_stages.json"
+                                                    data-related="#search_tournament" data-mirror="#gt_match_list_stage"
+                                                    data-placeholder="Все стадии" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[stage]"
+                                                    id="search_stage" data-select2-id="search_stage" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="138">Все стадии</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 select2 required search_round"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments_rounds.json"
+                                                    data-related="#search_stage" data-mirror="#gt_match_list_round"
+                                                    data-placeholder="Все раунды" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[round]"
+                                                    id="search_round" data-select2-id="search_round" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="140">Все раунды</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 select2 required search_team"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-queryparams="related_id="
+                                                    data-endpoint="gt_tournaments/all_teams.json"
+                                                    data-template-selection-name="template_with_icon"
+                                                    data-template-result-name="template_with_icon_result"
+                                                    data-placeholder="Все команды" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[team]"
+                                                    id="search_team" data-select2-id="search_team" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="142">Все команды</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-2" style="white-space: nowrap;"><span
+                                                    class="span-link"><a class="btn btn-primary"
+                                                        data-title="Обратите внимание"
+                                                        data-message="URL скопирован в буфер обмена"
+                                                        data-target="filter-form.link"
+                                                        data-action="filter-form#copy_url" href="#"><i
+                                                            class="fas fa-copy"></i></a></span><span
+                                                    class="span-link"><button name="button" type="submit"
+                                                        class="btn btn-primary"><i
+                                                            class="fas fa-search"></i></button></span>
+
+                                                <!-- EDIT -->
+                                                <button class="btn btn-success float-right collapsed"
+                                                    data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree"
+                                                    title="Добавить"><i class="fas fa-plus"></i></button>
+                                                <!-- .EDIT -->
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- EDIT -->
+                            <div class="accordion" id="accordionExample">
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <form class="simple_form new_gt_match_list" id="new_gt_match_list"
+                                        autocomplete="off" novalidate="novalidate" action="/gt_match_lists"
+                                        accept-charset="UTF-8" data-remote="true" method="post">
+                                        <div class="card">
+                                            <div class="card-body"><input value="new" type="hidden"
+                                                    name="gt_match_list[form_part]" id="gt_match_list_form_part">
+                                                <div data-controller="select2 datepicker">
+                                                    <div class="form-row">
+
+                                                        <div class="col-sm-6">
+                                                            <div
+                                                            class="form-group label-up select2 required gt_match_list_game">
+                                                            <label class="select2 required"
+                                                                for="gt_match_list_game_id">Дисциплина <abbr
+                                                                    title="обязательное">*</abbr></label><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-placeholder="Выберите дисциплину"
+                                                                data-allow-clear="true"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_match_list[game_id]" id="gt_match_list_game_id"
+                                                                data-select2-id="gt_match_list_game_id" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option value="" data-select2-id="144">Выберите
+                                                                    дисциплину
+                                                                </option>
+                                                                <option value="100">PUBG</option>
+                                                                <option value="200">Valorant</option>
+                                                                <option value="300">Fortnite</option>
+                                                                <option value="313">LoL</option>
+                                                                <option value="582">Dota 2</option>
+                                                                <option value="600">Rainbow Six</option>
+                                                                <option value="704">CS:GO</option>
+                                                                <option value="755">Hearthstone</option>
+                                                                <option value="800">Overwatch</option>
+                                                            </select>
+                                                            </div>
+                                                            <div
+                                                                class="form-group label-up select2 required gt_match_list_tournament">
+                                                                <label class="select2 required"
+                                                                    for="gt_match_list_tid">Турнир
+                                                                    <abbr title="обязательное">*</abbr></label><select
+                                                                    class="form-control select2 required select2-hidden-accessible"
+                                                                    autocomplete="off" data-target="select2.select"
+                                                                    data-width="100%" data-language="ru"
+                                                                    data-endpoint="gt_tournaments.json"
+                                                                    data-related="#gt_match_list_game_id"
+                                                                    data-template-selection-name="template_with_icon"
+                                                                    data-template-result-name="template_with_icon"
+                                                                    data-placeholder="Выберите турнир"
+                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-adapter-func="select2/data/extended-ajax"
+                                                                    name="gt_match_list[tid]" id="gt_match_list_tid"
+                                                                    data-select2-id="gt_match_list_tid" tabindex="-1"
+                                                                    aria-hidden="true"></select>
+                                                            </div>
+                                                            <div
+                                                                class="form-group label-up select2 required gt_match_list_match_stage">
+                                                                <label class="select2 required"
+                                                                    for="gt_match_list_stage">Стадия
+                                                                    <abbr title="обязательное">*</abbr></label><select
+                                                                    class="form-control select2 required select2-hidden-accessible"
+                                                                    autocomplete="off" data-target="select2.select"
+                                                                    data-width="100%" data-language="ru"
+                                                                    data-endpoint="gt_tournaments_stages.json"
+                                                                    data-related="#gt_match_list_tid"
+                                                                    data-placeholder="Выберите стадию"
+                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-adapter-func="select2/data/extended-ajax"
+                                                                    name="gt_match_list[stage]" id="gt_match_list_stage"
+                                                                    data-select2-id="gt_match_list_stage" tabindex="-1"
+                                                                    aria-hidden="true"></select>
+                                                            </div>
+                                                            <div
+                                                                class="form-group label-up select2 required gt_match_list_match_round">
+                                                                <label class="select2 required"
+                                                                    for="gt_match_list_round">Раунд
+                                                                    <abbr title="обязательное">*</abbr></label><select
+                                                                    class="form-control select2 required select2-hidden-accessible"
+                                                                    autocomplete="off" data-target="select2.select"
+                                                                    data-width="100%" data-language="ru"
+                                                                    data-endpoint="gt_tournaments_rounds.json"
+                                                                    data-related="#gt_match_list_stage"
+                                                                    data-placeholder="Выберите раунд"
+                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-adapter-func="select2/data/extended-ajax"
+                                                                    name="gt_match_list[round]" id="gt_match_list_round"
+                                                                    data-select2-id="gt_match_list_round" tabindex="-1"
+                                                                    aria-hidden="true"></select>
+                                                            </div>
+                                                            <div
+                                                                class="form-group label-up select2 optional gt_match_list_match_subround form-group-valid">
+                                                                <label class="select2 optional"
+                                                                    for="gt_match_list_rtab">Субраунд</label><select
+                                                                    class="form-control select2 optional select2-hidden-accessible"
+                                                                    autocomplete="off" data-target="select2.select"
+                                                                    data-width="100%" data-language="ru"
+                                                                    data-endpoint="gt_tournaments_round_tabs.json"
+                                                                    data-related="#gt_match_list_round"
+                                                                    data-placeholder="Выберите субраунд"
+                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-adapter-func="select2/data/extended-ajax"
+                                                                    name="gt_match_list[rtab]" id="gt_match_list_rtab"
+                                                                    data-select2-id="gt_match_list_rtab" tabindex="-1"
+                                                                    aria-hidden="true">
+                                                                    <option value="" data-select2-id="149">Выберите субраунд
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div
+                                                                class="form-group label-up string optional gt_match_list_date_and_time">
+                                                                <label class="string optional"
+                                                                    for="gt_match_list_date_and_time">Дата и
+                                                                    Время</label><input class="form-control string optional"
+                                                                    type="text" data-target="datepicker.single"
+                                                                    data-time="true"
+                                                                    data-locale="{&quot;format&quot;:&quot;YYYY-MM-DD HH:mm&quot;,&quot;singleDatePicker&quot;:true,&quot;separator&quot;:&quot;—&quot;,&quot;applyLabel&quot;:&quot;Принять&quot;,&quot;cancelLabel&quot;:&quot;Отменить&quot;,&quot;fromLabel&quot;:&quot;с&quot;,&quot;toLabel&quot;:&quot;по&quot;,&quot;daysOfWeek&quot;:[&quot;Вс&quot;,&quot;Пн&quot;,&quot;Вт&quot;,&quot;Ср&quot;,&quot;Чт&quot;,&quot;Пт&quot;,&quot;Сб&quot;],&quot;monthNames&quot;:[&quot;янв.&quot;,&quot;февр.&quot;,&quot;марта&quot;,&quot;апр.&quot;,&quot;мая&quot;,&quot;июня&quot;,&quot;июля&quot;,&quot;авг.&quot;,&quot;сент.&quot;,&quot;окт.&quot;,&quot;нояб.&quot;,&quot;дек.&quot;],&quot;firstDay&quot;:1}"
+                                                                    name="gt_match_list[date_and_time]"
+                                                                    id="gt_match_list_date_and_time"
+                                                                    placeholder="YYYY-MM-DD HH:mm">
+                                                            </div>
+                                                            
+                                                            <div class="form-row">
+                                                                <div
+                                                                    class="form-group label-up col-sm-8 select2 optional gt_match_list_t1 form-group-valid">
+                                                                    <label class="select2 optional"
+                                                                        for="gt_match_list_t1">Команда
+                                                                        1</label><select
+                                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                                        autocomplete="off" data-target="select2.select"
+                                                                        data-width="100%" data-language="ru"
+                                                                        data-endpoint="gt_tournaments/all_teams.json"
+                                                                        data-related="#gt_match_list_tid"
+                                                                        data-before-submit="beforeSubmit_addSelectedMembersToRequestFor_gt_match_list_t"
+                                                                        data-template-selection-name="template_with_icon"
+                                                                        data-template-result-name="template_with_icon_result"
+                                                                        data-placeholder="Выберите команду"
+                                                                        data-allow-clear="true" data-minimum-input-length="1"
+                                                                        data-adapter-func="select2/data/extended-ajax"
+                                                                        name="gt_match_list[t1]" id="gt_match_list_t1"
+                                                                        data-select2-id="gt_match_list_t1" tabindex="-1"
+                                                                        aria-hidden="true">
+                                                                        <option value="" data-select2-id="151">Выберите команду
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div
+                                                                    class="form-group label-up col-sm-4 string optional gt_match_list_t1s">
+                                                                    <label class="string optional"
+                                                                        for="gt_match_list_t1s">T1s</label><input
+                                                                        class="form-control string optional"
+                                                                        placeholder="Счет/Место" type="text"
+                                                                        name="gt_match_list[t1s]" id="gt_match_list_t1s">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div
+                                                                    class="form-group label-up col-sm-8 select2 optional gt_match_list_t2 form-group-valid">
+                                                                    <label class="select2 optional"
+                                                                        for="gt_match_list_t2">Команда
+                                                                        2</label><select
+                                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                                        autocomplete="off" data-target="select2.select"
+                                                                        data-width="100%" data-language="ru"
+                                                                        data-endpoint="gt_tournaments/all_teams.json"
+                                                                        data-related="#gt_match_list_tid"
+                                                                        data-before-submit="beforeSubmit_addSelectedMembersToRequestFor_gt_match_list_t"
+                                                                        data-template-selection-name="template_with_icon"
+                                                                        data-template-result-name="template_with_icon_result"
+                                                                        data-placeholder="Выберите команду"
+                                                                        data-allow-clear="true" data-minimum-input-length="1"
+                                                                        data-adapter-func="select2/data/extended-ajax"
+                                                                        name="gt_match_list[t2]" id="gt_match_list_t2"
+                                                                        data-select2-id="gt_match_list_t2" tabindex="-1"
+                                                                        aria-hidden="true">
+                                                                        <option value="" data-select2-id="153">Выберите команду
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div
+                                                                    class="form-group label-up col-sm-4 string optional gt_match_list_t2s">
+                                                                    <label class="string optional"
+                                                                        for="gt_match_list_t2s">T2s</label><input
+                                                                        class="form-control string optional"
+                                                                        placeholder="Счет/Место" type="text"
+                                                                        name="gt_match_list[t2s]" id="gt_match_list_t2s">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer"><input type="submit" name="commit" value="Добавить"
+                                                    class="btn btn-primary"
+                                                    formaction="/gt_match_lists?action_after_create=index"
+                                                    data-disable-with="Добавить"><input type="submit" name="commit"
+                                                    value="Добавить + Редактировать" class="btn btn-primary"
+                                                    formaction="/gt_match_lists?action_after_create=edit"
+                                                    data-disable-with="Добавить + Редактировать"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- EDIT -->
+                            <div class="card" id="gt_match_lists_index">
+                                <div class="overlay dark" id="index-loader" style="display:none"><i
+                                        class="fas fa-3x fa-sync-alt fa-spin"></i></div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive" data-controller="sortable putable">
+                                        <table class="table table-striped table-valign-middle table-hover text-nowrap">
+                                            <thead class="dark">
+                                                <tr>
+                                                    <th width="1%" class="text-center">ID #</th>
+                                                    <th width="120px">Дисциплина</th>
+                                                    <th width="150px">Дата и время</th>
+                                                    <th>Полное название</th>
+                                                    <th class="text-center" width="120px">Best of</th>
+                                                    <th class="text-center" width="120px">Очки</th>
+                                                    <th width="150px"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr id="row-247134">
+                                                    <td><span class="table__hl"><strong>247134</strong></span></td>
+                                                    <td>
+                                                        <!-- <img class="svgicon" src="./icons/cs.svg" alt="CS:GO"> -->
+                                                        CS:GO</td>
+                                                    <td class="m-time">
+                                                        2021-08-21&nbsp;&nbsp;<strong>08:00</strong>&nbsp;&nbsp;MSK
+                                                    </td>
+                                                    
+                                                    <td class="complex-name"><span><a
+                                                                href="/gt_tournaments/2996/edit">IEM XV
+                                                                Melbourne</a></span><span><a
+                                                                href="/gt_tournaments_stages/8914/edit">Playoff</a></span>
+                                                                <span><a
+                                                                    href="https://escorenews.com/ru/csgo/iem-melbourne-2020/playoff/tbd-vs-tbd-247134">1/2</a></span>
+                                                                <span><strong>TBD
+                                                                    (0:0) TBD</strong></span></td>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-center">0:0</td>
+                                                    <td class="text-right"><a class="btn btn-success btn-sm"
+                                                            data-remote="true"
+                                                            href="/gt_match_lists/247134/games?action_after_update=refresh_index"><i
+                                                                class="fas fa-gamepad"></i></a><a
+                                                            class="btn btn-primary btn-sm"
+                                                            href="/gt_match_lists/247134/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?"
+                                                            class="btn btbtn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_match_lists/247134"><i
+                                                                class="far fa-trash-alt"></i></a></td>
+                                                </tr>
+                                                <tr id="row-53302">
+                                                    <td><span class="table__hl"><strong>53302</strong></span></td>
+                                                    <td>Dota 2</td>
+                                                    <td class="m-time">
+                                                        2021-08-06&nbsp;&nbsp;<strong>00:15</strong>&nbsp;&nbsp;MSK
+                                                    </td>
+                                                    <td class="complex-name"><span><a
+                                                                href="/gt_tournaments/981/edit">The International
+                                                                VII</a></span><span><a
+                                                                href="/gt_tournaments_stages/3187/edit">Group
+                                                                Stage</a></span>
+                                                                <span><a
+                                                                    href="https://escorenews.com/ru/dota-2/international-2017/group/ig-vs-virtus-pro-53302">Group B</a></span>
+                                                                <span><strong>IG
+                                                                    (2:1) VP</strong></span></td>
+                                                    <td class="text-center">2</td>
+                                                    <td class="text-center">2:1</td>
+                                                    <td class="text-right"><a class="btn btn-success btn-sm"
+                                                            data-remote="true"
+                                                            href="/gt_match_lists/53302/games?action_after_update=refresh_index"><i
+                                                                class="fas fa-gamepad"></i></a><a
+                                                            class="btn btn-primary btn-sm"
+                                                            href="/gt_match_lists/53302/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?"
+                                                            class="btn btbtn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_match_lists/53302"><i
+                                                                class="far fa-trash-alt"></i></a></td>
+                                                </tr>
+                                                <tr id="row-316325">
+                                                    <td><span class="table__hl"><strong>316325</strong></span></td>
+                                                    <td>Dota 2</td>
+                                                    <td class="m-time">
+                                                        2021-08-06&nbsp;&nbsp;<strong>00:00</strong>&nbsp;&nbsp;MSK
+                                                    </td>
+                                                   
+                                                    <td class="complex-name"><span><a
+                                                                href="/gt_tournaments/981/edit">The International
+                                                                VII</a></span><span><a
+                                                                href="/gt_tournaments_stages/3187/edit">Group
+                                                                Stage</a></span><span><a
+                                                                    href="https://escorenews.com/ru/dota-2/international-2017/group/tbd-vs-tbd-316325">Group B</a></span><span><strong>TBD
+                                                                    (0:0) TBD</strong></span></td>
+                                                    <td class="text-center">0</td>
+                                                    <td class="text-center">0:0</td>
+                                                    <td class="text-right"><a
+                                                            class="btn btbtn btn-success btn-sm"
+                                                            data-remote="true"
+                                                            href="/gt_match_lists/316325/games?action_after_update=refresh_index"><i
+                                                                class="fas fa-gamepad"></i></a><a
+                                                            class="btn btn-primary btn-sm"
+                                                            href="/gt_match_lists/316325/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?"
+                                                            class="btn btbtn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_match_lists/316325"><i
+                                                                class="far fa-trash-alt"></i></a></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <nav class="pagination">
+                                        <li class="page-item active"><a data-remote="true" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_match_lists?page=2">2</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_match_lists?page=3">3</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_match_lists?page=4">4</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_match_lists?page=5">5</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_match_lists?page=2">Следующая ›</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_match_lists?page=8689">Последняя »</a></li>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+    </div>
+    {% include "./tpl/devmenu.html" %}
+</body>
+</html>

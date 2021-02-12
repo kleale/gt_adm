@@ -1,0 +1,239 @@
+/****************/
+/*** hide double select in dev ***/
+// span.select2.select2-container.select2-container--default:last-child {
+//     display: none;
+// }
+/*** .hide double select ***/
+
+
+body {
+    font-size: 13px;
+    font-family: helvetica;
+    color: #313131;
+}
+.btn {
+    padding: 0.375rem 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+.btn-group-sm > .btn,
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+.layout-navbar-fixed .wrapper .content-wrapper {
+    margin-top: 0;
+}
+span.table__hl {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: transparent;
+}
+
+.table td,
+.table th {
+    border-top: 1px solid #f1f1f1;
+    padding: 0.5rem;
+    line-height: 1rem;
+}
+
+.table img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.btn-primary {
+    background-color: #2196f3;
+    border-color: transparent;
+}
+
+a {
+    color: #2196f3;
+}
+
+.table thead.dark {
+    background-color: #e1e7ec;
+    border-radius: 5px 5px 0 0;
+}
+
+.table thead.dark th {
+    color: #333;
+    font-weight: bold;
+    font-size: 10px;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card {
+    /* border: 0;*/
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.card-footer {
+    background: #fff;
+}
+
+form .card-body {
+    background: #fff;
+}
+
+.page-item.active .page-link {
+    background-color: #2196f3;
+    border-color: transparent;
+}
+
+.page-link {
+    border-color: #fff;
+    background: #f4f6f9;
+    color: #525252;
+    border-radius: 5px;
+}
+
+.page-item.disabled .page-link {
+    border-color: transparent;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.form-control {
+    font-size: 13px;
+}
+
+.form-check-input {
+    margin-top: 0 !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #F4FAFE;
+}
+
+.with-main-row:hover {
+    background: #f3f9fd;
+}
+
+.table tbody + tbody {
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead.dark {
+    background-color: #ffffff;
+}
+
+.btn-transparent-danger {
+    color: #e91e63;
+}
+
+.btn-transparent-primary {
+    color: #03a9f4;
+}
+
+.btn-transparent-success {
+    color: #8bc34a;
+}
+
+.m-time {
+    font-size: 11px;
+}
+
+img.svgicon {
+    margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -2px;
+    opacity: 0.3;
+}
+.form-group.label-up label.select2,
+.form-group.label-up label.optional,
+.form-group.label-up label.string {
+    position: absolute;
+    z-index: 1;
+    margin-top: -8px;
+    padding: 0 6px;
+    font-size: 11px;
+    background: #fff;
+    margin-left: 4px;
+    width: auto;
+}
+
+.accordion .card-body {
+    padding-bottom: 0;
+}
+
+.table tbody.with-main-row tr:first-child,
+.table tbody tr.sub-row {
+    background-color: transparent;
+}
+.with-main-row tr td {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.table__hl {
+    text-align: inherit;
+}
+
+.table td.eventLogo {
+    padding-right: 0;
+    width: 39px;
+}
+
+/* .table tbody.with-main-row tr:first-child{
+    background: inherit;
+}
+.table tbody.with-main-row tr:second-child{
+    background: inherit;
+} */
+
+.form-check {
+    font-weight: 700;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    margin-bottom: -21px;
+}
+
+.custom-control-label:after,
+.custom-control-label:before {
+    top: 0.15rem;
+}
+.custom-switch .custom-control-label:after {
+    top: calc(0.15rem + 2px);
+}
+
+[data-target="uppy.uploaded"] img {
+    display: block;
+    max-width: 100%;
+    border: 2px solid #e2e2e2;
+    margin: 0;
+}
+.card-header h6 {
+    margin: 5px 0;
+}
+
+.ml-21px {
+    margin-left: 21px;
+}
+
+.edit-teams-list .list-group-item {
+    padding: 0.5rem 1.25rem;
+}
+.edit-teams-list li.list-group-item {
+    display: flex;
+}
+.edit-teams-list .tname {
+    flex-grow: 1;
+}

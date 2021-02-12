@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)https://esnadm.com/ -->
+<html style="height: auto;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="no-preview" name="turbolinks-cache-control">
+    <title>Decider Media Project</title>
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token"
+        content="oY/TcE7c7UVhVRTqFur8SLA5jKpJItu3bYkg5JqCx09is+i55kGYa7Ntf+WMpowlAg5zrFJgPLD/GY4ycToOaQ==">
+    <script src="./Decider Media Project_files/application-f8a44522597fe8bf8146.js.Без названия"
+        data-turbolinks-track="reload"></script>
+
+    <link rel="stylesheet" media="all" href="./Decider Media Project_files/application-17bb302e.css"
+        data-turbolinks-track="reload">
+    <link rel="stylesheet" media="all" href="css.css" data-turbolinks-track="reload">
+    <link rel="stylesheet" media="all" href="css/all.min.css" data-turbolinks-track="reload">
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://esnadm.com/packs/media/images/favicon32-82d97f60e57087d1f82ecbf0355e4183.png">
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
+                                        class="fas fa-home"></i>Dashboard</a></strong></li>
+                        <li class="breadcrumb-item active">Стадии</li>
+                    </ol>
+                </div>
+            </div>
+
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" id="gt_tournaments_rounds_filter">
+                                <div class="card-body" data-controller="filter-form">
+                                    <form novalidate="novalidate" class="simple_form search"
+                                        action="/gt_tournaments_rounds" accept-charset="UTF-8" data-remote="true"
+                                        method="get">
+                                        <div class="form-row" data-controller="select2" data-target="filter-form.form">
+                                            <div class="form-group col-sm-3 select2 required search_game"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-mirror="#gt_tournaments_round_game"
+                                                    data-placeholder="Все дисциплины" data-allow-clear="true"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[game]"
+                                                    id="search_game" data-select2-id="search_game" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="2">Все дисциплины</option>
+                                                    <option value="100">PUBG</option>
+                                                    <option value="200">Valorant</option>
+                                                    <option value="300">Fortnite</option>
+                                                    <option value="313">LoL</option>
+                                                    <option value="582">Dota 2</option>
+                                                    <option value="600">Rainbow Six</option>
+                                                    <option value="704">CS:GO</option>
+                                                    <option value="755">Hearthstone</option>
+                                                    <option value="800">Overwatch</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-4 select2 required search_tournament"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments.json"
+                                                    data-related="#search_game"
+                                                    data-mirror="#gt_tournaments_round_tournament"
+                                                    data-template-selection-name="template_with_icon"
+                                                    data-template-result-name="template_with_icon"
+                                                    data-placeholder="Все турниры" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax"
+                                                    name="search[tournament]" id="search_tournament"
+                                                    data-select2-id="search_tournament" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="4">Все турниры</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-3 select2 required search_stage"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_tournaments_stages.json"
+                                                    data-related="#search_tournament"
+                                                    data-mirror="#gt_tournaments_round_stage"
+                                                    data-placeholder="Все стадии" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[stage]"
+                                                    id="search_stage" data-select2-id="search_stage" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="6">Все стадии</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-2" style="white-space: nowrap;"><span
+                                                    class="span-link"><a class="btn btn-primary"
+                                                        data-title="Обратите внимание"
+                                                        data-message="URL скопирован в буфер обмена"
+                                                        data-target="filter-form.link"
+                                                        data-action="filter-form#copy_url" href="#"><i
+                                                            class="fas fa-copy"></i></a></span><span
+                                                    class="span-link"><button name="button" type="submit"
+                                                        class="btn btn-primary"><i
+                                                            class="fas fa-search"></i></button></span>
+                                                <!-- EDIT -->
+                                                <button class="btn btn-success float-right collapsed"
+                                                    data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree"
+                                                    title="Добавить стадию"><i class="fas fa-plus"></i></button>
+                                                <!-- .EDIT -->
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- EDIT -->
+                            <div class="accordion" id="accordionExample">
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <form class="simple_form new_gt_tournaments_round" id="new_gt_tournaments_round"
+                                        autocomplete="off" novalidate="novalidate" action="/gt_tournaments_rounds"
+                                        accept-charset="UTF-8" data-remote="true" method="post">
+                                        <div class="card">
+                                            <div class="card-body"><input value="new" type="hidden"
+                                                    name="gt_tournaments_round[form_part]"
+                                                    id="gt_tournaments_round_form_part">
+                                                <div data-controller="select2 autocomplete">
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_game">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_game">Дисциплина <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-placeholder="Выберите дисциплину"
+                                                                data-allow-clear="true"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round[game]"
+                                                                id="gt_tournaments_round_game"
+                                                                data-select2-id="gt_tournaments_round_game"
+                                                                tabindex="-1" aria-hidden="true">
+                                                                <option value="" data-select2-id="8">Выберите дисциплину
+                                                                </option>
+                                                                <option value="100">PUBG</option>
+                                                                <option value="200">Valorant</option>
+                                                                <option value="300">Fortnite</option>
+                                                                <option value="313">LoL</option>
+                                                                <option value="582">Dota 2</option>
+                                                                <option value="600">Rainbow Six</option>
+                                                                <option value="704">CS:GO</option>
+                                                                <option value="755">Hearthstone</option>
+                                                                <option value="800">Overwatch</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_tournament">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_tournament">Турнир <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_tournaments.json"
+                                                                data-related="#gt_tournaments_round_game"
+                                                                data-template-selection-name="template_with_icon"
+                                                                data-template-result-name="template_with_icon"
+                                                                data-placeholder="Выберите турнир"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round[tournament]"
+                                                                id="gt_tournaments_round_tournament"
+                                                                data-select2-id="gt_tournaments_round_tournament"
+                                                                tabindex="-1" aria-hidden="true"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_round_stage">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_stage">Стадия <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_tournaments_stages.json"
+                                                                data-related="#gt_tournaments_round_tournament"
+                                                                data-placeholder="Выберите стадию"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round[stage]"
+                                                                id="gt_tournaments_round_stage"
+                                                                data-select2-id="gt_tournaments_round_stage"
+                                                                tabindex="-1" aria-hidden="true"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string required gt_tournaments_round_title">
+                                                        <label class="col-sm-2 col-form-label string required"
+                                                            for="gt_tournaments_round_title">Название <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10">
+                                                            <div class="awesomplete"><input
+                                                                    class="form-control string required"
+                                                                    autocomplete="off" data-target="autocomplete.input"
+                                                                    data-endpoint="gt_tournaments_rounds/titles.json"
+                                                                    data-related="#gt_tournaments_round_game"
+                                                                    data-getvalue="title" type="text"
+                                                                    name="gt_tournaments_round[title]"
+                                                                    id="gt_tournaments_round_title"
+                                                                    aria-expanded="false" aria-owns="awesomplete_list_1"
+                                                                    role="combobox">
+                                                                <ul hidden="" role="listbox" id="awesomplete_list_1">
+                                                                </ul><span class="visually-hidden" role="status"
+                                                                    aria-live="assertive" aria-atomic="true">Type 1 or
+                                                                    more characters for
+                                                                    results.</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string required gt_tournaments_round_bo form-group-valid">
+                                                        <label class="col-sm-2 col-form-label string required"
+                                                            for="gt_tournaments_round_bo">Best of <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string required" required="required"
+                                                                aria-required="true" type="text" value="1"
+                                                                name="gt_tournaments_round[bo]"
+                                                                id="gt_tournaments_round_bo">
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 required gt_tournaments_round_score form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_tournaments_round_score">Распределение очков <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru" data-placeholder=""
+                                                                data-allow-clear="true"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_tournaments_round[score]"
+                                                                id="gt_tournaments_round_score"
+                                                                data-select2-id="gt_tournaments_round_score"
+                                                                tabindex="-1" aria-hidden="true">
+                                                                <option value=""></option>
+                                                                <option selected="selected" value="0"
+                                                                    data-select2-id="12">без
+                                                                    очков</option>
+                                                                <option value="1">3 очка</option>
+                                                                <option value="2">по числу побед</option>
+                                                                <option value="3">с отниманием очков</option>
+                                                                <option value="4">все карты</option>
+                                                                <option value="5">3 очка за сухую + по числу побед
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer"><input type="submit" name="commit"
+                                                    value="Добавить + Редактировать" class="btn btn-primary"
+                                                    formaction="/gt_tournaments_rounds?action_after_create=edit"
+                                                    data-disable-with="Добавить + Редактировать"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- .EDIT -->
+
+                            <div class="card" id="gt_tournaments_rounds_index">
+                                <div class="overlay dark" id="index-loader" style="display:none"><i
+                                        class="fas fa-3x fa-sync-alt fa-spin"></i></div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive" data-controller="sortable putable">
+                                        <table class="table table-valign-middle table-hover text-nowrap"
+                                            data-target="sortable.table">
+                                            <thead class="dark">
+                                                <tr>
+                                                    <th width="1%" class="text-center">ID #</th>
+                                                    <th width="120px">Дисциплина</th>
+                                                    <th width="10%">Турнир </th>
+                                                    <th width="10%">Cтадия</th>
+                                                    <th class="text-center" width="100px">Best of</th>
+                                                    <th>Распределение очков</th>
+                                                    <th>Название раунда</th>
+                                                    <th width="120px"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_rounds" data-id="50990" data-order="1"
+                                                data-record="gt_tournaments_round" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>50990</strong></span></td>
+                                                    <td>LoL</td>
+                                                    <td><a href="/gt_tournaments/4469/edit">LWC</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/gt_tournaments_stages/15831/edit">New One</a>
+                                                    </td>
+                                                    
+                                                    <td class="text-center">1</td>
+                                                    <td>без очков</td>
+                                                    <td><strong>Round 1</strong></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_rounds/50990/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_rounds/50990"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_rounds" data-id="50990" data-order="1"
+                                                data-record="gt_tournaments_round" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>50990</strong></span></td>
+                                                    <td>LoL</td>
+                                                    <td><a href="/gt_tournaments/4469/edit">LWC</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/gt_tournaments_stages/15831/edit">New One</a>
+                                                    </td>
+                                                    
+                                                    <td class="text-center">1</td>
+                                                    <td>без очков</td>
+                                                    <td><strong>Round 1</strong></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_rounds/50990/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_rounds/50990"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_rounds" data-id="50990" data-order="1"
+                                                data-record="gt_tournaments_round" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>50990</strong></span></td>
+                                                    <td>LoL</td>
+                                                    <td><a href="/gt_tournaments/4469/edit">LWC</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/gt_tournaments_stages/15831/edit">New One</a>
+                                                    </td>
+                                                    
+                                                    <td class="text-center">1</td>
+                                                    <td>без очков</td>
+                                                    <td><strong>Round 1</strong></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_rounds/50990/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_rounds/50990"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_rounds" data-id="50990" data-order="1"
+                                                data-record="gt_tournaments_round" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>50990</strong></span></td>
+                                                    <td>LoL</td>
+                                                    <td><a href="/gt_tournaments/4469/edit">LWC</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/gt_tournaments_stages/15831/edit">New One</a>
+                                                    </td>
+                                                    
+                                                    <td class="text-center">1</td>
+                                                    <td>без очков</td>
+                                                    <td><strong>Round 1</strong></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_rounds/50990/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_rounds/50990"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_rounds" data-id="50990" data-order="1"
+                                                data-record="gt_tournaments_round" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>50990</strong></span></td>
+                                                    <td>LoL</td>
+                                                    <td><a href="/gt_tournaments/4469/edit">LWC</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/gt_tournaments_stages/15831/edit">New One</a>
+                                                    </td>
+                                                    
+                                                    <td class="text-center">1</td>
+                                                    <td>без очков</td>
+                                                    <td><strong>Round 1</strong></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_rounds/50990/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_rounds/50990"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="sortable-item movable-item nested-1"
+                                                data-endpoint="gt_tournaments_rounds" data-id="50990" data-order="1"
+                                                data-record="gt_tournaments_round" data-target="sortable.tbody">
+                                                <tr>
+                                                    <td><span class="table__hl"><strong>50990</strong></span></td>
+                                                    <td>LoL</td>
+                                                    <td><a href="/gt_tournaments/4469/edit">LWC</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/gt_tournaments_stages/15831/edit">New One</a>
+                                                    </td>
+                                                    
+                                                    <td class="text-center">1</td>
+                                                    <td>без очков</td>
+                                                    <td><strong>Round 1</strong></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_tournaments_rounds/50990/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete"
+                                                            href="/gt_tournaments_rounds/50990"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <nav class="pagination">
+                                        <li class="page-item active"><a data-remote="true" class="page-link">1</a></li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_tournaments_rounds?page=2">2</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_rounds?page=3">3</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_rounds?page=4">4</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_rounds?page=5">5</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_tournaments_rounds?page=2">Следующая ›</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_tournaments_rounds?page=2211">Последняя »</a></li>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

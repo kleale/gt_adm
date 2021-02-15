@@ -176,6 +176,67 @@ module.exports = {
             filename: './gt_tournaments_stages.html'
         }),
 
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_venues.html`,
+            filename: './gt_venues.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_teams_lists.html`,
+            filename: './gt_teams_lists.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_player_lists.html`,
+            filename: './gt_player_lists.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_tournaments_stages_edit.html`,
+            filename: './gt_tournaments_stages_edit.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_tournaments_stages_edit_prize.html`,
+            filename: './gt_tournaments_stages_edit_prize.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_tournaments_stages_edit_mesh.html`,
+            filename: './gt_tournaments_stages_edit_mesh.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_tournaments_rounds_edit.html`,
+            filename: './gt_tournaments_rounds_edit.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_tournaments_round_tabs_edit.html`,
+            filename: './gt_tournaments_round_tabs_edit.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_match_lists_edit.html`,
+            filename: './gt_match_lists_edit.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games.html`,
+            filename: './live_games.html'
+        })
+
+        
+        
+        
+
     ],
 }
 

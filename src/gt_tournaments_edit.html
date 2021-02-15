@@ -5,22 +5,29 @@
 "Virtus.Pro"] %}
 {% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
 {% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
-{% set prize = ["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
+{% set prize =
+["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
 {% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
 
 {% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
-{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup 2021", "LinkenID" ] %}
-{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21", "CDA-FDC" ] %}
-{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ", "fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup
+2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21",
+"CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ",
+"fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
 {% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
-{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 — 2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
+{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 —
+2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
 
 {% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
 {% set date = ["1 января", "сегодня"] %}
 {% set status = ["Прошедший", "Будущий", "Текущий"] %}
 {% set stagetype = ["Основная", "Группы", "Сетка"] %}
-{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly Final", "Weekly Survival"] %}
-{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier", "weekly-final", "weekly-survival"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly
+Final", "Weekly Survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier",
+"weekly-final", "weekly-survival"] %}
 
 <!DOCTYPE html>
 <html style="height: auto;">
@@ -31,8 +38,9 @@
         display: none;
     }
 
-    #gt_tournament_logo_trigger.btn-primary ~ #gt_tournament_logo_trigger{
-        display: none;
+    #gt_tournament_logo_trigger.btn-primary~#gt_tournament_logo_trigger,
+    #gt_tournament_icon_trigger.btn-outline-primary {
+        display: none !important;
     }
 </style>
 
@@ -86,7 +94,22 @@
         </aside>
 
         <div class="content-wrapper">
-            <div class="content-header"><div class="container-fluid"><ol class="breadcrumb"><li class="breadcrumb-item"><strong><a class="with-icon" data-action="click->edit#track_change" href="/gt_tournaments"><i class="fas fa-arrow-left"></i>Турниры</a></strong></li><li class="breadcrumb-item active">Tac8 Pro Am League / Tac8 PUBG Pro Am League (<span class="inline-with-comma">ID: 4355</span><span class="inline-with-comma"><a target="_blank" href="https://escorenews.com/ru/pubg/tac8-pro-am-league">ESN</a></span><span class="inline-with-comma"><a target="_blank" href="https://game-tournaments.com/pubg/tac8-pro-am-league">GT</a></span><span class="inline-with-comma"><a target="_blank" href="https://ggscore.com/ru/pubg/tac8-pro-am-league">GG</a></span>)</li></ol></div></div>
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" data-action="click->edit#track_change"
+                                    href="/gt_tournaments"><i class="fas fa-arrow-left"></i>Турниры</a></strong></li>
+                        <li class="breadcrumb-item active">Tac8 Pro Am League / Tac8 PUBG Pro Am League (<span
+                                class="inline-with-comma">ID: 4355</span><span class="inline-with-comma"><a
+                                    target="_blank"
+                                    href="https://escorenews.com/ru/pubg/tac8-pro-am-league">ESN</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://game-tournaments.com/pubg/tac8-pro-am-league">GT</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://ggscore.com/ru/pubg/tac8-pro-am-league">GG</a></span>)</li>
+                    </ol>
+                </div>
+            </div>
 
             <section class="content">
                 <div class="container-fluid">
@@ -97,6 +120,11 @@
                                 data-remote="true" method="post"><input type="hidden" name="_method" value="patch">
                                 <div class="card" data-controller="edit-form">
                                     <div class="card-header p-2">
+                                        <h5 class="float-right mt-1 mb-1 mr-2">
+                                            <span class="badge badge-pill badge-success">
+                                                <i class="fas fa-check"></i>&nbspS;
+                                                Проверено</span>
+                                        </h5>
                                         <ul class="nav nav-pills">
                                             <li class="nav-item"><a class="nav-link active"
                                                     data-action="click->edit#track_change" data-remote="true"
@@ -134,7 +162,7 @@
                                                     id="gt_tournament_form_part">
 
                                                 <div data-controller="select2 datepicker">
-                                                    
+
                                                     <div
                                                         class="form-group row select2 required gt_tournament_game form-group-valid">
                                                         <label class="col-sm-2 col-form-label select2 required"
@@ -180,7 +208,7 @@
                                                                     aria-hidden="true"></span></span>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div
                                                         class="form-group row select2 optional gt_tournament_series form-group-valid">
                                                         <label class="col-sm-2 col-form-label select2 optional"
@@ -753,10 +781,18 @@
                                                         class="form-group row string optional gt_tournament_prize form-group-valid">
                                                         <label class="col-sm-2 col-form-label string optional"
                                                             for="gt_tournament_prize">Призовой фонд, USD</label>
-                                                        <div class="col-sm-10"><input
-                                                                class="form-control string optional" value="$1,600"
-                                                                type="text" name="gt_tournament[prize]"
-                                                                id="gt_tournament_prize"></div>
+                                                        <div class="col-sm-10">
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">$2,400</span>
+                                                                </div>
+                                                                <input class="form-control string optional"
+                                                                    value="$1,600" type="text"
+                                                                    name="gt_tournament[prize]"
+                                                                    id="gt_tournament_prize">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group row string optional gt_tournament_points">
                                                         <label class="col-sm-2 col-form-label string optional"
@@ -827,7 +863,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div data-controller="uppy">
                                                     <div class="card">
 
@@ -886,8 +922,8 @@
                                                     class="btn btn-primary"
                                                     formaction="/gt_tournaments/4355?action_after_update=index"
                                                     method="post" data-disable-with="Сохранить"></div>
+                                        </div>
                                     </div>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -901,4 +937,5 @@
     </div>
     {% include "./tpl/devmenu.html" %}
 </body>
+
 </html>

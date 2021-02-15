@@ -34,8 +34,8 @@ Final", "Weekly Survival"] %}
 {% include "./tpl/head.html" %}
 
 <style>
-    span.select2.select2-container.select2-container--default:last-child {
-        display: none;
+    .form-group.select2 .select2:last-child{
+        display: none!important;
     }
 </style>
 
@@ -166,10 +166,8 @@ Final", "Weekly Survival"] %}
                                                             type="text" name="gt_tournament[prize_places_attributes][0][prize]"
                                                             id="gt_tournament_prize_places_attributes_0_prize"></div>
 
-                                                    <div class="form-group col-sm-1">
-                                                        <input class="form-control string optional" placeholder="%"
-                                                            type="text" 
-                                                            id="gt_tournament_percent">
+                                                    <div class="col-sm-1 percent-block">
+                                                        34%
                                                     </div>
                                                     <div
                                                         class="form-group col-sm-2 string required gt_tournament_prize_places_decorated_points">

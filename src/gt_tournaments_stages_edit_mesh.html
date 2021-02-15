@@ -1,0 +1,737 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
+{% set team = ["Creep", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlong = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI",
+"KG",
+"Virtus.Pro"] %}
+{% set teamurl=
+["dreamteam-2","somos-los-rex","creep-gaming","toshik-gaming","dreamteam-2","testuniverse2","hashteam1","take-that","gol-pashmian-ya-kon-pashm"]
+%}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set prize =
+["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup
+2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21",
+"CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ",
+"fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
+{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 —
+2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
+
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set status = ["Прошедший", "Будущий", "Текущий"] %}
+{% set stagetype = ["Основная", "Группы", "Сетка"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly
+Final", "Weekly Survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier",
+"weekly-final", "weekly-survival"] %}
+
+{% set player = ["PAAD1N", "Nightaliscious", "Choko", "Bisbo", "Aggro" ] %}
+{% set playerlong = ["Bronnikov Roman", "Voronin Danil", "Akram Patarov", "Nguyễn Lâm Việt Sinh", "Kang Min-seok" ] %}
+{% set playerurl = ["123-smurf", "nightaliscious", "choko", "Bisbo", "aggro" ] %}
+{% set burth = ["1988-07-22", "1966-04-12", "1975-03-01", "2001-05-08", "2007-04-08"] %}
+
+
+<!DOCTYPE html>
+<html style="height: auto;">
+{% include "./tpl/head.html" %}
+
+<style>
+    .form-group.select2 .select2:last-child {
+        display: none !important;
+    }
+</style>
+
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper" style="min-height: 588px;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" data-action="click->edit#track_change"
+                                    href="/gt_tournaments_stages"><i class="fas fa-arrow-left"></i>Стадии</a></strong>
+                        </li>
+                        <li class="breadcrumb-item"><a data-action="click->edit#track_change"
+                                href="/gt_tournaments/4469/edit">LWCall 2021</a></li>
+                        <li class="breadcrumb-item active">Playoff (<span class="inline-with-comma">ID:
+                                15799</span><span class="inline-with-comma"><a target="_blank"
+                                    href="https://escorenews.com/ru/lol/lcall/all-star-game">ESN</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://game-tournaments.com/lol/lcall/all-star-game">GT</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://ggscore.com/ru/lol/lcall/all-star-game">GG</a></span>)</li>
+                    </ol>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="simple_form edit_gt_tournaments_stage" id="edit_gt_tournaments_stage_15799"
+                                autocomplete="off" novalidate="novalidate" action="/gt_tournaments_stages/15799"
+                                accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden"
+                                    name="_method" value="patch">
+                                <div class="card" data-controller="edit-form">
+                                    <div class="card-header p-2">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=common">Главная</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=places">Призовые
+                                                    места</a></li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change active" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=grid">Сетка</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=cache"><span
+                                                        class="translation_missing"
+                                                        title="translation missing: ru.form.parts.cache">Cache</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card-body"><span
+                                            data-dialog_text="Форма не сохранена. Всё равно продолжить?"
+                                            data-target="edit.body edit-form.body"></span><input value="grid"
+                                            type="hidden" name="gt_tournaments_stage[form_part]"
+                                            id="gt_tournaments_stage_form_part">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <div class="table-responsive" data-controller="table-grid"><template
+                                                        data-target="table-grid.template">
+                                                        <td><input
+                                                                name="gt_tournaments_stage[grid][COL_INDEX][ROW_INDEX]"
+                                                                type="text"></td>
+                                                    </template>
+                                                    <table class="table table-bordered table--grid"
+                                                        data-target="table-grid.table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][0]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][0]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][1]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][1]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][2]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][2]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][3]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][3]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][4]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][4]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][5]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][5]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][6]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][6]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][7]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][7]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][8]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][8]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][9]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][9]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][10]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][10]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][11]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][11]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][12]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][12]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][13]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][13]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][14]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][14]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][15]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][15]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][16]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][16]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][17]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][17]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][18]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][18]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input name="gt_tournaments_stage[grid][0][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][1][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][2][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][3][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][4][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][5][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][6][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][7][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][8][19]"
+                                                                        type="text"></td>
+                                                                <td><input name="gt_tournaments_stage[grid][9][19]"
+                                                                        type="text"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><a data-action="table-grid#add_row"
+                                                        class="btn btn-sm btn-outline-primary" href="#">Добавить
+                                                        строку</a><a data-action="table-grid#add_col"
+                                                        class="btn btn-sm btn-outline-primary" href="#">Добавить
+                                                        столбец</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <table class="table table--small">
+                                                    <tbody>
+                                                        <tr class="table__tbody-caption">
+                                                            <td colspan="4">Semifinal</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><u>#316197</u></td>
+                                                            <td><strong>0-0</strong></td>
+                                                            <td>TBD vs TBD</td>
+                                                            <td class="with-input"><input value=""
+                                                                    class="string optional" placeholder="Победитель"
+                                                                    type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][0][matches_attributes][0][next_match_w]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_0_matches_attributes_0_next_match_w"><input
+                                                                    value="" class="string optional"
+                                                                    placeholder="Проигравший" type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][0][matches_attributes][0][next_match_l]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_0_matches_attributes_0_next_match_l">
+                                                            </td>
+                                                        </tr><input type="hidden" value="316197"
+                                                            name="gt_tournaments_stage[rounds_attributes][0][matches_attributes][0][id]"
+                                                            id="gt_tournaments_stage_rounds_attributes_0_matches_attributes_0_id">
+                                                        <tr>
+                                                            <td><u>#316205</u></td>
+                                                            <td><strong>0-2</strong></td>
+                                                            <td>Indonesia vs LOLO</td>
+                                                            <td class="with-input"><input value=""
+                                                                    class="string optional" placeholder="Победитель"
+                                                                    type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][0][matches_attributes][1][next_match_w]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_0_matches_attributes_1_next_match_w"><input
+                                                                    value="" class="string optional"
+                                                                    placeholder="Проигравший" type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][0][matches_attributes][1][next_match_l]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_0_matches_attributes_1_next_match_l">
+                                                            </td>
+                                                        </tr><input type="hidden" value="316205"
+                                                            name="gt_tournaments_stage[rounds_attributes][0][matches_attributes][1][id]"
+                                                            id="gt_tournaments_stage_rounds_attributes_0_matches_attributes_1_id">
+                                                    </tbody><input type="hidden" value="50911"
+                                                        name="gt_tournaments_stage[rounds_attributes][0][id]"
+                                                        id="gt_tournaments_stage_rounds_attributes_0_id">
+                                                    <tbody>
+                                                        <tr class="table__tbody-caption">
+                                                            <td colspan="4">Final</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><u>#316198</u></td>
+                                                            <td><strong>0-0</strong></td>
+                                                            <td>TBD vs TBD</td>
+                                                            <td class="with-input"><input value=""
+                                                                    class="string optional" placeholder="Победитель"
+                                                                    type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][0][next_match_w]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_0_next_match_w"><input
+                                                                    value="" class="string optional"
+                                                                    placeholder="Проигравший" type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][0][next_match_l]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_0_next_match_l">
+                                                            </td>
+                                                        </tr><input type="hidden" value="316198"
+                                                            name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][0][id]"
+                                                            id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_0_id">
+                                                        <tr>
+                                                            <td><u>#316206</u></td>
+                                                            <td><strong>1-1</strong></td>
+                                                            <td>2144 vs LOLO</td>
+                                                            <td class="with-input"><input value=""
+                                                                    class="string optional" placeholder="Победитель"
+                                                                    type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][1][next_match_w]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_1_next_match_w"><input
+                                                                    value="" class="string optional"
+                                                                    placeholder="Проигравший" type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][1][next_match_l]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_1_next_match_l">
+                                                            </td>
+                                                        </tr><input type="hidden" value="316206"
+                                                            name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][1][id]"
+                                                            id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_1_id">
+                                                        <tr>
+                                                            <td><u>#316207</u></td>
+                                                            <td><strong>3*-2</strong></td>
+                                                            <td>2144 vs LOLO</td>
+                                                            <td class="with-input"><input value=""
+                                                                    class="string optional" placeholder="Победитель"
+                                                                    type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][2][next_match_w]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_2_next_match_w"><input
+                                                                    value="" class="string optional"
+                                                                    placeholder="Проигравший" type="text"
+                                                                    name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][2][next_match_l]"
+                                                                    id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_2_next_match_l">
+                                                            </td>
+                                                        </tr><input type="hidden" value="316207"
+                                                            name="gt_tournaments_stage[rounds_attributes][1][matches_attributes][2][id]"
+                                                            id="gt_tournaments_stage_rounds_attributes_1_matches_attributes_2_id">
+                                                    </tbody><input type="hidden" value="50912"
+                                                        name="gt_tournaments_stage[rounds_attributes][1][id]"
+                                                        id="gt_tournaments_stage_rounds_attributes_1_id">
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    {% include "./tpl/devmenu.html" %}
+</body>
+
+</html>

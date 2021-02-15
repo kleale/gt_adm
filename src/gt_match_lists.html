@@ -1,32 +1,40 @@
-
 {% set title = "Page Name" %}
 {% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
 {% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
-{% set team = ["TBD","TBD","TBD","TBD","TBD","Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+{% set team = ["TBD","TBD","TBD","TBD","TBD","Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire",
+"Ehome", "Navi", "VICI", "KG",
 "Virtus.Pro"] %}
 {% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
 {% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
-{% set prize = ["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
+{% set prize =
+["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
 {% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
 
 {% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
-{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup 2021", "LinkenID" ] %}
-{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21", "CDA-FDC" ] %}
-{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ", "fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup
+2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21",
+"CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ",
+"fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
 {% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
-{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 — 2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
+{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 —
+2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
 
 {% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
 {% set date = ["2021-01-18", "2020-12-23","2020-12-23","2020-12-23","2020-12-22","2020-12-24","2020-12-25" ] %}
 {% set status = ["Прошедший", "Будущий", "Текущий"] %}
 {% set stagetype = ["Основная", "Группы", "Сетка"] %}
-{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly Final", "Weekly Survival"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly
+Final", "Weekly Survival"] %}
 {% set substage = ["", "Day 5", "B-C", "Day 1", "A-B", "A-B"] %}
-{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier", "weekly-final", "weekly-survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier",
+"weekly-final", "weekly-survival"] %}
 
 {% set round = ["Resque", "Final", "Round 2", "Finals", "Phase 2","B-D","Group C","Table","Table","B-C", "A-C"] %}
 {% set bestof = ["1", "2", "3", "4", "1", "2"] %}
-{% set score = ["без очков","без очков","без очков","без очков","без очков", "3 очка", "3 очка", "3 очка за сухую + по числу побед", "с отниманием очков"] %}
+{% set score = ["без очков","без очков","без очков","без очков","без очков", "3 очка", "3 очка", "3 очка за сухую + по
+числу побед", "с отниманием очков"] %}
 {% set subround = ["A-C", "Day 5", "B-C", "Day 1", "A-B", "A-B"] %}
 {% set time = ["12:00", "14:45", "00:30", "23:00", "22:15", "21:30", "16:15"] %}
 {% set match = ["Match 1", "Match 2","Match 3","Match 4","Match 8","Match 9","Match 1",] %}
@@ -220,32 +228,33 @@
 
                                                         <div class="col-sm-6">
                                                             <div
-                                                            class="form-group label-up select2 required gt_match_list_game">
-                                                            <label class="select2 required"
-                                                                for="gt_match_list_game_id">Дисциплина <abbr
-                                                                    title="обязательное">*</abbr></label><select
-                                                                class="form-control select2 required select2-hidden-accessible"
-                                                                autocomplete="off" data-target="select2.select"
-                                                                data-width="100%" data-language="ru"
-                                                                data-placeholder="Выберите дисциплину"
-                                                                data-allow-clear="true"
-                                                                data-adapter-func="select2/data/extended-ajax"
-                                                                name="gt_match_list[game_id]" id="gt_match_list_game_id"
-                                                                data-select2-id="gt_match_list_game_id" tabindex="-1"
-                                                                aria-hidden="true">
-                                                                <option value="" data-select2-id="144">Выберите
-                                                                    дисциплину
-                                                                </option>
-                                                                <option value="100">PUBG</option>
-                                                                <option value="200">Valorant</option>
-                                                                <option value="300">Fortnite</option>
-                                                                <option value="313">LoL</option>
-                                                                <option value="582">Dota 2</option>
-                                                                <option value="600">Rainbow Six</option>
-                                                                <option value="704">CS:GO</option>
-                                                                <option value="755">Hearthstone</option>
-                                                                <option value="800">Overwatch</option>
-                                                            </select>
+                                                                class="form-group label-up select2 required gt_match_list_game">
+                                                                <label class="select2 required"
+                                                                    for="gt_match_list_game_id">Дисциплина <abbr
+                                                                        title="обязательное">*</abbr></label><select
+                                                                    class="form-control select2 required select2-hidden-accessible"
+                                                                    autocomplete="off" data-target="select2.select"
+                                                                    data-width="100%" data-language="ru"
+                                                                    data-placeholder="Выберите дисциплину"
+                                                                    data-allow-clear="true"
+                                                                    data-adapter-func="select2/data/extended-ajax"
+                                                                    name="gt_match_list[game_id]"
+                                                                    id="gt_match_list_game_id"
+                                                                    data-select2-id="gt_match_list_game_id"
+                                                                    tabindex="-1" aria-hidden="true">
+                                                                    <option value="" data-select2-id="144">Выберите
+                                                                        дисциплину
+                                                                    </option>
+                                                                    <option value="100">PUBG</option>
+                                                                    <option value="200">Valorant</option>
+                                                                    <option value="300">Fortnite</option>
+                                                                    <option value="313">LoL</option>
+                                                                    <option value="582">Dota 2</option>
+                                                                    <option value="600">Rainbow Six</option>
+                                                                    <option value="704">CS:GO</option>
+                                                                    <option value="755">Hearthstone</option>
+                                                                    <option value="800">Overwatch</option>
+                                                                </select>
                                                             </div>
                                                             <div
                                                                 class="form-group label-up select2 required gt_match_list_tournament">
@@ -260,7 +269,8 @@
                                                                     data-template-selection-name="template_with_icon"
                                                                     data-template-result-name="template_with_icon"
                                                                     data-placeholder="Выберите турнир"
-                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-allow-clear="true"
+                                                                    data-minimum-input-length="1"
                                                                     data-adapter-func="select2/data/extended-ajax"
                                                                     name="gt_match_list[tid]" id="gt_match_list_tid"
                                                                     data-select2-id="gt_match_list_tid" tabindex="-1"
@@ -277,7 +287,8 @@
                                                                     data-endpoint="gt_tournaments_stages.json"
                                                                     data-related="#gt_match_list_tid"
                                                                     data-placeholder="Выберите стадию"
-                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-allow-clear="true"
+                                                                    data-minimum-input-length="1"
                                                                     data-adapter-func="select2/data/extended-ajax"
                                                                     name="gt_match_list[stage]" id="gt_match_list_stage"
                                                                     data-select2-id="gt_match_list_stage" tabindex="-1"
@@ -294,7 +305,8 @@
                                                                     data-endpoint="gt_tournaments_rounds.json"
                                                                     data-related="#gt_match_list_stage"
                                                                     data-placeholder="Выберите раунд"
-                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-allow-clear="true"
+                                                                    data-minimum-input-length="1"
                                                                     data-adapter-func="select2/data/extended-ajax"
                                                                     name="gt_match_list[round]" id="gt_match_list_round"
                                                                     data-select2-id="gt_match_list_round" tabindex="-1"
@@ -310,12 +322,14 @@
                                                                     data-endpoint="gt_tournaments_round_tabs.json"
                                                                     data-related="#gt_match_list_round"
                                                                     data-placeholder="Выберите субраунд"
-                                                                    data-allow-clear="true" data-minimum-input-length="1"
+                                                                    data-allow-clear="true"
+                                                                    data-minimum-input-length="1"
                                                                     data-adapter-func="select2/data/extended-ajax"
                                                                     name="gt_match_list[rtab]" id="gt_match_list_rtab"
                                                                     data-select2-id="gt_match_list_rtab" tabindex="-1"
                                                                     aria-hidden="true">
-                                                                    <option value="" data-select2-id="149">Выберите субраунд
+                                                                    <option value="" data-select2-id="149">Выберите
+                                                                        субраунд
                                                                     </option>
                                                                 </select>
                                                             </div>
@@ -326,15 +340,15 @@
                                                                 class="form-group label-up string optional gt_match_list_date_and_time">
                                                                 <label class="string optional"
                                                                     for="gt_match_list_date_and_time">Дата и
-                                                                    Время</label><input class="form-control string optional"
-                                                                    type="text" data-target="datepicker.single"
-                                                                    data-time="true"
+                                                                    Время</label><input
+                                                                    class="form-control string optional" type="text"
+                                                                    data-target="datepicker.single" data-time="true"
                                                                     data-locale="{&quot;format&quot;:&quot;YYYY-MM-DD HH:mm&quot;,&quot;singleDatePicker&quot;:true,&quot;separator&quot;:&quot;—&quot;,&quot;applyLabel&quot;:&quot;Принять&quot;,&quot;cancelLabel&quot;:&quot;Отменить&quot;,&quot;fromLabel&quot;:&quot;с&quot;,&quot;toLabel&quot;:&quot;по&quot;,&quot;daysOfWeek&quot;:[&quot;Вс&quot;,&quot;Пн&quot;,&quot;Вт&quot;,&quot;Ср&quot;,&quot;Чт&quot;,&quot;Пт&quot;,&quot;Сб&quot;],&quot;monthNames&quot;:[&quot;янв.&quot;,&quot;февр.&quot;,&quot;марта&quot;,&quot;апр.&quot;,&quot;мая&quot;,&quot;июня&quot;,&quot;июля&quot;,&quot;авг.&quot;,&quot;сент.&quot;,&quot;окт.&quot;,&quot;нояб.&quot;,&quot;дек.&quot;],&quot;firstDay&quot;:1}"
                                                                     name="gt_match_list[date_and_time]"
                                                                     id="gt_match_list_date_and_time"
                                                                     placeholder="YYYY-MM-DD HH:mm">
                                                             </div>
-                                                            
+
                                                             <div class="form-row">
                                                                 <div
                                                                     class="form-group label-up col-sm-8 select2 optional gt_match_list_t1 form-group-valid">
@@ -350,12 +364,14 @@
                                                                         data-template-selection-name="template_with_icon"
                                                                         data-template-result-name="template_with_icon_result"
                                                                         data-placeholder="Выберите команду"
-                                                                        data-allow-clear="true" data-minimum-input-length="1"
+                                                                        data-allow-clear="true"
+                                                                        data-minimum-input-length="1"
                                                                         data-adapter-func="select2/data/extended-ajax"
                                                                         name="gt_match_list[t1]" id="gt_match_list_t1"
                                                                         data-select2-id="gt_match_list_t1" tabindex="-1"
                                                                         aria-hidden="true">
-                                                                        <option value="" data-select2-id="151">Выберите команду
+                                                                        <option value="" data-select2-id="151">Выберите
+                                                                            команду
                                                                         </option>
                                                                     </select>
                                                                 </div>
@@ -365,7 +381,8 @@
                                                                         for="gt_match_list_t1s">T1s</label><input
                                                                         class="form-control string optional"
                                                                         placeholder="Счет/Место" type="text"
-                                                                        name="gt_match_list[t1s]" id="gt_match_list_t1s">
+                                                                        name="gt_match_list[t1s]"
+                                                                        id="gt_match_list_t1s">
                                                                 </div>
                                                             </div>
                                                             <div class="form-row">
@@ -383,12 +400,14 @@
                                                                         data-template-selection-name="template_with_icon"
                                                                         data-template-result-name="template_with_icon_result"
                                                                         data-placeholder="Выберите команду"
-                                                                        data-allow-clear="true" data-minimum-input-length="1"
+                                                                        data-allow-clear="true"
+                                                                        data-minimum-input-length="1"
                                                                         data-adapter-func="select2/data/extended-ajax"
                                                                         name="gt_match_list[t2]" id="gt_match_list_t2"
                                                                         data-select2-id="gt_match_list_t2" tabindex="-1"
                                                                         aria-hidden="true">
-                                                                        <option value="" data-select2-id="153">Выберите команду
+                                                                        <option value="" data-select2-id="153">Выберите
+                                                                            команду
                                                                         </option>
                                                                     </select>
                                                                 </div>
@@ -398,7 +417,8 @@
                                                                         for="gt_match_list_t2s">T2s</label><input
                                                                         class="form-control string optional"
                                                                         placeholder="Счет/Место" type="text"
-                                                                        name="gt_match_list[t2s]" id="gt_match_list_t2s">
+                                                                        name="gt_match_list[t2s]"
+                                                                        id="gt_match_list_t2s">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -427,34 +447,35 @@
                                                 <tr>
                                                     <th width="60px"></th>
                                                     <th width="80px" class="text-center">ID #</th>
-
                                                     <th width="150px">Дата и время</th>
-                                                    
                                                     <th class="text-center" width="100px">Best of</th>
                                                     <th class="text-center" width="100px">Очки</th>
                                                     <th>Матч</th>
-                                                    
                                                     <th width="150px"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 {% for i in 2434..2454 %}
                                                 <tr id="row-{{i}}">
-                                                    <td class="text-center"><img class="gameicon" src="/img/svg/{{random(gamelogo)}}.svg" title="{{random(game)}}" alt="{{random(game)}}"/></td>
+                                                    <td class="text-center"><img class="gameicon"
+                                                            src="/img/svg/{{random(gamelogo)}}.svg"
+                                                            title="{{random(game)}}" alt="{{random(game)}}" /></td>
                                                     <td class="text-center">{{i}}</td>
                                                     <td class="m-time">
                                                         {{random(date)}}&nbsp;&nbsp;<strong>{{random(time)}}</strong>&nbsp;&nbsp;MSK
                                                     </td>
                                                     <td class="text-center">{{random(bestof)}}</td>
                                                     <td class="text-center">{{random(scorenum)}}</td>
-
                                                     <td class="complex-name">
-                                                        <span><a href="/gt_tournaments/2996/edit">{{random(tour)}}</a></span>
-                                                        <span><a href="/gt_tournaments_stages/8914/edit">{{random(stage)}}</a></span>
-                                                        <span><a href="https://escorenews.com/ru/csgo/iem-melbourne-2020/playoff/tbd-vs-tbd-247134">{{random(round)}}</a></span>
-                                                        <span><strong>{{random(team)}} {{random(scorenum)}} {{random(team)}}</strong></span>
+                                                        <span><a
+                                                                href="/gt_tournaments/2996/edit">{{random(tour)}}</a></span>
+                                                        <span><a
+                                                                href="/gt_tournaments_stages/8914/edit">{{random(stage)}}</a></span>
+                                                        <span><a
+                                                                href="https://escorenews.com/ru/csgo/iem-melbourne-2020/playoff/tbd-vs-tbd-247134">{{random(round)}}</a></span>
+                                                        <span><strong>{{random(team)}} {{random(scorenum)}}
+                                                                {{random(team)}}</strong></span>
                                                     </td>
-                                                    
                                                     <td class="text-right"><a class="btn btn-success btn-sm"
                                                             data-remote="true"
                                                             href="/gt_match_lists/247134/games?action_after_update=refresh_index"><i
@@ -463,9 +484,8 @@
                                                             href="/gt_match_lists/247134/edit"><i
                                                                 class="fas fa-pencil-alt"></i></a><a
                                                             data-confirm="Вы уверены?"
-                                                            class="btn btbtn btn-danger btn-sm"
-                                                            rel="nofollow" data-method="delete"
-                                                            href="/gt_match_lists/247134"><i
+                                                            class="btn btbtn btn-danger btn-sm" rel="nofollow"
+                                                            data-method="delete" href="/gt_match_lists/247134"><i
                                                                 class="far fa-trash-alt"></i></a></td>
                                                 </tr>
                                                 {% endfor %}
@@ -506,4 +526,5 @@
     </div>
     {% include "./tpl/devmenu.html" %}
 </body>
+
 </html>

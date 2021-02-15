@@ -1,0 +1,284 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
+{% set team = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set prize =
+["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup
+2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21",
+"CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ",
+"fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
+{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 —
+2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
+
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set status = ["Прошедший", "Будущий", "Текущий"] %}
+{% set stagetype = ["Основная", "Группы", "Сетка"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly
+Final", "Weekly Survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier",
+"weekly-final", "weekly-survival"] %}
+
+{% set country = ["Англия", "Армения", "Алжир", "Австрия", "Япония", "Китай"] %}
+{% set place = ["Old Trafor", "Italy", "Taiwan", "Puerto Rico"] %}
+
+
+<!DOCTYPE html>
+<html style="height: auto;">
+{% include "./tpl/head.html" %}
+
+<style>
+    .select2-container--default ~ .select2-container--default{
+        display: none!important;
+    }
+</style>
+
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
+                                        class="fas fa-home"></i>Dashboard</a></strong></li>
+                        <li class="breadcrumb-item active">Места проведения</li>
+                    </ol>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="card" id="gt_venues_filter">
+                                <div class="card-body" data-controller="filter-form">
+                                    <form novalidate="novalidate" class="simple_form search" action="/gt_venues"
+                                        accept-charset="UTF-8" data-remote="true" method="get">
+                                        <div class="form-row" data-controller="select2" data-target="filter-form.form">
+                                            <div class="form-group col-sm-3 select2 required search_country"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-endpoint="gt_countries.json"
+                                                    data-mirror="#gt_venue_country_id"
+                                                    data-template-selection-name="template_with_flag"
+                                                    data-template-result-name="template_with_flag"
+                                                    data-placeholder="Все страны" data-allow-clear="true"
+                                                    data-minimum-input-length="1"
+                                                    data-adapter-func="select2/data/extended-ajax"
+                                                    name="search[country]" id="search_country"
+                                                    data-select2-id="search_country" tabindex="-1" aria-hidden="true">
+                                                    <option value="" data-select2-id="2">Все страны</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--default"
+                                                    dir="ltr" data-select2-id="1" style="width: 100%;"><span
+                                                        class="selection"><span
+                                                            class="select2-selection select2-selection--single"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-search_country-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-search_country-container" role="textbox"
+                                                                aria-readonly="true"><span
+                                                                    class="select2-selection__placeholder">Все
+                                                                    страны</span></span><span
+                                                                class="select2-selection__arrow" role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            <div class="form-group col-sm-3 string required search_term"><input
+                                                    class="form-control string required" placeholder="Название"
+                                                    type="text" name="search[term]" id="search_term"></div>
+                                            <div class="col-sm-1" style="white-space: nowrap;"><span
+                                                    class="span-link"><a class="btn btn-primary"
+                                                        data-title="Обратите внимание"
+                                                        data-message="URL скопирован в буфер обмена"
+                                                        data-target="filter-form.link"
+                                                        data-action="filter-form#copy_url" href="#"><i
+                                                            class="fas fa-copy"></i></a></span><span
+                                                    class="span-link"><button name="button" type="submit"
+                                                        class="btn btn-primary"><i
+                                                            class="fas fa-search"></i></button></span></div>
+                                            <!-- EDIT -->
+                                            <div class="col-sm-5" style="white-space: nowrap;">
+                                                <button class="btn btn-success float-right collapsed"
+                                                    data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree"
+                                                    title="Добавить"><i class="fas fa-plus"></i></button>
+                                            </div>
+                                            <!--. EDIT -->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- EDIT -->
+                            <div class="accordion" id="accordionExample">
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <form class="simple_form new_gt_venue" id="new_gt_venue" autocomplete="off"
+                                        novalidate="novalidate" action="/gt_venues" accept-charset="UTF-8"
+                                        data-remote="true" method="post">
+                                        <div class="card">
+                                            <div class="card-body"><input value="new" type="hidden"
+                                                    name="gt_venue[form_part]" id="gt_venue_form_part">
+                                                <div data-controller="select2">
+                                                    <div class="form-group row select2 required gt_venue_country"><label
+                                                            class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_venue_country_id">Страна <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_countries.json"
+                                                                data-template-selection-name="template_with_flag"
+                                                                data-template-result-name="template_with_flag"
+                                                                data-placeholder="Выберите страну"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_venue[country_id]" id="gt_venue_country_id"
+                                                                data-select2-id="gt_venue_country_id" tabindex="-1"
+                                                                aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="3" style="width: 100%;"><span
+                                                                    class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-gt_venue_country_id-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-gt_venue_country_id-container"
+                                                                            role="textbox" aria-readonly="true"><span
+                                                                                class="select2-selection__placeholder">Выберите
+                                                                                страну</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span></div>
+                                                    </div>
+                                                    <div class="form-group row string required gt_venue_name"><label
+                                                            class="col-sm-2 col-form-label string required"
+                                                            for="gt_venue_name">Название <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string required" type="text"
+                                                                name="gt_venue[name]" id="gt_venue_name"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer"><input type="submit" name="commit"
+                                                    value="Добавить + Редактировать" class="btn btn-primary"
+                                                    formaction="/gt_venues?action_after_create=edit"
+                                                    data-disable-with="Добавить + Редактировать"></div>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                            <!-- .EDIT -->
+
+                            <div class="card" id="gt_venues_index">
+                                <div class="overlay dark" id="index-loader" style="display:none"><i
+                                        class="fas fa-3x fa-sync-alt fa-spin"></i></div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive" data-controller="sortable putable">
+                                        <table class="table table-striped table-valign-middle table-hover text-nowrap">
+                                            <thead class="dark">
+                                                <tr>
+                                                    <th width="60px" class="text-center">ID #</th>
+                                                    <th>Название</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in 1..4 %}
+                                                <tr id="row-{{i}}">
+                                                    <td class="text-center">{{i}}</td>
+                                                    <td><img style="width: 20px; height: 20px; object-fit: contain;"
+                                                        onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                        src="https://assets.esnadm.com/media/flag/{{i}}.png">&nbsp;&nbsp;<strong>{{random(place)}}</strong></td>
+                                                    <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                            href="/gt_venues/{{i}}/edit"><i
+                                                                class="fas fa-pencil-alt"></i></a><a
+                                                            data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                            rel="nofollow" data-method="delete" href="/gt_venues/{{i}}"><i
+                                                                class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    {% include "./tpl/devmenu.html" %}
+</body>
+
+</html>

@@ -1,0 +1,1041 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html style="height: auto;">
+<head lang="ru">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Name</title>
+  <meta name="csrf-token"
+    content="oY/TcE7c7UVhVRTqFur8SLA5jKpJItu3bYkg5JqCx09is+i55kGYa7Ntf+WMpowlAg5zrFJgPLD/GY4ycToOaQ==">
+  <script src="./static/application-f8a44522597fe8bf8146.js.socket" data-turbolinks-track="reload"></script>
+  <link rel="stylesheet" media="all" href="./static/application-17bb302e.css" data-turbolinks-track="reload">
+  <!-- <link rel="stylesheet" media="all" href="./css/css.css" data-turbolinks-track="reload"> -->
+  <link rel="stylesheet" media="all" href="./fonts/css/all.min.css" data-turbolinks-track="reload">
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://esnadm.com/packs/media/images/favicon32-82d97f60e57087d1f82ecbf0355e4183.png">
+<link href="/css/app.css" rel="stylesheet"></head>
+<style>
+    .form-group.select2 .select2:last-child {
+        display: none !important;
+    }
+</style>
+
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper" style="min-height: 588px;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" data-action="click->edit#track_change"
+                                    href="/gt_tournaments_stages"><i class="fas fa-arrow-left"></i>Стадии</a></strong>
+                        </li>
+                        <li class="breadcrumb-item"><a data-action="click->edit#track_change"
+                                href="/gt_tournaments/4469/edit">LWCall 2021</a></li>
+                        <li class="breadcrumb-item active">Playoff (<span class="inline-with-comma">ID:
+                                15799</span><span class="inline-with-comma"><a target="_blank"
+                                    href="https://escorenews.com/ru/lol/lcall/all-star-game">ESN</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://game-tournaments.com/lol/lcall/all-star-game">GT</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://ggscore.com/ru/lol/lcall/all-star-game">GG</a></span>)</li>
+                    </ol>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="simple_form edit_gt_tournaments_stage" id="edit_gt_tournaments_stage_15799"
+                                autocomplete="off" novalidate="novalidate" action="/gt_tournaments_stages/15799"
+                                accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden"
+                                    name="_method" value="patch">
+                                <div class="card" data-controller="edit-form">
+                                    <div class="card-header p-2">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=common">Главная</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link active"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=places">Призовые
+                                                    места</a></li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=grid">Сетка</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=cache"><span
+                                                        class="translation_missing"
+                                                        title="translation missing: ru.form.parts.cache">Cache</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body"><span
+                                            data-dialog_text="Форма не сохранена. Всё равно продолжить?"
+                                            data-target="edit.body edit-form.body"></span><input value="places"
+                                            type="hidden" name="gt_tournaments_stage[form_part]"
+                                            id="gt_tournaments_stage_form_part">
+                                        <div data-controller="nested-form">
+                                                                                        <div class="nested-fields form-row" data-controller="select2"
+                                                style="display:flex">
+                                                <div
+                                                    class="form-group col-sm-1 string optional gt_tournaments_stage_prize_places_place">
+                                                    <input class="form-control string optional" placeholder="Место"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][place]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_place">
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string optional gt_tournaments_stage_prize_places_prize">
+                                                    <input class="form-control string optional" placeholder="Приз"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][prize]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_prize">
+                                                </div>
+                                                <div class="col-sm-1 percent-block">
+                                                    34%
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string required gt_tournaments_stage_prize_places_decorated_points">
+                                                    <input class="form-control string required" placeholder="Очки"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][decorated_points]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_decorated_points">
+                                                </div><input value="4469" type="hidden"
+                                                    name="gt_tournaments_stage[prize_places_attributes][0][tid]"
+                                                    id="gt_tournaments_stage_prize_places_attributes_0_tid">
+                                                <div
+                                                    class="form-group col-sm-2 select2 optional gt_tournaments_stage_prize_places_invite_in form-group-valid">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru"
+                                                        data-queryparams="tid=15799&amp;game_id=313&amp;data_start=2020-12-14"
+                                                        data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon"
+                                                        data-placeholder="Инвайт на" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][event_id]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="99">Инвайт на</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="98" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Инвайт
+                                                                        на</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-3 select2 optional gt_tournaments_stage_prize_places_team_in">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru" data-queryparams="tid=4469"
+                                                        data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                        data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournaments_stage"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon_result"
+                                                        data-placeholder="Выберите участника" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][team]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="101">Выберите участника
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?qsWl&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/31768/edit&quot;>100A / 100 Thieves Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?33E7&quot; />&nbsp;100A / 100 Thieves Academy</span>"
+                                                            value="31768" data-select2-id="102">100A / 100 Thieves
+                                                            Academy</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?b4b_&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18257/edit&quot;>17A / 17 Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?WOC9&quot; />&nbsp;17A / 17 Academy</span>"
+                                                            value="18257" data-select2-id="103">17A / 17 Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35258/edit&quot;>2144 / 2144 Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144 / 2144 Gaming</span>"
+                                                            value="35258" data-select2-id="104">2144 / 2144 Gaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35259/edit&quot;>2144D / 2144 Danmu Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144D / 2144 Danmu Gaming</span>"
+                                                            value="35259" data-select2-id="105">2144D / 2144 Danmu
+                                                            Gaming</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?YJC0&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/59838/edit&quot;>404 / 404 Multigaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?WiCk&quot; />&nbsp;404 / 404 Multigaming</span>"
+                                                            value="59838" data-select2-id="106">404 / 404 Multigaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?ZHgb&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/46106/edit&quot;>5RA / 5 Ronin Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?jM-h&quot; />&nbsp;5RA / 5 Ronin Academy</span>"
+                                                            value="46106" data-select2-id="107">5RA / 5 Ronin Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69957/edit&quot;>HashTeam1</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam1</span>"
+                                                            value="69957" data-select2-id="108">HashTeam1</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69958/edit&quot;>HashTeam2</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam2</span>"
+                                                            value="69958" data-select2-id="109">HashTeam2</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69959/edit&quot;>HashTeam3</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam3</span>"
+                                                            value="69959" data-select2-id="110">HashTeam3</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?xcB-&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?eHDm&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
+                                                            value="18597" data-select2-id="111">Indonesia / LoL Garuda
+                                                            Series</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/66094/edit&quot;>LOL / Lollols</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOL / Lollols</span>"
+                                                            value="66094" data-select2-id="112">LOL / Lollols</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65675/edit&quot;>LOLE / Lolek i team</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLE / Lolek i team</span>"
+                                                            value="65675" data-select2-id="113">LOLE / Lolek i team
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/49310/edit&quot;>Loli KMS</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Loli KMS</span>"
+                                                            value="49310" data-select2-id="114">Loli KMS</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
+                                                            value="65383" data-select2-id="115">LOLO / Lights On Lights
+                                                            Off</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="100" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Выберите
+                                                                        участника</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                        class="btn-sm btn-danger"
+                                                        data-action="click->nested-form#remove_association" href="#"><i
+                                                            class="fas fa-trash"></i></a><input type="hidden"
+                                                        value="false"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][_destroy]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0__destroy">
+                                                </div>
+                                            </div>
+                                                                                        <div class="nested-fields form-row" data-controller="select2"
+                                                style="display:flex">
+                                                <div
+                                                    class="form-group col-sm-1 string optional gt_tournaments_stage_prize_places_place">
+                                                    <input class="form-control string optional" placeholder="Место"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][place]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_place">
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string optional gt_tournaments_stage_prize_places_prize">
+                                                    <input class="form-control string optional" placeholder="Приз"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][prize]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_prize">
+                                                </div>
+                                                <div class="col-sm-1 percent-block">
+                                                    34%
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string required gt_tournaments_stage_prize_places_decorated_points">
+                                                    <input class="form-control string required" placeholder="Очки"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][decorated_points]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_decorated_points">
+                                                </div><input value="4469" type="hidden"
+                                                    name="gt_tournaments_stage[prize_places_attributes][0][tid]"
+                                                    id="gt_tournaments_stage_prize_places_attributes_0_tid">
+                                                <div
+                                                    class="form-group col-sm-2 select2 optional gt_tournaments_stage_prize_places_invite_in form-group-valid">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru"
+                                                        data-queryparams="tid=15799&amp;game_id=313&amp;data_start=2020-12-14"
+                                                        data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon"
+                                                        data-placeholder="Инвайт на" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][event_id]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="99">Инвайт на</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="98" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Инвайт
+                                                                        на</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-3 select2 optional gt_tournaments_stage_prize_places_team_in">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru" data-queryparams="tid=4469"
+                                                        data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                        data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournaments_stage"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon_result"
+                                                        data-placeholder="Выберите участника" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][team]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="101">Выберите участника
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?qsWl&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/31768/edit&quot;>100A / 100 Thieves Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?33E7&quot; />&nbsp;100A / 100 Thieves Academy</span>"
+                                                            value="31768" data-select2-id="102">100A / 100 Thieves
+                                                            Academy</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?b4b_&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18257/edit&quot;>17A / 17 Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?WOC9&quot; />&nbsp;17A / 17 Academy</span>"
+                                                            value="18257" data-select2-id="103">17A / 17 Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35258/edit&quot;>2144 / 2144 Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144 / 2144 Gaming</span>"
+                                                            value="35258" data-select2-id="104">2144 / 2144 Gaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35259/edit&quot;>2144D / 2144 Danmu Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144D / 2144 Danmu Gaming</span>"
+                                                            value="35259" data-select2-id="105">2144D / 2144 Danmu
+                                                            Gaming</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?YJC0&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/59838/edit&quot;>404 / 404 Multigaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?WiCk&quot; />&nbsp;404 / 404 Multigaming</span>"
+                                                            value="59838" data-select2-id="106">404 / 404 Multigaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?ZHgb&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/46106/edit&quot;>5RA / 5 Ronin Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?jM-h&quot; />&nbsp;5RA / 5 Ronin Academy</span>"
+                                                            value="46106" data-select2-id="107">5RA / 5 Ronin Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69957/edit&quot;>HashTeam1</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam1</span>"
+                                                            value="69957" data-select2-id="108">HashTeam1</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69958/edit&quot;>HashTeam2</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam2</span>"
+                                                            value="69958" data-select2-id="109">HashTeam2</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69959/edit&quot;>HashTeam3</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam3</span>"
+                                                            value="69959" data-select2-id="110">HashTeam3</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?xcB-&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?eHDm&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
+                                                            value="18597" data-select2-id="111">Indonesia / LoL Garuda
+                                                            Series</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/66094/edit&quot;>LOL / Lollols</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOL / Lollols</span>"
+                                                            value="66094" data-select2-id="112">LOL / Lollols</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65675/edit&quot;>LOLE / Lolek i team</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLE / Lolek i team</span>"
+                                                            value="65675" data-select2-id="113">LOLE / Lolek i team
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/49310/edit&quot;>Loli KMS</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Loli KMS</span>"
+                                                            value="49310" data-select2-id="114">Loli KMS</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
+                                                            value="65383" data-select2-id="115">LOLO / Lights On Lights
+                                                            Off</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="100" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Выберите
+                                                                        участника</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                        class="btn-sm btn-danger"
+                                                        data-action="click->nested-form#remove_association" href="#"><i
+                                                            class="fas fa-trash"></i></a><input type="hidden"
+                                                        value="false"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][_destroy]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0__destroy">
+                                                </div>
+                                            </div>
+                                                                                        <div class="nested-fields form-row" data-controller="select2"
+                                                style="display:flex">
+                                                <div
+                                                    class="form-group col-sm-1 string optional gt_tournaments_stage_prize_places_place">
+                                                    <input class="form-control string optional" placeholder="Место"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][place]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_place">
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string optional gt_tournaments_stage_prize_places_prize">
+                                                    <input class="form-control string optional" placeholder="Приз"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][prize]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_prize">
+                                                </div>
+                                                <div class="col-sm-1 percent-block">
+                                                    34%
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string required gt_tournaments_stage_prize_places_decorated_points">
+                                                    <input class="form-control string required" placeholder="Очки"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][decorated_points]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_decorated_points">
+                                                </div><input value="4469" type="hidden"
+                                                    name="gt_tournaments_stage[prize_places_attributes][0][tid]"
+                                                    id="gt_tournaments_stage_prize_places_attributes_0_tid">
+                                                <div
+                                                    class="form-group col-sm-2 select2 optional gt_tournaments_stage_prize_places_invite_in form-group-valid">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru"
+                                                        data-queryparams="tid=15799&amp;game_id=313&amp;data_start=2020-12-14"
+                                                        data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon"
+                                                        data-placeholder="Инвайт на" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][event_id]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="99">Инвайт на</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="98" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Инвайт
+                                                                        на</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-3 select2 optional gt_tournaments_stage_prize_places_team_in">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru" data-queryparams="tid=4469"
+                                                        data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                        data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournaments_stage"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon_result"
+                                                        data-placeholder="Выберите участника" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][team]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="101">Выберите участника
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?qsWl&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/31768/edit&quot;>100A / 100 Thieves Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?33E7&quot; />&nbsp;100A / 100 Thieves Academy</span>"
+                                                            value="31768" data-select2-id="102">100A / 100 Thieves
+                                                            Academy</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?b4b_&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18257/edit&quot;>17A / 17 Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?WOC9&quot; />&nbsp;17A / 17 Academy</span>"
+                                                            value="18257" data-select2-id="103">17A / 17 Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35258/edit&quot;>2144 / 2144 Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144 / 2144 Gaming</span>"
+                                                            value="35258" data-select2-id="104">2144 / 2144 Gaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35259/edit&quot;>2144D / 2144 Danmu Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144D / 2144 Danmu Gaming</span>"
+                                                            value="35259" data-select2-id="105">2144D / 2144 Danmu
+                                                            Gaming</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?YJC0&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/59838/edit&quot;>404 / 404 Multigaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?WiCk&quot; />&nbsp;404 / 404 Multigaming</span>"
+                                                            value="59838" data-select2-id="106">404 / 404 Multigaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?ZHgb&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/46106/edit&quot;>5RA / 5 Ronin Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?jM-h&quot; />&nbsp;5RA / 5 Ronin Academy</span>"
+                                                            value="46106" data-select2-id="107">5RA / 5 Ronin Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69957/edit&quot;>HashTeam1</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam1</span>"
+                                                            value="69957" data-select2-id="108">HashTeam1</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69958/edit&quot;>HashTeam2</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam2</span>"
+                                                            value="69958" data-select2-id="109">HashTeam2</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69959/edit&quot;>HashTeam3</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam3</span>"
+                                                            value="69959" data-select2-id="110">HashTeam3</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?xcB-&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?eHDm&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
+                                                            value="18597" data-select2-id="111">Indonesia / LoL Garuda
+                                                            Series</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/66094/edit&quot;>LOL / Lollols</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOL / Lollols</span>"
+                                                            value="66094" data-select2-id="112">LOL / Lollols</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65675/edit&quot;>LOLE / Lolek i team</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLE / Lolek i team</span>"
+                                                            value="65675" data-select2-id="113">LOLE / Lolek i team
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/49310/edit&quot;>Loli KMS</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Loli KMS</span>"
+                                                            value="49310" data-select2-id="114">Loli KMS</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
+                                                            value="65383" data-select2-id="115">LOLO / Lights On Lights
+                                                            Off</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="100" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Выберите
+                                                                        участника</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                        class="btn-sm btn-danger"
+                                                        data-action="click->nested-form#remove_association" href="#"><i
+                                                            class="fas fa-trash"></i></a><input type="hidden"
+                                                        value="false"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][_destroy]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0__destroy">
+                                                </div>
+                                            </div>
+                                                                                        <div class="nested-fields form-row" data-controller="select2"
+                                                style="display:flex">
+                                                <div
+                                                    class="form-group col-sm-1 string optional gt_tournaments_stage_prize_places_place">
+                                                    <input class="form-control string optional" placeholder="Место"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][place]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_place">
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string optional gt_tournaments_stage_prize_places_prize">
+                                                    <input class="form-control string optional" placeholder="Приз"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][prize]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_prize">
+                                                </div>
+                                                <div class="col-sm-1 percent-block">
+                                                    34%
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-2 string required gt_tournaments_stage_prize_places_decorated_points">
+                                                    <input class="form-control string required" placeholder="Очки"
+                                                        type="text"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][decorated_points]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_decorated_points">
+                                                </div><input value="4469" type="hidden"
+                                                    name="gt_tournaments_stage[prize_places_attributes][0][tid]"
+                                                    id="gt_tournaments_stage_prize_places_attributes_0_tid">
+                                                <div
+                                                    class="form-group col-sm-2 select2 optional gt_tournaments_stage_prize_places_invite_in form-group-valid">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru"
+                                                        data-queryparams="tid=15799&amp;game_id=313&amp;data_start=2020-12-14"
+                                                        data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon"
+                                                        data-placeholder="Инвайт на" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][event_id]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_event_id"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="99">Инвайт на</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="98" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_event_id-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Инвайт
+                                                                        на</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div
+                                                    class="form-group col-sm-3 select2 optional gt_tournaments_stage_prize_places_team_in">
+                                                    <select
+                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru" data-queryparams="tid=4469"
+                                                        data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                        data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournaments_stage"
+                                                        data-template-selection-name="template_with_icon"
+                                                        data-template-result-name="template_with_icon_result"
+                                                        data-placeholder="Выберите участника" data-allow-clear="true"
+                                                        data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][team]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        data-select2-id="gt_tournaments_stage_prize_places_attributes_0_team"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <option value="" data-select2-id="101">Выберите участника
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?qsWl&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/31768/edit&quot;>100A / 100 Thieves Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?33E7&quot; />&nbsp;100A / 100 Thieves Academy</span>"
+                                                            value="31768" data-select2-id="102">100A / 100 Thieves
+                                                            Academy</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?b4b_&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18257/edit&quot;>17A / 17 Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?WOC9&quot; />&nbsp;17A / 17 Academy</span>"
+                                                            value="18257" data-select2-id="103">17A / 17 Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35258/edit&quot;>2144 / 2144 Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144 / 2144 Gaming</span>"
+                                                            value="35258" data-select2-id="104">2144 / 2144 Gaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35259/edit&quot;>2144D / 2144 Danmu Gaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144D / 2144 Danmu Gaming</span>"
+                                                            value="35259" data-select2-id="105">2144D / 2144 Danmu
+                                                            Gaming</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?YJC0&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/59838/edit&quot;>404 / 404 Multigaming</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?WiCk&quot; />&nbsp;404 / 404 Multigaming</span>"
+                                                            value="59838" data-select2-id="106">404 / 404 Multigaming
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?ZHgb&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/46106/edit&quot;>5RA / 5 Ronin Academy</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?jM-h&quot; />&nbsp;5RA / 5 Ronin Academy</span>"
+                                                            value="46106" data-select2-id="107">5RA / 5 Ronin Academy
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69957/edit&quot;>HashTeam1</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam1</span>"
+                                                            value="69957" data-select2-id="108">HashTeam1</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69958/edit&quot;>HashTeam2</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam2</span>"
+                                                            value="69958" data-select2-id="109">HashTeam2</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69959/edit&quot;>HashTeam3</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam3</span>"
+                                                            value="69959" data-select2-id="110">HashTeam3</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?xcB-&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?eHDm&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
+                                                            value="18597" data-select2-id="111">Indonesia / LoL Garuda
+                                                            Series</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/66094/edit&quot;>LOL / Lollols</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOL / Lollols</span>"
+                                                            value="66094" data-select2-id="112">LOL / Lollols</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65675/edit&quot;>LOLE / Lolek i team</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLE / Lolek i team</span>"
+                                                            value="65675" data-select2-id="113">LOLE / Lolek i team
+                                                        </option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/49310/edit&quot;>Loli KMS</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Loli KMS</span>"
+                                                            value="49310" data-select2-id="114">Loli KMS</option>
+                                                        <option
+                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
+                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
+                                                            value="65383" data-select2-id="115">LOLO / Lights On Lights
+                                                            Off</option>
+                                                    </select><span
+                                                        class="select2 select2-container select2-container--default"
+                                                        dir="ltr" data-select2-id="100" style="width: 100%;"><span
+                                                            class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-haspopup="true"
+                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                                                aria-labelledby="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"><span
+                                                                    class="select2-selection__rendered"
+                                                                    id="select2-gt_tournaments_stage_prize_places_attributes_0_team-container"
+                                                                    role="textbox" aria-readonly="true"><span
+                                                                        class="select2-selection__placeholder">Выберите
+                                                                        участника</span></span><span
+                                                                    class="select2-selection__arrow"
+                                                                    role="presentation"><b
+                                                                        role="presentation"></b></span></span></span><span
+                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                        class="btn-sm btn-danger"
+                                                        data-action="click->nested-form#remove_association" href="#"><i
+                                                            class="fas fa-trash"></i></a><input type="hidden"
+                                                        value="false"
+                                                        name="gt_tournaments_stage[prize_places_attributes][0][_destroy]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_0__destroy">
+                                                </div>
+                                            </div>
+                                                                                        <template data-target="nested-form.template">
+                                                <div class="nested-fields form-row" data-controller="select2"
+                                                    style="display:flex">
+                                                    <div
+                                                        class="form-group col-sm-1 string optional gt_tournaments_stage_prize_places_place">
+                                                        <input class="form-control string optional" placeholder="Место"
+                                                            type="text"
+                                                            name="gt_tournaments_stage[prize_places_attributes][TEMPLATE_RECORD][place]"
+                                                            id="gt_tournaments_stage_prize_places_attributes_TEMPLATE_RECORD_place">
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-2 string optional gt_tournaments_stage_prize_places_prize">
+                                                        <input class="form-control string optional" placeholder="Приз"
+                                                            type="text"
+                                                            name="gt_tournaments_stage[prize_places_attributes][TEMPLATE_RECORD][prize]"
+                                                            id="gt_tournaments_stage_prize_places_attributes_TEMPLATE_RECORD_prize">
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-2 string required gt_tournaments_stage_prize_places_decorated_points">
+                                                        <input class="form-control string required" placeholder="Очки"
+                                                            type="text"
+                                                            name="gt_tournaments_stage[prize_places_attributes][TEMPLATE_RECORD][decorated_points]"
+                                                            id="gt_tournaments_stage_prize_places_attributes_TEMPLATE_RECORD_decorated_points">
+                                                    </div><input value="4469" type="hidden"
+                                                        name="gt_tournaments_stage[prize_places_attributes][TEMPLATE_RECORD][tid]"
+                                                        id="gt_tournaments_stage_prize_places_attributes_TEMPLATE_RECORD_tid">
+                                                    <div
+                                                        class="form-group col-sm-3 select2 optional gt_tournaments_stage_prize_places_invite_in form-group-valid">
+                                                        <select class="form-control select2 optional" autocomplete="off"
+                                                            data-target="select2.select" data-width="100%"
+                                                            data-language="ru"
+                                                            data-queryparams="tid=15799&amp;game_id=313&amp;data_start=2020-12-14"
+                                                            data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon"
+                                                            data-placeholder="Инвайт на" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournaments_stage[prize_places_attributes][TEMPLATE_RECORD][event_id]"
+                                                            id="gt_tournaments_stage_prize_places_attributes_TEMPLATE_RECORD_event_id">
+                                                            <option value="">Инвайт на</option>
+                                                        </select>
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-3 select2 optional gt_tournaments_stage_prize_places_team_in">
+                                                        <select class="form-control select2 optional" autocomplete="off"
+                                                            data-target="select2.select" data-width="100%"
+                                                            data-language="ru" data-queryparams="tid=4469"
+                                                            data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                            data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournaments_stage"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon_result"
+                                                            data-placeholder="Выберите участника"
+                                                            data-allow-clear="true" data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournaments_stage[prize_places_attributes][TEMPLATE_RECORD][team]"
+                                                            id="gt_tournaments_stage_prize_places_attributes_TEMPLATE_RECORD_team">
+                                                            <option value="">Выберите участника</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?qsWl&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/31768/edit&quot;>100A / 100 Thieves Academy</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t31768.png?33E7&quot; />&nbsp;100A / 100 Thieves Academy</span>"
+                                                                value="31768">100A / 100 Thieves Academy</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?b4b_&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18257/edit&quot;>17A / 17 Academy</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/7.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18257.png?WOC9&quot; />&nbsp;17A / 17 Academy</span>"
+                                                                value="18257">17A / 17 Academy</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35258/edit&quot;>2144 / 2144 Gaming</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144 / 2144 Gaming</span>"
+                                                                value="35258">2144 / 2144 Gaming</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/35259/edit&quot;>2144D / 2144 Danmu Gaming</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;2144D / 2144 Danmu Gaming</span>"
+                                                                value="35259">2144D / 2144 Danmu Gaming</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?YJC0&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/59838/edit&quot;>404 / 404 Multigaming</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/5.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t59838.png?WiCk&quot; />&nbsp;404 / 404 Multigaming</span>"
+                                                                value="59838">404 / 404 Multigaming</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?ZHgb&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/46106/edit&quot;>5RA / 5 Ronin Academy</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/38.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t46106.png?jM-h&quot; />&nbsp;5RA / 5 Ronin Academy</span>"
+                                                                value="46106">5RA / 5 Ronin Academy</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69957/edit&quot;>HashTeam1</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam1</span>"
+                                                                value="69957">HashTeam1</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69958/edit&quot;>HashTeam2</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam2</span>"
+                                                                value="69958">HashTeam2</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69959/edit&quot;>HashTeam3</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/11.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;HashTeam3</span>"
+                                                                value="69959">HashTeam3</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?xcB-&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?eHDm&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
+                                                                value="18597">Indonesia / LoL Garuda Series</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/66094/edit&quot;>LOL / Lollols</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOL / Lollols</span>"
+                                                                value="66094">LOL / Lollols</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65675/edit&quot;>LOLE / Lolek i team</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/21.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLE / Lolek i team</span>"
+                                                                value="65675">LOLE / Lolek i team</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/49310/edit&quot;>Loli KMS</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/3.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Loli KMS</span>"
+                                                                value="49310">Loli KMS</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
+                                                                value="65383">LOLO / Lights On Lights Off</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                            class="btn-sm btn-danger"
+                                                            data-action="click->nested-form#remove_association"
+                                                            href="#"><i class="fas fa-trash"></i></a><input
+                                                            type="hidden" value="false"
+                                                            name="gt_tournaments_stage[prize_places_attributes][TEMPLATE_RECORD][_destroy]"
+                                                            id="gt_tournaments_stage_prize_places_attributes_TEMPLATE_RECORD__destroy">
+                                                    </div>
+                                                </div>
+                                            </template>
+                                            <div data-target="nested-form.addhere"></div><a
+                                                class="btn btn-sm btn-outline-primary" data-target="nested-form.add"
+                                                data-action="nested-form#add_association" href="#">Добавить Призовое
+                                                место</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer"><input type="submit" name="commit"
+                                            value="Сохранить + Редактировать" class="btn btn-primary"
+                                            formaction="/gt_tournaments_stages/15799?action_after_update=edit"
+                                            method="post" data-disable-with="Сохранить + Редактировать"><input
+                                            type="submit" name="commit" value="Сохранить" class="btn btn-primary"
+                                            formaction="/gt_tournaments_stages/15799?action_after_update=index"
+                                            method="post" data-disable-with="Сохранить"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <!--PAGES select only dev-->
+<style>
+  
+  .project-menu{
+    position: fixed;
+    z-index: 21000;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px 0px 0px 0px;
+    /*display: none;*/
+  }
+  .project-menu .btn-group{
+    margin: 0;
+  }
+  .project-menu a{
+    font-size: 12px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+
+    <div class="dropdown">
+      <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        DEV Меню
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a href="/" class="dropdown-item">index</a>
+          <a href="/gt_match_lists.html" class="dropdown-item ">gt_match_lists</a>
+          <a href="/gt_tournaments_edit_prize.html" class="dropdown-item ">gt_tournaments_edit_prize</a>
+          <a href="/gt_tournaments_edit_teams.html" class="dropdown-item ">gt_tournaments_edit_teams</a>
+          <a href="/gt_tournaments_edit.html" class="dropdown-item ">gt_tournaments_edit</a>
+          <a href="/gt_tournaments_round_tabs.html" class="dropdown-item ">gt_tournaments_round_tabs</a>
+          <a href="/gt_tournaments_rounds.html" class="dropdown-item ">gt_tournaments_rounds</a>
+          <a href="/gt_tournaments_stages.html" class="dropdown-item ">gt_tournaments_stages</a>
+          <a href="/gt_venues.html" class="dropdown-item text-danger">gt_venues</a>
+          <a href="/gt_teams_lists.html" class="dropdown-item text-danger">gt_teams_lists</a>
+          <a href="/gt_player_lists.html" class="dropdown-item text-danger">gt_player_lists</a>
+          <a href="/gt_tournaments_stages_edit.html" class="dropdown-item text-danger">gt_tournaments_stages_edit</a>
+          <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_prize</a>
+          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_mesh</a>
+          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-danger">gt_tournaments_rounds_edit</a>
+          
+          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-danger">gt_tournaments_round_tabs_edit</a>
+          <a href="/gt_match_lists_edit.html" class="dropdown-item text-danger">gt_match_lists_edit</a>
+          <a href="/live_games.html" class="dropdown-item text-danger">live_games</a>
+
+
+
+        </div>
+    </div>
+
+    
+     
+  </div>
+</div>
+
+<!--.PAGES navi dev--><script type="text/javascript" src="/js/app.js"></script></body>
+
+</html>

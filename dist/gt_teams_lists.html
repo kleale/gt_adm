@@ -1,0 +1,1294 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html style="height: auto;">
+<head lang="ru">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Name</title>
+  <meta name="csrf-token"
+    content="oY/TcE7c7UVhVRTqFur8SLA5jKpJItu3bYkg5JqCx09is+i55kGYa7Ntf+WMpowlAg5zrFJgPLD/GY4ycToOaQ==">
+  <script src="./static/application-f8a44522597fe8bf8146.js.socket" data-turbolinks-track="reload"></script>
+  <link rel="stylesheet" media="all" href="./static/application-17bb302e.css" data-turbolinks-track="reload">
+  <!-- <link rel="stylesheet" media="all" href="./css/css.css" data-turbolinks-track="reload"> -->
+  <link rel="stylesheet" media="all" href="./fonts/css/all.min.css" data-turbolinks-track="reload">
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://esnadm.com/packs/media/images/favicon32-82d97f60e57087d1f82ecbf0355e4183.png">
+<link href="/css/app.css" rel="stylesheet"></head>
+<style>
+    .select2-container--default~.select2-container--default {
+        display: none !important;
+    }
+</style>
+
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
+                                        class="fas fa-home"></i>Dashboard</a></strong></li>
+                        <li class="breadcrumb-item active">Команды</li>
+                    </ol>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="card" id="gt_teams_lists_filter">
+                                <div class="card-body" data-controller="filter-form">
+                                    <form novalidate="novalidate" class="simple_form search" action="/gt_teams_lists"
+                                        accept-charset="UTF-8" data-remote="true" method="get">
+                                        <div class="form-row" data-controller="select2" data-target="filter-form.form">
+                                            <div class="form-group col-sm-2 select2 required search_game"><select
+                                                    class="form-control select2 required select2-hidden-accessible"
+                                                    autocomplete="off" data-target="select2.select" data-width="100%"
+                                                    data-language="ru" data-mirror="#gt_teams_list_game_id"
+                                                    data-placeholder="Все дисциплины" data-allow-clear="true"
+                                                    data-adapter-func="select2/data/extended-ajax" name="search[game]"
+                                                    id="search_game" data-select2-id="search_game" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option value="" data-select2-id="2">Все дисциплины</option>
+                                                    <option value="100">PUBG</option>
+                                                    <option value="200">Valorant</option>
+                                                    <option value="300">Fortnite</option>
+                                                    <option value="313">LoL</option>
+                                                    <option value="582">Dota 2</option>
+                                                    <option value="600">Rainbow Six</option>
+                                                    <option value="704">CS:GO</option>
+                                                    <option value="755">Hearthstone</option>
+                                                    <option value="800">Overwatch</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--default"
+                                                    dir="ltr" data-select2-id="1" style="width: 100%;"><span
+                                                        class="selection"><span
+                                                            class="select2-selection select2-selection--single"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-search_game-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-search_game-container" role="textbox"
+                                                                aria-readonly="true"><span
+                                                                    class="select2-selection__placeholder">Все
+                                                                    дисциплины</span></span><span
+                                                                class="select2-selection__arrow" role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            <div class="form-group col-sm-3 string required search_teams_title"><input
+                                                    class="form-control string required" placeholder="Все названия"
+                                                    type="text" name="search[teams_title]" id="search_teams_title">
+                                            </div>
+                                            <div class="form-group col-sm-3 string required search_teams_api_id"><input
+                                                    class="form-control string required" placeholder="Все API ID"
+                                                    type="text" name="search[teams_api_id]" id="search_teams_api_id">
+                                            </div>
+                                            <div class="col-sm-1" style="white-space: nowrap;"><span
+                                                    class="span-link"><a class="btn btn-primary"
+                                                        data-title="Обратите внимание"
+                                                        data-message="URL скопирован в буфер обмена"
+                                                        data-target="filter-form.link"
+                                                        data-action="filter-form#copy_url" href="#"><i
+                                                            class="fas fa-copy"></i></a></span><span
+                                                    class="span-link"><button name="button" type="submit"
+                                                        class="btn btn-primary"><i
+                                                            class="fas fa-search"></i></button></span></div>
+
+                                            <!-- EDIT -->
+                                            <div class="col-sm-3" style="white-space: nowrap;">
+                                                <button class="btn btn-success float-right collapsed"
+                                                    data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree"
+                                                    title="Добавить"><i class="fas fa-plus"></i></button>
+                                            </div>
+                                            <!--. EDIT -->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+                            <!-- EDIT -->
+                            <div class="accordion" id="accordionExample">
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+
+                                    <form class="simple_form new_gt_teams_list" id="new_gt_teams_list"
+                                        autocomplete="off" novalidate="novalidate" action="/gt_teams_lists"
+                                        accept-charset="UTF-8" data-remote="true" method="post">
+                                        <div class="card">
+                                            <div class="card-body"><input value="new" type="hidden"
+                                                    name="gt_teams_list[form_part]" id="gt_teams_list_form_part">
+                                                <div data-controller="select2">
+                                                    <div
+                                                        class="form-group row select2 required gt_teams_list_game form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_teams_list_game_id">Дисциплина <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-placeholder="Выберите дисциплину"
+                                                                data-allow-clear="true"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_teams_list[game_id]" id="gt_teams_list_game_id"
+                                                                data-select2-id="gt_teams_list_game_id" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option value="" data-select2-id="4">Выберите дисциплину
+                                                                </option>
+                                                                <option value="100">PUBG</option>
+                                                                <option value="200">Valorant</option>
+                                                                <option value="300">Fortnite</option>
+                                                                <option value="313">LoL</option>
+                                                                <option value="582">Dota 2</option>
+                                                                <option value="600">Rainbow Six</option>
+                                                                <option value="704">CS:GO</option>
+                                                                <option value="755">Hearthstone</option>
+                                                                <option value="800">Overwatch</option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="3" style="width: 100%;"><span
+                                                                    class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-gt_teams_list_game_id-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-gt_teams_list_game_id-container"
+                                                                            role="textbox" aria-readonly="true"><span
+                                                                                class="select2-selection__placeholder">Выберите
+                                                                                дисциплину</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span></div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 required gt_teams_list_country form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                            for="gt_teams_list_cid">Страна</label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 required select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_countries.json"
+                                                                data-template-selection-name="template_with_flag"
+                                                                data-template-result-name="template_with_flag"
+                                                                data-placeholder="Выберите страну"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_teams_list[cid]" id="gt_teams_list_cid"
+                                                                data-select2-id="gt_teams_list_cid" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option value="" data-select2-id="6">Выберите страну
+                                                                </option>
+                                                                <option
+                                                                    data-template_with_flag="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/1.png&quot; />Корея</span>"
+                                                                    value="1" data-select2-id="7">Корея</option>
+                                                                <option
+                                                                    data-template_with_flag="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/2.png&quot; />США</span>"
+                                                                    value="2" data-select2-id="8">США</option>
+                                                                <option
+                                                                    data-template_with_flag="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/129.png&quot; />Катар</span>"
+                                                                    value="129" data-select2-id="135">Катар</option>
+                                                                <option
+                                                                    data-template_with_flag="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/130.png&quot; />Оман</span>"
+                                                                    value="130" data-select2-id="136">Оман</option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="5" style="width: 100%;"><span
+                                                                    class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-gt_teams_list_cid-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-gt_teams_list_cid-container"
+                                                                            role="textbox" aria-readonly="true"><span
+                                                                                class="select2-selection__placeholder">Выберите
+                                                                                страну</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span></div>
+                                                    </div>
+                                                    <div class="form-group row string optional gt_teams_list_title">
+                                                        <label class="col-sm-2 col-form-label string optional"
+                                                            for="gt_teams_list_title">Сокращенное название</label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string optional" type="text"
+                                                                value="" name="gt_teams_list[title]"
+                                                                id="gt_teams_list_title"></div>
+                                                    </div>
+                                                    <div class="form-group row string required gt_teams_list_name">
+                                                        <label class="col-sm-2 col-form-label string required"
+                                                            for="gt_teams_list_name">Полное название <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string required" type="text"
+                                                                value="" name="gt_teams_list[name]"
+                                                                id="gt_teams_list_name"></div>
+                                                    </div>
+                                                    <div class="form-group row string required gt_teams_list_eng"><label
+                                                            class="col-sm-2 col-form-label string required"
+                                                            for="gt_teams_list_eng">Транслит <abbr
+                                                                title="обязательное">*</abbr></label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string required" type="text"
+                                                                value="" name="gt_teams_list[eng]"
+                                                                id="gt_teams_list_eng"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer"><input type="submit" name="commit"
+                                                    value="Добавить + Редактировать" class="btn btn-primary"
+                                                    formaction="/gt_teams_lists?action_after_create=edit"
+                                                    data-disable-with="Добавить + Редактировать"></div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <!-- .EDIT -->
+
+                            <div class="card" id="gt_teams_lists_index">
+                                <div class="overlay dark" id="index-loader" style="display:none"><i
+                                        class="fas fa-3x fa-sync-alt fa-spin"></i></div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive" data-controller="sortable putable">
+                                        <table class="table table-striped table-valign-middle table-hover text-nowrap">
+                                            <thead class="dark">
+                                                <tr>
+                                                    <th width="60px"></th>
+                                                    <th width="80px" class="text-center">ID #</th>
+                                                    <th width="60px" class="text-center">Страна</th>
+                                                    <th class="text-center" width="30px"></th>
+                                                    <th width="210px">Команда</th>
+                                                    <th width="210px">Транслит</th>
+                                                    <th>API</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                    <tr id="row-60">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/rs.svg" title="LOL" alt="LOL"/></td>
+                                                        <td class="text-center">60</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/60.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>VICI</strong><br>
+                                                            <small>Virtus.Pro</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">dreamteam-2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-61">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/sc2.svg" title="LOL" alt="LOL"/></td>
+                                                        <td class="text-center">61</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/61.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>VICI</strong><br>
+                                                            <small>Ehome</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">creep-gaming</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-62">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/pubg.svg" title="Overwatch" alt="LOL"/></td>
+                                                        <td class="text-center">62</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/62.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>KG</strong><br>
+                                                            <small>EG</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">hashteam1</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-63">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/sc2.svg" title="DOTA2" alt="CSGO"/></td>
+                                                        <td class="text-center">63</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/63.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>OG</strong><br>
+                                                            <small>Virtus.Pro</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">somos-los-rex</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                            <i style="color:green" title="Есть" class="fas fa-check"></i>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-64">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/csgo.svg" title="Overwatch" alt="LOL"/></td>
+                                                        <td class="text-center">64</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/64.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>OG</strong><br>
+                                                            <small>Empire</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">gol-pashmian-ya-kon-pashm</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-65">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/dota2.svg" title="CSGO" alt="CSGO"/></td>
+                                                        <td class="text-center">65</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/65.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>KG</strong><br>
+                                                            <small>OG</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">take-that</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                            <i style="color:green" title="Есть" class="fas fa-check"></i>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-66">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/rl.svg" title="DOTA2" alt="DOTA2"/></td>
+                                                        <td class="text-center">66</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/66.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Mineski</strong><br>
+                                                            <small>Gambit</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">gol-pashmian-ya-kon-pashm</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-67">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/csgo.svg" title="Overwatch" alt="Overwatch"/></td>
+                                                        <td class="text-center">67</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/67.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Liquid</strong><br>
+                                                            <small>KG</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">take-that</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-68">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/pubg.svg" title="LOL" alt="DOTA2"/></td>
+                                                        <td class="text-center">68</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/68.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Navi</strong><br>
+                                                            <small>Navi</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">toshik-gaming</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                            <i style="color:green" title="Есть" class="fas fa-check"></i>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-69">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/sc2.svg" title="DOTA2" alt="CSGO"/></td>
+                                                        <td class="text-center">69</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/69.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Mineski</strong><br>
+                                                            <small>Mineski</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">dreamteam-2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-70">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/artifact.svg" title="CSGO" alt="CSGO"/></td>
+                                                        <td class="text-center">70</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/70.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Navi</strong><br>
+                                                            <small>OG</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">hashteam1</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-71">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/csgo.svg" title="Overwatch" alt="DOTA2"/></td>
+                                                        <td class="text-center">71</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/71.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Mineski</strong><br>
+                                                            <small>Navi</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">testuniverse2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-72">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/csgo.svg" title="LOL" alt="DOTA2"/></td>
+                                                        <td class="text-center">72</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/72.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>VICI</strong><br>
+                                                            <small>OG</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">take-that</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                            <i style="color:green" title="Есть" class="fas fa-check"></i>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-73">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/lol.svg" title="CSGO" alt="CSGO"/></td>
+                                                        <td class="text-center">73</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/73.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Liquid</strong><br>
+                                                            <small>Mineski</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">gol-pashmian-ya-kon-pashm</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-74">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/dota2.svg" title="LOL" alt="CSGO"/></td>
+                                                        <td class="text-center">74</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/74.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Liquid</strong><br>
+                                                            <small>Gambit</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">testuniverse2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-75">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/hs.svg" title="DOTA2" alt="CSGO"/></td>
+                                                        <td class="text-center">75</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/75.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Creep</strong><br>
+                                                            <small>Navi</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">testuniverse2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-76">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/hs.svg" title="Fortnite" alt="Overwatch"/></td>
+                                                        <td class="text-center">76</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/76.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Navi</strong><br>
+                                                            <small>Empire</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">dreamteam-2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-77">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/rl.svg" title="DOTA2" alt="Overwatch"/></td>
+                                                        <td class="text-center">77</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/77.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Navi</strong><br>
+                                                            <small>Empire</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">creep-gaming</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-78">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/pubg.svg" title="Overwatch" alt="LOL"/></td>
+                                                        <td class="text-center">78</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/78.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>KG</strong><br>
+                                                            <small>Movistar Riders</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">creep-gaming</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-79">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/sc2.svg" title="DOTA2" alt="Fortnite"/></td>
+                                                        <td class="text-center">79</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/79.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Liquid</strong><br>
+                                                            <small>Navi</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">dreamteam-2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-80">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/lol.svg" title="Overwatch" alt="DOTA2"/></td>
+                                                        <td class="text-center">80</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/80.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Virtus.Pro</strong><br>
+                                                            <small>Virtus.Pro</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">dreamteam-2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-81">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/rs.svg" title="Overwatch" alt="DOTA2"/></td>
+                                                        <td class="text-center">81</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/81.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Mineski</strong><br>
+                                                            <small>Liquid</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">take-that</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-82">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/fn.svg" title="LOL" alt="Fortnite"/></td>
+                                                        <td class="text-center">82</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/82.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Navi</strong><br>
+                                                            <small>Navi</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">somos-los-rex</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-83">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/rs.svg" title="Overwatch" alt="LOL"/></td>
+                                                        <td class="text-center">83</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/83.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Empire</strong><br>
+                                                            <small>VICI</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">dreamteam-2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-84">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/artifact.svg" title="LOL" alt="Overwatch"/></td>
+                                                        <td class="text-center">84</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/84.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Gambit</strong><br>
+                                                            <small>VICI</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">toshik-gaming</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-85">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/dota2.svg" title="CSGO" alt="LOL"/></td>
+                                                        <td class="text-center">85</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/85.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>OG</strong><br>
+                                                            <small>Movistar Riders</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">take-that</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-86">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/csgo.svg" title="LOL" alt="CSGO"/></td>
+                                                        <td class="text-center">86</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/86.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>OG</strong><br>
+                                                            <small>OG</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">take-that</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-87">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/sc2.svg" title="DOTA2" alt="Fortnite"/></td>
+                                                        <td class="text-center">87</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/87.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Empire</strong><br>
+                                                            <small>Movistar Riders</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">testuniverse2</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-88">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/sc2.svg" title="DOTA2" alt="Overwatch"/></td>
+                                                        <td class="text-center">88</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/88.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Mineski</strong><br>
+                                                            <small>Liquid</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">hashteam1</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-89">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/pubg.svg" title="LOL" alt="Overwatch"/></td>
+                                                        <td class="text-center">89</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/89.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>KG</strong><br>
+                                                            <small>Mineski</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">gol-pashmian-ya-kon-pashm</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                                    <tr id="row-90">
+                                                        <td class="text-center"><img class="gameicon" src="/img/svg/artifact.svg" title="LOL" alt="LOL"/></td>
+                                                        <td class="text-center">90</td>
+                                                        <td class="text-center"><img
+                                                                style="width: 20px; height: 20px; object-fit: contain;"
+                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                src="https://assets.esnadm.com/media/flag/90.png"></td>
+                                                        
+                                                        <td class="text-center"><img
+                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                src="https://assets.esnadm.com/media/logo/not.svg"></td>
+                                                        <td>
+                                                            <strong>Mineski</strong><br>
+                                                            <small>OG</small>&nbsp;<small>
+                                                        </td>
+                                                        <td> 
+                                                            <a href="https://escorenews.com/ru/pubg/team/dreamteam-2,somos-los-rex,creep-gaming,toshik-gaming,dreamteam-2,testuniverse2,hashteam1,take-that,gol-pashmian-ya-kon-pashm">somos-los-rex</a>
+                                                        </td>
+                                                        <td>
+                                                                                                                    </td>
+                                                        <td class="text-right"><a class="btn btn-primary btn-sm"
+                                                                href="/gt_teams_lists/69960/edit"><i
+                                                                    class="fas fa-pencil-alt"></i></a><a
+                                                                data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
+                                                                rel="nofollow" data-method="delete"
+                                                                href="/gt_teams_lists/69960"><i
+                                                                    class="fas fa-trash"></i></a></td>
+                                                    </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <nav class="pagination">
+                                        <li class="page-item active"><a data-remote="true" class="page-link">1</a></li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_teams_lists?page=2">2</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_teams_lists?page=3">3</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_teams_lists?page=4">4</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_teams_lists?page=5">5</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
+                                        <li class="page-item"><a rel="next" class="page-link" data-remote="true"
+                                                href="/gt_teams_lists?page=2">Следующая ›</a></li>
+                                        <li class="page-item"><a class="page-link" data-remote="true"
+                                                href="/gt_teams_lists?page=1055">Последняя »</a></li>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--PAGES select only dev-->
+<style>
+  
+  .project-menu{
+    position: fixed;
+    z-index: 21000;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px 0px 0px 0px;
+    /*display: none;*/
+  }
+  .project-menu .btn-group{
+    margin: 0;
+  }
+  .project-menu a{
+    font-size: 12px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+
+    <div class="dropdown">
+      <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        DEV Меню
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a href="/" class="dropdown-item">index</a>
+          <a href="/gt_match_lists.html" class="dropdown-item ">gt_match_lists</a>
+          <a href="/gt_tournaments_edit_prize.html" class="dropdown-item ">gt_tournaments_edit_prize</a>
+          <a href="/gt_tournaments_edit_teams.html" class="dropdown-item ">gt_tournaments_edit_teams</a>
+          <a href="/gt_tournaments_edit.html" class="dropdown-item ">gt_tournaments_edit</a>
+          <a href="/gt_tournaments_round_tabs.html" class="dropdown-item ">gt_tournaments_round_tabs</a>
+          <a href="/gt_tournaments_rounds.html" class="dropdown-item ">gt_tournaments_rounds</a>
+          <a href="/gt_tournaments_stages.html" class="dropdown-item ">gt_tournaments_stages</a>
+          <a href="/gt_venues.html" class="dropdown-item text-danger">gt_venues</a>
+          <a href="/gt_teams_lists.html" class="dropdown-item text-danger">gt_teams_lists</a>
+          <a href="/gt_player_lists.html" class="dropdown-item text-danger">gt_player_lists</a>
+          <a href="/gt_tournaments_stages_edit.html" class="dropdown-item text-danger">gt_tournaments_stages_edit</a>
+          <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_prize</a>
+          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_mesh</a>
+          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-danger">gt_tournaments_rounds_edit</a>
+          
+          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-danger">gt_tournaments_round_tabs_edit</a>
+          <a href="/gt_match_lists_edit.html" class="dropdown-item text-danger">gt_match_lists_edit</a>
+          <a href="/live_games.html" class="dropdown-item text-danger">live_games</a>
+
+
+
+        </div>
+    </div>
+
+    
+     
+  </div>
+</div>
+
+<!--.PAGES navi dev--><script type="text/javascript" src="/js/app.js"></script></body>
+
+</html>

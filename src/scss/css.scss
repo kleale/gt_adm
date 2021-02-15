@@ -5,7 +5,6 @@
 // }
 /*** .hide double select ***/
 
-
 body {
     font-size: 13px;
     font-family: helvetica;
@@ -26,53 +25,29 @@ body {
 .layout-navbar-fixed .wrapper .content-wrapper {
     margin-top: 0;
 }
-span.table__hl {
-    border: 0;
-    background: transparent;
-    padding: 0;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background: transparent;
-}
-
-.table td,
-.table th {
-    border-top: 1px solid #f1f1f1;
-    padding: 0.5rem;
-    line-height: 1rem;
-}
-
-.table img {
-    max-width: 30px;
-    max-height: 30px;
-}
 
 .btn-primary {
     background-color: #2196f3;
     border-color: transparent;
 }
 
+.btn-transparent-danger {
+    color: #e91e63;
+}
+
+.btn-transparent-primary {
+    color: #03a9f4;
+}
+
+.btn-transparent-success {
+    color: #8bc34a;
+}
+
 a {
     color: #2196f3;
 }
 
-.table thead.dark {
-    background-color: #e1e7ec;
-    border-radius: 5px 5px 0 0;
-}
-
-.table thead.dark th {
-    color: #333;
-    font-weight: bold;
-    font-size: 10px;
-    padding-top: 16px;
-    padding-bottom: 15px;
-    text-transform: uppercase;
-}
-
 .card {
-    /* border: 0;*/
     border: 1px solid #ddd;
     background: #fff;
     border-radius: 5px;
@@ -82,6 +57,10 @@ a {
 
 .card-footer {
     background: #fff;
+}
+
+.card-header h6 {
+    margin: 5px 0;
 }
 
 form .card-body {
@@ -117,33 +96,6 @@ form .card-body {
     margin-top: 0 !important;
 }
 
-.table-hover tbody tr:hover {
-    background-color: #F4FAFE;
-}
-
-.with-main-row:hover {
-    background: #f3f9fd;
-}
-
-.table tbody + tbody {
-    border-top: 1px solid #dee2e6;
-}
-
-.table thead.dark {
-    background-color: #ffffff;
-}
-
-.btn-transparent-danger {
-    color: #e91e63;
-}
-
-.btn-transparent-primary {
-    color: #03a9f4;
-}
-
-.btn-transparent-success {
-    color: #8bc34a;
-}
 
 img.svgicon {
     margin-right: 12px;
@@ -153,6 +105,12 @@ img.svgicon {
     top: -2px;
     opacity: 0.3;
 }
+
+.gameicon {
+    width: 18px;
+    height: 18px;
+}
+
 .form-group.label-up label.select2,
 .form-group.label-up label.optional,
 .form-group.label-up label.string {
@@ -165,15 +123,79 @@ img.svgicon {
     margin-left: 4px;
     width: auto;
 }
+.input-group-text{
+    font-size: 13px;
+    background-color: #f5faff;
+}
+.col-form-label{
+    line-height: 23px;
+}
 
 .accordion .card-body {
     padding-bottom: 0;
 }
 
-.table tbody.with-main-row tr:first-child,
-.table tbody tr.sub-row {
-    background-color: transparent;
+.card-body .table {
+    margin-bottom: 0;
 }
+
+.table {
+    td,
+    th {
+        border-top: 1px solid #f1f1f1;
+        padding: 0.5rem;
+        line-height: 1rem;
+    }
+    tr:last-child td{
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+    thead.dark {
+        background-color: #e1e7ec;
+        border-radius: 5px 5px 0 0;
+    }
+
+    thead.dark th {
+        color: #333;
+        font-weight: bold;
+        font-size: 10px;
+        padding-top: 16px;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    tbody + tbody {
+        border-top: 1px solid #dee2e6;
+    }
+
+    thead.dark {
+        background-color: #ffffff;
+    }
+
+    tbody.with-main-row tr:first-child,
+    tbody tr.sub-row {
+        background-color: transparent;
+    }
+    td.eventLogo {
+        padding-right: 0;
+        width: 39px;
+    }
+}
+
+span.table__hl {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: transparent;
+}
+
 .with-main-row tr td {
     border-bottom: 1px solid #f1f1f1;
 }
@@ -181,10 +203,12 @@ img.svgicon {
 .table__hl {
     text-align: inherit;
 }
+.table-hover tbody tr:hover {
+    background-color: #f4fafe;
+}
 
-.table td.eventLogo {
-    padding-right: 0;
-    width: 39px;
+.with-main-row:hover {
+    background: #f3f9fd;
 }
 
 /* .table tbody.with-main-row tr:first-child{
@@ -206,9 +230,6 @@ img.svgicon {
 .custom-control-label:before {
     top: 0.15rem;
 }
-.custom-switch .custom-control-label:after {
-    top: calc(0.15rem + 2px);
-}
 
 [data-target="uppy.uploaded"] img {
     display: block;
@@ -216,24 +237,38 @@ img.svgicon {
     border: 2px solid #e2e2e2;
     margin: 0;
 }
-.card-header h6 {
-    margin: 5px 0;
-}
-
 .ml-21px {
     margin-left: 21px;
 }
 
-.edit-teams-list .list-group-item {
-    padding: 0.5rem 1.25rem;
+.edit-teams-list {
+    .list-group-item {
+        padding: 0.5rem 1.25rem;
+    }
+    li.list-group-item {
+        display: flex;
+    }
+    .tname {
+        flex-grow: 1;
+    }
 }
-.edit-teams-list li.list-group-item {
-    display: flex;
+
+.custom-switch {
+    line-height: 21px;
+    .custom-control-label:after {
+        top: calc(0.15rem + 2px);
+    }
 }
-.edit-teams-list .tname {
-    flex-grow: 1;
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    font-size: 20px;
+    color: #dc3545;
 }
-.gameicon{
-    width: 18px;
-    height: 18px;
+
+
+.percent-block {
+    max-width: 60px;
+    line-height: 39px;
+    text-align: center;
 }
+

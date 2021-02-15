@@ -21,8 +21,9 @@
         display: none;
     }
 
-    #gt_tournament_logo_trigger.btn-primary ~ #gt_tournament_logo_trigger{
-        display: none;
+    #gt_tournament_logo_trigger.btn-primary~#gt_tournament_logo_trigger,
+    #gt_tournament_icon_trigger.btn-outline-primary {
+        display: none !important;
     }
 </style>
 
@@ -76,7 +77,22 @@
         </aside>
 
         <div class="content-wrapper">
-            <div class="content-header"><div class="container-fluid"><ol class="breadcrumb"><li class="breadcrumb-item"><strong><a class="with-icon" data-action="click->edit#track_change" href="/gt_tournaments"><i class="fas fa-arrow-left"></i>Турниры</a></strong></li><li class="breadcrumb-item active">Tac8 Pro Am League / Tac8 PUBG Pro Am League (<span class="inline-with-comma">ID: 4355</span><span class="inline-with-comma"><a target="_blank" href="https://escorenews.com/ru/pubg/tac8-pro-am-league">ESN</a></span><span class="inline-with-comma"><a target="_blank" href="https://game-tournaments.com/pubg/tac8-pro-am-league">GT</a></span><span class="inline-with-comma"><a target="_blank" href="https://ggscore.com/ru/pubg/tac8-pro-am-league">GG</a></span>)</li></ol></div></div>
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" data-action="click->edit#track_change"
+                                    href="/gt_tournaments"><i class="fas fa-arrow-left"></i>Турниры</a></strong></li>
+                        <li class="breadcrumb-item active">Tac8 Pro Am League / Tac8 PUBG Pro Am League (<span
+                                class="inline-with-comma">ID: 4355</span><span class="inline-with-comma"><a
+                                    target="_blank"
+                                    href="https://escorenews.com/ru/pubg/tac8-pro-am-league">ESN</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://game-tournaments.com/pubg/tac8-pro-am-league">GT</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://ggscore.com/ru/pubg/tac8-pro-am-league">GG</a></span>)</li>
+                    </ol>
+                </div>
+            </div>
 
             <section class="content">
                 <div class="container-fluid">
@@ -87,6 +103,11 @@
                                 data-remote="true" method="post"><input type="hidden" name="_method" value="patch">
                                 <div class="card" data-controller="edit-form">
                                     <div class="card-header p-2">
+                                        <h5 class="float-right mt-1 mb-1 mr-2">
+                                            <span class="badge badge-pill badge-success">
+                                                <i class="fas fa-check"></i>&nbspS;
+                                                Проверено</span>
+                                        </h5>
                                         <ul class="nav nav-pills">
                                             <li class="nav-item"><a class="nav-link active"
                                                     data-action="click->edit#track_change" data-remote="true"
@@ -124,7 +145,7 @@
                                                     id="gt_tournament_form_part">
 
                                                 <div data-controller="select2 datepicker">
-                                                    
+
                                                     <div
                                                         class="form-group row select2 required gt_tournament_game form-group-valid">
                                                         <label class="col-sm-2 col-form-label select2 required"
@@ -170,7 +191,7 @@
                                                                     aria-hidden="true"></span></span>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div
                                                         class="form-group row select2 optional gt_tournament_series form-group-valid">
                                                         <label class="col-sm-2 col-form-label select2 optional"
@@ -743,10 +764,18 @@
                                                         class="form-group row string optional gt_tournament_prize form-group-valid">
                                                         <label class="col-sm-2 col-form-label string optional"
                                                             for="gt_tournament_prize">Призовой фонд, USD</label>
-                                                        <div class="col-sm-10"><input
-                                                                class="form-control string optional" value="$1,600"
-                                                                type="text" name="gt_tournament[prize]"
-                                                                id="gt_tournament_prize"></div>
+                                                        <div class="col-sm-10">
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"
+                                                                        id="basic-addon1">$2,400</span>
+                                                                </div>
+                                                                <input class="form-control string optional"
+                                                                    value="$1,600" type="text"
+                                                                    name="gt_tournament[prize]"
+                                                                    id="gt_tournament_prize">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group row string optional gt_tournament_points">
                                                         <label class="col-sm-2 col-form-label string optional"
@@ -817,7 +846,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div data-controller="uppy">
                                                     <div class="card">
 
@@ -876,8 +905,8 @@
                                                     class="btn btn-primary"
                                                     formaction="/gt_tournaments/4355?action_after_update=index"
                                                     method="post" data-disable-with="Сохранить"></div>
+                                        </div>
                                     </div>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -918,13 +947,27 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a href="/" class="dropdown-item">index</a>
-          <a href="/gt_match_lists.html" class="dropdown-item">gt_match_lists</a>
-          <a href="/gt_tournaments_edit_prize.html" class="dropdown-item">gt_tournaments_edit_prize</a>
-          <a href="/gt_tournaments_edit_teams.html" class="dropdown-item">gt_tournaments_edit_teams</a>
-          <a href="/gt_tournaments_edit.html" class="dropdown-item">gt_tournaments_edit</a>
-          <a href="/gt_tournaments_round_tabs.html" class="dropdown-item">gt_tournaments_round_tabs</a>
-          <a href="/gt_tournaments_rounds.html" class="dropdown-item">gt_tournaments_rounds</a>
-          <a href="/gt_tournaments_stages.html" class="dropdown-item">gt_tournaments_stages</a>
+          <a href="/gt_match_lists.html" class="dropdown-item ">gt_match_lists</a>
+          <a href="/gt_tournaments_edit_prize.html" class="dropdown-item ">gt_tournaments_edit_prize</a>
+          <a href="/gt_tournaments_edit_teams.html" class="dropdown-item ">gt_tournaments_edit_teams</a>
+          <a href="/gt_tournaments_edit.html" class="dropdown-item ">gt_tournaments_edit</a>
+          <a href="/gt_tournaments_round_tabs.html" class="dropdown-item ">gt_tournaments_round_tabs</a>
+          <a href="/gt_tournaments_rounds.html" class="dropdown-item ">gt_tournaments_rounds</a>
+          <a href="/gt_tournaments_stages.html" class="dropdown-item ">gt_tournaments_stages</a>
+          <a href="/gt_venues.html" class="dropdown-item text-danger">gt_venues</a>
+          <a href="/gt_teams_lists.html" class="dropdown-item text-danger">gt_teams_lists</a>
+          <a href="/gt_player_lists.html" class="dropdown-item text-danger">gt_player_lists</a>
+          <a href="/gt_tournaments_stages_edit.html" class="dropdown-item text-danger">gt_tournaments_stages_edit</a>
+          <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_prize</a>
+          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_mesh</a>
+          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-danger">gt_tournaments_rounds_edit</a>
+          
+          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-danger">gt_tournaments_round_tabs_edit</a>
+          <a href="/gt_match_lists_edit.html" class="dropdown-item text-danger">gt_match_lists_edit</a>
+          <a href="/live_games.html" class="dropdown-item text-danger">live_games</a>
+
+
+
         </div>
     </div>
 
@@ -934,4 +977,5 @@
 </div>
 
 <!--.PAGES navi dev--><script type="text/javascript" src="/js/app.js"></script></body>
+
 </html>

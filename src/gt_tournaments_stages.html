@@ -355,9 +355,9 @@
                                                 <tr>
                                                     <th width="60px"></th>
                                                     <th width="80px" class="text-center">ID #</th>
+                                                    <th width="40px"></th>
                                                     <th width="210px">Стадия</th>
-                                                    <th width="250px">Тип / Даты</th>
-                                                    <th >Турнир</th>
+                                                    <th>Тип / Даты</th>
                                                     <th width="120px"></th>
                                                 </tr>
                                             </thead>
@@ -367,28 +367,21 @@
                                                 data-record="gt_tournaments_stage" data-target="sortable.tbody">
                                                 <td class="text-center"><img class="gameicon" src="/img/svg/{{random(gamelogo)}}.svg" title="{{random(game)}}" alt="{{random(game)}}"/></td>
                                                 <td class="text-center">{{i}}</td>
-                                                <td>
-                                                    <form class="form-check"
-                                                        action="/api/v1/admin/gt_tournaments_stages/{{i}}"
-                                                        accept-charset="UTF-8" data-remote="true" method="post"><input
-                                                            type="hidden" name="_method" value="patch" /><input
-                                                            type="hidden" name="authenticity_token"
-                                                            value="nIjYU5ecAMP5KDvZzrKqcjKnlGY32dLW2VFlEAq9qJ2ShvAphI5DQ4AJ36fRuKJBCEgtmSjqzST2B8e3WDJhDw==" /><input
-                                                            name="gt_tournaments_stage[isq]" type="hidden"
-                                                            value="0" /><input autocomplete="false"
+                                                <td class="text-center">
+                                                    <input autocomplete="false"
                                                             data-action="change-&gt;putable#submit_form"
-                                                            class="form-check-input" id="gt_tournaments_stage_isq_{{i}}"
+                                                            id="gt_tournaments_stage_isq_{{i}}"
                                                             type="checkbox" value="1"
                                                             name="gt_tournaments_stage[isq]" /> 
-                                                            {{random(stage)}}<br>
-                                                    </form>
-                                                    <small class="ml-21px">{{random(stage)}} / {{random(stageurl)}}</small>
+                                                </td>
+                                                <td>
+                                                    <strong>{{random(stage)}}</strong></br>
+                                                    <small>{{random(stage)}} / {{random(stageurl)}}</small>
                                                 </td>
                                                 <td>
                                                     {{random(stagetype)}}<br>
                                                     <small>{{random(dates)}}</small>
                                                 </td>
-                                                <td><a href="/gt_tournaments/{{i}}/edit">{{random(tour)}}</a></td>
                                                 <td class="text-right"><a class="btn btn-primary btn-sm"
                                                         href="/gt_tournaments_stages/{{i}}/edit"><i
                                                             class="fas fa-pencil-alt"></i></a><a

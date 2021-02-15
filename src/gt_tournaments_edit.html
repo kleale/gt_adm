@@ -26,6 +26,15 @@
 <html style="height: auto;">
 {% include "./tpl/head.html" %}
 
+<style>
+    span.select2.select2-container.select2-container--default:last-child {
+        display: none;
+    }
+
+    #gt_tournament_logo_trigger.btn-primary ~ #gt_tournament_logo_trigger{
+        display: none;
+    }
+</style>
 
 <body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
     <div class="wrapper">
@@ -877,7 +886,8 @@
                                                     class="btn btn-primary"
                                                     formaction="/gt_tournaments/4355?action_after_update=index"
                                                     method="post" data-disable-with="Сохранить"></div>
-                                        </div>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>

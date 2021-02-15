@@ -16,6 +16,12 @@
   <link rel="shortcut icon" type="image/x-icon"
     href="https://esnadm.com/packs/media/images/favicon32-82d97f60e57087d1f82ecbf0355e4183.png">
 <link href="/css/app.css" rel="stylesheet"></head>
+<style>
+    span.select2.select2-container.select2-container--default:last-child {
+        display: none;
+    }
+</style>
+
 <body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
     <div class="wrapper">
         <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
@@ -120,10 +126,662 @@
                                                     ($20054)</a></li>
                                         </ul>
                                     </div>
-                                    
 
-                                    
-                                    
+                                    <div class="card-body">
+                                        <span data-dialog_text="Форма не сохранена. Всё равно продолжить?"
+                                            data-target="edit.body edit-form.body"></span>
+                                        <input value="places" type="hidden" name="gt_tournament[form_part]"
+                                            id="gt_tournament_form_part">
+
+                                            <div data-controller="nested-form">
+                                                                                                <div class="nested-fields form-row" data-controller="select2"
+                                                    style="display:flex">
+                                                    <div
+                                                        class="form-group col-sm-1 string optional gt_tournament_prize_places_place form-group-valid">
+                                                        <input class="form-control string optional" placeholder="Место"
+                                                            type="text" value="1"
+                                                            name="gt_tournament[prize_places_attributes][0][place]"
+                                                            id="gt_tournament_prize_places_attributes_0_place"></div>
+                                                    <div
+                                                        class="form-group col-sm-2 string optional gt_tournament_prize_places_prize">
+                                                        <input class="form-control string optional" placeholder="Приз"
+                                                            type="text" name="gt_tournament[prize_places_attributes][0][prize]"
+                                                            id="gt_tournament_prize_places_attributes_0_prize"></div>
+
+                                                    <div class="form-group col-sm-1">
+                                                        <input class="form-control string optional" placeholder="%"
+                                                            type="text" 
+                                                            id="gt_tournament_percent">
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-2 string required gt_tournament_prize_places_decorated_points">
+                                                        <input class="form-control string required" placeholder="Очки"
+                                                            type="text"
+                                                            name="gt_tournament[prize_places_attributes][0][decorated_points]"
+                                                            id="gt_tournament_prize_places_attributes_0_decorated_points"></div>
+                                                    <input value="4475" type="hidden"
+                                                        name="gt_tournament[prize_places_attributes][0][tid]"
+                                                        id="gt_tournament_prize_places_attributes_0_tid">
+                                                    <div
+                                                        class="form-group col-sm-2 select2 optional gt_tournament_prize_places_invite_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru"
+                                                            data-queryparams="tid=4475&amp;game_id=100&amp;data_start=2021-01-06"
+                                                            data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon"
+                                                            data-placeholder="Инвайт на" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][event_id]"
+                                                            id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="595">Инвайт на</option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="594" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_event_id-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_event_id-container"
+                                                                        role="textbox" aria-readonly="true"><span
+                                                                            class="select2-selection__placeholder">Инвайт
+                                                                            на</span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div
+                                                        class="form-group col-sm-3 select2 optional gt_tournament_prize_places_team_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru" data-queryparams="tid=4475"
+                                                            data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                            data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournament"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon_result"
+                                                            data-placeholder="Выберите участника" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][team]"
+                                                            id="gt_tournament_prize_places_attributes_0_team"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_team"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="597">Выберите участника</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?x1Bv&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/27259/edit&quot;>1246</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?qs7Z&quot; />&nbsp;1246</span>"
+                                                                value="27259" data-select2-id="598">1246</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?CxtY&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69621/edit&quot;>ERVS / E-RIVALS</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?M1yW&quot; />&nbsp;ERVS / E-RIVALS</span>"
+                                                                value="69621" data-select2-id="599">ERVS / E-RIVALS</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69960/edit&quot;>Test 3</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Test 3</span>"
+                                                                value="69960" data-select2-id="600">Test 3</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69953/edit&quot;>TEST2</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?mpjM&quot; />&nbsp;TEST2</span>"
+                                                                selected="selected" value="69953" data-select2-id="601">TEST2
+                                                            </option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="596" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_team-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_team-container"
+                                                                        role="textbox" aria-readonly="true" title="TEST2"><span
+                                                                            class="select2-selection__clear"
+                                                                            title="Удалить все элементы"
+                                                                            data-select2-id="602">×</span><span
+                                                                            class="icon-label"><img
+                                                                                style="width: 24px; height: 24px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/15.png"><img
+                                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                                                src="https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN">&nbsp;<a
+                                                                                onclick="event.stopPropagation()"
+                                                                                target="_blank"
+                                                                                href="/gt_teams_lists/69953/edit">TEST2</a></span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                            class="btn-sm btn-danger"
+                                                            data-action="click->nested-form#remove_association" href="#"><i
+                                                                class="fas fa-trash"></i></a><input type="hidden" value="false"
+                                                            name="gt_tournament[prize_places_attributes][0][_destroy]"
+                                                            id="gt_tournament_prize_places_attributes_0__destroy"></div>
+                                                </div>
+                                                                                                <div class="nested-fields form-row" data-controller="select2"
+                                                    style="display:flex">
+                                                    <div
+                                                        class="form-group col-sm-1 string optional gt_tournament_prize_places_place form-group-valid">
+                                                        <input class="form-control string optional" placeholder="Место"
+                                                            type="text" value="1"
+                                                            name="gt_tournament[prize_places_attributes][0][place]"
+                                                            id="gt_tournament_prize_places_attributes_0_place"></div>
+                                                    <div
+                                                        class="form-group col-sm-2 string optional gt_tournament_prize_places_prize">
+                                                        <input class="form-control string optional" placeholder="Приз"
+                                                            type="text" name="gt_tournament[prize_places_attributes][0][prize]"
+                                                            id="gt_tournament_prize_places_attributes_0_prize"></div>
+
+                                                    <div class="form-group col-sm-1">
+                                                        <input class="form-control string optional" placeholder="%"
+                                                            type="text" 
+                                                            id="gt_tournament_percent">
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-2 string required gt_tournament_prize_places_decorated_points">
+                                                        <input class="form-control string required" placeholder="Очки"
+                                                            type="text"
+                                                            name="gt_tournament[prize_places_attributes][0][decorated_points]"
+                                                            id="gt_tournament_prize_places_attributes_0_decorated_points"></div>
+                                                    <input value="4475" type="hidden"
+                                                        name="gt_tournament[prize_places_attributes][0][tid]"
+                                                        id="gt_tournament_prize_places_attributes_0_tid">
+                                                    <div
+                                                        class="form-group col-sm-2 select2 optional gt_tournament_prize_places_invite_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru"
+                                                            data-queryparams="tid=4475&amp;game_id=100&amp;data_start=2021-01-06"
+                                                            data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon"
+                                                            data-placeholder="Инвайт на" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][event_id]"
+                                                            id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="595">Инвайт на</option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="594" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_event_id-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_event_id-container"
+                                                                        role="textbox" aria-readonly="true"><span
+                                                                            class="select2-selection__placeholder">Инвайт
+                                                                            на</span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div
+                                                        class="form-group col-sm-3 select2 optional gt_tournament_prize_places_team_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru" data-queryparams="tid=4475"
+                                                            data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                            data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournament"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon_result"
+                                                            data-placeholder="Выберите участника" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][team]"
+                                                            id="gt_tournament_prize_places_attributes_0_team"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_team"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="597">Выберите участника</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?x1Bv&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/27259/edit&quot;>1246</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?qs7Z&quot; />&nbsp;1246</span>"
+                                                                value="27259" data-select2-id="598">1246</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?CxtY&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69621/edit&quot;>ERVS / E-RIVALS</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?M1yW&quot; />&nbsp;ERVS / E-RIVALS</span>"
+                                                                value="69621" data-select2-id="599">ERVS / E-RIVALS</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69960/edit&quot;>Test 3</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Test 3</span>"
+                                                                value="69960" data-select2-id="600">Test 3</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69953/edit&quot;>TEST2</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?mpjM&quot; />&nbsp;TEST2</span>"
+                                                                selected="selected" value="69953" data-select2-id="601">TEST2
+                                                            </option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="596" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_team-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_team-container"
+                                                                        role="textbox" aria-readonly="true" title="TEST2"><span
+                                                                            class="select2-selection__clear"
+                                                                            title="Удалить все элементы"
+                                                                            data-select2-id="602">×</span><span
+                                                                            class="icon-label"><img
+                                                                                style="width: 24px; height: 24px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/15.png"><img
+                                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                                                src="https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN">&nbsp;<a
+                                                                                onclick="event.stopPropagation()"
+                                                                                target="_blank"
+                                                                                href="/gt_teams_lists/69953/edit">TEST2</a></span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                            class="btn-sm btn-danger"
+                                                            data-action="click->nested-form#remove_association" href="#"><i
+                                                                class="fas fa-trash"></i></a><input type="hidden" value="false"
+                                                            name="gt_tournament[prize_places_attributes][0][_destroy]"
+                                                            id="gt_tournament_prize_places_attributes_0__destroy"></div>
+                                                </div>
+                                                                                                <div class="nested-fields form-row" data-controller="select2"
+                                                    style="display:flex">
+                                                    <div
+                                                        class="form-group col-sm-1 string optional gt_tournament_prize_places_place form-group-valid">
+                                                        <input class="form-control string optional" placeholder="Место"
+                                                            type="text" value="1"
+                                                            name="gt_tournament[prize_places_attributes][0][place]"
+                                                            id="gt_tournament_prize_places_attributes_0_place"></div>
+                                                    <div
+                                                        class="form-group col-sm-2 string optional gt_tournament_prize_places_prize">
+                                                        <input class="form-control string optional" placeholder="Приз"
+                                                            type="text" name="gt_tournament[prize_places_attributes][0][prize]"
+                                                            id="gt_tournament_prize_places_attributes_0_prize"></div>
+
+                                                    <div class="form-group col-sm-1">
+                                                        <input class="form-control string optional" placeholder="%"
+                                                            type="text" 
+                                                            id="gt_tournament_percent">
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-2 string required gt_tournament_prize_places_decorated_points">
+                                                        <input class="form-control string required" placeholder="Очки"
+                                                            type="text"
+                                                            name="gt_tournament[prize_places_attributes][0][decorated_points]"
+                                                            id="gt_tournament_prize_places_attributes_0_decorated_points"></div>
+                                                    <input value="4475" type="hidden"
+                                                        name="gt_tournament[prize_places_attributes][0][tid]"
+                                                        id="gt_tournament_prize_places_attributes_0_tid">
+                                                    <div
+                                                        class="form-group col-sm-2 select2 optional gt_tournament_prize_places_invite_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru"
+                                                            data-queryparams="tid=4475&amp;game_id=100&amp;data_start=2021-01-06"
+                                                            data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon"
+                                                            data-placeholder="Инвайт на" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][event_id]"
+                                                            id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="595">Инвайт на</option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="594" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_event_id-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_event_id-container"
+                                                                        role="textbox" aria-readonly="true"><span
+                                                                            class="select2-selection__placeholder">Инвайт
+                                                                            на</span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div
+                                                        class="form-group col-sm-3 select2 optional gt_tournament_prize_places_team_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru" data-queryparams="tid=4475"
+                                                            data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                            data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournament"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon_result"
+                                                            data-placeholder="Выберите участника" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][team]"
+                                                            id="gt_tournament_prize_places_attributes_0_team"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_team"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="597">Выберите участника</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?x1Bv&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/27259/edit&quot;>1246</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?qs7Z&quot; />&nbsp;1246</span>"
+                                                                value="27259" data-select2-id="598">1246</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?CxtY&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69621/edit&quot;>ERVS / E-RIVALS</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?M1yW&quot; />&nbsp;ERVS / E-RIVALS</span>"
+                                                                value="69621" data-select2-id="599">ERVS / E-RIVALS</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69960/edit&quot;>Test 3</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Test 3</span>"
+                                                                value="69960" data-select2-id="600">Test 3</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69953/edit&quot;>TEST2</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?mpjM&quot; />&nbsp;TEST2</span>"
+                                                                selected="selected" value="69953" data-select2-id="601">TEST2
+                                                            </option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="596" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_team-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_team-container"
+                                                                        role="textbox" aria-readonly="true" title="TEST2"><span
+                                                                            class="select2-selection__clear"
+                                                                            title="Удалить все элементы"
+                                                                            data-select2-id="602">×</span><span
+                                                                            class="icon-label"><img
+                                                                                style="width: 24px; height: 24px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/15.png"><img
+                                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                                                src="https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN">&nbsp;<a
+                                                                                onclick="event.stopPropagation()"
+                                                                                target="_blank"
+                                                                                href="/gt_teams_lists/69953/edit">TEST2</a></span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                            class="btn-sm btn-danger"
+                                                            data-action="click->nested-form#remove_association" href="#"><i
+                                                                class="fas fa-trash"></i></a><input type="hidden" value="false"
+                                                            name="gt_tournament[prize_places_attributes][0][_destroy]"
+                                                            id="gt_tournament_prize_places_attributes_0__destroy"></div>
+                                                </div>
+                                                                                                <div class="nested-fields form-row" data-controller="select2"
+                                                    style="display:flex">
+                                                    <div
+                                                        class="form-group col-sm-1 string optional gt_tournament_prize_places_place form-group-valid">
+                                                        <input class="form-control string optional" placeholder="Место"
+                                                            type="text" value="1"
+                                                            name="gt_tournament[prize_places_attributes][0][place]"
+                                                            id="gt_tournament_prize_places_attributes_0_place"></div>
+                                                    <div
+                                                        class="form-group col-sm-2 string optional gt_tournament_prize_places_prize">
+                                                        <input class="form-control string optional" placeholder="Приз"
+                                                            type="text" name="gt_tournament[prize_places_attributes][0][prize]"
+                                                            id="gt_tournament_prize_places_attributes_0_prize"></div>
+
+                                                    <div class="form-group col-sm-1">
+                                                        <input class="form-control string optional" placeholder="%"
+                                                            type="text" 
+                                                            id="gt_tournament_percent">
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-2 string required gt_tournament_prize_places_decorated_points">
+                                                        <input class="form-control string required" placeholder="Очки"
+                                                            type="text"
+                                                            name="gt_tournament[prize_places_attributes][0][decorated_points]"
+                                                            id="gt_tournament_prize_places_attributes_0_decorated_points"></div>
+                                                    <input value="4475" type="hidden"
+                                                        name="gt_tournament[prize_places_attributes][0][tid]"
+                                                        id="gt_tournament_prize_places_attributes_0_tid">
+                                                    <div
+                                                        class="form-group col-sm-2 select2 optional gt_tournament_prize_places_invite_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru"
+                                                            data-queryparams="tid=4475&amp;game_id=100&amp;data_start=2021-01-06"
+                                                            data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon"
+                                                            data-placeholder="Инвайт на" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][event_id]"
+                                                            id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="595">Инвайт на</option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="594" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_event_id-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_event_id-container"
+                                                                        role="textbox" aria-readonly="true"><span
+                                                                            class="select2-selection__placeholder">Инвайт
+                                                                            на</span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div
+                                                        class="form-group col-sm-3 select2 optional gt_tournament_prize_places_team_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru" data-queryparams="tid=4475"
+                                                            data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                            data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournament"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon_result"
+                                                            data-placeholder="Выберите участника" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][team]"
+                                                            id="gt_tournament_prize_places_attributes_0_team"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_team"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="597">Выберите участника</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?x1Bv&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/27259/edit&quot;>1246</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?qs7Z&quot; />&nbsp;1246</span>"
+                                                                value="27259" data-select2-id="598">1246</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?CxtY&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69621/edit&quot;>ERVS / E-RIVALS</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?M1yW&quot; />&nbsp;ERVS / E-RIVALS</span>"
+                                                                value="69621" data-select2-id="599">ERVS / E-RIVALS</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69960/edit&quot;>Test 3</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Test 3</span>"
+                                                                value="69960" data-select2-id="600">Test 3</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69953/edit&quot;>TEST2</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?mpjM&quot; />&nbsp;TEST2</span>"
+                                                                selected="selected" value="69953" data-select2-id="601">TEST2
+                                                            </option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="596" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_team-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_team-container"
+                                                                        role="textbox" aria-readonly="true" title="TEST2"><span
+                                                                            class="select2-selection__clear"
+                                                                            title="Удалить все элементы"
+                                                                            data-select2-id="602">×</span><span
+                                                                            class="icon-label"><img
+                                                                                style="width: 24px; height: 24px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/15.png"><img
+                                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                                                src="https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN">&nbsp;<a
+                                                                                onclick="event.stopPropagation()"
+                                                                                target="_blank"
+                                                                                href="/gt_teams_lists/69953/edit">TEST2</a></span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                            class="btn-sm btn-danger"
+                                                            data-action="click->nested-form#remove_association" href="#"><i
+                                                                class="fas fa-trash"></i></a><input type="hidden" value="false"
+                                                            name="gt_tournament[prize_places_attributes][0][_destroy]"
+                                                            id="gt_tournament_prize_places_attributes_0__destroy"></div>
+                                                </div>
+                                                                                                <div class="nested-fields form-row" data-controller="select2"
+                                                    style="display:flex">
+                                                    <div
+                                                        class="form-group col-sm-1 string optional gt_tournament_prize_places_place form-group-valid">
+                                                        <input class="form-control string optional" placeholder="Место"
+                                                            type="text" value="1"
+                                                            name="gt_tournament[prize_places_attributes][0][place]"
+                                                            id="gt_tournament_prize_places_attributes_0_place"></div>
+                                                    <div
+                                                        class="form-group col-sm-2 string optional gt_tournament_prize_places_prize">
+                                                        <input class="form-control string optional" placeholder="Приз"
+                                                            type="text" name="gt_tournament[prize_places_attributes][0][prize]"
+                                                            id="gt_tournament_prize_places_attributes_0_prize"></div>
+
+                                                    <div class="form-group col-sm-1">
+                                                        <input class="form-control string optional" placeholder="%"
+                                                            type="text" 
+                                                            id="gt_tournament_percent">
+                                                    </div>
+                                                    <div
+                                                        class="form-group col-sm-2 string required gt_tournament_prize_places_decorated_points">
+                                                        <input class="form-control string required" placeholder="Очки"
+                                                            type="text"
+                                                            name="gt_tournament[prize_places_attributes][0][decorated_points]"
+                                                            id="gt_tournament_prize_places_attributes_0_decorated_points"></div>
+                                                    <input value="4475" type="hidden"
+                                                        name="gt_tournament[prize_places_attributes][0][tid]"
+                                                        id="gt_tournament_prize_places_attributes_0_tid">
+                                                    <div
+                                                        class="form-group col-sm-2 select2 optional gt_tournament_prize_places_invite_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru"
+                                                            data-queryparams="tid=4475&amp;game_id=100&amp;data_start=2021-01-06"
+                                                            data-endpoint="gt_tournaments/prize_places/invites_in.json"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon"
+                                                            data-placeholder="Инвайт на" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][event_id]"
+                                                            id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_event_id"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="595">Инвайт на</option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="594" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_event_id-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_event_id-container"
+                                                                        role="textbox" aria-readonly="true"><span
+                                                                            class="select2-selection__placeholder">Инвайт
+                                                                            на</span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div
+                                                        class="form-group col-sm-3 select2 optional gt_tournament_prize_places_team_in form-group-valid">
+                                                        <select class="form-control select2 optional select2-hidden-accessible"
+                                                            autocomplete="off" data-target="select2.select" data-width="100%"
+                                                            data-language="ru" data-queryparams="tid=4475"
+                                                            data-endpoint="gt_tournaments/prize_places/teams_in.json"
+                                                            data-before-submit="beforeSubmit_addSelectedTeamsToRequestFor_gt_tournament"
+                                                            data-template-selection-name="template_with_icon"
+                                                            data-template-result-name="template_with_icon_result"
+                                                            data-placeholder="Выберите участника" data-allow-clear="true"
+                                                            data-minimum-input-length="1"
+                                                            data-adapter-func="select2/data/extended-ajax"
+                                                            name="gt_tournament[prize_places_attributes][0][team]"
+                                                            id="gt_tournament_prize_places_attributes_0_team"
+                                                            data-select2-id="gt_tournament_prize_places_attributes_0_team"
+                                                            tabindex="-1" aria-hidden="true">
+                                                            <option value="" data-select2-id="597">Выберите участника</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?x1Bv&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/27259/edit&quot;>1246</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t27259.png?qs7Z&quot; />&nbsp;1246</span>"
+                                                                value="27259" data-select2-id="598">1246</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?CxtY&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69621/edit&quot;>ERVS / E-RIVALS</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69621.png?M1yW&quot; />&nbsp;ERVS / E-RIVALS</span>"
+                                                                value="69621" data-select2-id="599">ERVS / E-RIVALS</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69960/edit&quot;>Test 3</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/90.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;Test 3</span>"
+                                                                value="69960" data-select2-id="600">Test 3</option>
+                                                            <option
+                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/69953/edit&quot;>TEST2</a></span>"
+                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t69953.png?mpjM&quot; />&nbsp;TEST2</span>"
+                                                                selected="selected" value="69953" data-select2-id="601">TEST2
+                                                            </option>
+                                                        </select><span
+                                                            class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="596" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                    class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-disabled="false"
+                                                                    aria-labelledby="select2-gt_tournament_prize_places_attributes_0_team-container"><span
+                                                                        class="select2-selection__rendered"
+                                                                        id="select2-gt_tournament_prize_places_attributes_0_team-container"
+                                                                        role="textbox" aria-readonly="true" title="TEST2"><span
+                                                                            class="select2-selection__clear"
+                                                                            title="Удалить все элементы"
+                                                                            data-select2-id="602">×</span><span
+                                                                            class="icon-label"><img
+                                                                                style="width: 24px; height: 24px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/15.png"><img
+                                                                                style="width: 30px; height: 30px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                                                src="https://assets.esnadm.com/media/logo/_30/t69953.png?tSBN">&nbsp;<a
+                                                                                onclick="event.stopPropagation()"
+                                                                                target="_blank"
+                                                                                href="/gt_teams_lists/69953/edit">TEST2</a></span></span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                                    <div class="form-group form-group--vcenter col-1 text-right"><a
+                                                            class="btn-sm btn-danger"
+                                                            data-action="click->nested-form#remove_association" href="#"><i
+                                                                class="fas fa-trash"></i></a><input type="hidden" value="false"
+                                                            name="gt_tournament[prize_places_attributes][0][_destroy]"
+                                                            id="gt_tournament_prize_places_attributes_0__destroy"></div>
+                                                </div>
+                                                                                            </div>
+                                    </div>
+
                                     <div class="card-footer"><input type="submit" name="commit"
                                             value="Сохранить + Редактировать" class="btn btn-primary"
                                             formaction="/gt_tournaments/4355?action_after_update=edit" method="post"
@@ -188,4 +846,5 @@
 </div>
 
 <!--.PAGES navi dev--><script type="text/javascript" src="/js/app.js"></script></body>
+
 </html>

@@ -18,9 +18,9 @@
   <link rel="shortcut icon" type="image/x-icon"
     href="https://esnadm.com/packs/media/images/favicon32-82d97f60e57087d1f82ecbf0355e4183.png">
 <link href="/css/app.css" rel="stylesheet"></head><style>
-    .form-group.select2 .select2:last-child{
+    /* .form-group.select2 .select2:last-child{
         display: none!important;
-    }
+    } */
 </style>
 
 <body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
@@ -131,23 +131,16 @@
                                                         aria-hidden="true">
                                                         <option selected="selected" value="50911" data-select2-id="61">
                                                             Semifinal</option>
-                                                    </select><span
-                                                        class="select2 select2-container select2-container--default"
-                                                        dir="ltr" data-select2-id="60" style="width: 100%;"><span
-                                                            class="selection"><span
-                                                                class="select2-selection select2-selection--single"
-                                                                role="combobox" aria-haspopup="true"
-                                                                aria-expanded="false" tabindex="0" aria-disabled="false"
-                                                                aria-labelledby="select2-gt_tournaments_round_tab_round-container"><span
-                                                                    class="select2-selection__rendered"
-                                                                    id="select2-gt_tournaments_round_tab_round-container"
-                                                                    role="textbox" aria-readonly="true"
-                                                                    title="Semifinal">Semifinal</span><span
-                                                                    class="select2-selection__arrow"
-                                                                    role="presentation"><b
-                                                                        role="presentation"></b></span></span></span><span
-                                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                    </select>
                                                 </div>
+                                            </div>
+                                            <div
+                                                class="form-group row string optional gt_tournaments_round_tab_short form-group-valid">
+                                                <label class="col-sm-2 col-form-label string optional"
+                                                    for="gt_tournaments_round_tab_short">Сокращенное название</label>
+                                                <div class="col-sm-10"><input class="form-control string optional"
+                                                        type="text" value="W7" name="gt_tournaments_round_tab[short]"
+                                                        id="gt_tournaments_round_tab_short"></div>
                                             </div>
                                             <div
                                                 class="form-group row string required gt_tournaments_round_tab_title form-group-valid">
@@ -157,14 +150,6 @@
                                                 <div class="col-sm-10"><input class="form-control string required"
                                                         type="text" value="B-C" name="gt_tournaments_round_tab[title]"
                                                         id="gt_tournaments_round_tab_title"></div>
-                                            </div>
-                                            <div
-                                                class="form-group row string optional gt_tournaments_round_tab_short form-group-valid">
-                                                <label class="col-sm-2 col-form-label string optional"
-                                                    for="gt_tournaments_round_tab_short">Сокращенное название</label>
-                                                <div class="col-sm-10"><input class="form-control string optional"
-                                                        type="text" value="W7" name="gt_tournaments_round_tab[short]"
-                                                        id="gt_tournaments_round_tab_short"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -220,20 +205,16 @@
           <a href="/gt_tournaments_round_tabs.html" class="dropdown-item ">gt_tournaments_round_tabs</a>
           <a href="/gt_tournaments_rounds.html" class="dropdown-item ">gt_tournaments_rounds</a>
           <a href="/gt_tournaments_stages.html" class="dropdown-item ">gt_tournaments_stages</a>
-          <a href="/gt_venues.html" class="dropdown-item text-danger">gt_venues</a>
-          <a href="/gt_teams_lists.html" class="dropdown-item text-danger">gt_teams_lists</a>
-          <a href="/gt_player_lists.html" class="dropdown-item text-danger">gt_player_lists</a>
-          <a href="/gt_tournaments_stages_edit.html" class="dropdown-item text-danger">gt_tournaments_stages_edit</a>
-          <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_prize</a>
+          <a href="/gt_venues.html" class="dropdown-item">gt_venues</a>
+          <a href="/gt_teams_lists.html" class="dropdown-item">gt_teams_lists</a>
+          <a href="/gt_player_lists.html" class="dropdown-item">gt_player_lists</a>
+          <a href="/gt_tournaments_stages_edit.html" class="dropdown-item">gt_tournaments_stages_edit</a>
+          <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item">gt_tournaments_stages_edit_prize</a>
           <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_mesh</a>
           <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-danger">gt_tournaments_rounds_edit</a>
-          
           <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-danger">gt_tournaments_round_tabs_edit</a>
           <a href="/gt_match_lists_edit.html" class="dropdown-item text-danger">gt_match_lists_edit</a>
           <a href="/live_games.html" class="dropdown-item text-danger">live_games</a>
-
-
-
         </div>
     </div>
 

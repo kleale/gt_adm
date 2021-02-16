@@ -90,6 +90,7 @@ form .card-body {
 
 .form-control {
     font-size: 13px;
+    line-height: 25px;
 }
 
 .form-check-input {
@@ -272,3 +273,34 @@ span.table__hl {
     text-align: center;
 }
 
+.mnum{
+    border: 0;
+    background: #f4f6f9;
+    text-align: center;
+    width: 45px;
+    margin-right: 20px;
+    height: 29px;
+}
+.gt_match_list_games_attributes{
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.btns{
+    padding: 3px;
+}
+
+.teams-line{
+    display: flex;
+    span{
+        width:50%;
+        &.t1{
+            text-align: right;
+        }
+    }
+ .tscore{
+        width: 60px;
+        text-align: center;
+    }
+}

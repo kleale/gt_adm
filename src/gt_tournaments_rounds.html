@@ -22,7 +22,9 @@
 {% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly Final", "Weekly Survival"] %}
 {% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier", "weekly-final", "weekly-survival"] %}
 
-{% set round = ["Resque", "Final", "Round 2", "Finals (BE)", "Phase 2","B-D","Group C (BE)","Table","Table","B-C (BC)", "A-C (AC)"] %}
+{% set round = ["Resque", "Final", "Round 2", "Finals", "Phase 2","B-D","Group C","Table","Table","B-C", "A-C"] %}
+{% set roundfull = ["Resque full name", "mega Final full name", "B-C", "A-C"] %}
+
 {% set bestof = ["1", "2", "3", "4", "1", "2"] %}
 {% set score = ["без очков","без очков","без очков","без очков","без очков", "3 очка", "3 очка", "3 очка за сухую + по числу побед", "с отниманием очков"] %}
 
@@ -359,7 +361,12 @@
                                                     <tr>
                                                         <td class="text-center"><img class="gameicon" src="/img/svg/{{random(gamelogo)}}.svg" title="{{random(game)}}" alt="{{random(game)}}"/></td>
                                                         <td class="text-center">{{i}}</td>
-                                                        <td><strong>{{random(round)}}</strong></td>
+                                                        <td>
+                                                            <strong>{{random(round)}}</strong><br>
+                                                            {% if i == 5060 or i == 5061 or i == 5065 or i == 5072 %}
+                                                                <small>{{random(roundfull)}}</small>
+                                                            {% endif %}
+                                                        </td>
                                                         <td class="text-center">{{random(bestof)}}</td>
                                                         <td>{{random(score)}}</td>
                                                         <td>

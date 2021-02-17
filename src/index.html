@@ -230,7 +230,8 @@
                           <th width="60px"></th>
                           <th width="80px" class="text-center">ID #</th>
                           <th class="text-center eventLogo"></th>
-                          <th width="25%">Турнир</th>
+                          <th width="250px">Турнир</th>
+                          <th width="250px">Транслит</th>
                           <th width="30px"></th>
                           <th width="200px">Призовой, USD / Даты</th>
                           <th>Серия</th>
@@ -246,12 +247,11 @@
                               onerror="this.onerror=null; this.src=&#39;https://assets.esnadm.com/media/event/event.svg&#39;;"
                               src="./Decider Media Project_files/image_processing20201116-1-q3h5bo.png">
                             </td>
-
                             <td>
                               <strong>{{random(tourshort)}} </strong><br>
-                              <small>{{random(tour)}}</small>&nbsp;
-                              <small><a href="https://escorenews.com/ru/overwatch/cyber-over-cup-2020">{{random(toururl)}}</a></small>
+                              <small>{{random(tour)}}</small>
                             </td>
+                            <td>{{random(toururl)}}</td>
                             <td>
                               <img width="15px" src="/img/{{random(statusicon)}}.svg" title="{{random(status)}}" alt="">
                             </td>  

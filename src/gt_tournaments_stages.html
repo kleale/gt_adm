@@ -277,6 +277,21 @@
                                                                 id="gt_tournaments_stage_eng" /></div>
                                                     </div>
                                                     <div
+                                                        class="form-group row string required gt_tournaments_stage_eng">
+                                                        <label class="col-sm-2"></label>
+                                                        <div class="col-sm-10">
+                                                            <div class="custom-control custom-switch"><input
+                                                                name=""
+                                                                type="hidden" value="0" /><input
+                                                                class="custom-control-input boolean optional"
+                                                                type="checkbox" value="1"
+                                                                name=""
+                                                                id="" /><label
+                                                                class="custom-control-label boolean optional"
+                                                                for="">LAN стадия?</label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
                                                         class="form-group row select2 required gt_tournaments_stage_form">
                                                         <label class="col-sm-2 col-form-label select2 required"
                                                             for="gt_tournaments_stage_form">Тип <abbr
@@ -316,7 +331,7 @@
                                                     </div>
                                                     <div
                                                         class="form-group row boolean optional gt_tournaments_stage_dup_prize_places">
-                                                        
+                                                        <label class="col-sm-2"></label>
                                                         <div class="col-sm-10">
                                                             <div class="custom-control custom-switch"><input
                                                                     name="gt_tournaments_stage[dup_prize_places]"
@@ -326,8 +341,7 @@
                                                                     name="gt_tournaments_stage[dup_prize_places]"
                                                                     id="gt_tournaments_stage_dup_prize_places" /><label
                                                                     class="custom-control-label boolean optional"
-                                                                    for="gt_tournaments_stage_dup_prize_places">Скопировать
-                                                                    призовые</label></div>
+                                                                    for="gt_tournaments_stage_dup_prize_places">Скопировать призовые</label></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -356,7 +370,8 @@
                                                     <th width="60px"></th>
                                                     <th width="80px" class="text-center">ID #</th>
                                                     <th width="40px"></th>
-                                                    <th width="210px">Стадия</th>
+                                                    <th width="250px">Стадия</th>
+                                                    <th width="250px">Транслит</th>
                                                     <th>Тип / Даты</th>
                                                     <th width="120px"></th>
                                                 </tr>
@@ -376,8 +391,9 @@
                                                 </td>
                                                 <td>
                                                     <strong>{{random(stage)}}</strong></br>
-                                                    <small>{{random(stage)}} / {{random(stageurl)}}</small>
+                                                    <small>{{random(stage)}}</small>
                                                 </td>
+                                                <td>{{random(stageurl)}}</td>
                                                 <td>
                                                     {{random(stagetype)}}<br>
                                                     <small>{{random(dates)}}</small>

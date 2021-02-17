@@ -231,6 +231,26 @@ module.exports = {
             hash: false,
             template: `${PATHS.src}/live_games.html`,
             filename: './live_games.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games_lol.html`,
+            filename: './live_games_lol.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games_valorant.html`,
+            filename: './live_games_valorant.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_teams_lists_edit.html`,
+            filename: './gt_teams_lists_edit.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_player_lists_edit.html`,
+            filename: './gt_player_lists_edit.html'
         })
 
         

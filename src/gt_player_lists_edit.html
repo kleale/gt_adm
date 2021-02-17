@@ -1,0 +1,661 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
+{% set team = ["Creep", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlong = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI",
+"KG",
+"Virtus.Pro"] %}
+{% set teamurl=
+["dreamteam-2","somos-los-rex","creep-gaming","toshik-gaming","dreamteam-2","testuniverse2","hashteam1","take-that","gol-pashmian-ya-kon-pashm"]
+%}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set prize =
+["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup
+2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21",
+"CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ",
+"fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
+{% set dates = ["2020-11-29 — 2020-11-29 ", "2020-11-27 — 2020-12-15", "2020-12-10 — 2020-12-12", "2020-12-12 —
+2020-12-14", "2020-11-28 — 2020-11-29", "2020-11-23 — 2020-11-27", "2020-11-24 — 2020-12-15", "—"] %}
+
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set status = ["Прошедший", "Будущий", "Текущий"] %}
+{% set stagetype = ["Основная", "Группы", "Сетка"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly
+Final", "Weekly Survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier",
+"weekly-final", "weekly-survival"] %}
+
+{% set player = ["PAAD1N", "Nightaliscious", "Choko", "Bisbo", "Aggro" ] %}
+{% set playerlong = ["Bronnikov Roman", "Voronin Danil", "Akram Patarov", "Nguyễn Lâm Việt Sinh", "Kang Min-seok" ] %}
+{% set playerurl = ["123-smurf", "nightaliscious", "choko", "Bisbo", "aggro" ] %}
+{% set burth = ["1988-07-22", "1966-04-12", "1975-03-01", "2001-05-08", "2007-04-08"] %}
+
+
+<!DOCTYPE html>
+<html style="height: auto;">
+{% include "./tpl/head.html" %}
+
+<style>
+    .select2-container--default~.select2-container--default {
+        display: none !important;
+    }
+</style>
+
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" data-controller="loader index" style="height: auto;">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4"><a class="brand-link"
+                href="https://esnadm.com/"><span class="brand-text">DMP</span></a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3"><span class="info"><a class="d-block"
+                            href="https://esnadm.com/dmp_admins/profiles/1/edit">adm@esnadm.com</a><a rel="nofollow"
+                            data-method="delete" href="https://esnadm.com/dmp_admins/sign_out">Logout</a></span></div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" data-widget="treeview"
+                        role="menu">
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments">Турниры</a></li>
+
+                        <li class="nav-item"><a class="nav-link" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_stages">Стадии</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_rounds">Раунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_tournaments_round_tabs">Cубраунды</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_match_lists">Матчи</a></li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/discipline/api/dota2/live_games">API: Dota2<span
+                                    class="right badge badge-danger" data-controller="realtime-partial"
+                                    data-realtime-partial-key="discipline/api/dota2/live_game/unlinked_games">13</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/odds_matches">Коэффициенты на матчи</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_venues">Места проведения</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_teams_lists">Команды</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_player_lists">Игроки</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_streams">Стримы</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/gt_video_autos">Видео</a></li>
+                        <li class="nav-item"><a class="nav-link " data-action="click-&gt;edit#track_change"
+                                href="https://esnadm.com/esn_breezes">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper" style="min-height: 616px;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><strong><a class="with-icon" data-action="click->edit#track_change"
+                                    href="/gt_player_lists"><i class="fas fa-arrow-left"></i>Игроки</a></strong></li>
+                        <li class="breadcrumb-item active">Привет / 123 (<span class="inline-with-comma">ID:
+                                71124</span><span class="inline-with-comma"><a target="_blank"
+                                    href="https://escorenews.com/ru/dota-2/player/Привет">ESN</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://game-tournaments.com/dota-2/player/Привет">GT</a></span><span
+                                class="inline-with-comma"><a target="_blank"
+                                    href="https://ggscore.com/ru/dota-2/player/Привет">GG</a></span>)</li>
+                    </ol>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="simple_form edit_gt_player_list" id="edit_gt_player_list_71124"
+                                autocomplete="off" novalidate="novalidate" action="/gt_player_lists/71124"
+                                accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden"
+                                    name="_method" value="patch">
+                                <div class="card" data-controller="edit-form">
+                                    <div class="card-header p-2">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item"><a class="nav-link active"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_player_lists/71124/edit?gt_player_lists_form_part=common">Главная</a>
+                                            </li>
+
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_player_lists/71124/edit?gt_player_lists_form_part=biographies">Биография (RU)</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_player_lists/71124/edit?gt_player_lists_form_part=teams">Команды</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_player_lists/71124/edit?gt_player_lists_form_part=dup">Дубль</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-9">
+
+                                                <span data-dialog_text="Форма не сохранена. Всё равно продолжить?"
+                                                    data-target="edit.body edit-form.body"></span><input value="common"
+                                                    type="hidden" name="gt_player_list[form_part]"
+                                                    id="gt_player_list_form_part">
+                                                <div data-controller="select2 datepicker">
+                                                    <div
+                                                        class="form-group row select2 optional gt_player_list_country form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                            for="gt_player_list_cid">Страна</label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 optional select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_countries.json"
+                                                                data-template-selection-name="template_with_flag"
+                                                                data-template-result-name="template_with_flag"
+                                                                data-placeholder="Выберите страну"
+                                                                data-allow-clear="true" data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_player_list[cid]" id="gt_player_list_cid"
+                                                                data-select2-id="gt_player_list_cid" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option value="" data-select2-id="2">Выберите страну
+                                                                </option>
+                                                                <option
+                                                                    data-template_with_flag="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/15.png&quot; />Австрия</span>"
+                                                                    selected="selected" value="15" data-select2-id="3">
+                                                                    Австрия
+                                                                </option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="1" style="width: 100%;"><span
+                                                                    class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-gt_player_list_cid-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-gt_player_list_cid-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="Австрия"><span
+                                                                                class="select2-selection__clear"
+                                                                                title="Удалить все элементы"
+                                                                                data-select2-id="4">×</span><span
+                                                                                class="icon-label"><img
+                                                                                    style="width: 24px; height: 24px; object-fit: contain;"
+                                                                                    onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                    src="https://assets.esnadm.com/media/flag/15.png">Австрия</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string optional gt_player_list_title form-group-valid">
+                                                        <label class="col-sm-2 col-form-label string optional"
+                                                            for="gt_player_list_title">Ник</label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string optional" type="text"
+                                                                value="Привет" name="gt_player_list[title]"
+                                                                id="gt_player_list_title"></div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string optional gt_player_list_name form-group-valid">
+                                                        <label class="col-sm-2 col-form-label string optional"
+                                                            for="gt_player_list_name">Имя</label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string optional" type="text"
+                                                                value="123" name="gt_player_list[name]"
+                                                                id="gt_player_list_name"></div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string optional gt_player_list_eng form-group-valid">
+                                                        <label class="col-sm-2 col-form-label string optional"
+                                                            for="gt_player_list_eng">Транслит</label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string optional" type="text"
+                                                                value="privet" name="gt_player_list[eng]"
+                                                                id="gt_player_list_eng"></div>
+                                                    </div>
+
+                                                    <div
+                                                        class="form-group row select2 optional gt_player_list_titles form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                            for="gt_player_list_title_ids">Варианты названий</label>
+                                                        <div class="col-sm-10"><input name="gt_player_list[title_ids][]"
+                                                                type="hidden" value=""><select
+                                                                class="form-control select2 optional select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru" data-tags="true"
+                                                                data-placeholder="Выберите или создайте вариант названия"
+                                                                data-adapter-func="select2/data/extended-ajax-tags"
+                                                                data-token-separators="[&quot;,&quot;]"
+                                                                data-multiple="true" multiple=""
+                                                                name="gt_player_list[title_ids][]"
+                                                                id="gt_player_list_title_ids"
+                                                                data-select2-id="gt_player_list_title_ids" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option selected="selected" value="71124,winfortheone"
+                                                                    data-select2-id="10">winfortheone</option>
+                                                                <option selected="selected" value="71124,amigos"
+                                                                    data-select2-id="11">amigos</option>
+                                                                <option selected="selected" value="71124,DenDi"
+                                                                    data-select2-id="12">DenDi</option>
+                                                                <option selected="selected" value="71124,dendi2"
+                                                                    data-select2-id="13">dendi2</option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="9" style="width: 100%;"><span
+                                                                    class="selection"><span
+                                                                        class="select2-selection select2-selection--multiple"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="-1"
+                                                                        aria-disabled="false">
+                                                                        <ul class="select2-selection__rendered">
+                                                                            <li class="select2-selection__choice"
+                                                                                title="winfortheone"
+                                                                                data-select2-id="14"><span
+                                                                                    class="select2-selection__choice__remove"
+                                                                                    role="presentation">×</span>winfortheone
+                                                                            </li>
+                                                                            <li class="select2-selection__choice"
+                                                                                title="amigos" data-select2-id="15">
+                                                                                <span
+                                                                                    class="select2-selection__choice__remove"
+                                                                                    role="presentation">×</span>amigos
+                                                                            </li>
+                                                                            <li class="select2-selection__choice"
+                                                                                title="DenDi" data-select2-id="16"><span
+                                                                                    class="select2-selection__choice__remove"
+                                                                                    role="presentation">×</span>DenDi
+                                                                            </li>
+                                                                            <li class="select2-selection__choice"
+                                                                                title="dendi2" data-select2-id="17">
+                                                                                <span
+                                                                                    class="select2-selection__choice__remove"
+                                                                                    role="presentation">×</span>dendi2
+                                                                            </li>
+                                                                            <li
+                                                                                class="select2-search select2-search--inline">
+                                                                                <input class="select2-search__field"
+                                                                                    type="search" tabindex="0"
+                                                                                    autocomplete="off" autocorrect="off"
+                                                                                    autocapitalize="none"
+                                                                                    spellcheck="false" role="searchbox"
+                                                                                    aria-autocomplete="list"
+                                                                                    placeholder=""
+                                                                                    style="width: 0.75em;">
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span></span><span class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span></div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 optional gt_player_list_pop_niks form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                            for="gt_player_list_pop_niks">Известные ники</label>
+                                                        <div class="col-sm-10"><input name="gt_player_list[pop_niks][]"
+                                                                type="hidden" value=""><select
+                                                                class="form-control select2 optional select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru" data-tags="true"
+                                                                data-placeholder="Выберите или создайте вариант названия"
+                                                                data-adapter-func="select2/data/extended-ajax-tags"
+                                                                data-token-separators="[&quot;,&quot;]"
+                                                                data-multiple="true" multiple=""
+                                                                name="gt_player_list[pop_niks][]" id="pop_niks"
+                                                                data-select2-id="gt_player_list_pop_niks" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option selected="selected" value="71124,winfortheone"
+                                                                    data-select2-id="10">winfortheone</option>
+                                                                <option selected="selected" value="71124,amigos"
+                                                                    data-select2-id="11">amigos</option>
+                                                                <option selected="selected" value="71124,DenDi"
+                                                                    data-select2-id="12">DenDi</option>
+                                                                <option selected="selected" value="71124,dendi2"
+                                                                    data-select2-id="13">dendi2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row select2 optional gt_player_list_role form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                            for="gt_player_list_role">Роль</label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 optional select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-endpoint="gt_player_lists/roles.json?game_id=582"
+                                                                data-placeholder="Выбрать роль" data-allow-clear="true"
+                                                                data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_player_list[role]" id="gt_player_list_role"
+                                                                data-select2-id="gt_player_list_role" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option value="" data-select2-id="6">Выбрать роль
+                                                                </option>
+                                                                <option value="true" data-select2-id="7">Yes</option>
+                                                                <option value="false" data-select2-id="8">No</option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="5" style="width: 100%;"><span
+                                                                    class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-gt_player_list_role-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-gt_player_list_role-container"
+                                                                            role="textbox" aria-readonly="true"><span
+                                                                                class="select2-selection__placeholder">Выбрать
+                                                                                роль</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string optional gt_player_list_data form-group-valid">
+                                                        <label class="col-sm-2 col-form-label string optional"
+                                                            for="gt_player_list_data">Дата рождения</label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string optional" type="text"
+                                                                data-target="datepicker.single"
+                                                                data-locale="{&quot;format&quot;:&quot;YYYY-MM-DD&quot;,&quot;singleDatePicker&quot;:true,&quot;separator&quot;:&quot;—&quot;,&quot;applyLabel&quot;:&quot;Принять&quot;,&quot;cancelLabel&quot;:&quot;Отменить&quot;,&quot;fromLabel&quot;:&quot;с&quot;,&quot;toLabel&quot;:&quot;по&quot;,&quot;daysOfWeek&quot;:[&quot;Вс&quot;,&quot;Пн&quot;,&quot;Вт&quot;,&quot;Ср&quot;,&quot;Чт&quot;,&quot;Пт&quot;,&quot;Сб&quot;],&quot;monthNames&quot;:[&quot;янв.&quot;,&quot;февр.&quot;,&quot;марта&quot;,&quot;апр.&quot;,&quot;мая&quot;,&quot;июня&quot;,&quot;июля&quot;,&quot;авг.&quot;,&quot;сент.&quot;,&quot;окт.&quot;,&quot;нояб.&quot;,&quot;дек.&quot;],&quot;firstDay&quot;:1}"
+                                                                value="2021-01-26" name="gt_player_list[data]"
+                                                                id="gt_player_list_data" placeholder="YYYY-MM-DD"></div>
+                                                    </div><input type="hidden" value="582"
+                                                        name="gt_player_list[game_id]" id="gt_player_list_game_id">
+                                                    <div
+                                                        class="form-group row select2 optional gt_player_list_api_steam form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                            for="gt_player_list_api_steam_ids">Steam ID</label>
+                                                        <div class="col-sm-10"><input
+                                                                name="gt_player_list[api_steam_ids][]" type="hidden"
+                                                                value=""><select
+                                                                class="form-control select2 optional select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru" data-tags="true"
+                                                                data-placeholder=""
+                                                                data-adapter-func="select2/data/extended-ajax-tags"
+                                                                data-token-separators="[&quot;,&quot;]"
+                                                                data-multiple="true" multiple=""
+                                                                name="gt_player_list[api_steam_ids][]"
+                                                                id="gt_player_list_api_steam_ids"
+                                                                data-select2-id="gt_player_list_api_steam_ids"
+                                                                tabindex="-1" aria-hidden="true">
+                                                                <option selected="selected" value="71124,1233,steam"
+                                                                    data-select2-id="19">1233</option>
+                                                                <option selected="selected" value="71124,37868545,steam"
+                                                                    data-select2-id="20">37868545</option>
+                                                                <option selected="selected"
+                                                                    value="71124,454849686,steam" data-select2-id="21">
+                                                                    454849686</option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="18"
+                                                                style="width: 100%;"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--multiple"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="-1"
+                                                                        aria-disabled="false">
+                                                                        <ul class="select2-selection__rendered">
+                                                                            <li class="select2-selection__choice"
+                                                                                title="1233" data-select2-id="22"><span
+                                                                                    class="select2-selection__choice__remove"
+                                                                                    role="presentation">×</span>1233
+                                                                            </li>
+                                                                            <li class="select2-selection__choice"
+                                                                                title="37868545" data-select2-id="23">
+                                                                                <span
+                                                                                    class="select2-selection__choice__remove"
+                                                                                    role="presentation">×</span>37868545
+                                                                            </li>
+                                                                            <li class="select2-selection__choice"
+                                                                                title="454849686" data-select2-id="24">
+                                                                                <span
+                                                                                    class="select2-selection__choice__remove"
+                                                                                    role="presentation">×</span>454849686
+                                                                            </li>
+                                                                            <li
+                                                                                class="select2-search select2-search--inline">
+                                                                                <input class="select2-search__field"
+                                                                                    type="search" tabindex="0"
+                                                                                    autocomplete="off" autocorrect="off"
+                                                                                    autocapitalize="none"
+                                                                                    spellcheck="false" role="searchbox"
+                                                                                    aria-autocomplete="list"
+                                                                                    placeholder=""
+                                                                                    style="width: 0.75em;">
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span></span><span class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span></div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group row string required gt_teams_list_twitter form-group-valid">
+                                                        <label class="col-sm-2 col-form-label string required"
+                                                            for="gt_teams_list_twitter">Twitter</label>
+                                                        <div class="col-sm-10"><input
+                                                                class="form-control string required" type="text"
+                                                                value="dreamteam-2" name="gt_teams_list[twitter]"
+                                                                id="gt_teams_list_twitter"></div>
+                                                    </div>
+
+
+
+                                                    <div
+                                                        class="form-group row select2 optional gt_player_list_teams_list form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                            for="gt_player_list_teams_list_ids">Добавить команды</label>
+                                                        <div class="col-sm-10"><input
+                                                                name="gt_player_list[teams_list_ids][]" class="form-control string" placeholder="Выберите команду"
+                                                                value="">
+                                                                <!-- <select
+                                                                class="form-control select2 optional select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru"
+                                                                data-queryparams="game_id=582"
+                                                                data-endpoint="gt_player_lists/teams.json"
+                                                                data-before-submit="beforeSubmit_addSelectedTeamsToRequest_gt_player_list"
+                                                                data-template-selection-name="template_selection_teams_count"
+                                                                data-template-result-name="template_with_icon_result"
+                                                                data-placeholder="Выберите команды"
+                                                                data-minimum-input-length="1"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                data-multiple="true" multiple=""
+                                                                name="gt_player_list[teams_list_ids][]"
+                                                                id="gt_player_list_teams_list_ids"
+                                                                data-select2-id="gt_player_list_teams_list_ids"
+                                                                tabindex="-1" aria-hidden="true">
+                                                                <option
+                                                                    data-template_selection_teams_count="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t40634.png?7erd&quot; /><a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/40634/edit&quot;>TL / Team Lightning</a></span>"
+                                                                    data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/4.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t40634.png?zkhn&quot; />&nbsp;TL / Team Lightning</span>"
+                                                                    selected="selected" value="40634"
+                                                                    data-select2-id="26">TL / Team Lightning
+                                                                </option>
+                                                            </select> -->
+
+                                                            <ul class="list-group list-group-flush edit-teams-list">
+                                                                {% for i in 1..4 %}
+                                                                <li class="list-group-item">
+                                                                    <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                        onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                        src="https://assets.esnadm.com/media/flag/{{i}}.png">
+                                                                    <img style="width: 30px; height: 30px; object-fit: contain;"
+                                                                        onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                                        src="https://assets.esnadm.com/media/logo/_30/t40634.png?7erd">
+                                                                    &nbsp;
+                                                                    <a onclick="event.stopPropagation()" target="_blank"
+                                                                        class="tname"
+                                                                        href="/gt_teams_lists/66726/edit">{{random(team)}}
+                                                                        /
+                                                                        {{random(teamlong)}}
+                                                                    </a>
+                                                                    <a class="float-right text-danger" href="#"
+                                                                        role="presentation"><i
+                                                                            class="far fa-times-circle"></i></a>
+                                                                </li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div data-controller="uppy">
+
+
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h6 class="float-left">Логотип
+                                                                <i class="fas fa-info-circle"
+                                                                    style="opacity: .4;margin-left:10px;"
+                                                                    title="300px x 300px, jpg, png, jpeg"></i>
+                                                            </h6>
+                                                            <div class="float-right">
+                                                                <a href="#" id="gt_tournament_logo_trigger"
+                                                                    class="btn btn-primary btn-sm"><i
+                                                                        class="fas fa-plus"></i></a>
+                                                                <a class="btn btn-danger btn-sm"
+                                                                    data-target="uppy.delete"
+                                                                    data-action="uppy#remove_image" style="" href="#"><i
+                                                                        class="fas fa-trash-alt"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row" data-target="uppy.croppergroup"
+                                                                style="display:none">
+                                                                <div class="col-sm-6"><img data-target="uppy.cropper"
+                                                                        data-ratio="3" src=""></div>
+                                                                <div class="col-sm-6">
+                                                                    <div data-target="uppy.preview"
+                                                                        style="width:60px; height:17px; "></div>
+                                                                </div>
+                                                            </div>
+                                                            <div data-target="uppy.uploaded">
+                                                                <img
+                                                                    src="https://assets.esnadm.com/media/tournament/e4355.png?II-Y" />
+
+                                                            </div>
+
+                                                            <div
+                                                                class="form-group row string optional  form-group-valid">
+                                                                <label class="col-sm-2 col-form-label string optional"
+                                                                    for="">Источник</label>
+                                                                <div class="col-sm-10"><input
+                                                                        class="form-control string optional" type="text"
+                                                                        value="" name="" id=""></div>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-group row hidden gt_tournament_logo form-group-valid">
+                                                                <input class="form-control hidden"
+                                                                    data-target="uppy.single"
+                                                                    data-hint=">= 300px x 300px, jpg, png, jpeg"
+                                                                    data-value="{&quot;id&quot;:&quot;origin/tournament/e4355.png&quot;,&quot;storage&quot;:&quot;store&quot;,&quot;metadata&quot;:{}}"
+                                                                    data-min-dimensions-error="Слишком маленькие размеры файла, должны быть больше "
+                                                                    data-min-dimensions="300,300"
+                                                                    data-allowed-extensions="jpg,png,jpeg"
+                                                                    data-prompt="Выберите Логотип" type="hidden"
+                                                                    name="gt_tournament[logo]" id="gt_tournament_logo">
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div data-controller="uppy">
+                                                    <div class="card">
+
+                                                        <div class="card-header">
+                                                            <h6 class="float-left">Иконка
+                                                                <i class="fas fa-info-circle"
+                                                                    style="opacity: .4;margin-left:10px;"
+                                                                    title="300px x 300px, jpg, png, jpeg"></i>
+                                                            </h6>
+                                                            <div class="float-right">
+                                                                <a href="#" id="gt_tournament_icon_trigger"
+                                                                    class="btn btn-primary btn-sm"><i
+                                                                        class="fas fa-plus"></i></a>
+                                                                <a class="btn btn-danger btn-sm"
+                                                                    data-target="uppy.delete"
+                                                                    data-action="uppy#remove_image" style="" href="#"><i
+                                                                        class="fas fa-trash-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="card-body">
+                                                            <div data-target="uppy.uploaded">
+                                                                <!-- <img
+                                                                            src="https://assets.esnadm.com/media/event/e4355.png?3csL"><img
+                                                                            style=""
+                                                                            src="https://assets.esnadm.com/media/event/_120/e4355.png?-GJt">
+                                                                        -->
+                                                                <img style=""
+                                                                    src="https://assets.esnadm.com/media/event/_60/e4355.png?0_kJ">
+                                                                <!-- <img style="" src="https://assets.esnadm.com/media/event/_30/e4355.png?JTvc"> -->
+                                                            </div>
+                                                            <div
+                                                                class="form-group row hidden gt_tournament_icon form-group-valid">
+                                                                <div class="col-sm-10"><input
+                                                                        class="form-control hidden"
+                                                                        data-target="uppy.single"
+                                                                        data-hint=">= 120px x 120px, png"
+                                                                        data-value="{&quot;id&quot;:&quot;origin/event/e4355.png&quot;,&quot;storage&quot;:&quot;store&quot;,&quot;metadata&quot;:{}}"
+                                                                        data-min-dimensions-error="Слишком маленькие размеры файла, должны быть больше "
+                                                                        data-min-dimensions="120,120"
+                                                                        data-allowed-extensions="png"
+                                                                        data-prompt="Выберите Иконка" type="hidden"
+                                                                        name="gt_tournament[icon]"
+                                                                        id="gt_tournament_icon">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer"><input type="submit" name="commit"
+                                            value="Сохранить + Редактировать" class="btn btn-primary"
+                                            formaction="/gt_player_lists/71124?action_after_update=edit" method="post"
+                                            data-disable-with="Сохранить + Редактировать"><input type="submit"
+                                            name="commit" value="Сохранить" class="btn btn-primary"
+                                            formaction="/gt_player_lists/71124?action_after_update=index" method="post"
+                                            data-disable-with="Сохранить"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+    {% include "./tpl/devmenu.html" %}
+</body>
+
+</html>

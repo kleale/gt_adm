@@ -1,5 +1,5 @@
 {% set title = "Page Name" %}
-{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Bonus", "Gamover"] %}
 {% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
 {% set team = ["TBD","TBD","TBD","TBD","TBD","Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire",
 "Ehome", "Navi", "VICI", "KG",
@@ -336,17 +336,33 @@ Final", "Weekly Survival"] %}
                                                         </div>
 
                                                         <div class="col-sm-6">
-                                                            <div
-                                                                class="form-group label-up string optional gt_match_list_date_and_time">
-                                                                <label class="string optional"
-                                                                    for="gt_match_list_date_and_time">Дата и
-                                                                    Время</label><input
-                                                                    class="form-control string optional" type="text"
-                                                                    data-target="datepicker.single" data-time="true"
-                                                                    data-locale="{&quot;format&quot;:&quot;YYYY-MM-DD HH:mm&quot;,&quot;singleDatePicker&quot;:true,&quot;separator&quot;:&quot;—&quot;,&quot;applyLabel&quot;:&quot;Принять&quot;,&quot;cancelLabel&quot;:&quot;Отменить&quot;,&quot;fromLabel&quot;:&quot;с&quot;,&quot;toLabel&quot;:&quot;по&quot;,&quot;daysOfWeek&quot;:[&quot;Вс&quot;,&quot;Пн&quot;,&quot;Вт&quot;,&quot;Ср&quot;,&quot;Чт&quot;,&quot;Пт&quot;,&quot;Сб&quot;],&quot;monthNames&quot;:[&quot;янв.&quot;,&quot;февр.&quot;,&quot;марта&quot;,&quot;апр.&quot;,&quot;мая&quot;,&quot;июня&quot;,&quot;июля&quot;,&quot;авг.&quot;,&quot;сент.&quot;,&quot;окт.&quot;,&quot;нояб.&quot;,&quot;дек.&quot;],&quot;firstDay&quot;:1}"
-                                                                    name="gt_match_list[date_and_time]"
-                                                                    id="gt_match_list_date_and_time"
-                                                                    placeholder="YYYY-MM-DD HH:mm">
+                                                            <div class="form-row">
+
+                                                                <div
+                                                                    class="form-group label-up col-sm-8 string optional gt_match_list_date_and_time">
+                                                                    <label class="string optional"
+                                                                        for="gt_match_list_date_and_time">Дата и
+                                                                        Время</label><input
+                                                                        class="form-control string optional" type="text"
+                                                                        data-target="datepicker.single" data-time="true"
+                                                                        data-locale="{&quot;format&quot;:&quot;YYYY-MM-DD HH:mm&quot;,&quot;singleDatePicker&quot;:true,&quot;separator&quot;:&quot;—&quot;,&quot;applyLabel&quot;:&quot;Принять&quot;,&quot;cancelLabel&quot;:&quot;Отменить&quot;,&quot;fromLabel&quot;:&quot;с&quot;,&quot;toLabel&quot;:&quot;по&quot;,&quot;daysOfWeek&quot;:[&quot;Вс&quot;,&quot;Пн&quot;,&quot;Вт&quot;,&quot;Ср&quot;,&quot;Чт&quot;,&quot;Пт&quot;,&quot;Сб&quot;],&quot;monthNames&quot;:[&quot;янв.&quot;,&quot;февр.&quot;,&quot;марта&quot;,&quot;апр.&quot;,&quot;мая&quot;,&quot;июня&quot;,&quot;июля&quot;,&quot;авг.&quot;,&quot;сент.&quot;,&quot;окт.&quot;,&quot;нояб.&quot;,&quot;дек.&quot;],&quot;firstDay&quot;:1}"
+                                                                        name="gt_match_list[date_and_time]"
+                                                                        id="gt_match_list_date_and_time"
+                                                                        placeholder="YYYY-MM-DD HH:mm">
+                                                                </div>
+                                                                <div
+                                                                    class="col-sm-4 form-group boolean optional gt_match_list_defwin form-group-valid">
+                                                                    <div class="custom-control custom-switch mt-2"><input
+                                                                            name="gt_match_list[defwin]" type="hidden"
+                                                                            value="0"><input
+                                                                            class="custom-control-input boolean optional"
+                                                                            type="checkbox" value="1"
+                                                                            name="gt_match_list[defwin]"
+                                                                            id="gt_match_list_defwin"><label
+                                                                            class="custom-control-label boolean optional"
+                                                                            for="gt_match_list_defwin">Defwin</label>
+                                                                    </div>
+                                                                </div>
                                                             </div>
 
                                                             <div class="form-row">

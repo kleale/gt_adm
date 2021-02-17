@@ -110,17 +110,17 @@
                                             </li>
                                             <li class="nav-item"><a class="nav-link"
                                                     data-action="click->edit#track_change" data-remote="true"
-                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=places">Призовые
-                                                    места</a></li>
-                                            <li class="nav-item"><a class="nav-link"
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=places">Призовые ($20,054)
+                                                    </a></li>
+                                            <li class="nav-item"><a class="nav-link with-icon"
                                                     data-action="click->edit#track_change" data-remote="true"
-                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=grid">Сетка</a>
+                                                    href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=grid"><i class="text-success fas fa-check"></i> Сетка</a>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link"
+                                            <li class="nav-item"><a class="nav-link with-icon"
                                                     data-action="click->edit#track_change" data-remote="true"
                                                     href="/gt_tournaments_stages/15799/edit?gt_tournaments_stages_form_part=cache"><span
                                                         class="translation_missing"
-                                                        title="translation missing: ru.form.parts.cache">Cache</span></a>
+                                                        title="translation missing: ru.form.parts.cache"><i class="text-danger fas fa-times"></i> Cache</span></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -220,6 +220,16 @@
                                                             aria-atomic="true">Type 1 or more characters for
                                                             results.</span>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row string required gt_tournaments_stage_eng">
+                                                <label class="col-sm-2 col-form-label string required" for="gt_tournaments_stage_eng">Транслит <abbr title="обязательное">*</abbr></label>
+                                                <div class="col-sm-10"><div class="awesomplete"><input class="form-control string required" autocomplete="off" data-target="autocomplete.input" data-endpoint="gt_tournaments_stages/engs.json" data-related="#gt_tournaments_stage_game" data-queryparams="true" data-onchoose="TournamentsStages_OnChoose" data-getvalue="eng" type="text" name="gt_tournaments_stage[eng]" id="gt_tournaments_stage_eng" aria-expanded="false" aria-owns="awesomplete_list_3" role="combobox"><ul hidden="" role="listbox" id="awesomplete_list_3"></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-atomic="true">Type 1 or more characters for results.</span></div></div>
+                                            </div>
+                                            <div class="form-group row string required gt_tournaments_stage_eng">
+                                                <label class="col-sm-2"></label>
+                                                <div class="col-sm-10">
+                                                    <div class="custom-control custom-switch"><input name="" type="hidden" value="0"><input class="custom-control-input boolean optional" type="checkbox" value="1" name="" id=""><label class="custom-control-label boolean optional" for="">LAN стадия?</label></div>
                                                 </div>
                                             </div>
                                             <div
@@ -383,6 +393,10 @@
           <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-danger">gt_tournaments_round_tabs_edit</a>
           <a href="/gt_match_lists_edit.html" class="dropdown-item text-danger">gt_match_lists_edit</a>
           <a href="/live_games.html" class="dropdown-item text-danger">live_games</a>
+          <a href="/live_games_lol.html" class="dropdown-item text-danger">live_games_lol</a>
+          <a href="/live_games_valorant.html" class="dropdown-item text-danger">live_games_valorant</a>
+          <a href="/gt_teams_lists_edit.html" class="dropdown-item text-danger">gt_teams_lists_edit</a>
+          <a href="/gt_player_lists_edit.html" class="dropdown-item text-danger">gt_player_lists_edit</a>
         </div>
     </div>
 

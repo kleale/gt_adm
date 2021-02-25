@@ -97,7 +97,6 @@ form .card-body {
     margin-top: 0 !important;
 }
 
-
 img.svgicon {
     margin-right: 12px;
     width: 16px;
@@ -124,11 +123,11 @@ img.svgicon {
     margin-left: 4px;
     width: auto;
 }
-.input-group-text{
+.input-group-text {
     font-size: 13px;
     background-color: #f5faff;
 }
-.col-form-label{
+.col-form-label {
     line-height: 23px;
 }
 
@@ -147,7 +146,7 @@ img.svgicon {
         padding: 0.5rem;
         line-height: 1rem;
     }
-    tr:last-child td{
+    tr:last-child td {
         border-bottom: 1px solid #f1f1f1;
     }
 
@@ -244,15 +243,14 @@ span.table__hl {
 
 .edit-teams-list {
     .list-group-item {
-        padding: 0.5rem 1.25rem;
-        img{
+        padding: 0.5rem 0;
+        img {
             margin-right: 5px;
         }
     }
     li.list-group-item {
         display: flex;
         align-items: center;
-
     }
     .tname {
         flex-grow: 1;
@@ -271,7 +269,6 @@ span.table__hl {
     color: #dc3545;
 }
 
-
 .percent-block {
     max-width: 60px;
     line-height: 39px;
@@ -289,65 +286,379 @@ span.table__hl {
     padding-left: 0;
 }
 
-.gt_match_list_games_attributes{
+.gt_match_list_games_attributes {
     display: flex;
     align-items: center;
     padding: 3px;
 }
 
-.btns{
+.btns {
     padding: 3px;
 }
 
-.teams-line{
+.teams-line {
     display: flex;
-    span{
-        width:50%;
-        b{
+    span {
+        width: 50%;
+        b {
             font-weight: normal;
         }
-        &.t1{
+        &.t1 {
             text-align: right;
-            small{
+            small {
                 margin-left: 5px;
             }
         }
-        &.t2{
-            small{
+        &.t2 {
+            small {
                 margin-left: 5px;
             }
         }
-        &.win b{
-            border-bottom: 2px solid 
+        &.win b {
+            border-bottom: 2px solid;
         }
-        &.green{
-            color:#82ac4e;
+        &.green {
+            color: #82ac4e;
         }
-        small{
+        small {
             font-size: 12px;
-            color: #bbbbbb;
-            s{
-                color: #212529;
-                text-decoration: none;
-            }
+            color: #b3b3b3;
         }
     }
- .tscore{
+    .tscore {
         width: 60px;
         text-align: center;
     }
 }
-.form-row .btns{
-    max-width: 875px;
+.green {
+    color: #82ac4e;
+}
+.form-row .btns {
+    max-width: 75px;
 }
 
 .badge-num {
-    background: #f4f6f9;
     text-align: center;
     line-height: 13px;
     margin-right: 15px;
     font-size: 12px;
+    background: #eaeaea;
+    &.badge-danger {
+        color: red;
+    }
 }
-.numdiv{
+.numdiv {
     width: 30px;
+}
+
+.complex-name s {
+    text-decoration: none;
+    padding: 0 5px;
+}
+.pl-input.form-control {
+    width: 32px;
+    padding: 1px;
+    line-height: 10px;
+    height: 25px;
+    text-align: center;
+    margin-right: 10px;
+}
+.live {
+    width: 9px;
+    font-size: 6px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+}
+
+.teams-on-live {
+    .team-logo {
+        img {
+            width: 50px;
+        }
+    }
+}
+
+.table.const td,
+.table.const th {
+    vertical-align: middle;
+}
+.col-2.vert-line:before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background: #ccc;
+    left: 50%;
+}
+
+.form-group .feedback {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+}
+
+.filterico {
+    width: 20px;
+    display: inline-block;
+}
+
+.teams-on-live {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+        padding: 1rem 0 0;
+    }
+
+    > span {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        flex-basis: 13rem;
+        padding: 1rem;
+        text-decoration: none;
+
+        @media (max-width: 1024px) {
+            padding: 0;
+        }
+
+        
+
+        picture {
+            display: flex;
+            max-width: 11rem;
+            height: 5rem;
+            line-height: 5rem;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+
+            > * {
+                max-height: 3rem;
+                display: block;
+
+                @media (max-width: 1024px) {
+                    height: 2rem;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 1rem;
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        b {
+            font-size: 1rem;
+            display: inline;
+            font-weight: normal;
+        }
+
+        &.win {
+            b {
+                border-bottom: 2px solid;
+            }
+        }
+
+        u {
+            font-size: 0.65rem;
+            text-decoration: none;
+            color: #707070;
+        }
+
+        s {
+            text-decoration: none;
+            position: absolute;
+            top: 0rem;
+            right: 2rem;
+            width: 1.2rem;
+            line-height: 1.2rem;
+            height: 1.2rem;
+            border-radius: 1.6rem;
+            font-size: 0.6rem;
+            color: #3764a0;
+            border: 1px solid #3764a0;
+        }
+
+        &:last-child s {
+            right: auto;
+            left: 2rem;
+        }
+
+        sup {
+            display: flex;
+            align-content: center;
+            padding: 1rem 0 0;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            i,
+            a {
+                margin: 0 0.05rem;
+                display: inline-block;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 1rem;
+                background: #babdce;
+                text-decoration: none;
+                cursor: pointer;
+                margin: 0 0.2rem 0.2rem;
+                @media (max-width: 1024px) {
+                    margin: 0 0.1rem 0.2rem;
+                }
+
+                &.win,
+                &.mtype1 {
+                    background: #82ac4e;
+                }
+
+                &.loose,
+                &.mtype-1 {
+                    background: #eb5757;
+                }
+            }
+        }
+    }
+
+    .score {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        font-size: 0.9rem;
+        color: #30404f;
+        padding: 0.15rem 1rem;
+
+        h2,
+        h3,
+        h4 {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        b {
+            margin-top: 0.5rem;
+        }
+
+        .kf {
+            color: #707070;
+        }
+
+        .progress {
+            margin: 0.5rem 0;
+        }
+
+        u {
+            text-decoration: none;
+        }
+
+        .type1 {
+            background: transparent;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            font-weight: bold;
+            color: #000;
+            padding: 1rem 0 1.2rem;
+            width: auto;
+
+            &.ended {
+                s {
+                    animation: none;
+                }
+            }
+
+            s {
+                margin: 0 0.5rem;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.teams-on-live-hrzntl {
+    align-items: center;
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    .game-score {
+        flex-basis: 100px;
+        text-align: center;
+        font-size: 23px;
+        margin-right: 20px;
+    }
+    .game-info {
+    }
+    .timer {
+        font-size: 14px;
+        color: #30404f;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .gm{
+        margin-right: 5px;
+    }
+    .api{
+        margin-left: 5px;
+    }
+}
+
+.teamblock {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    .team-logo {
+        padding-right: 20px;
+    }
+    a {
+        font-size: 15px;
+    }
+    .team-num {
+        margin-right: 20px;
+    }
+
+    .win {
+        a {
+            border-bottom: 2px solid;
+        }
+    }
+
+}
+
+.const.table {
+    margin: 0;
+    tr {
+        &:last-child td {
+            border-bottom: 0;
+        }
+        td,
+        th {
+            border-bottom: 1px solid #f1f1f1;
+            border-top: 0;
+            padding: 2px;
+            line-height: 1rem;
+            font-size: 11px;
+        }
+    }
+}
+
+.playerName{
+    b{
+        display: inline-block;
+        width: 24px;
+    }
+}
+
+.api{
+    color: #299caf;
 }

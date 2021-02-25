@@ -47,6 +47,11 @@ Final", "Weekly Survival"] %}
     .select2-container--default~.select2-container--default {
         display: none !important;
     }
+
+    #gt_tournament_logo_trigger.btn-primary~#gt_tournament_logo_trigger,
+    #gt_tournament_icon_trigger.btn-outline-primary {
+        display: none !important;
+    }
 </style>
 
 
@@ -352,12 +357,12 @@ Final", "Weekly Survival"] %}
                                                                     {% for i in 2..5 %}
                                                                     <li class="list-group-item">
                                                                         <span class="numdiv">
-                                                                            {% if i == 5 or i == 2 or i == 68 or i == 4 %}
-                                                                                <b class="badge badge-num">{{i}}</b>
+                                                                            {% if or i == 3 or i == 4 %}
+                                                                                <b class="badge badge-num badge-danger" title="Ошибка">{{i}}</b>
                                                                             {% endif %}
                                                                         </span>
                                                                         <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/{{i}}.png">
-                                                                        <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
+                                                                        
                                                                         &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">{{random(user)}} / {{random(user)}}
                                                                             </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
                                                                     </li>

@@ -22,6 +22,10 @@
     .select2-container--default~.select2-container--default {
         display: none !important;
     }
+    #gt_tournament_logo_trigger.btn-primary~#gt_tournament_logo_trigger,
+    #gt_tournament_icon_trigger.btn-outline-primary {
+        display: none !important;
+    }
 </style>
 
 
@@ -112,10 +116,6 @@
                                             </li>
                                             <li class="nav-item"><a class="nav-link"
                                                     data-action="click->edit#track_change" data-remote="true"
-                                                    href="/gt_player_lists/71124/edit?gt_player_lists_form_part=teams">Команды</a>
-                                            </li>
-                                            <li class="nav-item"><a class="nav-link"
-                                                    data-action="click->edit#track_change" data-remote="true"
                                                     href="/gt_player_lists/71124/edit?gt_player_lists_form_part=dup">Дубль</a>
                                             </li>
                                         </ul>
@@ -183,7 +183,8 @@
                                                     <div
                                                         class="form-group row string optional gt_player_list_title form-group-valid">
                                                         <label class="col-sm-2 col-form-label string optional"
-                                                            for="gt_player_list_title">Ник</label>
+                                                            for="gt_player_list_title">Ник  <abbr
+                                                            title="обязательное">*</abbr></label>
                                                         <div class="col-sm-10"><input
                                                                 class="form-control string optional" type="text"
                                                                 value="Привет" name="gt_player_list[title]"
@@ -307,6 +308,28 @@
                                                             </select>
                                                         </div>
                                                     </div>
+
+                                                    <div
+                                                        class="form-group row select2 optional gt_player_list_pop_sex form-group-valid">
+                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                            for="gt_player_list_pop_sex">Пол</label>
+                                                        <div class="col-sm-10"><select
+                                                                class="form-control select2 optional select2-hidden-accessible"
+                                                                autocomplete="off" data-target="select2.select"
+                                                                data-width="100%" data-language="ru" 
+                                                                data-placeholder="Выберите или создайте вариант названия"
+                                                                data-adapter-func="select2/data/extended-ajax"
+                                                                name="gt_player_list[pop_sex][]" id="pop_sex"
+                                                                data-select2-id="gt_player_list_pop_sex" tabindex="-1"
+                                                                aria-hidden="true">
+                                                                <option selected="selected" value="man"
+                                                                    data-select2-id="1">Мужской</option>
+                                                                <option value="woman"
+                                                                    data-select2-id="2">Женский</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
                                                     <div
                                                         class="form-group row select2 optional gt_player_list_role form-group-valid">
                                                         <label class="col-sm-2 col-form-label select2 optional"
@@ -326,25 +349,7 @@
                                                                 </option>
                                                                 <option value="true" data-select2-id="7">Yes</option>
                                                                 <option value="false" data-select2-id="8">No</option>
-                                                            </select><span
-                                                                class="select2 select2-container select2-container--default"
-                                                                dir="ltr" data-select2-id="5" style="width: 100%;"><span
-                                                                    class="selection"><span
-                                                                        class="select2-selection select2-selection--single"
-                                                                        role="combobox" aria-haspopup="true"
-                                                                        aria-expanded="false" tabindex="0"
-                                                                        aria-disabled="false"
-                                                                        aria-labelledby="select2-gt_player_list_role-container"><span
-                                                                            class="select2-selection__rendered"
-                                                                            id="select2-gt_player_list_role-container"
-                                                                            role="textbox" aria-readonly="true"><span
-                                                                                class="select2-selection__placeholder">Выбрать
-                                                                                роль</span></span><span
-                                                                            class="select2-selection__arrow"
-                                                                            role="presentation"><b
-                                                                                role="presentation"></b></span></span></span><span
-                                                                    class="dropdown-wrapper"
-                                                                    aria-hidden="true"></span></span>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div
@@ -474,15 +479,13 @@
                                                                     <img style="width: 18px; height: 18px; object-fit: contain;"
                                                                         onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
                                                                         src="https://assets.esnadm.com/media/flag/1.png">
-                                                                    <img style="width: 30px; height: 30px; object-fit: contain;"
-                                                                        onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
-                                                                        src="https://assets.esnadm.com/media/logo/_30/t40634.png?7erd">
+                                                                    
                                                                     &nbsp;
                                                                     <a onclick="event.stopPropagation()" target="_blank"
                                                                         class="tname"
-                                                                        href="/gt_teams_lists/66726/edit">EG
+                                                                        href="/gt_teams_lists/66726/edit">Gambit
                                                                         /
-                                                                        KG
+                                                                        VICI
                                                                     </a>
                                                                     <a class="float-right text-danger" href="#"
                                                                         role="presentation"><i
@@ -492,15 +495,13 @@
                                                                     <img style="width: 18px; height: 18px; object-fit: contain;"
                                                                         onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
                                                                         src="https://assets.esnadm.com/media/flag/2.png">
-                                                                    <img style="width: 30px; height: 30px; object-fit: contain;"
-                                                                        onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
-                                                                        src="https://assets.esnadm.com/media/logo/_30/t40634.png?7erd">
+                                                                    
                                                                     &nbsp;
                                                                     <a onclick="event.stopPropagation()" target="_blank"
                                                                         class="tname"
-                                                                        href="/gt_teams_lists/66726/edit">Navi
+                                                                        href="/gt_teams_lists/66726/edit">OG
                                                                         /
-                                                                        Virtus.Pro
+                                                                        Navi
                                                                     </a>
                                                                     <a class="float-right text-danger" href="#"
                                                                         role="presentation"><i
@@ -510,15 +511,13 @@
                                                                     <img style="width: 18px; height: 18px; object-fit: contain;"
                                                                         onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
                                                                         src="https://assets.esnadm.com/media/flag/3.png">
-                                                                    <img style="width: 30px; height: 30px; object-fit: contain;"
-                                                                        onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
-                                                                        src="https://assets.esnadm.com/media/logo/_30/t40634.png?7erd">
+                                                                    
                                                                     &nbsp;
                                                                     <a onclick="event.stopPropagation()" target="_blank"
                                                                         class="tname"
-                                                                        href="/gt_teams_lists/66726/edit">Navi
+                                                                        href="/gt_teams_lists/66726/edit">EG
                                                                         /
-                                                                        Gambit
+                                                                        Movistar Riders
                                                                     </a>
                                                                     <a class="float-right text-danger" href="#"
                                                                         role="presentation"><i
@@ -528,15 +527,13 @@
                                                                     <img style="width: 18px; height: 18px; object-fit: contain;"
                                                                         onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
                                                                         src="https://assets.esnadm.com/media/flag/4.png">
-                                                                    <img style="width: 30px; height: 30px; object-fit: contain;"
-                                                                        onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
-                                                                        src="https://assets.esnadm.com/media/logo/_30/t40634.png?7erd">
+                                                                    
                                                                     &nbsp;
                                                                     <a onclick="event.stopPropagation()" target="_blank"
                                                                         class="tname"
-                                                                        href="/gt_teams_lists/66726/edit">Ehome
+                                                                        href="/gt_teams_lists/66726/edit">Mineski
                                                                         /
-                                                                        VICI
+                                                                        OG
                                                                     </a>
                                                                     <a class="float-right text-danger" href="#"
                                                                         role="presentation"><i
@@ -581,15 +578,20 @@
                                                             <div data-target="uppy.uploaded">
                                                                 <img
                                                                     src="https://assets.esnadm.com/media/tournament/e4355.png?II-Y" />
-
+                                                                
+                                                                <img title="Иконка" class="mt-3 mb-3"
+                                                                    src="https://assets.esnadm.com/media/event/_60/e4355.png?0_kJ">
+                                                                <!-- <a href="" class="btn btn-outline-primary">Сохранить иконку</a> -->
                                                             </div>
 
                                                             <div
-                                                                class="form-group row string optional  form-group-valid">
-                                                                <label class="col-sm-2 col-form-label string optional"
+                                                                class="form-group row string optional mt-2 mb-0 form-group-valid">
+                                                                <label class="col-sm-12 col-form-label string optional"
                                                                     for="">Источник</label>
-                                                                <div class="col-sm-10"><input
-                                                                        class="form-control string optional" type="text"
+                                                                <div class="col-sm-12"><input
+                                                                        class="form-control string optional" 
+                                                                        placeholder="https://source.com"
+                                                                        type="text"
                                                                         value="" name="" id=""></div>
                                                             </div>
 
@@ -604,62 +606,13 @@
                                                                     data-allowed-extensions="jpg,png,jpeg"
                                                                     data-prompt="Выберите Логотип" type="hidden"
                                                                     name="gt_tournament[logo]" id="gt_tournament_logo">
-
+ 
                                                             </div>
 
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div data-controller="uppy">
-                                                    <div class="card">
-
-                                                        <div class="card-header">
-                                                            <h6 class="float-left">Иконка
-                                                                <i class="fas fa-info-circle"
-                                                                    style="opacity: .4;margin-left:10px;"
-                                                                    title="300px x 300px, jpg, png, jpeg"></i>
-                                                            </h6>
-                                                            <div class="float-right">
-                                                                <a href="#" id="gt_tournament_icon_trigger"
-                                                                    class="btn btn-primary btn-sm"><i
-                                                                        class="fas fa-plus"></i></a>
-                                                                <a class="btn btn-danger btn-sm"
-                                                                    data-target="uppy.delete"
-                                                                    data-action="uppy#remove_image" style="" href="#"><i
-                                                                        class="fas fa-trash-alt"></i></a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="card-body">
-                                                            <div data-target="uppy.uploaded">
-                                                                <!-- <img
-                                                                            src="https://assets.esnadm.com/media/event/e4355.png?3csL"><img
-                                                                            style=""
-                                                                            src="https://assets.esnadm.com/media/event/_120/e4355.png?-GJt">
-                                                                        -->
-                                                                <img style=""
-                                                                    src="https://assets.esnadm.com/media/event/_60/e4355.png?0_kJ">
-                                                                <!-- <img style="" src="https://assets.esnadm.com/media/event/_30/e4355.png?JTvc"> -->
-                                                            </div>
-                                                            <div
-                                                                class="form-group row hidden gt_tournament_icon form-group-valid">
-                                                                <div class="col-sm-10"><input
-                                                                        class="form-control hidden"
-                                                                        data-target="uppy.single"
-                                                                        data-hint=">= 120px x 120px, png"
-                                                                        data-value="{&quot;id&quot;:&quot;origin/event/e4355.png&quot;,&quot;storage&quot;:&quot;store&quot;,&quot;metadata&quot;:{}}"
-                                                                        data-min-dimensions-error="Слишком маленькие размеры файла, должны быть больше "
-                                                                        data-min-dimensions="120,120"
-                                                                        data-allowed-extensions="png"
-                                                                        data-prompt="Выберите Иконка" type="hidden"
-                                                                        name="gt_tournament[icon]"
-                                                                        id="gt_tournament_icon">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -721,20 +674,25 @@
           <a href="/gt_player_lists.html" class="dropdown-item">gt_player_lists</a>
           <a href="/gt_tournaments_stages_edit.html" class="dropdown-item">gt_tournaments_stages_edit</a>
           <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item">gt_tournaments_stages_edit_prize</a>
-          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_mesh</a>
-          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-danger">gt_tournaments_rounds_edit</a>
-          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-danger">gt_tournaments_round_tabs_edit</a>
-          <a href="/gt_match_lists_edit.html" class="dropdown-item text-danger">gt_match_lists_edit</a>
-          <a href="/live_games.html" class="dropdown-item text-danger">live_games</a>
-          <a href="/live_games_lol.html" class="dropdown-item text-danger">live_games_lol</a>
-          <a href="/live_games_valorant.html" class="dropdown-item text-danger">live_games_valorant</a>
-          <a href="/gt_teams_lists_edit.html" class="dropdown-item text-danger">gt_teams_lists_edit</a>
-          <a href="/gt_player_lists_edit.html" class="dropdown-item text-danger">gt_player_lists_edit</a>
+          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-">gt_tournaments_stages_edit_mesh</a>
+          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-">gt_tournaments_rounds_edit</a>
+          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-">gt_tournaments_round_tabs_edit</a>
+          <a href="/gt_match_lists_edit.html" class="dropdown-item text-">gt_match_lists_edit</a>
+          <a href="/live_games.html" class="dropdown-item text-">live_games</a>
+          <a href="/live_games_lol.html" class="dropdown-item text-">live_games_lol</a>
+          <a href="/live_games_valorant.html" class="dropdown-item text-">live_games_valorant</a>
+          <a href="/gt_teams_lists_edit.html" class="dropdown-item text-">gt_teams_lists_edit</a>
+          <a href="/gt_player_lists_edit.html" class="dropdown-item text-">gt_player_lists_edit</a>
+          <a href="/live_games_pubg.html" class="dropdown-item text-">live_games_pubg</a>
+          <a href="/gt_match_lists2.html" class="dropdown-item text-">gt_match_lists2</a>
+          <!-- <a href="/live_games_Dota_Match.html" class="dropdown-item text-">live_games_Dota_Match</a> -->
+          <a href="/live_games_Dota_Match2.html" class="dropdown-item text-">live_games_Dota_Match2</a>
+          <a href="/live_games_pubg_match.html" class="dropdown-item text-">live_games_pubg_match</a>
+          <a href="/live_games_lol_Match2.html" class="dropdown-item text-">live_games_lol_Match2</a>
+
         </div>
     </div>
 
-    
-     
   </div>
 </div>
 

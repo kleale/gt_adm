@@ -251,12 +251,38 @@ module.exports = {
             hash: false,
             template: `${PATHS.src}/gt_player_lists_edit.html`,
             filename: './gt_player_lists_edit.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games_pubg.html`,
+            filename: './live_games_pubg.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/gt_match_lists2.html`,
+            filename: './gt_match_lists2.html'
+        }),
+        // new HtmlWebpackPlugin({
+        //     hash: false,
+        //     template: `${PATHS.src}/live_games_Dota_Match.html`,
+        //     filename: './live_games_Dota_Match.html'
+        // }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games_Dota_Match2.html`,
+            filename: './live_games_Dota_Match2.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games_pubg_match.html`,
+            filename: './live_games_pubg_match.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games_lol_Match2.html`,
+            filename: './live_games_lol_Match2.html'
         })
-
         
-        
-        
-
     ],
 }
 

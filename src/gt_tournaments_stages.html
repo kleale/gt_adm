@@ -163,11 +163,11 @@
                                                     id="gt_tournaments_stage_form_part" />
                                                 <div data-controller="select2 autocomplete">
                                                     <div
-                                                        class="form-group row select2 required gt_tournaments_stage_game_id">
-                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                        class="form-group label-up row select2 required gt_tournaments_stage_game_id">
+                                                        <label class="select2 required"
                                                             for="gt_tournaments_stage_game_id">Дисциплина <abbr
                                                                 title="обязательное">*</abbr></label>
-                                                        <div class="col-sm-10"><select
+                                                        <div class="col-sm-12"><select
                                                                 class="form-control select2 required" autocomplete="off"
                                                                 data-target="select2.select" data-width="100%"
                                                                 data-language="ru"
@@ -189,18 +189,18 @@
                                                             </select></div>
                                                     </div>
                                                     <div
-                                                        class="form-group row select2 required gt_tournaments_stage_tournament">
-                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                        class="form-group label-up row select2 required gt_tournaments_stage_tournament">
+                                                        <label class="select2 required"
                                                             for="gt_tournaments_stage_tid">Турнир <abbr
                                                                 title="обязательное">*</abbr></label>
-                                                        <div class="col-sm-10"><select
+                                                        <div class="col-sm-12"><select
                                                                 class="form-control select2 required" autocomplete="off"
                                                                 data-target="select2.select" data-width="100%"
                                                                 data-language="ru" data-endpoint="gt_tournaments.json"
                                                                 data-related="#gt_tournaments_stage_game_id"
                                                                 data-template-selection-name="template_with_icon"
                                                                 data-template-result-name="template_with_icon"
-                                                                data-placeholder="" data-allow-clear="true"
+                                                                data-placeholder="Выберите турнир" data-allow-clear="true"
                                                                 data-minimum-input-length="1"
                                                                 data-adapter-func="select2/data/extended-ajax"
                                                                 name="gt_tournaments_stage[tid]"
@@ -209,10 +209,10 @@
                                                             </select></div>
                                                     </div>
                                                     <div
-                                                        class="form-group row select2 optional gt_tournaments_stage_parent_stage form-group-valid">
-                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                        class="form-group label-up row select2 optional gt_tournaments_stage_parent_stage form-group-valid">
+                                                        <label class="select2 optional"
                                                             for="gt_tournaments_stage_stage">Родительская стадия</label>
-                                                        <div class="col-sm-10"><select
+                                                        <div class="col-sm-12"><select
                                                                 class="form-control select2 optional" autocomplete="off"
                                                                 data-target="select2.select" data-width="100%"
                                                                 data-language="ru"
@@ -228,11 +228,11 @@
                                                             </select></div>
                                                     </div>
                                                     <div
-                                                        class="form-group row string optional gt_tournaments_stage_title">
-                                                        <label class="col-sm-2 col-form-label string optional"
+                                                        class="form-group label-up row string optional gt_tournaments_stage_title">
+                                                        <label class="string optional"
                                                             for="gt_tournaments_stage_title">Сокращенное
                                                             название</label>
-                                                        <div class="col-sm-10"><input
+                                                        <div class="col-sm-12"><input
                                                                 class="form-control string optional" autocomplete="off"
                                                                 data-target="autocomplete.input"
                                                                 data-endpoint="gt_tournaments_stages/titles.json"
@@ -244,11 +244,11 @@
                                                                 id="gt_tournaments_stage_title" /></div>
                                                     </div>
                                                     <div
-                                                        class="form-group row string required gt_tournaments_stage_name">
-                                                        <label class="col-sm-2 col-form-label string required"
+                                                        class="form-group label-up row string required gt_tournaments_stage_name">
+                                                        <label class="string required"
                                                             for="gt_tournaments_stage_name">Полное название <abbr
                                                                 title="обязательное">*</abbr></label>
-                                                        <div class="col-sm-10"><input
+                                                        <div class="col-sm-12"><input
                                                                 class="form-control string required" autocomplete="off"
                                                                 data-target="autocomplete.input"
                                                                 data-endpoint="gt_tournaments_stages/names.json"
@@ -261,11 +261,11 @@
                                                     </div>
                                                     
                                                     <div
-                                                        class="form-group row string required gt_tournaments_stage_eng">
-                                                        <label class="col-sm-2 col-form-label string required"
+                                                        class="form-group label-up row string required gt_tournaments_stage_eng">
+                                                        <label class="string required"
                                                             for="gt_tournaments_stage_eng">Транслит <abbr
                                                                 title="обязательное">*</abbr></label>
-                                                        <div class="col-sm-10"><input
+                                                        <div class="col-sm-12"><input
                                                                 class="form-control string required" autocomplete="off"
                                                                 data-target="autocomplete.input"
                                                                 data-endpoint="gt_tournaments_stages/engs.json"
@@ -276,7 +276,7 @@
                                                                 name="gt_tournaments_stage[eng]"
                                                                 id="gt_tournaments_stage_eng" /></div>
                                                     </div>
-                                                    <div
+                                                    <!-- <div
                                                         class="form-group row string required gt_tournaments_stage_eng">
                                                         <label class="col-sm-2"></label>
                                                         <div class="col-sm-10">
@@ -290,13 +290,13 @@
                                                                 class="custom-control-label boolean optional"
                                                                 for="">LAN стадия?</label></div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div
-                                                        class="form-group row select2 required gt_tournaments_stage_form">
-                                                        <label class="col-sm-2 col-form-label select2 required"
+                                                        class="form-group label-up row select2 required gt_tournaments_stage_form">
+                                                        <label class="select2 required"
                                                             for="gt_tournaments_stage_form">Тип <abbr
                                                                 title="обязательное">*</abbr></label>
-                                                        <div class="col-sm-10"><select
+                                                        <div class="col-sm-12"><select
                                                                 class="form-control select2 required" autocomplete="off"
                                                                 data-target="select2.select" data-width="100%"
                                                                 data-language="ru" data-placeholder="Выберите тип"
@@ -312,10 +312,10 @@
                                                             </select></div>
                                                     </div>
                                                     <div
-                                                        class="form-group row select2 optional gt_tournaments_stage_dup_id">
-                                                        <label class="col-sm-2 col-form-label select2 optional"
+                                                        class="form-group label-up row select2 optional gt_tournaments_stage_dup_id">
+                                                        <label class="select2 optional"
                                                             for="gt_tournaments_stage_dup_id">Копирование</label>
-                                                        <div class="col-sm-10"><select
+                                                        <div class="col-sm-12"><select
                                                                 class="form-control select2 optional" autocomplete="off"
                                                                 data-target="select2.select" data-width="100%"
                                                                 data-language="ru"
@@ -330,9 +330,9 @@
                                                             </select></div>
                                                     </div>
                                                     <div
-                                                        class="form-group row boolean optional gt_tournaments_stage_dup_prize_places">
-                                                        <label class="col-sm-2"></label>
-                                                        <div class="col-sm-10">
+                                                        class="form-group label-up row boolean optional gt_tournaments_stage_dup_prize_places">
+                                                        <label class=""></label>
+                                                        <div class="col-sm-12">
                                                             <div class="custom-control custom-switch"><input
                                                                     name="gt_tournaments_stage[dup_prize_places]"
                                                                     type="hidden" value="0" /><input

@@ -40,8 +40,8 @@ Final", "Weekly Survival"] %}
 {% set burth = ["1988-07-22", "1966-04-12", "1975-03-01", "2001-05-08", "2007-04-08"] %}
 {% set id = ["5838563453", "5838562255", "5838539413", "5838539385", "583853952", "5838539962", "5838539936"] %}
 
-{% set scorenum = ["12:24", "2:4", "1:2", "1:4", "2:12", "3:1", "4:6", "3:6", "0:2", "1:0" ] %}
-{% set hash = ["#1", "#2", "#2", "#1", "#2", "#3", "#3", "", "", "" ] %}
+{% set scorenum = ["12:24", "12:43", "1:2", "1:4", "2:12", "3:1", "24:64", "3:6", "0:2", "1:0" ] %}
+{% set hash = ["#1", "#2", "#2", "#1", "#2", "#3", "#3" ] %}
 
 {% set time = ["12:00", "14:45", "00:30", "23:00", "22:15", "21:30", "16:15"] %}
 {% set date = ["2021-01-18", "2020-12-23","2020-12-23","2020-12-23","2020-12-22","2020-12-24","2020-12-25" ] %}
@@ -177,16 +177,18 @@ Final", "Weekly Survival"] %}
                                                     <th width="100px">API ID</th>
                                                     <th width="150px">Турнир</th>
                                                     <th class="text-center">Матч</th>
-                                                    <th width="120px">GT</th>
                                                     <th width="150px">Время</th>
+                                                    <th width="120px" class="text-center">Игра</th>
                                                     <th width="150px"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {% for i in 1..5 %}
+                                                {% for i in 1..8 %}
                                                 <tr id="row-{{i}}">
                                                     <td class="text-center">
-                                                        {% if i == 2 %}
+                                                        {% if i == 5 %}
+                                                            <i style="color:green" title="ОКОК" class="fas fa-check-double"></i>
+                                                        {% elseif i == 2 %}
                                                             <i style="color:green" title="ОК" class="fas fa-check"></i>
                                                         {% elseif i == 3 %}
                                                             <i style="color:red" title="Ошибка" class="fas fa-times"></i>
@@ -201,8 +203,11 @@ Final", "Weekly Survival"] %}
                                                     <td>{{random(id)}}</td>
                                                     <td>
                                                         {% if i == 3 or i == 5 %}
-                                                            <a class="text-success" href="/gt_tournaments/2996/edit">{{random(tour)}}</a>
+                                                        <span class="filterico"><a href="/"><i class="fas fa-filter"></i></a></span>    
+                                                        <a class="text-success" href="/gt_tournaments/2996/edit">{{random(tour)}}</a>
+                                                            &nbsp;&nbsp;
                                                         {% else %}
+                                                        <span class="filterico"></span>    
                                                             <a class="text-body" href="/gt_tournaments/2996/edit">{{random(tour)}}</a>
                                                         {% endif %}
                                                     </td>
@@ -220,17 +225,22 @@ Final", "Weekly Survival"] %}
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        {% if i == 3 or i == 5 %}
-                                                            <a href="/">{{random()}}</a>{{random(hash)}}
-                                                        {% else %}
+                                                        <span class="live">{% if i == 1 %} <i style="color:red" title="LIVE" class="fas fa-circle"></i>{% endif %}</span>
+                                                        00:2{{i}}:5{{i}} 
+                                                    </td>
+                                                    <td class="text-center">
+                                                        {% if i == 1 or  i == 3 or  i == 4 or i == 5 %}
                                                             {{random(hash)}}
                                                         {% endif %}
                                                     </td>
-                                                    <td>
-                                                        00:2{{i}}:5{{i}}
-                                                    </td>
+                                                    
                                                     <td class="text-right">
-                                                        <a class="btn btn-success btn-sm select-matches-link-4122" data-remote="true" href="/discipline/api/dota2/live_games/5838563453/matches?filter=4122%2C4087&amp;live_game%5Bdire_series_wins%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_id%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_name%5D=&amp;live_game%5Bfrom_history%5D=false&amp;live_game%5Bleague_id%5D=4122&amp;live_game%5Bleague_name%5D=FACEIT+League&amp;live_game%5Bmatch_id%5D=5838563453&amp;live_game%5Bradiant_series_wins%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_id%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_name%5D=&amp;live_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=17&amp;live_game%5Bscoreboard%5D%5Bduration%5D=1524&amp;live_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=27&amp;live_game%5Bstart_time%5D="><i class="fas fa-gamepad"></i></a>
+                                                        <!-- <a class="btn btn-success btn-sm" data-remote="true" href="/"><i class="fas fa-gamepad"></i></a> -->
+                                                        {% if i == 1 or i == 2 or i == 3 or i == 5 %}
+                                                            <a class="btn btn-success btn-sm" data-remote="true" href="/"><i class="fas fa-check"></i></a>
+                                                        {% else %}
+                                                            <a class="btn btn-secondary btn-sm" data-remote="true" href="/"><i class="fas fa-question"></i></a>
+                                                        {% endif %}
                                                         <a class="btn btn-primary btn-sm" href="/discipline/api/dota2/live_games/5838563453?filter=4122%2C4087%2C5838563453&amp;live_game%5Bdire_series_wins%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_id%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_name%5D=&amp;live_game%5Bfrom_history%5D=false&amp;live_game%5Bleague_id%5D=4122&amp;live_game%5Bleague_name%5D=FACEIT+League&amp;live_game%5Bmatch_id%5D=5838563453&amp;live_game%5Bradiant_series_wins%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_id%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_name%5D=&amp;live_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=17&amp;live_game%5Bscoreboard%5D%5Bduration%5D=1524&amp;live_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=27&amp;live_game%5Bstart_time%5D=&amp;search%5Blive_dota2_tournament%5D=4122%2C4087%2C5838563453"><i class="fas fa-info-circle"></i></a>
                                                     </td>
                                                 </tr>

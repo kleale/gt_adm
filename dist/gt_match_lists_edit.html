@@ -137,7 +137,7 @@
                                             data-target="edit.body edit-form.body"></span><input value="common"
                                             type="hidden" name="gt_match_list[form_part]" id="gt_match_list_form_part">
                                         <div data-controller="select2 datepicker">
-                                            <div class="row">
+                                            <div class="form-row">
                                                 <label class="col-sm-2 col-form-label select2 required"
                                                     for="gt_match_list_tid">Турнир <abbr
                                                         title="обязательное">*</abbr></label>
@@ -183,7 +183,7 @@
                                                 </div>
 
                                                 <div
-                                                    class="form-group col-sm-4 row select2 required gt_match_list_match_round form-group-valid">
+                                                    class="form-group col-sm-2 select2 required gt_match_list_match_round form-group-valid">
                                                     <select
                                                         class="form-control select2 required select2-hidden-accessible"
                                                         autocomplete="off" data-target="select2.select"
@@ -199,55 +199,449 @@
                                                             Semifinal</option>
                                                     </select>
                                                 </div>
+                                                <div
+                                                    class="form-group col-sm-2 select2 required gt_match_list_match_round_tabs form-group-valid">
+                                                    <select
+                                                        class="form-control select2 required select2-hidden-accessible"
+                                                        autocomplete="off" data-target="select2.select"
+                                                        data-width="100%" data-language="ru"
+                                                        data-endpoint="gt_tournaments_rounds_tabs.json"
+                                                        data-related="#gt_match_list_round"
+                                                        data-placeholder="Выберите Субраунд" data-minimum-input-length="1"
+                                                        data-adapter-func="select2/data/extended-ajax"
+                                                        name="gt_match_list[round_tabs]" id="gt_match_list_round_tabs "
+                                                        data-select2-id="gt_match_list_round" tabindex="-1"
+                                                        aria-hidden="true">
+                                                        <option >
+                                                            Субраунд</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div
-                                                class="form-group row string optional gt_match_list_date_and_time form-group-valid">
+
+                                            <div class="form-row string optional gt_match_list_date form-group-valid">
                                                 <label class="col-sm-2 col-form-label string optional"
-                                                    for="gt_match_list_date_and_time">Дата и Время</label>
-                                                <div class="col-sm-10"><input class="form-control string optional"
-                                                        type="text" data-target="datepicker.single" data-time="true"
-                                                        data-locale="{&quot;format&quot;:&quot;YYYY-MM-DD HH:mm&quot;,&quot;singleDatePicker&quot;:true,&quot;separator&quot;:&quot;—&quot;,&quot;applyLabel&quot;:&quot;Принять&quot;,&quot;cancelLabel&quot;:&quot;Отменить&quot;,&quot;fromLabel&quot;:&quot;с&quot;,&quot;toLabel&quot;:&quot;по&quot;,&quot;daysOfWeek&quot;:[&quot;Вс&quot;,&quot;Пн&quot;,&quot;Вт&quot;,&quot;Ср&quot;,&quot;Чт&quot;,&quot;Пт&quot;,&quot;Сб&quot;],&quot;monthNames&quot;:[&quot;янв.&quot;,&quot;февр.&quot;,&quot;марта&quot;,&quot;апр.&quot;,&quot;мая&quot;,&quot;июня&quot;,&quot;июля&quot;,&quot;авг.&quot;,&quot;сент.&quot;,&quot;окт.&quot;,&quot;нояб.&quot;,&quot;дек.&quot;],&quot;firstDay&quot;:1}"
-                                                        value="2020-12-14 15:02 MSK" name="gt_match_list[date_and_time]"
-                                                        id="gt_match_list_date_and_time" placeholder="YYYY-MM-DD HH:mm">
+                                                    for="gt_match_list_date">Дата и Время</label>
+                                                <div class="form-group col-sm-2"><input
+                                                        class="form-control string optional" type="text"
+                                                        data-target="datepicker.single" data-time="false"
+                                                        data-locale="{&quot;format&quot;:&quot;YYYY-MM-DD&quot;,&quot;singleDatePicker&quot;:true,&quot;separator&quot;:&quot;—&quot;,&quot;applyLabel&quot;:&quot;Принять&quot;,&quot;cancelLabel&quot;:&quot;Отменить&quot;,&quot;fromLabel&quot;:&quot;с&quot;,&quot;toLabel&quot;:&quot;по&quot;,&quot;daysOfWeek&quot;:[&quot;Вс&quot;,&quot;Пн&quot;,&quot;Вт&quot;,&quot;Ср&quot;,&quot;Чт&quot;,&quot;Пт&quot;,&quot;Сб&quot;],&quot;monthNames&quot;:[&quot;янв.&quot;,&quot;февр.&quot;,&quot;марта&quot;,&quot;апр.&quot;,&quot;мая&quot;,&quot;июня&quot;,&quot;июля&quot;,&quot;авг.&quot;,&quot;сент.&quot;,&quot;окт.&quot;,&quot;нояб.&quot;,&quot;дек.&quot;],&quot;firstDay&quot;:1}"
+                                                        value="2020-12-13" name="gt_match_list[date]"
+                                                        id="gt_match_list_date" placeholder="YYYY-MM-DD">
                                                 </div>
-                                            </div>
-                                            <div
-                                                class="form-group row boolean optional gt_match_list_defwin form-group-valid">
-                                                <label class="col-sm-2"></label>
-                                                <div class="col-sm-10">
-                                                    <div class="custom-control custom-switch"><input
-                                                            name="gt_match_list[defwin]" type="hidden" value="0"><input
-                                                            class="custom-control-input boolean optional"
-                                                            type="checkbox" value="1" name="gt_match_list[defwin]"
-                                                            id="gt_match_list_defwin"><label
-                                                            class="custom-control-label boolean optional"
-                                                            for="gt_match_list_defwin">Defwin</label></div>
+
+                                                <div class="input-group form-group col-sm-1">
+                                                    <input class="form-control string optional" type="text"  
+                                                        name="gt_match_list[time]" id="gt_match_list_time"
+                                                        placeholder="HH:mm">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text" id="basic-addon1">MSK</span>
+                                                    </div>
                                                 </div>
                                             </div>
 
+                                        </div>
+                                        <div
+                                            class="form-group row boolean optional gt_match_list_defwin form-group-valid">
+                                            <label class="col-sm-2"></label>
+                                            <div class="col-sm-10">
+                                                <div class="custom-control custom-switch"><input
+                                                        name="gt_match_list[defwin]" type="hidden" value="0"><input
+                                                        class="custom-control-input boolean optional" type="checkbox"
+                                                        value="1" name="gt_match_list[defwin]"
+                                                        id="gt_match_list_defwin"><label
+                                                        class="custom-control-label boolean optional"
+                                                        for="gt_match_list_defwin">Defwin</label></div>
+                                            </div>
+                                        </div>
 
-                                            <hr>
-                                            <div class="row">
-                                                <label class="col-sm-2">Команды</label>
-                                                <div class="col-sm-10">
-                                                    <span data-dialog_text="Форма не сохранена. Всё равно продолжить?"
-                                                        data-target="edit.body edit-form.body"></span><input
-                                                        value="teams" type="hidden" name="gt_match_list[form_part]"
-                                                        id="gt_match_list_form_part">
-                                                    <div data-controller="sortable select2-group calculations">
-                                                        <div data-controller="nested-form secondary-nested-form"
-                                                            data-target="sortable.fields">
+
+                                        <hr>
+                                        <div class="row">
+                                            <label class="col-sm-2">Команды</label>
+                                            <div class="col-sm-10">
+                                                <span data-dialog_text="Форма не сохранена. Всё равно продолжить?"
+                                                    data-target="edit.body edit-form.body"></span><input value="teams"
+                                                    type="hidden" name="gt_match_list[form_part]"
+                                                    id="gt_match_list_form_part">
+                                                <div data-controller="sortable select2-group calculations">
+                                                    <div data-controller="nested-form secondary-nested-form"
+                                                        data-target="sortable.fields">
+                                                        <div class="nested-fields sortable-item movable-item"
+                                                            data-controller="select2">
+                                                            <div class="form-row">
+
+                                                                <div class="form-group form-group--vcenter col-1">
+                                                                    <input
+                                                                        class="form-control string optional readonly mnum"
+                                                                        data-target="sortable.order secondary-nested-form.order calculations.places"
+                                                                        readonly="readonly" type="text" value="1"
+                                                                        name="gt_match_list[members_attributes][0][num]"
+                                                                        id="gt_match_list_members_attributes_0_num">
+                                                                    <span class="btn-sm sortable-handle"><i
+                                                                            class="fas fa-arrows-alt"></i></span><a
+                                                                        data-action="click->sortable#move_up"
+                                                                        class="btn-sm" href="#"><i
+                                                                            class="fas fa-arrow-up"></i></a><a
+                                                                        data-action="click->sortable#move_down"
+                                                                        class="btn-sm" href="#"><i
+                                                                            class="fas fa-arrow-down"></i></a>
+                                                                </div>
+                                                                <div
+                                                                    class="form-group col-sm-4 select2 optional gt_match_list_members_member_id form-group-valid">
+                                                                    <select
+                                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                                        autocomplete="off" data-target="select2.select"
+                                                                        data-width="100%" data-language="ru"
+                                                                        data-queryparams="tid=4469&amp;mid=316205"
+                                                                        data-endpoint="gt_tournaments/all_teams.json"
+                                                                        data-before-submit="beforeSubmit_addSelectedMembersToRequestFor_gt_match_members"
+                                                                        data-template-selection-name="template_with_icon"
+                                                                        data-template-result-name="template_with_icon_result"
+                                                                        data-placeholder="Выберите участника"
+                                                                        data-allow-clear="true"
+                                                                        data-minimum-input-length="1"
+                                                                        data-adapter-func="select2/data/extended-ajax"
+                                                                        name="gt_match_list[members_attributes][0][member_id]"
+                                                                        id="gt_match_list_members_attributes_0_member_id"
+                                                                        data-select2-id="gt_match_list_members_attributes_0_member_id"
+                                                                        tabindex="-1" aria-hidden="true">
+                                                                        <option value="" data-select2-id="8">
+                                                                            Выберите
+                                                                            участника</option>
+                                                                        <option
+                                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?8-iR&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
+                                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?Gpzq&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
+                                                                            value="18597" data-select2-id="9">
+                                                                            Indonesia
+                                                                            / LoL Garuda Series</option>
+                                                                        <option
+                                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
+                                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
+                                                                            selected="selected" value="65383"
+                                                                            data-select2-id="10">LOLO / Lights On
+                                                                            Lights
+                                                                            Off</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div
+                                                                    class="form-group col-sm-1 string optional gt_match_list_members_scores_with_defwin">
+                                                                    <input class="form-control string optional"
+                                                                        data-target="calculations.scores"
+                                                                        placeholder="Счет/Место" type="text"
+                                                                        name="gt_match_list[members_attributes][0][scores_with_defwin]"
+                                                                        id="gt_match_list_members_attributes_0_scores_with_defwin">
+                                                                </div>
+                                                                <div
+                                                                    class="form-group col-sm-1 string optional gt_match_list_members_points_with_penalty">
+                                                                    <input class="form-control string optional"
+                                                                        data-target="calculations.points"
+                                                                        placeholder="Очки" type="text"
+                                                                        name="gt_match_list[members_attributes][0][points_with_penalty]"
+                                                                        id="gt_match_list_members_attributes_0_points_with_penalty">
+                                                                </div>
+
+                                                                <div
+                                                                    class="form-group col-sm-5 select2 optional gt_match_list_members_players">
+                                                                    <input
+                                                                        name="gt_match_list[members_attributes][0][player_ids][]"
+                                                                        type="hidden" value=""><select
+                                                                        class="form-control select2 optional select2--rows select2-hidden-accessible"
+                                                                        autocomplete="off"
+                                                                        data-target="select2.select select2-group.select"
+                                                                        data-width="100%" data-language="ru"
+                                                                        data-queryparams="game_id=313&amp;match_id=316205&amp;serializer=GtPlayerMatchLinkSerializer&amp;team_index=0"
+                                                                        data-endpoint="gt_match_lists/players.json"
+                                                                        data-related="#gt_match_list_members_attributes_0_member_id"
+                                                                        data-before-submit="beforeSubmit_addSelectedPlayersToRequestFor_gt_player_match"
+                                                                        data-template-selection-name="template_with_icon"
+                                                                        data-template-result-name="template_with_icon_result"
+                                                                        data-placeholder="Выберите игроков команды"
+                                                                        data-minimum-input-length="1"
+                                                                        data-adapter-func="select2/data/extended-ajax"
+                                                                        data-multiple="true" multiple=""
+                                                                        name="gt_match_list[members_attributes][0][player_ids][]"
+                                                                        id="gt_match_list_members_attributes_0_player_ids"
+                                                                        data-select2-id="gt_match_list_members_attributes_0_player_ids"
+                                                                        tabindex="-1" aria-hidden="true"></select>
+
+                                                                    <ul
+                                                                        class="list-group list-group-flush edit-teams-list">
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/1.png">
+                                                                            <!-- <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I"> -->
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">Gamover
+                                                                                / BananaUser
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/2.png">
+                                                                            <!-- <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I"> -->
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">Progamer
+                                                                                / BananaUser
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/3.png">
+                                                                            <!-- <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I"> -->
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">Bonus
+                                                                                / Gamover
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/4.png">
+                                                                            <!-- <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I"> -->
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">Progamer
+                                                                                / Gamover
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                            </ul>
+
+                                                                </div>
+                                                                <!-- <div
+                                                                        class="form-group form-group--vcenter col-1 text-right">
+                                                                        <a class="btn-sm btn-danger"
+                                                                            data-action="click->sortable#remove_association"
+                                                                            href="#"><i
+                                                                                class="fas fa-trash"></i></a><input
+                                                                            type="hidden" value="false"
+                                                                            name="gt_match_list[members_attributes][0][_destroy]"
+                                                                            id="gt_match_list_members_attributes_0__destroy">
+                                                                    </div> -->
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <input type="hidden" value="316205 65383"
+                                                            name="gt_match_list[members_attributes][0][id]"
+                                                            id="gt_match_list_members_attributes_0_id">
+
+
+
+
+
+                                                        <div class="nested-fields sortable-item movable-item"
+                                                            data-controller="select2">
+                                                            <div class="form-row">
+
+                                                                <div class="form-group form-group--vcenter col-1">
+                                                                    <input
+                                                                        class="form-control string optional readonly mnum"
+                                                                        data-target="sortable.order secondary-nested-form.order calculations.places"
+                                                                        readonly="readonly" type="text" value="2"
+                                                                        name="gt_match_list[members_attributes][1][num]"
+                                                                        id="gt_match_list_members_attributes_1_num">
+                                                                    <span class="btn-sm sortable-handle"><i
+                                                                            class="fas fa-arrows-alt"></i></span><a
+                                                                        data-action="click->sortable#move_up"
+                                                                        class="btn-sm" href="#"><i
+                                                                            class="fas fa-arrow-up"></i></a><a
+                                                                        data-action="click->sortable#move_down"
+                                                                        class="btn-sm" href="#"><i
+                                                                            class="fas fa-arrow-down"></i></a>
+                                                                </div>
+                                                                <div
+                                                                    class="form-group col-sm-4 select2 optional gt_match_list_members_member_id form-group-valid">
+                                                                    <select
+                                                                        class="form-control select2 optional select2-hidden-accessible"
+                                                                        autocomplete="off" data-target="select2.select"
+                                                                        data-width="100%" data-language="ru"
+                                                                        data-queryparams="tid=4469&amp;mid=316205"
+                                                                        data-endpoint="gt_tournaments/all_teams.json"
+                                                                        data-before-submit="beforeSubmit_addSelectedMembersToRequestFor_gt_match_members"
+                                                                        data-template-selection-name="template_with_icon"
+                                                                        data-template-result-name="template_with_icon_result"
+                                                                        data-placeholder="Выберите участника"
+                                                                        data-allow-clear="true"
+                                                                        data-minimum-input-length="1"
+                                                                        data-adapter-func="select2/data/extended-ajax"
+                                                                        name="gt_match_list[members_attributes][1][member_id]"
+                                                                        id="gt_match_list_members_attributes_1_member_id"
+                                                                        data-select2-id="gt_match_list_members_attributes_1_member_id"
+                                                                        tabindex="-1" aria-hidden="true">
+                                                                        <option value="" data-select2-id="14">
+                                                                            Выберите
+                                                                            участника</option>
+                                                                        <option
+                                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?8-iR&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
+                                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?Gpzq&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
+                                                                            selected="selected" value="18597"
+                                                                            data-select2-id="15">Indonesia / LoL
+                                                                            Garuda
+                                                                            Series</option>
+                                                                        <option
+                                                                            data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
+                                                                            data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
+                                                                            value="65383" data-select2-id="16">LOLO
+                                                                            /
+                                                                            Lights On Lights Off</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div
+                                                                    class="form-group col-sm-1 string optional gt_match_list_members_scores_with_defwin form-group-valid">
+                                                                    <input class="form-control string optional"
+                                                                        data-target="calculations.scores"
+                                                                        placeholder="Счет/Место" type="text" value="2"
+                                                                        name="gt_match_list[members_attributes][1][scores_with_defwin]"
+                                                                        id="gt_match_list_members_attributes_1_scores_with_defwin">
+                                                                </div>
+                                                                <div
+                                                                    class="form-group col-sm-1 string optional gt_match_list_members_points_with_penalty">
+                                                                    <input class="form-control string optional"
+                                                                        data-target="calculations.points"
+                                                                        placeholder="Очки" type="text"
+                                                                        name="gt_match_list[members_attributes][1][points_with_penalty]"
+                                                                        id="gt_match_list_members_attributes_1_points_with_penalty">
+                                                                </div>
+
+
+                                                                <div
+                                                                    class="form-group col-sm-5 select2 optional gt_match_list_members_players">
+                                                                    <input
+                                                                        name="gt_match_list[members_attributes][1][player_ids][]"
+                                                                        type="hidden" value=""><select
+                                                                        class="form-control select2 optional select2--rows select2-hidden-accessible"
+                                                                        autocomplete="off"
+                                                                        data-target="select2.select select2-group.select"
+                                                                        data-width="100%" data-language="ru"
+                                                                        data-queryparams="game_id=313&amp;match_id=316205&amp;serializer=GtPlayerMatchLinkSerializer&amp;team_index=1"
+                                                                        data-endpoint="gt_match_lists/players.json"
+                                                                        data-related="#gt_match_list_members_attributes_1_member_id"
+                                                                        data-before-submit="beforeSubmit_addSelectedPlayersToRequestFor_gt_player_match"
+                                                                        data-template-selection-name="template_with_icon"
+                                                                        data-template-result-name="template_with_icon_result"
+                                                                        data-placeholder="Выберите игроков команды"
+                                                                        data-minimum-input-length="1"
+                                                                        data-adapter-func="select2/data/extended-ajax"
+                                                                        data-multiple="true" multiple=""
+                                                                        name="gt_match_list[members_attributes][1][player_ids][]"
+                                                                        id="gt_match_list_members_attributes_1_player_ids"
+                                                                        data-select2-id="gt_match_list_members_attributes_1_player_ids"
+                                                                        tabindex="-1" aria-hidden="true"></select>
+                                                                    <ul
+                                                                        class="list-group list-group-flush edit-teams-list">
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/1.png">
+
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">Progamer
+                                                                                / BananaUser
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/2.png">
+
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">GromiK
+                                                                                / Bonus
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/3.png">
+
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">GromiK
+                                                                                / Gamover
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                                <li class="list-group-item">
+                                                                            <input class="pl-input form-control"
+                                                                                value="22">
+                                                                            <img style="width: 18px; height: 18px; object-fit: contain;"
+                                                                                onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                                                src="https://assets.esnadm.com/media/flag/4.png">
+
+                                                                            &nbsp;<a onclick="event.stopPropagation()"
+                                                                                target="_blank" class="tname"
+                                                                                href="/gt_teams_lists/66726/edit">Progamer
+                                                                                / Gamover
+                                                                            </a><a class="float-right text-danger"
+                                                                                href="#" role="presentation"><i
+                                                                                    class="far fa-times-circle"></i></a>
+                                                                        </li>
+                                                                                                                                            </ul>
+                                                                </div>
+                                                                <!-- <div
+                                                                        class="form-group form-group--vcenter col-1 text-right">
+                                                                        <a class="btn-sm btn-danger"
+                                                                            data-action="click->sortable#remove_association"
+                                                                            href="#"><i
+                                                                                class="fas fa-trash"></i></a><input
+                                                                            type="hidden" value="false"
+                                                                            name="gt_match_list[members_attributes][1][_destroy]"
+                                                                            id="gt_match_list_members_attributes_1__destroy">
+                                                                    </div> -->
+                                                            </div>
+                                                        </div><input type="hidden" value="316205 18597"
+                                                            name="gt_match_list[members_attributes][1][id]"
+                                                            id="gt_match_list_members_attributes_1_id"><template
+                                                            data-target="sortable.template">
                                                             <div class="nested-fields sortable-item movable-item"
                                                                 data-controller="select2">
                                                                 <div class="form-row">
-                                                                    
-                                                                    <div class="form-group form-group--vcenter col-1">
+                                                                    <div
+                                                                        class="form-group col-sm-1 string optional readonly gt_match_list_members_num">
                                                                         <input
-                                                                            class="form-control string optional readonly mnum"
+                                                                            class="form-control string optional readonly"
                                                                             data-target="sortable.order secondary-nested-form.order calculations.places"
-                                                                            readonly="readonly" type="text" value="1"
-                                                                            name="gt_match_list[members_attributes][0][num]"
-                                                                            id="gt_match_list_members_attributes_0_num">
+                                                                            readonly="readonly" type="text"
+                                                                            name="gt_match_list[members_attributes][TEMPLATE_RECORD][num]"
+                                                                            id="gt_match_list_members_attributes_TEMPLATE_RECORD_num">
+                                                                    </div>
+                                                                    <div class="form-group form-group--vcenter col-1">
                                                                         <span class="btn-sm sortable-handle"><i
                                                                                 class="fas fa-arrows-alt"></i></span><a
                                                                             data-action="click->sortable#move_up"
@@ -258,9 +652,8 @@
                                                                                 class="fas fa-arrow-down"></i></a>
                                                                     </div>
                                                                     <div
-                                                                        class="form-group col-sm-4 select2 optional gt_match_list_members_member_id form-group-valid">
-                                                                        <select
-                                                                            class="form-control select2 optional select2-hidden-accessible"
+                                                                        class="form-group col-sm-5 select2 optional gt_match_list_members_member_id">
+                                                                        <select class="form-control select2 optional"
                                                                             autocomplete="off"
                                                                             data-target="select2.select"
                                                                             data-width="100%" data-language="ru"
@@ -273,24 +666,19 @@
                                                                             data-allow-clear="true"
                                                                             data-minimum-input-length="1"
                                                                             data-adapter-func="select2/data/extended-ajax"
-                                                                            name="gt_match_list[members_attributes][0][member_id]"
-                                                                            id="gt_match_list_members_attributes_0_member_id"
-                                                                            data-select2-id="gt_match_list_members_attributes_0_member_id"
-                                                                            tabindex="-1" aria-hidden="true">
-                                                                            <option value="" data-select2-id="8">
-                                                                                Выберите
-                                                                                участника</option>
+                                                                            name="gt_match_list[members_attributes][TEMPLATE_RECORD][member_id]"
+                                                                            id="gt_match_list_members_attributes_TEMPLATE_RECORD_member_id">
+                                                                            <option value="">Выберите участника
+                                                                            </option>
                                                                             <option
                                                                                 data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?8-iR&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
                                                                                 data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?Gpzq&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
-                                                                                value="18597" data-select2-id="9">
-                                                                                Indonesia
-                                                                                / LoL Garuda Series</option>
+                                                                                value="18597">Indonesia / LoL Garuda
+                                                                                Series</option>
                                                                             <option
                                                                                 data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
                                                                                 data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
-                                                                                selected="selected" value="65383"
-                                                                                data-select2-id="10">LOLO / Lights On
+                                                                                value="65383">LOLO / Lights On
                                                                                 Lights
                                                                                 Off</option>
                                                                         </select>
@@ -300,69 +688,38 @@
                                                                         <input class="form-control string optional"
                                                                             data-target="calculations.scores"
                                                                             placeholder="Счет/Место" type="text"
-                                                                            name="gt_match_list[members_attributes][0][scores_with_defwin]"
-                                                                            id="gt_match_list_members_attributes_0_scores_with_defwin">
+                                                                            name="gt_match_list[members_attributes][TEMPLATE_RECORD][scores_with_defwin]"
+                                                                            id="gt_match_list_members_attributes_TEMPLATE_RECORD_scores_with_defwin">
                                                                     </div>
                                                                     <div
                                                                         class="form-group col-sm-1 string optional gt_match_list_members_points_with_penalty">
                                                                         <input class="form-control string optional"
                                                                             data-target="calculations.points"
                                                                             placeholder="Очки" type="text"
-                                                                            name="gt_match_list[members_attributes][0][points_with_penalty]"
-                                                                            id="gt_match_list_members_attributes_0_points_with_penalty">
+                                                                            name="gt_match_list[members_attributes][TEMPLATE_RECORD][points_with_penalty]"
+                                                                            id="gt_match_list_members_attributes_TEMPLATE_RECORD_points_with_penalty">
                                                                     </div>
-
                                                                     <div
-                                                                        class="form-group col-sm-3 select2 optional gt_match_list_members_players">
+                                                                        class="form-group col-sm-2 select2 optional gt_match_list_members_players">
                                                                         <input
-                                                                            name="gt_match_list[members_attributes][0][player_ids][]"
+                                                                            name="gt_match_list[members_attributes][TEMPLATE_RECORD][player_ids][]"
                                                                             type="hidden" value=""><select
-                                                                            class="form-control select2 optional select2--rows select2-hidden-accessible"
+                                                                            class="form-control select2 optional select2--rows"
                                                                             autocomplete="off"
                                                                             data-target="select2.select select2-group.select"
                                                                             data-width="100%" data-language="ru"
-                                                                            data-queryparams="game_id=313&amp;match_id=316205&amp;serializer=GtPlayerMatchLinkSerializer&amp;team_index=0"
+                                                                            data-queryparams="game_id=313&amp;match_id=316205&amp;serializer=GtPlayerMatchLinkSerializer&amp;team_index=TEMPLATE_RECORD"
                                                                             data-endpoint="gt_match_lists/players.json"
-                                                                            data-related="#gt_match_list_members_attributes_0_member_id"
+                                                                            data-related="#gt_match_list_members_attributes_TEMPLATE_RECORD_member_id"
                                                                             data-before-submit="beforeSubmit_addSelectedPlayersToRequestFor_gt_player_match"
                                                                             data-template-selection-name="template_with_icon"
                                                                             data-template-result-name="template_with_icon_result"
                                                                             data-placeholder="Выберите игроков команды"
                                                                             data-minimum-input-length="1"
                                                                             data-adapter-func="select2/data/extended-ajax"
-                                                                            data-multiple="true" multiple=""
-                                                                            name="gt_match_list[members_attributes][0][player_ids][]"
-                                                                            id="gt_match_list_members_attributes_0_player_ids"
-                                                                            data-select2-id="gt_match_list_members_attributes_0_player_ids"
-                                                                            tabindex="-1" aria-hidden="true"></select>
-
-                                                                            <ul class="list-group list-group-flush edit-teams-list">
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/1.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">Bonus / Gamover
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/2.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">Bonus / BananaUser
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/3.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">GromiK / Progamer
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/4.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">Gamover / Bonus
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                            </ul>
-
+                                                                            data-multiple="true" multiple="multiple"
+                                                                            name="gt_match_list[members_attributes][TEMPLATE_RECORD][player_ids][]"
+                                                                            id="gt_match_list_members_attributes_TEMPLATE_RECORD_player_ids"></select>
                                                                     </div>
                                                                     <div
                                                                         class="form-group form-group--vcenter col-1 text-right">
@@ -371,460 +728,194 @@
                                                                             href="#"><i
                                                                                 class="fas fa-trash"></i></a><input
                                                                             type="hidden" value="false"
-                                                                            name="gt_match_list[members_attributes][0][_destroy]"
-                                                                            id="gt_match_list_members_attributes_0__destroy">
+                                                                            name="gt_match_list[members_attributes][TEMPLATE_RECORD][_destroy]"
+                                                                            id="gt_match_list_members_attributes_TEMPLATE_RECORD__destroy">
                                                                     </div>
-
-                                                                    
                                                                 </div>
                                                             </div>
-                                                            
-                                                            <input type="hidden" value="316205 65383"
-                                                                name="gt_match_list[members_attributes][0][id]"
-                                                                id="gt_match_list_members_attributes_0_id">
-
-
-
-
-
-                                                            <div class="nested-fields sortable-item movable-item"
-                                                                data-controller="select2">
-                                                                <div class="form-row">
-                                                                    
-                                                                    <div class="form-group form-group--vcenter col-1">
-                                                                        <input
-                                                                            class="form-control string optional readonly mnum"
-                                                                            data-target="sortable.order secondary-nested-form.order calculations.places"
-                                                                            readonly="readonly" type="text" value="2"
-                                                                            name="gt_match_list[members_attributes][1][num]"
-                                                                            id="gt_match_list_members_attributes_1_num">
-                                                                        <span class="btn-sm sortable-handle"><i
-                                                                                class="fas fa-arrows-alt"></i></span><a
-                                                                            data-action="click->sortable#move_up"
-                                                                            class="btn-sm" href="#"><i
-                                                                                class="fas fa-arrow-up"></i></a><a
-                                                                            data-action="click->sortable#move_down"
-                                                                            class="btn-sm" href="#"><i
-                                                                                class="fas fa-arrow-down"></i></a>
-                                                                    </div>
-                                                                    <div
-                                                                        class="form-group col-sm-4 select2 optional gt_match_list_members_member_id form-group-valid">
-                                                                        <select
-                                                                            class="form-control select2 optional select2-hidden-accessible"
-                                                                            autocomplete="off"
-                                                                            data-target="select2.select"
-                                                                            data-width="100%" data-language="ru"
-                                                                            data-queryparams="tid=4469&amp;mid=316205"
-                                                                            data-endpoint="gt_tournaments/all_teams.json"
-                                                                            data-before-submit="beforeSubmit_addSelectedMembersToRequestFor_gt_match_members"
-                                                                            data-template-selection-name="template_with_icon"
-                                                                            data-template-result-name="template_with_icon_result"
-                                                                            data-placeholder="Выберите участника"
-                                                                            data-allow-clear="true"
-                                                                            data-minimum-input-length="1"
-                                                                            data-adapter-func="select2/data/extended-ajax"
-                                                                            name="gt_match_list[members_attributes][1][member_id]"
-                                                                            id="gt_match_list_members_attributes_1_member_id"
-                                                                            data-select2-id="gt_match_list_members_attributes_1_member_id"
-                                                                            tabindex="-1" aria-hidden="true">
-                                                                            <option value="" data-select2-id="14">
-                                                                                Выберите
-                                                                                участника</option>
-                                                                            <option
-                                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?8-iR&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
-                                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?Gpzq&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
-                                                                                selected="selected" value="18597"
-                                                                                data-select2-id="15">Indonesia / LoL
-                                                                                Garuda
-                                                                                Series</option>
-                                                                            <option
-                                                                                data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
-                                                                                data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
-                                                                                value="65383" data-select2-id="16">LOLO
-                                                                                /
-                                                                                Lights On Lights Off</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div
-                                                                        class="form-group col-sm-1 string optional gt_match_list_members_scores_with_defwin form-group-valid">
-                                                                        <input class="form-control string optional"
-                                                                            data-target="calculations.scores"
-                                                                            placeholder="Счет/Место" type="text"
-                                                                            value="2"
-                                                                            name="gt_match_list[members_attributes][1][scores_with_defwin]"
-                                                                            id="gt_match_list_members_attributes_1_scores_with_defwin">
-                                                                    </div>
-                                                                    <div
-                                                                        class="form-group col-sm-1 string optional gt_match_list_members_points_with_penalty">
-                                                                        <input class="form-control string optional"
-                                                                            data-target="calculations.points"
-                                                                            placeholder="Очки" type="text"
-                                                                            name="gt_match_list[members_attributes][1][points_with_penalty]"
-                                                                            id="gt_match_list_members_attributes_1_points_with_penalty">
-                                                                    </div>
-
-
-                                                                    <div
-                                                                        class="form-group col-sm-3 select2 optional gt_match_list_members_players">
-                                                                        <input
-                                                                            name="gt_match_list[members_attributes][1][player_ids][]"
-                                                                            type="hidden" value=""><select
-                                                                            class="form-control select2 optional select2--rows select2-hidden-accessible"
-                                                                            autocomplete="off"
-                                                                            data-target="select2.select select2-group.select"
-                                                                            data-width="100%" data-language="ru"
-                                                                            data-queryparams="game_id=313&amp;match_id=316205&amp;serializer=GtPlayerMatchLinkSerializer&amp;team_index=1"
-                                                                            data-endpoint="gt_match_lists/players.json"
-                                                                            data-related="#gt_match_list_members_attributes_1_member_id"
-                                                                            data-before-submit="beforeSubmit_addSelectedPlayersToRequestFor_gt_player_match"
-                                                                            data-template-selection-name="template_with_icon"
-                                                                            data-template-result-name="template_with_icon_result"
-                                                                            data-placeholder="Выберите игроков команды"
-                                                                            data-minimum-input-length="1"
-                                                                            data-adapter-func="select2/data/extended-ajax"
-                                                                            data-multiple="true" multiple=""
-                                                                            name="gt_match_list[members_attributes][1][player_ids][]"
-                                                                            id="gt_match_list_members_attributes_1_player_ids"
-                                                                            data-select2-id="gt_match_list_members_attributes_1_player_ids"
-                                                                            tabindex="-1" aria-hidden="true"></select>
-                                                                            <ul class="list-group list-group-flush edit-teams-list">
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/1.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">Bonus / Progamer
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/2.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">BananaUser / Bonus
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/3.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">Bonus / GromiK
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                                <li class="list-group-item">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';" src="https://assets.esnadm.com/media/flag/4.png">
-                                                                                    <img style="width: 18px; height: 18px; object-fit: contain;" onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';" src="https://assets.esnadm.com/media/logo/_30/t66726.png?Er-I">
-                                                                                    &nbsp;<a onclick="event.stopPropagation()" target="_blank" class="tname" href="/gt_teams_lists/66726/edit">Gamover / Progamer
-                                                                                        </a><a class="float-right text-danger" href="#" role="presentation"><i class="far fa-times-circle"></i></a>
-                                                                                </li>
-                                                                                                                                                            </ul>
-                                                                    </div>
-                                                                    <div
-                                                                        class="form-group form-group--vcenter col-1 text-right">
-                                                                        <a class="btn-sm btn-danger"
-                                                                            data-action="click->sortable#remove_association"
-                                                                            href="#"><i
-                                                                                class="fas fa-trash"></i></a><input
-                                                                            type="hidden" value="false"
-                                                                            name="gt_match_list[members_attributes][1][_destroy]"
-                                                                            id="gt_match_list_members_attributes_1__destroy">
-                                                                    </div>
-                                                                </div>
-                                                            </div><input type="hidden" value="316205 18597"
-                                                                name="gt_match_list[members_attributes][1][id]"
-                                                                id="gt_match_list_members_attributes_1_id"><template
-                                                                data-target="sortable.template">
-                                                                <div class="nested-fields sortable-item movable-item"
-                                                                    data-controller="select2">
-                                                                    <div class="form-row">
-                                                                        <div
-                                                                            class="form-group col-sm-1 string optional readonly gt_match_list_members_num">
-                                                                            <input
-                                                                                class="form-control string optional readonly"
-                                                                                data-target="sortable.order secondary-nested-form.order calculations.places"
-                                                                                readonly="readonly" type="text"
-                                                                                name="gt_match_list[members_attributes][TEMPLATE_RECORD][num]"
-                                                                                id="gt_match_list_members_attributes_TEMPLATE_RECORD_num">
-                                                                        </div>
-                                                                        <div
-                                                                            class="form-group form-group--vcenter col-1">
-                                                                            <span class="btn-sm sortable-handle"><i
-                                                                                    class="fas fa-arrows-alt"></i></span><a
-                                                                                data-action="click->sortable#move_up"
-                                                                                class="btn-sm" href="#"><i
-                                                                                    class="fas fa-arrow-up"></i></a><a
-                                                                                data-action="click->sortable#move_down"
-                                                                                class="btn-sm" href="#"><i
-                                                                                    class="fas fa-arrow-down"></i></a>
-                                                                        </div>
-                                                                        <div
-                                                                            class="form-group col-sm-5 select2 optional gt_match_list_members_member_id">
-                                                                            <select
-                                                                                class="form-control select2 optional"
-                                                                                autocomplete="off"
-                                                                                data-target="select2.select"
-                                                                                data-width="100%" data-language="ru"
-                                                                                data-queryparams="tid=4469&amp;mid=316205"
-                                                                                data-endpoint="gt_tournaments/all_teams.json"
-                                                                                data-before-submit="beforeSubmit_addSelectedMembersToRequestFor_gt_match_members"
-                                                                                data-template-selection-name="template_with_icon"
-                                                                                data-template-result-name="template_with_icon_result"
-                                                                                data-placeholder="Выберите участника"
-                                                                                data-allow-clear="true"
-                                                                                data-minimum-input-length="1"
-                                                                                data-adapter-func="select2/data/extended-ajax"
-                                                                                name="gt_match_list[members_attributes][TEMPLATE_RECORD][member_id]"
-                                                                                id="gt_match_list_members_attributes_TEMPLATE_RECORD_member_id">
-                                                                                <option value="">Выберите участника
-                                                                                </option>
-                                                                                <option
-                                                                                    data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?8-iR&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/18597/edit&quot;>Indonesia / LoL Garuda Series</a></span>"
-                                                                                    data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/44.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';&quot; src=&quot;https://assets.esnadm.com/media/logo/_30/t18597.png?Gpzq&quot; />&nbsp;Indonesia / LoL Garuda Series</span>"
-                                                                                    value="18597">Indonesia / LoL Garuda
-                                                                                    Series</option>
-                                                                                <option
-                                                                                    data-template_with_icon="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;<a onclick=&quot;event.stopPropagation()&quot; target=&quot;_blank&quot; href=&quot;/gt_teams_lists/65383/edit&quot;>LOLO / Lights On Lights Off</a></span>"
-                                                                                    data-template_with_icon_result="<span class=&quot;icon-label&quot;><img style=&quot;width: 24px; height: 24px; object-fit: contain;&quot; onerror=&quot;this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';&quot; src=&quot;https://assets.esnadm.com/media/flag/26.png&quot; /><img style=&quot;width: 30px; height: 30px; object-fit: contain;&quot; src=&quot;https://assets.esnadm.com/media/logo/not.svg&quot; />&nbsp;LOLO / Lights On Lights Off</span>"
-                                                                                    value="65383">LOLO / Lights On
-                                                                                    Lights
-                                                                                    Off</option>
-                                                                            </select>
-                                                                        </div>
-                                                                        <div
-                                                                            class="form-group col-sm-1 string optional gt_match_list_members_scores_with_defwin">
-                                                                            <input class="form-control string optional"
-                                                                                data-target="calculations.scores"
-                                                                                placeholder="Счет/Место" type="text"
-                                                                                name="gt_match_list[members_attributes][TEMPLATE_RECORD][scores_with_defwin]"
-                                                                                id="gt_match_list_members_attributes_TEMPLATE_RECORD_scores_with_defwin">
-                                                                        </div>
-                                                                        <div
-                                                                            class="form-group col-sm-1 string optional gt_match_list_members_points_with_penalty">
-                                                                            <input class="form-control string optional"
-                                                                                data-target="calculations.points"
-                                                                                placeholder="Очки" type="text"
-                                                                                name="gt_match_list[members_attributes][TEMPLATE_RECORD][points_with_penalty]"
-                                                                                id="gt_match_list_members_attributes_TEMPLATE_RECORD_points_with_penalty">
-                                                                        </div>
-                                                                        <div
-                                                                            class="form-group col-sm-2 select2 optional gt_match_list_members_players">
-                                                                            <input
-                                                                                name="gt_match_list[members_attributes][TEMPLATE_RECORD][player_ids][]"
-                                                                                type="hidden" value=""><select
-                                                                                class="form-control select2 optional select2--rows"
-                                                                                autocomplete="off"
-                                                                                data-target="select2.select select2-group.select"
-                                                                                data-width="100%" data-language="ru"
-                                                                                data-queryparams="game_id=313&amp;match_id=316205&amp;serializer=GtPlayerMatchLinkSerializer&amp;team_index=TEMPLATE_RECORD"
-                                                                                data-endpoint="gt_match_lists/players.json"
-                                                                                data-related="#gt_match_list_members_attributes_TEMPLATE_RECORD_member_id"
-                                                                                data-before-submit="beforeSubmit_addSelectedPlayersToRequestFor_gt_player_match"
-                                                                                data-template-selection-name="template_with_icon"
-                                                                                data-template-result-name="template_with_icon_result"
-                                                                                data-placeholder="Выберите игроков команды"
-                                                                                data-minimum-input-length="1"
-                                                                                data-adapter-func="select2/data/extended-ajax"
-                                                                                data-multiple="true" multiple="multiple"
-                                                                                name="gt_match_list[members_attributes][TEMPLATE_RECORD][player_ids][]"
-                                                                                id="gt_match_list_members_attributes_TEMPLATE_RECORD_player_ids"></select>
-                                                                        </div>
-                                                                        <div
-                                                                            class="form-group form-group--vcenter col-1 text-right">
-                                                                            <a class="btn-sm btn-danger"
-                                                                                data-action="click->sortable#remove_association"
-                                                                                href="#"><i
-                                                                                    class="fas fa-trash"></i></a><input
-                                                                                type="hidden" value="false"
-                                                                                name="gt_match_list[members_attributes][TEMPLATE_RECORD][_destroy]"
-                                                                                id="gt_match_list_members_attributes_TEMPLATE_RECORD__destroy">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </template>
-                                                            <div data-target="sortable.addhere"></div><input
-                                                                type="submit" name="commit" value="submit"
-                                                                class="d-none"
-                                                                formaction="/gt_match_lists/316205?action_after_update=edit"
-                                                                method="post" data-disable-with="submit"><span
-                                                                class="span-link"><a
-                                                                    class="btn btn-sm btn-outline-primary"
-                                                                    data-action="sortable#add_association"
-                                                                    data-target="sortable.add"
-                                                                    data-max-nested-fields="2" href="#"
-                                                                    style="display: none;">Добавить
-                                                                    Команду</a></span><span class="span-link"><a
-                                                                    class="btn btn-sm btn-outline-primary"
-                                                                    data-action="select2-group#add_results"
-                                                                    data-title="Готово" data-message="Игроки добавлены"
-                                                                    href="#">Добавить Игроков</a></span>
-                                                        </div>
+                                                        </template>
+                                                        <div data-target="sortable.addhere"></div><input type="submit"
+                                                            name="commit" value="submit" class="d-none"
+                                                            formaction="/gt_match_lists/316205?action_after_update=edit"
+                                                            method="post" data-disable-with="submit"><span
+                                                            class="span-link"><a class="btn btn-sm btn-outline-primary"
+                                                                data-action="sortable#add_association"
+                                                                data-target="sortable.add" data-max-nested-fields="2"
+                                                                href="#" style="display: none;">Добавить
+                                                                Команду</a></span><span class="span-link"><a
+                                                                class="btn btn-sm btn-outline-primary"
+                                                                data-action="select2-group#add_results"
+                                                                data-title="Готово" data-message="Игроки добавлены"
+                                                                href="#">Добавить Игроков</a></span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <hr>
+                                        </div>
+                                        <hr>
 
 
 
-                                            <div
-                                                class="form-group row string required gt_match_list_bo form-group-valid">
-                                                <label class="col-sm-2 col-form-label string required"
-                                                    for="gt_match_list_bo">Best of <abbr
-                                                        title="обязательное">*</abbr></label>
-                                                <div class="col-sm-10"><input class="form-control string required"
-                                                        required="required" aria-required="true" type="text" value="3"
-                                                        name="gt_match_list[bo]" id="gt_match_list_bo"></div>
-                                            </div>
+                                        <div class="form-group row string required gt_match_list_bo form-group-valid">
+                                            <label class="col-sm-2 col-form-label string required"
+                                                for="gt_match_list_bo">Best of <abbr
+                                                    title="обязательное">*</abbr></label>
+                                            <div class="col-sm-10"><input class="form-control string required"
+                                                    required="required" aria-required="true" type="text" value="3"
+                                                    name="gt_match_list[bo]" id="gt_match_list_bo"></div>
+                                        </div>
 
-                                            <hr>
-                                            <div class="row">
-                                                <label class="col-sm-2 col-form-label ">Игры</label>
-                                                <div class="col-sm-10">
-                                                    <span data-dialog_text="Форма не сохранена. Всё равно продолжить?"
-                                                        data-target="edit.body edit-form.body"></span>
-                                                    <input value="games" type="hidden" name="gt_match_list[form_part]"
-                                                        id="gt_match_list_form_part">
-                                                    <div data-controller="nested-form">
+                                        <hr>
+                                        <div class="row">
+                                            <label class="col-sm-2 col-form-label ">Игры</label>
+                                            <div class="col-sm-10">
+                                                <span data-dialog_text="Форма не сохранена. Всё равно продолжить?"
+                                                    data-target="edit.body edit-form.body"></span>
+                                                <input value="games" type="hidden" name="gt_match_list[form_part]"
+                                                    id="gt_match_list_form_part">
+                                                <div data-controller="nested-form">
 
-                                                        <div class="nested-fields form-row">
-                                                            <div class="col-1 btns">
-                                                                <a class="span-link btn btn-sm btn-warning"
-                                                                    data-action="click->nested-form#refresh_association"
-                                                                    href="#"><i class="fas fa-redo"></i></a><a
-                                                                    class="span-link btn btn-sm btn-danger"
-                                                                    data-action="click->nested-form#clear_association"
-                                                                    href="#"><i class="fas fa-trash"></i></a><input
-                                                                    type="hidden"
-                                                                    name="gt_match_list[games_attributes][0][_refresh]"
-                                                                    id="gt_match_list_games_attributes_0__refresh"><input
-                                                                    type="hidden"
-                                                                    name="gt_match_list[games_attributes][0][_clear]"
-                                                                    id="gt_match_list_games_attributes_0__clear">
-                                                            </div>
-                                                            <div class="col-sm-10">
-                                                                <div class="gt_match_list_games_attributes">
-                                                                    <input
-                                                                        class="form-control string optional readonly mnum mr-3"
-                                                                        readonly="readonly" type="text" value="Игра 1"
-                                                                        name="gt_match_list[games_attributes][0][num]"
-                                                                        id="gt_match_list_games_attributes_0_num">
-                                                                    <strong
-                                                                        class="text-secondary text-danger mr-3">33224</strong>
-                                                                    <span>Не удалось получить данные</span>
-
-                                                                </div>
-
-                                                            </div>
+                                                    <div class="nested-fields form-row">
+                                                        <div class="col-1 btns">
+                                                            <a class="span-link btn btn-sm btn-warning"
+                                                                data-action="click->nested-form#refresh_association"
+                                                                href="#"><i class="fas fa-redo"></i></a><a
+                                                                class="span-link btn btn-sm btn-danger"
+                                                                data-action="click->nested-form#clear_association"
+                                                                href="#"><i class="fas fa-trash"></i></a><input
+                                                                type="hidden"
+                                                                name="gt_match_list[games_attributes][0][_refresh]"
+                                                                id="gt_match_list_games_attributes_0__refresh"><input
+                                                                type="hidden"
+                                                                name="gt_match_list[games_attributes][0][_clear]"
+                                                                id="gt_match_list_games_attributes_0__clear">
                                                         </div>
-                                                        <input type="hidden" value="480285"
-                                                            name="gt_match_list[games_attributes][0][id]"
-                                                            id="gt_match_list_games_attributes_0_id">
+                                                        <div class="col-sm-10">
+                                                            <div class="gt_match_list_games_attributes">
+                                                                <input
+                                                                    class="form-control string optional readonly mnum mr-3"
+                                                                    readonly="readonly" type="text" value="Игра 1"
+                                                                    name="gt_match_list[games_attributes][0][num]"
+                                                                    id="gt_match_list_games_attributes_0_num">
+                                                                <strong
+                                                                    class="text-secondary text-danger mr-3">33224</strong>
+                                                                <span>Не удалось получить данные</span>
 
-
-                                                        <div class="nested-fields form-row">
-                                                            <div class="col-1 btns">
-                                                            </div>
-                                                            <div class="col-sm-10">
-                                                                <div class="gt_match_list_games_attributes">
-                                                                    <input
-                                                                        class="form-control string optional readonly mnum mr-3"
-                                                                        readonly="readonly" type="text" value="Игра 2"
-                                                                        name="gt_match_list[games_attributes][1][num]"
-                                                                        id="gt_match_list_games_attributes_1_num">
-                                                                    <strong
-                                                                        class="text-secondary mr-3">—</strong></span>
-                                                                </div>
-                                                            </div>
-                                                        </div><input type="hidden" value="480286"
-                                                            name="gt_match_list[games_attributes][1][id]"
-                                                            id="gt_match_list_games_attributes_1_id">
-
-
-                                                        <div class="nested-fields form-row">
-                                                            <div class="col-1 btns">
-                                                                <a class="span-link btn btn-sm btn-warning"
-                                                                    data-action="click->nested-form#refresh_association"
-                                                                    href="#"><i class="fas fa-redo"></i></a><a
-                                                                    class="span-link btn btn-sm btn-danger"
-                                                                    data-action="click->nested-form#clear_association"
-                                                                    href="#"><i class="fas fa-trash"></i></a><input
-                                                                    type="hidden"
-                                                                    name="gt_match_list[games_attributes][2][_refresh]"
-                                                                    id="gt_match_list_games_attributes_2__refresh"><input
-                                                                    type="hidden"
-                                                                    name="gt_match_list[games_attributes][2][_clear]"
-                                                                    id="gt_match_list_games_attributes_2__clear">
                                                             </div>
 
-
-                                                            <div class="col-sm-10">
-                                                                <div class="gt_match_list_games_attributes">
-                                                                    <input
-                                                                        class="form-control string optional readonly mnum mr-3"
-                                                                        readonly="readonly" type="text" value="Игра 3"
-                                                                        name="gt_match_list[games_attributes][2][num]"
-                                                                        id="gt_match_list_games_attributes_2_num">
-                                                                    <strong
-                                                                        class="text-secondary text-success mr-3">33224</strong>
-                                                                </div>
-                                                            </div>
                                                         </div>
-                                                        <input type="hidden" value="480287"
-                                                            name="gt_match_list[games_attributes][2][id]"
-                                                            id="gt_match_list_games_attributes_2_id">
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <hr>
+                                                    <input type="hidden" value="480285"
+                                                        name="gt_match_list[games_attributes][0][id]"
+                                                        id="gt_match_list_games_attributes_0_id">
 
-                                            <div class="form-group row string optional gt_match_list_txt"><label
-                                                    class="col-sm-2 col-form-label string optional"
-                                                    for="gt_match_list_txt">Важная информация</label>
-                                                <div class="col-sm-10"><input class="form-control string optional"
-                                                        type="text" value="" name="gt_match_list[txt]"
-                                                        id="gt_match_list_txt"></div>
-                                            </div>
-                                            <div
-                                                class="form-group row boolean optional gt_match_list_is_score form-group-valid">
-                                                <label class="col-sm-2"></label>
-                                                <div class="col-sm-10">
-                                                    <div class="custom-control custom-switch"><input
-                                                            name="gt_match_list[is_score]" type="hidden"
-                                                            value="0"><input
-                                                            class="custom-control-input boolean optional"
-                                                            type="checkbox" value="1" checked="checked"
-                                                            name="gt_match_list[is_score]"
-                                                            id="gt_match_list_is_score"><label
-                                                            class="custom-control-label boolean optional"
-                                                            for="gt_match_list_is_score">Считать очки</label></div>
+
+                                                    <div class="nested-fields form-row">
+                                                        <div class="col-1 btns">
+                                                        </div>
+                                                        <div class="col-sm-10">
+                                                            <div class="gt_match_list_games_attributes">
+                                                                <input
+                                                                    class="form-control string optional readonly mnum mr-3"
+                                                                    readonly="readonly" type="text" value="Игра 2"
+                                                                    name="gt_match_list[games_attributes][1][num]"
+                                                                    id="gt_match_list_games_attributes_1_num">
+                                                                <strong class="text-secondary mr-3">—</strong></span>
+                                                            </div>
+                                                        </div>
+                                                    </div><input type="hidden" value="480286"
+                                                        name="gt_match_list[games_attributes][1][id]"
+                                                        id="gt_match_list_games_attributes_1_id">
+
+
+                                                    <div class="nested-fields form-row">
+                                                        <div class="col-1 btns">
+                                                            <a class="span-link btn btn-sm btn-warning"
+                                                                data-action="click->nested-form#refresh_association"
+                                                                href="#"><i class="fas fa-redo"></i></a><a
+                                                                class="span-link btn btn-sm btn-danger"
+                                                                data-action="click->nested-form#clear_association"
+                                                                href="#"><i class="fas fa-trash"></i></a><input
+                                                                type="hidden"
+                                                                name="gt_match_list[games_attributes][2][_refresh]"
+                                                                id="gt_match_list_games_attributes_2__refresh"><input
+                                                                type="hidden"
+                                                                name="gt_match_list[games_attributes][2][_clear]"
+                                                                id="gt_match_list_games_attributes_2__clear">
+                                                        </div>
+
+
+                                                        <div class="col-sm-10">
+                                                            <div class="gt_match_list_games_attributes">
+                                                                <input
+                                                                    class="form-control string optional readonly mnum mr-3"
+                                                                    readonly="readonly" type="text" value="Игра 3"
+                                                                    name="gt_match_list[games_attributes][2][num]"
+                                                                    id="gt_match_list_games_attributes_2_num">
+                                                                <strong
+                                                                    class="text-secondary text-success mr-3">33224</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <input type="hidden" value="480287"
+                                                        name="gt_match_list[games_attributes][2][id]"
+                                                        id="gt_match_list_games_attributes_2_id">
                                                 </div>
                                             </div>
-                                            <div class="form-group row string optional gt_match_list_next_match_w">
-                                                <label class="col-sm-2 col-form-label string optional"
-                                                    for="gt_match_list_next_match_w">Победитель</label>
-                                                <div class="col-sm-10"><input class="form-control string optional"
-                                                        placeholder="{ID Матча}-{Слот} или @{Место}" type="text"
-                                                        value="" name="gt_match_list[next_match_w]"
-                                                        id="gt_match_list_next_match_w"></div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="form-group row string optional gt_match_list_txt"><label
+                                                class="col-sm-2 col-form-label string optional"
+                                                for="gt_match_list_txt">Важная информация</label>
+                                            <div class="col-sm-10"><input class="form-control string optional"
+                                                    type="text" value="" name="gt_match_list[txt]"
+                                                    id="gt_match_list_txt"></div>
+                                        </div>
+                                        <div
+                                            class="form-group row boolean optional gt_match_list_is_score form-group-valid">
+                                            <label class="col-sm-2"></label>
+                                            <div class="col-sm-10">
+                                                <div class="custom-control custom-switch"><input
+                                                        name="gt_match_list[is_score]" type="hidden" value="0"><input
+                                                        class="custom-control-input boolean optional" type="checkbox"
+                                                        value="1" checked="checked" name="gt_match_list[is_score]"
+                                                        id="gt_match_list_is_score"><label
+                                                        class="custom-control-label boolean optional"
+                                                        for="gt_match_list_is_score">Считать очки</label></div>
                                             </div>
-                                            <div class="form-group row string optional gt_match_list_next_match_l">
-                                                <label class="col-sm-2 col-form-label string optional"
-                                                    for="gt_match_list_next_match_l">Проигравший</label>
-                                                <div class="col-sm-10"><input class="form-control string optional"
-                                                        placeholder="{ID Матча}-{Слот} или @{Место}" type="text"
-                                                        value="" name="gt_match_list[next_match_l]"
-                                                        id="gt_match_list_next_match_l"></div>
+                                        </div>
+                                        <div class="form-group row string optional gt_match_list_next_match_w">
+                                            <label class="col-sm-2 col-form-label string optional"
+                                                for="gt_match_list_next_match_w">Победитель</label>
+                                            <div class="col-sm-10"><input class="form-control string optional"
+                                                    placeholder="{ID Матча}-{Слот} или @{Место}" type="text" value=""
+                                                    name="gt_match_list[next_match_w]" id="gt_match_list_next_match_w">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row string optional gt_match_list_next_match_l">
+                                            <label class="col-sm-2 col-form-label string optional"
+                                                for="gt_match_list_next_match_l">Проигравший</label>
+                                            <div class="col-sm-10"><input class="form-control string optional"
+                                                    placeholder="{ID Матча}-{Слот} или @{Место}" type="text" value=""
+                                                    name="gt_match_list[next_match_l]" id="gt_match_list_next_match_l">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-footer"><input type="submit" name="commit"
-                                            value="Сохранить + Редактировать" class="btn btn-primary"
-                                            formaction="/gt_match_lists/316205?action_after_update=edit" method="post"
-                                            data-disable-with="Сохранить + Редактировать"><input type="submit"
-                                            name="commit" value="Сохранить" class="btn btn-primary"
-                                            formaction="/gt_match_lists/316205?action_after_update=index" method="post"
-                                            data-disable-with="Сохранить"></div>
                                 </div>
-                            </form>
+                                <div class="card-footer"><input type="submit" name="commit"
+                                        value="Сохранить + Редактировать" class="btn btn-primary"
+                                        formaction="/gt_match_lists/316205?action_after_update=edit" method="post"
+                                        data-disable-with="Сохранить + Редактировать"><input type="submit" name="commit"
+                                        value="Сохранить" class="btn btn-primary"
+                                        formaction="/gt_match_lists/316205?action_after_update=index" method="post"
+                                        data-disable-with="Сохранить"></div>
                         </div>
+                        </form>
                     </div>
                 </div>
-            </section>
         </div>
+        </section>
+    </div>
 
 
     </div>
@@ -869,20 +960,25 @@
           <a href="/gt_player_lists.html" class="dropdown-item">gt_player_lists</a>
           <a href="/gt_tournaments_stages_edit.html" class="dropdown-item">gt_tournaments_stages_edit</a>
           <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item">gt_tournaments_stages_edit_prize</a>
-          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-danger">gt_tournaments_stages_edit_mesh</a>
-          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-danger">gt_tournaments_rounds_edit</a>
-          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-danger">gt_tournaments_round_tabs_edit</a>
-          <a href="/gt_match_lists_edit.html" class="dropdown-item text-danger">gt_match_lists_edit</a>
-          <a href="/live_games.html" class="dropdown-item text-danger">live_games</a>
-          <a href="/live_games_lol.html" class="dropdown-item text-danger">live_games_lol</a>
-          <a href="/live_games_valorant.html" class="dropdown-item text-danger">live_games_valorant</a>
-          <a href="/gt_teams_lists_edit.html" class="dropdown-item text-danger">gt_teams_lists_edit</a>
-          <a href="/gt_player_lists_edit.html" class="dropdown-item text-danger">gt_player_lists_edit</a>
+          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-">gt_tournaments_stages_edit_mesh</a>
+          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-">gt_tournaments_rounds_edit</a>
+          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-">gt_tournaments_round_tabs_edit</a>
+          <a href="/gt_match_lists_edit.html" class="dropdown-item text-">gt_match_lists_edit</a>
+          <a href="/live_games.html" class="dropdown-item text-">live_games</a>
+          <a href="/live_games_lol.html" class="dropdown-item text-">live_games_lol</a>
+          <a href="/live_games_valorant.html" class="dropdown-item text-">live_games_valorant</a>
+          <a href="/gt_teams_lists_edit.html" class="dropdown-item text-">gt_teams_lists_edit</a>
+          <a href="/gt_player_lists_edit.html" class="dropdown-item text-">gt_player_lists_edit</a>
+          <a href="/live_games_pubg.html" class="dropdown-item text-">live_games_pubg</a>
+          <a href="/gt_match_lists2.html" class="dropdown-item text-">gt_match_lists2</a>
+          <!-- <a href="/live_games_Dota_Match.html" class="dropdown-item text-">live_games_Dota_Match</a> -->
+          <a href="/live_games_Dota_Match2.html" class="dropdown-item text-">live_games_Dota_Match2</a>
+          <a href="/live_games_pubg_match.html" class="dropdown-item text-">live_games_pubg_match</a>
+          <a href="/live_games_lol_Match2.html" class="dropdown-item text-">live_games_lol_Match2</a>
+
         </div>
     </div>
 
-    
-     
   </div>
 </div>
 

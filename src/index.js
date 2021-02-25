@@ -18,8 +18,24 @@ $(document).ready(function () {
             }
         });
     }
+
 });
 // .dev pager
+
+import JSONFormatter from 'json-formatter-js'
+
+$.fn.ready(function() {
+    const myJSON = $.parseJSON($("#json").html());;
+        const formatter = new JSONFormatter(myJSON);
+        $("#json-view").html(formatter.render());
+    // $(document).on('click', '.json-viewer', function (e) {
+    //     e.preventDefault()
+        
+    //     const myJSON = $.parseJSON($("#json").html());;
+    //     const formatter = new JSONFormatter(myJSON);
+    //     $("#json-view").html(formatter.render());
+    // });
+});
 
 /*
  * Third party

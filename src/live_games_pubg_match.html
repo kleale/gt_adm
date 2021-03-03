@@ -49,6 +49,8 @@ Final", "Weekly Survival"] %}
 {% set hero = ["Spirit Breaker","Juggernaut","Bristleback","Arc Warden","Jakiro","Rubick","Ember Spirit"] %}
 {% set heroimg = ["120","111","112","113","114"] %}
 {% set player = ["Wulrong","OutPlayed","Yua Mikami","Fuju~","rosettaaa","salgin","nxiqua"] %}
+{% set apiplayer = ["cf00dcf0ebf643f49437989ff5a18172","kjsdfjs7ds7fgdsfhsj","kasbnf9jhju3bhtgo48hd","kfnv83yenbf23vlnfls3452ohsce34","jsbf836efzncmbirhy743905sjdjgt875","985jhtgb8smzbckmh4574oituyegvjkogjr","9347fgbgkhwsfe6tojmhgfjty34hdsorujdy"] %}
+
 
 
 
@@ -130,17 +132,18 @@ Final", "Weekly Survival"] %}
                             <div class="game-header">
                                 <!-- <div class="game-score ended">28 : 36</div> -->
                                 <div class="game-info">
-                                    <h3><a href="/" class="green">The Summit S13 OQ</a> <small>(API: 4122)</small></h3>
-                                    <span class="gm">Игра 2</span>
-                                    &nbsp;|&nbsp;&nbsp;
+                                    <h3><a href="/" class="green">The Summit S13 OQ</a> <small class="api">(as-pgirr3)</small></h3>
+                                    
                                     <b class="timer">
-                                        <span class="live" title="Игра идет">
+                                        <!-- <span class="live" title="Игра идет">
                                             <i style="color:red" title="LIVE" class="fas fa-circle"></i>
-                                        </span>
+                                        </span> -->
                                         <span>00:42:03</span>
                                     </b>
+                                    &nbsp;|&nbsp;&nbsp;
+                                    <span class="gm">Baltic_Main</span>
                                     &nbsp;&nbsp;|&nbsp;
-                                    <span class="api">API: 5844762768</span>
+                                    <span class="api">5537d677-5a8f-4417-a064-1afaf4242979</span>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +165,7 @@ Final", "Weekly Survival"] %}
                                         </a> -->
                                         <span class="{% if i == 2 %}win{% endif %}">
                                             <a href="/" class="{% if i == 1 %}green{% else %}text-muted{% endif %}">{{random(team)}}</a><br>
-                                            <small tooltip="API ID">API: 3285324238</small>
+                                            <!-- <small tooltip="API ID">5537d677-5a8f-4417-a064-1afaf4242979</small> -->
                                         </span>
                                     </div>
                                 </div>
@@ -171,14 +174,14 @@ Final", "Weekly Survival"] %}
                                         <tbody>
                                             {% for i in 1..5 %}
                                             <tr>
-                                                <td width="50px">
+                                                <!-- <td width="50px">
                                                     <img width="50px"
                                                         src="https://escorenews.com/media/game/hero/582/_59/{{random(heroimg)}}.png">
                                                 </td>
                                                 <td width="150px">
                                                     {{random(hero)}}
-                                                </td>
-                                                <td width="250px">
+                                                </td> -->
+                                                <td width="200px">
                                                     {% if i == 2 %}
                                                     <a title="выбрать игрока" class="text-muted" href="/"><i
                                                             class="ml-1 mr-2 far fa-user-circle"></i> выбрать
@@ -200,8 +203,9 @@ Final", "Weekly Survival"] %}
                                                     </a>
                                                     {% endif %}
                                                 </td>
-                                                <td width="110px">
-                                                    API: {{random()}}
+                                                <td width="50px"><i class="fas fa-bullseye"></i> {{random(num)}}</td>
+                                                <td width="300px" class="api">
+                                                    account.{{random(apiplayer)}}
                                                 </td>
                                                 <td width="">
                                                     {{random(player)}}

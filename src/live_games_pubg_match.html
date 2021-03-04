@@ -132,7 +132,7 @@ Final", "Weekly Survival"] %}
                             <div class="game-header">
                                 <!-- <div class="game-score ended">28 : 36</div> -->
                                 <div class="game-info">
-                                    <h3><a href="/" class="green">The Summit S13 OQ</a> <small class="api">(as-pgirr3)</small></h3>
+                                    <h3><a href="/" class="green">The Summit S13 OQ</a> <small class="api">as-pgirr3</small></h3>
                                     
                                     <b class="timer">
                                         <!-- <span class="live" title="Игра идет">
@@ -163,7 +163,7 @@ Final", "Weekly Survival"] %}
                                                 <img src="http://gg2.kleale.ru/img/dummy/team-lg.png" alt="">
                                             </picture>
                                         </a> -->
-                                        <span class="{% if i == 2 %}win{% endif %}">
+                                        <span>
                                             <a href="/" class="{% if i == 1 %}green{% else %}text-muted{% endif %}">{{random(team)}}</a><br>
                                             <!-- <small tooltip="API ID">5537d677-5a8f-4417-a064-1afaf4242979</small> -->
                                         </span>
@@ -181,7 +181,14 @@ Final", "Weekly Survival"] %}
                                                 <td width="150px">
                                                     {{random(hero)}}
                                                 </td> -->
-                                                <td width="200px">
+                                                <td width="300px" class="api">
+                                                    account.{{random(apiplayer)}}
+                                                </td>
+                                                <td width="150px">
+                                                    {{random(player)}}
+                                                </td>
+                                                <td width="100px"><i class="fas fa-crosshairs" tiltle="число килов"></i> {{random(num)}}</td>
+                                                <td>
                                                     {% if i == 2 %}
                                                     <a title="выбрать игрока" class="text-muted" href="/"><i
                                                             class="ml-1 mr-2 far fa-user-circle"></i> выбрать
@@ -203,13 +210,8 @@ Final", "Weekly Survival"] %}
                                                     </a>
                                                     {% endif %}
                                                 </td>
-                                                <td width="50px"><i class="fas fa-bullseye"></i> {{random(num)}}</td>
-                                                <td width="300px" class="api">
-                                                    account.{{random(apiplayer)}}
-                                                </td>
-                                                <td width="">
-                                                    {{random(player)}}
-                                                </td>
+                                               
+                                                
                                             </tr>
                                             {% endfor %}
                                         </tbody>

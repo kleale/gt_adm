@@ -666,3 +666,15 @@ span.table__hl {
 .api{
     color: #299caf;
 }
+
+.modal-header {
+    padding: .5rem 1rem;
+}
+
+.complex-name span+span:before {
+    content: "→";
+    padding: 0 5px;
+}
+.mmlink{
+    font-weight: normal;
+}

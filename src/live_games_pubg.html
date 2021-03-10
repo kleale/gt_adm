@@ -204,18 +204,26 @@ Final", "Weekly Survival"] %}
                                                         {{random(date)}} - {{random(date)}}
 
                                                     </td>
-                                                    <td>{{random(id)}}</td>
                                                     <td>
                                                         {% if i == 3 or i == 5 %}
-                                                        <a href="/gt_tournaments/2996/">{{random(tour)}}</a> | <a href="/gt_tournaments/2996/">{{random(tour)}}</a>&nbsp;&nbsp;&nbsp;
-                                                         <b class="badge badge-num" 
+                                                            <a class="green" href="">{{random(id)}}</a>
+                                                        {% else %}
+                                                            <a class="black" href="">{{random(id)}}</a>
+                                                        {% endif %}
+                                                    </td>
+                                                    <td class="more-tours">
+                                                        {% if i == 3 or i == 5 %}
+                                                        <span href="/gt_tournaments/2996/">{{random(tour)}}</span>
+                                                        <span href="/gt_tournaments/2996/">{{random(tour)}}</span>
+                                                        <b class="badge badge-num" 
                                                             data-toggle="popover" 
                                                             data-trigger="focus" 
                                                             data-html="true"
                                                             data-content="{{random(tour)}},<br> {{random(tour)}},<br> {{random(tour)}},<br> {{random(tour)}}" 
                                                             title="{{random(tour)}}, {{random(tour)}}, {{random(tour)}}, {{random(tour)}}">+2</b>
                                                         {% else %}
-                                                            <a href="/gt_tournaments/2996/">{{random(tour)}}</a> | <a href="/gt_tournaments/2996/">{{random(tour)}}</a>
+                                                            <span href="/gt_tournaments/2996/">{{random(tour)}}</span>
+                                                            <span href="/gt_tournaments/2996/">{{random(tour)}}</span>
                                                         {% endif %}
                                                     </td>
                                                     
@@ -225,8 +233,9 @@ Final", "Weekly Survival"] %}
                                                             href="/discipline/api/dota2/live_games/5838563453/matches?filter=4122%2C4087&amp;live_game%5Bdire_series_wins%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_id%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_name%5D=&amp;live_game%5Bfrom_history%5D=false&amp;live_game%5Bleague_id%5D=4122&amp;live_game%5Bleague_name%5D=FACEIT+League&amp;live_game%5Bmatch_id%5D=5838563453&amp;live_game%5Bradiant_series_wins%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_id%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_name%5D=&amp;live_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=17&amp;live_game%5Bscoreboard%5D%5Bduration%5D=1524&amp;live_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=27&amp;live_game%5Bstart_time%5D="><i
                                                                 class="fas fa-gamepad"></i></a> -->
                                                         <a class="btn btn-primary btn-sm"
-                                                            href="/discipline/api/dota2/live_games/5838563453?filter=4122%2C4087%2C5838563453&amp;live_game%5Bdire_series_wins%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_id%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_name%5D=&amp;live_game%5Bfrom_history%5D=false&amp;live_game%5Bleague_id%5D=4122&amp;live_game%5Bleague_name%5D=FACEIT+League&amp;live_game%5Bmatch_id%5D=5838563453&amp;live_game%5Bradiant_series_wins%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_id%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_name%5D=&amp;live_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=17&amp;live_game%5Bscoreboard%5D%5Bduration%5D=1524&amp;live_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=27&amp;live_game%5Bstart_time%5D=&amp;search%5Blive_dota2_tournament%5D=4122%2C4087%2C5838563453"><i
-                                                                class="fas fa-info-circle"></i></a>
+                                                            href="">
+                                                            <i class="fas fa-filter"></i>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                                 {% endfor %}

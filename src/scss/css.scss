@@ -333,6 +333,9 @@ span.table__hl {
 .green {
     color: #82ac4e;
 }
+.black{
+    color: #313131;
+}
 .form-row .btns {
     max-width: 75px;
 }
@@ -677,4 +680,15 @@ span.table__hl {
 }
 .mmlink{
     font-weight: normal;
+}
+
+.more-tours{
+    span{
+        border: 1px solid #e0e0e0;
+        padding: 2px 5px;
+        border-radius: 4px;
+        margin-right: 5px;
+        color: #313131;
+        font-size: 12px;
+    }
 }

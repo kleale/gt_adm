@@ -360,7 +360,7 @@ Final", "Weekly Survival"] %}
             <div class="modal-content">
                 <div class="modal-header">
                     <h6 class="modal-title" id="discipline_api_dota2_api_games_matches_modal_title">
-                        Матч: 
+                        Матч:
                         <small class="api"> 12692</small>
                         <!-- <small class="api">ID: 12692</small> -->
                     </h6>
@@ -376,9 +376,23 @@ Final", "Weekly Survival"] %}
                             accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="_method"
                                 value="patch">
                             <div data-controller="nested-form">
+
+                                {% for i in 1..5 %}
                                 <div class="form-row nested-fields">
 
                                     <label class="col-sm-9 col-form-label" for="gt_tournament_all_team_ids">
+                                        {% if i == 1 %}
+                                        <i style="color:green" title="ОКОК" class="fas fa-check-double"></i>
+                                        {% elseif i == 2 %}
+                                        <i style="color:green" title="ОК" class="fas fa-check"></i>
+                                        {% elseif i == 3 %}
+                                        <i style="color:red" title="Ошибка" class="fas fa-times"></i>
+                                        {% elseif i == 4 %}
+                                        <i title="В процессе" class="fas fa-minus"></i>
+                                        {% else %}
+                                        <i style="color:orange" title="В процессе" class="far fa-circle"></i>
+                                        {% endif %}
+                                        &nbsp;&nbsp;
                                         <a class="text-body complex-name mmlink"
                                             href="/gt_match_lists/324999/edit?gt_match_lists_form_part=games">
                                             <span>2020-12-25&nbsp;&nbsp;<strong>00:30</strong>&nbsp;&nbsp;MSK</span>
@@ -392,60 +406,30 @@ Final", "Weekly Survival"] %}
                                             </span>
                                         </a>
                                     </label>
-                                    
-                                    <div
-                                        class="form-group col-sm-1 string optional discipline_api_dota2_api_game_matches_map_num">
-                                        <input class="form-control string optional text-center" data-id="324999"
-                                            data-action="input->nested-form#choose_trigger" placeholder="№ карты"
-                                            type="text"
-                                            name="discipline_api_dota2_api_game[matches_attributes][0][map_num]"
-                                            id="discipline_api_dota2_api_game_matches_attributes_0_map_num">
-                                    </div><input type="hidden" value="324999"
+
+                                    <input type="hidden" value="324999"
                                         name="discipline_api_dota2_api_game[matches_attributes][0][id]"
                                         id="discipline_api_dota2_api_game_matches_attributes_0_id">
-
-                                    <div class="form-group col-sm-2 string optional">
-                                        <input type="submit" name="commit" value="Сохранить"
-                                            class="btn btn-outline-primary form-control"
-                                            formaction="/discipline/api/dota2/api_games/5868145518/matches/5868145518?action_after_update=refresh_edit_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868145518&amp;api_game%5Bradiant_series_wins%5D=1&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=0&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=Binding%3A%3ABind%3A%3AGame"
-                                            method="put" data-disable-with="Сохранить">
+                                    <div class="col-sm-3">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <input class="form-control form-control-sm string optional text-center" data-id="324999"
+                                                    data-action="input->nested-form#choose_trigger"
+                                                    placeholder="№ карты" type="text"
+                                                    name="discipline_api_dota2_api_game[matches_attributes][0][map_num]"
+                                                    id="discipline_api_dota2_api_game_matches_attributes_0_map_num">
+                                            </div>
+                                            <div class="col">
+                                                <input type="submit" name="commit" value="Сохранить"
+                                                    class="btn btn-outline-primary btn-sm"
+                                                    formaction="/discipline/api/dota2/api_games/5868145518/matches/5868145518?action_after_update=refresh_edit_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868145518&amp;api_game%5Bradiant_series_wins%5D=1&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=0&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=Binding%3A%3ABind%3A%3AGame"
+                                                    method="put" data-disable-with="Сохранить">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                {% endfor %}
 
-                                <div class="form-row nested-fields">
-                                    <label class="col-sm-9 col-form-label" for="gt_tournament_all_team_ids">
-                                        <a class="text-body complex-name mmlink"
-                                            href="/gt_match_lists/324999/edit?gt_match_lists_form_part=games">
-                                            <span>2020-12-25&nbsp;&nbsp;<strong>00:30</strong>&nbsp;&nbsp;MSK</span>
-                                            <span>Brasil Esport CSCompetion 2021</span>
-                                            <span>Qualifier</span>
-                                            <span>B-D</span>
-                                            <span>
-                                                <strong>TBD</strong>
-                                                <s>[1:0]</s>
-                                                <strong>Movistar Riders</strong>
-                                            </span>
-                                        </a>
-                                    </label>
-                                    
-                                    <div
-                                        class="form-group col-sm-1 string optional discipline_api_dota2_api_game_matches_map_num">
-                                        <input class="form-control string optional text-center" data-id="325044"
-                                            data-action="input->nested-form#choose_trigger" placeholder="№ карты"
-                                            type="text"
-                                            name="discipline_api_dota2_api_game[matches_attributes][1][map_num]"
-                                            id="discipline_api_dota2_api_game_matches_attributes_1_map_num">
-                                    </div><input type="hidden" value="325044"
-                                        name="discipline_api_dota2_api_game[matches_attributes][1][id]"
-                                        id="discipline_api_dota2_api_game_matches_attributes_1_id">
-
-                                    <div class="form-group col-sm-2 string optional">
-                                        <input type="submit" name="commit" value="Сохранить"
-                                            class="btn btn-outline-primary form-control"
-                                            formaction="/discipline/api/dota2/api_games/5868145518/matches/5868145518?action_after_update=refresh_edit_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868145518&amp;api_game%5Bradiant_series_wins%5D=1&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=0&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=Binding%3A%3ABind%3A%3AGame"
-                                            method="put" data-disable-with="Сохранить">
-                                    </div>
-                                </div>
                             </div>
                             <hr>
                             <input type="hidden" value="5868145518" name="discipline_api_dota2_api_game[id]"
@@ -453,7 +437,7 @@ Final", "Weekly Survival"] %}
                             <input type="submit" name="commit" value="Создать матч"
                                 formaction="/discipline/api/dota2/api_games/5868145518/matches/5868145518?action_after_update=refresh_edit_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868145518&amp;api_game%5Bradiant_series_wins%5D=1&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=0&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=create_match"
                                 method="put" class="btn btn-success" data-disable-with="Создать матч">
-                            
+
                         </form>
                     </div>
                 </div>

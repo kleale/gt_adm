@@ -1,28 +1,62 @@
+{% set title = "Page Name" %}
+{% set user = ["Progamer", "BananaUser", "GromiK", "Drax", "kleale", "Bonus", "Gamover"] %}
+{% set game = ["DOTA2", "CSGO", "LOL", "Overwatch", "Fortnite"] %}
+{% set team = ["Creep", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI", "KG",
+"Virtus.Pro"] %}
+{% set teamlong = ["Movistar Riders", "Gambit", "Liquid", "Mineski", "OG", "EG", "Empire", "Ehome", "Navi", "VICI",
+"KG",
+"Virtus.Pro"] %}
+{% set teamurl=
+["dreamteam-2","somos-los-rex","creep-gaming","toshik-gaming","dreamteam-2","testuniverse2","hashteam1","take-that","gol-pashmian-ya-kon-pashm"]
+%}
+{% set teamlogo = ["team1", "team2", "team3", "team4", "team5"] %}
+{% set teamlogo2 = ["3","11","16","4051","6274","10785","4653","49","17","1","14","15"] %}
+{% set prize =
+["12,000","11,000","16,000","4,000","6,274","1,000,000","46,530","4,900","1,700","10,000","140,000","1,500,000"] %}
+{% set tourlogo = ["tour1", "tour2", "tour3", "tour4"] %}
+
+{% set gamelogo = ["dota2", "csgo", "lol", "hs", "ow", "fn", "pubg", "rl", "artifact", "rs", "sc2"] %}
+{% set tour = ["Five Winter Cup", "Brasil Esport CSCompetion 2021", "Dota Main Winter Cup 2020", "Fortnite Night Cup
+2021", "LinkenID" ] %}
+{% set tourshort = ["FWC", "DMWinCup", "Cyber Over ", "Lin", "HP", "shortt", "same", "DW2020", "BrasilEsport 21",
+"CDA-FDC" ] %}
+{% set toururl = ["five-winter-cup", "brasil-esport-cscompetion-2021", "dota-main-winter-cup-2020 ",
+"fortnite-night-cup-2021", "cyber-over-cup-2020", "linkenid", "same", "full-hp", "engl" ] %}
+{% set serie = ["Asian Gold Occupation ", "Masters Tournament", "VAL", "Merkur Masters", " NeXT", " ", " ", " ", " "] %}
 
 
+{% set num = ["1", "21", "34", "14", "3", "11", "7"] %}
+{% set date = ["1 января", "сегодня"] %}
+{% set status = ["Прошедший", "Будущий", "Текущий"] %}
+{% set stagetype = ["Основная", "Группы", "Сетка"] %}
+{% set stage = ["Stage1", "Main Event", "Stage 2", "Finals", "Latin America", "North America", "Qualifier", "Weekly
+Final", "Weekly Survival"] %}
+{% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier",
+"weekly-final", "weekly-survival"] %}
 
+{% set player = ["PAAD1N", "Nightaliscious", "Choko", "Bisbo", "Aggro" ] %}
+{% set playerlong = ["Bronnikov Roman", "Voronin Danil", "Akram Patarov", "Nguyễn Lâm Việt Sinh", "Kang Min-seok" ] %}
+{% set playerurl = ["123-smurf", "nightaliscious", "choko", "Bisbo", "aggro" ] %}
+{% set burth = ["1988-07-22", "1966-04-12", "1975-03-01", "2001-05-08", "2007-04-08"] %}
+{% set id = ["5838563453", "5838562255", "5838539413", "5838539385", "583853952", "5838539962", "5838539936"] %}
 
+{% set scorenum = ["12:24", "12:43", "1:2", "1:4", "2:12", "3:1", "24:64", "3:6", "0:2", "1:0" ] %}
+{% set hash = ["#1", "#2", "#2", "#1", "#2", "#3", "#3", "", "", "" ] %}
 
+{% set time = ["12:00", "14:45", "00:30", "23:00", "22:15", "21:30", "16:15"] %}
+{% set date = ["2021-01-18", "2020-12-23","2020-12-23","2020-12-23","2020-12-22","2020-12-24","2020-12-25" ] %}
 
+{% set hero = ["Spirit Breaker","Juggernaut","Bristleback","Arc Warden","Jakiro","Rubick","Ember Spirit"] %}
+{% set heroimg = ["120","111","112","113","114"] %}
+{% set player = ["Wulrong","OutPlayed","Yua Mikami","Fuju~","rosettaaa","salgin","nxiqua"] %}
 
-
+{% set apiid = ["ap 411213f0-2fef-4fdc-ba72-bf941b490bdd", "ap 2423522t3-4f23-fh4s-k5jgj-jjr643tgd32", "latam 6819194f-5288-4907-aa31-3b3804139565", "latam 23425261-2345-7643-gd45-423rfsfg43t"] %}
 
 
 <!DOCTYPE html>
 <html style="height: auto;">
-<head lang="ru">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page Name</title>
-  <meta name="csrf-token"
-    content="oY/TcE7c7UVhVRTqFur8SLA5jKpJItu3bYkg5JqCx09is+i55kGYa7Ntf+WMpowlAg5zrFJgPLD/GY4ycToOaQ==">
-  <script src="./static/application-f8a44522597fe8bf8146.js.socket" data-turbolinks-track="reload"></script>
-  <link rel="stylesheet" media="all" href="./static/application-17bb302e.css" data-turbolinks-track="reload">
-  <!-- <link rel="stylesheet" media="all" href="./css/css.css" data-turbolinks-track="reload"> -->
-  <link rel="stylesheet" media="all" href="./fonts/css/all.min.css" data-turbolinks-track="reload">
-  <link rel="shortcut icon" type="image/x-icon"
-    href="https://esnadm.com/packs/media/images/favicon32-82d97f60e57087d1f82ecbf0355e4183.png">
-<link href="/css/app.css" rel="stylesheet"></head>
+{% include "./tpl/head.html" %}
+
 <style>
     .select2-container--default~.select2-container--default {
         display: none !important;
@@ -97,31 +131,29 @@
                             <div class="game-header">
                                 <!-- <div class="game-score ended">28 : 36</div> -->
                                 <div class="game-info">
-                                    <h3><a href="/" class="green">The Summit S13 OQ</a> <small class="api">4122</small></h3>
+                                    <h3><a href="/" class="green">The Summit S13 OQ</a></h3>
                                     <span class="date">2020-12-22 <b>12:00</b> MSK</span>
-                                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                                    <span class="gm">Игра 2</span>
-                                    &nbsp;|&nbsp;&nbsp;
+                                    &nbsp;&nbsp;
+                                    |
+                                    &nbsp;&nbsp;
                                     <b class="timer">
-                                        <span class="live" title="Игра идет">
-                                            <i style="color:red" title="LIVE" class="fas fa-circle"></i>
-                                        </span>
+                                        
                                         <span>00:42:03</span>
                                     </b>
                                     &nbsp;&nbsp;|&nbsp;
-                                    <span class="api">5844762768</span>
+                                    <span class="api">ap ff612ada-df0e-47f1-923a-204bfb479eed</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                         
+                        {% for i in 1..2 %} 
                         <li class="list-group-item">
                             <div class="teams-on-live-hrzntl row">
 
                                 <div class="col-sm-2">
                                     <div class="teamblock">
-                                        <b class="team-num">23</b>
+                                        <b class="team-num">{% if i == 1 %}23{% else %}34{% endif %}</b>
                                         <!-- <a href="#" class="team-logo">
                                             <picture>
                                                 <source type="image/webp"
@@ -129,339 +161,87 @@
                                                 <img src="http://gg2.kleale.ru/img/dummy/team-lg.png" alt="">
                                             </picture>
                                         </a> -->
-                                        <span class="">
-                                            <a href="/" data-toggle="modal"
-                                            data-target="#discipline_api_dota2_api_games_team_modal_id" class="green">Ehome</a><br>
-                                            <small class="api">3285324238</small>
+                                        <span class="{% if i == 2 %}win{% endif %}">
+                                            <a href="/" data-toggle="modal" class="{% if i == 2 %}text-body{% else %} text-danger{% endif %}"
+                                            data-target="#discipline_api_dota2_api_games_team_modal_id">{{random(team)}}</a> 
+                                            <small class="text-muted">({{random(team)}})</small>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="col-sm-10">
                                     <table class="table table-hover table-striped table-sm const">
-                                        <tbody>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/113.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Jakiro
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">37313027</span>
-                                                </td>
-                                                <td width="150px">
-                                                    Fuju~
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
-                                                        <!-- <picture>
-                                                            <img class="notsvg" src="/media/logo/nop.svg">
-                                                        </picture> -->
-                                                        <b>
-                                                                                                                    <img class="flag mr-2" width="18px"
-                                                            src="https://escorenews.com/media/flags/1.svg"
-                                                            title="Словакия">
-                                                                                                                </b>
-                                                        <span class="green">Fuju~</span>
-                                                    </a>
-                                                                                                    </td>
-                                                
-                                                
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2"></th>
+                                                <th width="30px" class="text-center"><i class="fas fa-crosshairs text-muted"></i></th>
+                                                <th width="30px" class="text-center"><i class="fas fa-skull-crossbones text-muted"></i></th>
+                                                <th width="30px" class="text-center"><i class="fas fa-hands-helping text-muted"></i></th>
+                                                <th width="30px"></th>
+                                                <th></th>
                                             </tr>
-                                                                                        <tr>
-                                                <td width="50px">
+                                        </thead>
+                                        <tbody>
+                                            {% for i in 1..5 %}
+                                            <tr>
+                                                <td width="280px">
+                                                    <span class="api">{{random(apiid)}}</span>
+                                                </td>
+                                                <!-- <td width="50px">
                                                     <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/112.png">
-                                                </td>
+                                                        src="https://escorenews.com/media/game/hero/582/_59/{{random(heroimg)}}.png">
+                                                </td> -->
+                                                <!-- <td width="150px">
+                                                    {{random(hero)}}
+                                                </td> -->
+                                                
                                                 <td width="150px">
-                                                    Ember Spirit
+                                                    {{random(player)}}
                                                 </td>
-                                                <td width="130px">
-                                                    <span class="api">2038056067</span>
+                                                <td class="text-center">
+                                                    {{random(10)}}
                                                 </td>
-                                                <td width="150px">
-                                                    nxiqua
+                                                <td class="text-center">
+                                                    {{random(15)}} 
                                                 </td>
-                                                <td width="">
-                                                                                                        <a title="выбрать игрока" data-toggle="modal"
+                                                <td class="text-center">
+                                                    {{random(7)}} 
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    {% if i == 2 %}
+                                                    <a title="выбрать игрока" data-toggle="modal"
                                                     data-target="#discipline_api_dota2_api_games_player_modal_id" class="text-muted" href="/"><i
                                                             class="ml-1 mr-2 far fa-user-circle"></i> выбрать
                                                         игрока</a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/113.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Spirit Breaker
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">256386720</span>
-                                                </td>
-                                                <td width="150px">
-                                                    OutPlayed
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
+                                                    {% else %}
+                                                    <a href="/" data-toggle="modal"
                                                     data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
                                                         <!-- <picture>
                                                             <img class="notsvg" src="/media/logo/nop.svg">
                                                         </picture> -->
                                                         <b>
-                                                                                                                    <img class="flag mr-2" width="18px"
-                                                            src="https://escorenews.com/media/flags/3.svg"
+                                                        {% if i == 4 %}
+                                                        {% else %}
+                                                            <img class="flag mr-2" width="18px"
+                                                            src="https://escorenews.com/media/flags/{{i}}.svg"
                                                             title="Словакия">
-                                                                                                                </b>
-                                                        <span class="green">nxiqua</span>
+                                                        {% endif %}
+                                                        </b>
+                                                        <span class="green">{{random(player)}}</span>
                                                     </a>
-                                                                                                    </td>
+                                                    {% endif %}
+                                                </td>
                                                 
                                                 
                                             </tr>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/120.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Jakiro
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">1098196496</span>
-                                                </td>
-                                                <td width="150px">
-                                                    OutPlayed
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
-                                                        <!-- <picture>
-                                                            <img class="notsvg" src="/media/logo/nop.svg">
-                                                        </picture> -->
-                                                        <b>
-                                                                                                                                                                        </b>
-                                                        <span class="green">nxiqua</span>
-                                                    </a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/120.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Bristleback
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">1093361850</span>
-                                                </td>
-                                                <td width="150px">
-                                                    Wulrong
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
-                                                        <!-- <picture>
-                                                            <img class="notsvg" src="/media/logo/nop.svg">
-                                                        </picture> -->
-                                                        <b>
-                                                                                                                    <img class="flag mr-2" width="18px"
-                                                            src="https://escorenews.com/media/flags/5.svg"
-                                                            title="Словакия">
-                                                                                                                </b>
-                                                        <span class="green">OutPlayed</span>
-                                                    </a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                    </tbody>
+                                            {% endfor %}
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
                         </li>
-                         
-                        <li class="list-group-item">
-                            <div class="teams-on-live-hrzntl row">
-
-                                <div class="col-sm-2">
-                                    <div class="teamblock">
-                                        <b class="team-num">34</b>
-                                        <!-- <a href="#" class="team-logo">
-                                            <picture>
-                                                <source type="image/webp"
-                                                    srcset="http://gg2.kleale.ru/img/dummy/team-lg.png">
-                                                <img src="http://gg2.kleale.ru/img/dummy/team-lg.png" alt="">
-                                            </picture>
-                                        </a> -->
-                                        <span class="win">
-                                            <a href="/" data-toggle="modal"
-                                            data-target="#discipline_api_dota2_api_games_team_modal_id" class="text-muted">OG</a><br>
-                                            <small class="api">3285324238</small>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-10">
-                                    <table class="table table-hover table-striped table-sm const">
-                                        <tbody>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/114.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Bristleback
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">13750407</span>
-                                                </td>
-                                                <td width="150px">
-                                                    OutPlayed
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
-                                                        <!-- <picture>
-                                                            <img class="notsvg" src="/media/logo/nop.svg">
-                                                        </picture> -->
-                                                        <b>
-                                                                                                                    <img class="flag mr-2" width="18px"
-                                                            src="https://escorenews.com/media/flags/1.svg"
-                                                            title="Словакия">
-                                                                                                                </b>
-                                                        <span class="green">Yua Mikami</span>
-                                                    </a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/112.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Ember Spirit
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">1884298127</span>
-                                                </td>
-                                                <td width="150px">
-                                                    salgin
-                                                </td>
-                                                <td width="">
-                                                                                                        <a title="выбрать игрока" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="text-muted" href="/"><i
-                                                            class="ml-1 mr-2 far fa-user-circle"></i> выбрать
-                                                        игрока</a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/113.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Rubick
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">1593537195</span>
-                                                </td>
-                                                <td width="150px">
-                                                    Yua Mikami
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
-                                                        <!-- <picture>
-                                                            <img class="notsvg" src="/media/logo/nop.svg">
-                                                        </picture> -->
-                                                        <b>
-                                                                                                                    <img class="flag mr-2" width="18px"
-                                                            src="https://escorenews.com/media/flags/3.svg"
-                                                            title="Словакия">
-                                                                                                                </b>
-                                                        <span class="green">nxiqua</span>
-                                                    </a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/111.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Jakiro
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">840113918</span>
-                                                </td>
-                                                <td width="150px">
-                                                    rosettaaa
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
-                                                        <!-- <picture>
-                                                            <img class="notsvg" src="/media/logo/nop.svg">
-                                                        </picture> -->
-                                                        <b>
-                                                                                                                                                                        </b>
-                                                        <span class="green">OutPlayed</span>
-                                                    </a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                        <tr>
-                                                <td width="50px">
-                                                    <img width="30px"
-                                                        src="https://escorenews.com/media/game/hero/582/_59/112.png">
-                                                </td>
-                                                <td width="150px">
-                                                    Arc Warden
-                                                </td>
-                                                <td width="130px">
-                                                    <span class="api">763625413</span>
-                                                </td>
-                                                <td width="150px">
-                                                    salgin
-                                                </td>
-                                                <td width="">
-                                                                                                        <a href="/" data-toggle="modal"
-                                                    data-target="#discipline_api_dota2_api_games_player_modal_id" class="playerName">
-                                                        <!-- <picture>
-                                                            <img class="notsvg" src="/media/logo/nop.svg">
-                                                        </picture> -->
-                                                        <b>
-                                                                                                                    <img class="flag mr-2" width="18px"
-                                                            src="https://escorenews.com/media/flags/5.svg"
-                                                            title="Словакия">
-                                                                                                                </b>
-                                                        <span class="green">rosettaaa</span>
-                                                    </a>
-                                                                                                    </td>
-                                                
-                                                
-                                            </tr>
-                                                                                    </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                                            </ul>
+                        {% endfor %}
+                    </ul>
                     <hr>
                     <div class="mb-2">
                         <button class="btn btn-primary" type="button" data-toggle="collapse"
@@ -784,70 +564,7 @@
 
 
 
-    <!--PAGES select only dev-->
-<style>
-  
-  .project-menu{
-    position: fixed;
-    z-index: 21000;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px 0px 0px 0px;
-    /*display: none;*/
-  }
-  .project-menu .btn-group{
-    margin: 0;
-  }
-  .project-menu a{
-    font-size: 12px;
-  }
-</style>
-<div class="project-menu">
-  <div class="btn-group" role="group" id="hpages">
-
-    <div class="dropdown">
-      <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        DEV Меню
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a href="/" class="dropdown-item">index</a>
-          <a href="/gt_match_lists.html" class="dropdown-item ">gt_match_lists</a>
-          <a href="/gt_tournaments_edit_prize.html" class="dropdown-item ">gt_tournaments_edit_prize</a>
-          <a href="/gt_tournaments_edit_teams.html" class="dropdown-item ">gt_tournaments_edit_teams</a>
-          <a href="/gt_tournaments_edit.html" class="dropdown-item ">gt_tournaments_edit</a>
-          <a href="/gt_tournaments_round_tabs.html" class="dropdown-item ">gt_tournaments_round_tabs</a>
-          <a href="/gt_tournaments_rounds.html" class="dropdown-item ">gt_tournaments_rounds</a>
-          <a href="/gt_tournaments_stages.html" class="dropdown-item ">gt_tournaments_stages</a>
-          <a href="/gt_venues.html" class="dropdown-item">gt_venues</a>
-          <a href="/gt_teams_lists.html" class="dropdown-item">gt_teams_lists</a>
-          <a href="/gt_player_lists.html" class="dropdown-item">gt_player_lists</a>
-          <a href="/gt_tournaments_stages_edit.html" class="dropdown-item">gt_tournaments_stages_edit</a>
-          <a href="/gt_tournaments_stages_edit_prize.html" class="dropdown-item">gt_tournaments_stages_edit_prize</a>
-          <a href="/gt_tournaments_stages_edit_mesh.html" class="dropdown-item text-">gt_tournaments_stages_edit_mesh</a>
-          <a href="/gt_tournaments_rounds_edit.html" class="dropdown-item text-">gt_tournaments_rounds_edit</a>
-          <a href="/gt_tournaments_round_tabs_edit.html" class="dropdown-item text-">gt_tournaments_round_tabs_edit</a>
-          <a href="/gt_match_lists_edit.html" class="dropdown-item text-">gt_match_lists_edit</a>
-          <a href="/live_games.html" class="dropdown-item text-">live_games</a>
-          <a href="/live_games_lol.html" class="dropdown-item text-">live_games_lol</a>
-          <a href="/live_games_valorant.html" class="dropdown-item text-">live_games_valorant</a>
-          <a href="/gt_teams_lists_edit.html" class="dropdown-item text-">gt_teams_lists_edit</a>
-          <a href="/gt_player_lists_edit.html" class="dropdown-item text-">gt_player_lists_edit</a>
-          <a href="/live_games_pubg.html" class="dropdown-item text-">live_games_pubg</a>
-          <a href="/gt_match_lists2.html" class="dropdown-item text-">gt_match_lists2</a>
-          <!-- <a href="/live_games_Dota_Match.html" class="dropdown-item text-">live_games_Dota_Match</a> -->
-          <a href="/live_games_Dota_Match2.html" class="dropdown-item text-">live_games_Dota_Match2</a>
-          <a href="/live_games_pubg_match.html" class="dropdown-item text-">live_games_pubg_match</a>
-          <a href="/live_games_lol_Match2.html" class="dropdown-item text-">live_games_lol_Match2</a>
-          <a href="/live_games_velorant_match.html" class="dropdown-item text-">live_games_velorant_match</a>
-
-        </div>
-    </div>
-
-  </div>
-</div>
-
-<!--.PAGES navi dev--><script type="text/javascript" src="/js/app.js"></script></body>
+    {% include "./tpl/devmenu.html" %}
+</body>
 
 </html>

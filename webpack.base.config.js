@@ -281,7 +281,14 @@ module.exports = {
             hash: false,
             template: `${PATHS.src}/live_games_lol_Match2.html`,
             filename: './live_games_lol_Match2.html'
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/live_games_velorant_match.html`,
+            filename: './live_games_velorant_match.html'
         })
+
+        
         
     ],
 }

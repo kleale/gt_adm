@@ -277,15 +277,22 @@ span.table__hl {
 
 .mnum {
     border: 0;
-    background: #f4f6f9;
-    text-align: center;
+    background: #e9ecef;
     min-width: 28px;
-    max-width: 60px;
-    height: 29px;
     padding-right: 0;
     padding-left: 0;
+    color: #495057;
+    border-radius: .25rem;
+    padding: .375rem .5rem;
+    display: block;
+    height: 32px;
+    margin-right: 15px;
 }
-
+a.mnum {
+    &:hover {
+        background: #e0f1ff;
+    }
+}
 .gt_match_list_games_attributes {
     display: flex;
     align-items: center;

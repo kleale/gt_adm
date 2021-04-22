@@ -360,10 +360,17 @@ a.mnum {
 .numdiv {
     width: 30px;
 }
-
-.complex-name s {
+.complex-name .mlink {
     text-decoration: none;
     padding: 0 5px;
+    s {
+        text-decoration: none;
+        padding: 0 5px;
+        color: #333;
+    }
+    &:hover{
+        border-bottom: 1px solid #3764a0;
+    }
 }
 .pl-input.form-control {
     width: 32px;

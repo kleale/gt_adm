@@ -4,14 +4,14 @@
   "description": "Верстка проекта GT",
   "main": "index.js",
   "dependencies": {
+    "popper.js": "^1.16.1",
     "bootstrap": "^4.6.0",
     "bootstrap-select": "^1.13.18",
     "highcharts": "^7.2.2",
     "jquery": "^3.5.1",
     "json-formatter-js": "^2.3.4",
     "medium-zoom": "^1.0.6",
-    "overlayscrollbars": "^1.13.1",
-    "popper.js": "^1.16.1"
+    "overlayscrollbars": "^1.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

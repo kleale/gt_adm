@@ -4,6 +4,7 @@ import $ from 'jquery';
 // PAGES js navi only dev pager
 //==================
 import "./js/dev/jquery.cookie.min.js"
+
 $(document).ready(function () {
     setNavigation();
     function setNavigation() {

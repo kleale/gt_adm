@@ -525,6 +525,7 @@ Final", "Weekly Survival"] %}
                                                     <th width="150px">Дата и время</th>
                                                     <th class="text-center" width="100px">Best of</th>
                                                     <th class="text-center" width="100px">Очки</th>
+                                                    <th  width="100px">API</th>
                                                     <th>Матч</th>
                                                     <th width="150px"></th>
                                                 </tr>
@@ -541,17 +542,34 @@ Final", "Weekly Survival"] %}
                                                     </td>
                                                     <td class="text-center">{{random(bestof)}}</td>
                                                     <td class="text-center">{{random(scorenum)}}</td>
+                                                    <td class="text-center">
+                                                        {% if i == 2434 %}
+                                                        <!-- <i style="color:green" title="ОКОК" class="fas fa-check-double"></i> -->
+                                                        <i style="color:green" title="ОК" class="fas fa-check"></i>
+                                                        {% elseif i == 2435 %}
+                                                        <i style="color:green" title="ОК" class="fas fa-check"></i>
+                                                        {% elseif i == 2436 %}
+                                                        <i style="color:red" title="Ошибка" class="fas fa-times"></i>
+                                                        {% elseif i == 2445 %}
+                                                        <i style="color:red" title="Ошибка" class="fas fa-times"></i>
+                                                        <!-- <i title="В процессе" class="fas fa-minus"></i> -->
+                                                        {% else %}
+                                                        <i style="color:gray" title="В процессе" class="far fa-circle"></i>
+                                                        {% endif %}
+
+                                                    </td>
                                                     <td class="complex-name">
                                                         <span><a
                                                                 href="/gt_tournaments/2996/edit">{{random(tour)}}</a></span>
                                                         <span><a
                                                                 href="/gt_tournaments_stages/8914/edit">{{random(stage)}}</a></span>
-                                                        <span><a
-                                                                href="https://escorenews.com/ru/csgo/iem-melbourne-2020/playoff/tbd-vs-tbd-247134">{{random(round)}}</a></span>
+                                                        <span>{{random(round)}}</span>
                                                         <span>
-                                                            <strong>{{random(team)}}</strong>
-                                                            <s>[{{random(scorenum)}}]</s>
-                                                            <strong>{{random(team)}}</strong>
+                                                            <a class="mlink" href="">
+                                                                <strong>{{random(team)}}</strong>
+                                                                <s>[{{random(scorenum)}}]</s>
+                                                                <strong>{{random(team)}}</strong>
+                                                            </a>
                                                         </span>
                                                     </td>
                                                     <td class="text-right"><a class="btn btn-success btn-sm"

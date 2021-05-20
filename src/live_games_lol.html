@@ -115,11 +115,20 @@ Final", "Weekly Survival"] %}
         <div class="content-wrapper" style="min-height: 588px;">
             <div class="content-header">
                 <div class="container-fluid">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
-                                        class="fas fa-home"></i>Dashboard</a></strong></li>
-                        <li class="breadcrumb-item active">API: LOL</li>
-                    </ol>
+                    <div class="row">
+                        <div class="col-10">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><strong><a class="with-icon" href="/"><i
+                                                class="fas fa-home"></i>Dashboard</a></strong></li>
+                                <li class="breadcrumb-item active">API: LOL</li>
+                            </ol>
+                        </div>
+                        <div class="col-2 copy-url">
+                            <a data-title="Обратите внимание" data-message="URL скопирован в буфер обмена"
+                                data-target="filter-form.link" data-action="filter-form#copy_url" href="#"><i
+                                    class="fas fa-copy"></i> Ссылка на страницу</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -154,16 +163,29 @@ Final", "Weekly Survival"] %}
                                             </div>
                                             <input type="hidden" name="search[tournament]" id="search_tournament"
                                                 value="">
-                                            <div class="col-sm-1" style="white-space: nowrap;"><span
-                                                    class="span-link"><a class="btn btn-primary"
-                                                        data-title="Обратите внимание"
+                                            <div
+                                                class="col-sm-1 form-group boolean optional gt_errors form-group-valid">
+                                                <div class="custom-control custom-switch mt-2">
+                                                    <input name="gt_match_list[defwin]" type="hidden" value="0"><input
+                                                        class="custom-control-input boolean optional" type="checkbox"
+                                                        value="1" name="gt_match_list[defwin]" id="gt_errors"><label
+                                                        class="custom-control-label boolean optional"
+                                                        for="gt_errors">Ошибки</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1" style="white-space: nowrap;">
+                                                <span class="span-link">
+                                                    <a class="btn btn-primary" data-title="Обратите внимание"
                                                         data-message="URL скопирован в буфер обмена"
                                                         data-target="filter-form.link"
                                                         data-action="filter-form#copy_url" href="#"><i
-                                                            class="fas fa-copy"></i></a></span><span
-                                                    class="span-link"><button name="button" type="submit"
+                                                            class="fas fa-copy"></i>
+                                                    </a>
+                                                </span>
+                                                <span class="span-link"><button name="button" type="submit"
                                                         class="btn btn-primary"><i
-                                                            class="fas fa-search"></i></button></span></div>
+                                                            class="fas fa-search"></i></button></span>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -193,13 +215,17 @@ Final", "Weekly Survival"] %}
                                                 <tr id="row-{{i}}">
                                                     <td class="text-center">
                                                         {% if i == 2 %}
-                                                        <i style="color:green" title="ОК" class="fas fa-check"></i>
+                                                        <i style="color:green" title="ОК"
+                                                            class="fas fa-check tip show-toast"></i>
                                                         {% elseif i == 3 %}
-                                                        <i style="color:red" title="Ошибка" class="fas fa-times"></i>
+                                                        <i style="color:red" class="fas fa-times tip" data-remote="true"
+                                                            data-toggle="popover" data-placement="bottom" title="Ошибка"
+                                                            data-content="Описание ошибки"></i>
                                                         {% else %}
                                                         <!-- <i style="color:gray" title="В процессе" class="fas fa-ellipsis-h"></i> -->
                                                         <i style="color:gray" title="В процессе"
-                                                            class="far fa-circle"></i>
+                                                            data-content="Описание ошибки" data-toggle="modal"
+                                                            data-target="#modal_error" class="far fa-circle tip"></i>
                                                         {% endif %}
                                                     </td>
                                                     <td class="m-time">
@@ -209,17 +235,20 @@ Final", "Weekly Survival"] %}
                                                         {% if i == 3 or i == 5 %}
                                                         <a href="/">MH</a>
                                                         {% else %}
-                                                            {{random(type)}}
+                                                        {{random(type)}}
                                                         {% endif %}
                                                     </td>
                                                     <td>
                                                         {% if i == 3 or i == 5 %}
-                                                        <span class="filterico"><a href="/"><i class="fas fa-filter"></i></a></span>    
-                                                        <a class="text-success" href="/gt_tournaments/2996/edit">{{random(tour)}}</a>
-                                                            &nbsp;&nbsp;
+                                                        <span class="filterico"><a href="/"><i
+                                                                    class="fas fa-filter"></i></a></span>
+                                                        <a class="text-success"
+                                                            href="/gt_tournaments/2996/edit">{{random(tour)}}</a>
+                                                        &nbsp;&nbsp;
                                                         {% else %}
-                                                        <span class="filterico"></span>    
-                                                            <a class="text-body" href="/gt_tournaments/2996/edit">{{random(tour)}}</a>
+                                                        <span class="filterico"></span>
+                                                        <a class="text-body"
+                                                            href="/gt_tournaments/2996/edit">{{random(tour)}}</a>
                                                         {% endif %}
                                                     </td>
                                                     <td>
@@ -229,7 +258,7 @@ Final", "Weekly Survival"] %}
                                                             <span
                                                                 class="tscore">&nbsp;[{{random(scorenum)}}]&nbsp;</span>
                                                             <span class="t2"><b>{{random(team)}}</b></span>
-                                                            {% else %} 
+                                                            {% else %}
                                                             <span class="t1"><b>{{random(team)}}</b></span>
                                                             <span
                                                                 class="tscore">&nbsp;[{{random(scorenum)}}]&nbsp;</span>
@@ -238,15 +267,17 @@ Final", "Weekly Survival"] %}
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <span class="live">{% if i == 1 %} <i style="color:red" title="LIVE" class="fas fa-circle"></i>{% endif %}</span>
-                                                        00:2{{i}}:5{{i}} 
+                                                        <span class="live">{% if i == 1 %} <i style="color:red"
+                                                                title="LIVE" class="fas fa-circle"></i>{% endif
+                                                            %}</span>
+                                                        00:2{{i}}:5{{i}}
                                                     </td>
                                                     <!-- <td>
                                                         {% if i == 3 or i == 5 %}
                                                         <a href="/">{{random()}}</a>{{random(hash)}}
                                                         {% endif %}
                                                     </td> -->
-                                                    
+
                                                     <!-- <td class="text-right">
                                                         <a class="btn btn-success btn-sm select-matches-link-4122"
                                                             data-remote="true"
@@ -259,14 +290,21 @@ Final", "Weekly Survival"] %}
                                                     <td class="text-right">
                                                         <!-- <a class="btn btn-success btn-sm" data-remote="true" href="/"><i class="fas fa-gamepad"></i></a> -->
                                                         {% if i == 1 or i == 2 or i == 3 or i == 5 %}
-                                                            <a class="btn btn-secondary btn-sm" data-remote="true" href="/"><i class="fas fa-sync"></i></a>
-                                                            <a class="btn btn-success btn-sm" data-remote="true" href="/"><i class="fas fa-check"></i></a>
+                                                        <a class="btn btn-secondary btn-sm" href="/"><i
+                                                                class="fas fa-sync"></i></a>
+                                                        <a class="btn btn-success btn-sm" data-remote="true" href="/"
+                                                            data-toggle="modal" data-target="#add_match"
+                                                            data-remote="true"><i class="fas fa-check"></i></a>
                                                         {% else %}
-                                                        <a class="btn btn-secondary btn-sm" data-remote="true" href="/" tooltip="Ошибка" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                                                        <a class="btn btn-secondary btn-sm" data-remote="true" href="/"
+                                                            data-toggle="modal" data-target="#add_match"
+                                                            data-remote="true">
                                                             <i class="fas fa-question"></i>
                                                         </a>
                                                         {% endif %}
-                                                        <a class="btn btn-primary btn-sm" href="/discipline/api/dota2/live_games/5838563453?filter=4122%2C4087%2C5838563453&amp;live_game%5Bdire_series_wins%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_id%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_name%5D=&amp;live_game%5Bfrom_history%5D=false&amp;live_game%5Bleague_id%5D=4122&amp;live_game%5Bleague_name%5D=FACEIT+League&amp;live_game%5Bmatch_id%5D=5838563453&amp;live_game%5Bradiant_series_wins%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_id%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_name%5D=&amp;live_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=17&amp;live_game%5Bscoreboard%5D%5Bduration%5D=1524&amp;live_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=27&amp;live_game%5Bstart_time%5D=&amp;search%5Blive_dota2_tournament%5D=4122%2C4087%2C5838563453"><i class="fas fa-info-circle"></i></a>
+                                                        <a class="btn btn-primary btn-sm"
+                                                            href="/discipline/api/dota2/live_games/5838563453?filter=4122%2C4087%2C5838563453&amp;live_game%5Bdire_series_wins%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_id%5D=0&amp;live_game%5Bdire_team%5D%5Bteam_name%5D=&amp;live_game%5Bfrom_history%5D=false&amp;live_game%5Bleague_id%5D=4122&amp;live_game%5Bleague_name%5D=FACEIT+League&amp;live_game%5Bmatch_id%5D=5838563453&amp;live_game%5Bradiant_series_wins%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_id%5D=0&amp;live_game%5Bradiant_team%5D%5Bteam_name%5D=&amp;live_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=17&amp;live_game%5Bscoreboard%5D%5Bduration%5D=1524&amp;live_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=27&amp;live_game%5Bstart_time%5D=&amp;search%5Blive_dota2_tournament%5D=4122%2C4087%2C5838563453"><i
+                                                                class="fas fa-info-circle"></i></a>
                                                     </td>
                                                 </tr>
                                                 {% endfor %}
@@ -286,6 +324,134 @@ Final", "Weekly Survival"] %}
 
     </div>
     {% include "./tpl/devmenu.html" %}
+
+    <div class="modal fade" id="modal_error" role="dialog" tabindex="-1" style="display: none;" aria-modal="true">
+        <div class="modal-dialog modal-lg" role="document" style="width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">
+                        Заголовок ошибки
+                    </h6>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-content" id="discipline_api_dota2_api_games_matches_modal_body">
+                        Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Then put toasts within -->
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="myToast" data-delay="4000"
+        style="position: absolute; top: 1rem; right: 1rem;">
+        <div class="toast-header">
+            <i class="fas fa-info-circle"></i>&nbsp;&nbsp;
+            <strong class="mr-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+
+    <div class="modal fade" id="add_match" role="dialog" tabindex="-1" style="display: none;" aria-modal="true">
+        <div class="modal-dialog modal-lg" role="document" style="width: 1100px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="discipline_api_dota2_api_games_matches_modal_title">
+                        Матч:
+                        <small class="api"> 12692</small>
+                        <!-- <small class="api">ID: 12692</small> -->
+                    </h6>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                            aria-hidden="true"> ×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-content" id="discipline_api_dota2_api_games_matches_modal_body">
+                        <form class="simple_form new_discipline_api_dota2_api_game"
+                            id="new_discipline_api_dota2_api_game_5868145518" novalidate="novalidate"
+                            data-controller="select2"
+                            action="/discipline/api/dota2/api_games/5868145518/matches/5868145518"
+                            accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="_method"
+                                value="patch">
+                            <div data-controller="nested-form">
+
+                                {% for i in 1..5 %}
+                                <div class="form-row nested-fields {% if i == 2 %}green{% endif %}">
+
+                                    <label class="col-sm-9 col-form-label mmm" for="gt_tournament_all_team_ids">
+                                        {% if i == 1 %}
+                                        <!-- <i style="color:green" title="ОКОК" class="fas fa-check-double"></i> -->
+                                        {% elseif i == 2 %}
+                                        <i style="color:green" title="ОК" class="fas fa-check"></i>
+                                        {% elseif i == 3 %}
+                                        <i style="color:red" title="Ошибка" class="fas fa-times"></i>
+                                        {% elseif i == 4 %}
+                                        <!-- <i title="В процессе" class="fas fa-minus"></i> -->
+                                        {% else %}
+                                        <i style="color:orange" title="В процессе" class="far fa-circle"></i>
+                                        {% endif %}
+
+                                        <a class="text-body complex-name mmlink"
+                                            href="/gt_match_lists/324999/edit?gt_match_lists_form_part=games">
+                                            {% if i == 1 %}
+                                            [bo3]&nbsp;&nbsp;
+                                            {% else %}
+                                            [bo1]&nbsp;&nbsp;
+                                            {% endif %}
+                                            <span>2020-12-25&nbsp;&nbsp;<strong>00:30</strong>&nbsp;&nbsp;MSK</span>
+                                            <span>Brasil Esport CSCompetion 2021</span>
+                                            <span>Qualifier</span>
+                                            <span>B-D</span>
+                                            <span>
+                                                <strong>TBD</strong>
+                                                <s>[1:0]</s>
+                                                <strong>Movistar Riders</strong>
+                                            </span>
+                                        </a>
+                                    </label>
+
+                                    <input type="hidden" value="324999"
+                                        name="discipline_api_dota2_api_game[matches_attributes][0][id]"
+                                        id="discipline_api_dota2_api_game_matches_attributes_0_id">
+                                    <div class="col-sm-3">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <input class="form-control form-control-sm string optional text-center"
+                                                    data-id="324999" data-action="input->nested-form#choose_trigger"
+                                                    placeholder="№ карты" type="text"
+                                                    name="discipline_api_dota2_api_game[matches_attributes][0][map_num]"
+                                                    id="discipline_api_dota2_api_game_matches_attributes_0_map_num">
+                                            </div>
+                                            <div class="col">
+                                                <a class="btn btn-outline-primary btn-sm" href="/"><i
+                                                        class="fas fa-link"></i> Прикрепить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                            <hr>
+                            <input type="submit" name="commit" value="Добавить матч" class="btn btn-success">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

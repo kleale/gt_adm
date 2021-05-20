@@ -715,3 +715,16 @@ a.mnum {
         top: 11px;
     }
 }
+
+.tip:hover{
+    cursor: pointer;
+}
+
+.copy-url{
+    line-height: 1.8rem;
+    text-align: end;
+}
+
+.green .text-body{
+    color: #82ac4e!important;
+}

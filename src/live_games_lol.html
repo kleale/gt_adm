@@ -515,6 +515,13 @@ Final", "Weekly Survival"] %}
                                     <div class="col-sm-3">
                                         <div class="form-row mactions">
                                             <div class="col radios">
+                                                <script>
+                                                    // среднее положение чекбокса инициализация через JS
+                                                    $(document).ready(function () {
+                                                        $('#checkbox1_3').prop('indeterminate', true)
+                                                    });
+                                                </script>
+                                                
                                                 {% if i != 4 %}
                                                 <div class="custom-control custom-checkbox custom-control-inline">
                                                     <input type="checkbox" id="checkbox{{i}}_1" checked
@@ -527,7 +534,7 @@ Final", "Weekly Survival"] %}
                                                     <label class="custom-control-label" for="checkbox{{i}}_2">2</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox custom-control-inline">
-                                                    <input type="checkbox" id="checkbox{{i}}_3" checked
+                                                    <input type="checkbox" id="checkbox{{i}}_3" 
                                                         name="checkbox{{i}}_3" class="custom-control-input">
                                                     <label class="custom-control-label" for="checkbox{{i}}_3">3</label>
                                                 </div>

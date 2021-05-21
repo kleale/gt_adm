@@ -780,4 +780,16 @@ a.mnum {
     .custom-control-label:before{
         box-shadow: none;
     }
+
+    .custom-checkbox .custom-control-input:indeterminate~.custom-control-label:after {
+        background-image: none;
+    }
+    .custom-checkbox .custom-control-input:indeterminate~.custom-control-label:before {
+        border-color: transparent;
+        background-color: #cacbcc;
+        box-shadow: none;
+    }
+    .custom-control-label:before {
+        background-color: #ffffff;
+    }
 }

@@ -653,7 +653,9 @@ a.mnum {
     }
 }
 
-.const.table {
+.table {
+
+    &.const{
     margin: 0;
     tr {
         &:last-child td {
@@ -668,6 +670,17 @@ a.mnum {
             font-size: 11px;
         }
     }
+}
+
+    &.pi tr td, &.pi tr th {
+        border-bottom: 0;
+        border-top: 0;
+        padding: 10px;
+        line-height: 1rem;
+        font-size: 12px;
+    }
+
+
 }
 
 .playerName {
@@ -792,4 +805,15 @@ a.mnum {
     .custom-control-label:before {
         background-color: #ffffff;
     }
+}
+
+
+.btn-cancel{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    display: inline-block;
+    vertical-align: bottom;
 }

@@ -130,7 +130,8 @@ Final", "Weekly Survival"] %}
                             <div class="game-header">
                                 <!-- <div class="game-score ended">28 : 36</div> -->
                                 <div class="game-info">
-                                    <h3><a href="/" class="green">The Summit S13 OQ</a> <small class="api">4122</small></h3>
+                                    <h3><a href="/" class="green">The Summit S13 OQ</a> <small class="api">4122</small>
+                                    </h3>
                                     <span class="date">2020-12-22 <b>12:00</b> MSK</span>
                                     &nbsp;&nbsp;|&nbsp;&nbsp;
                                     <!-- <span class="gm">Игра 2</span> -->
@@ -142,13 +143,14 @@ Final", "Weekly Survival"] %}
                                         <span>00:42:03</span>
                                     </b>
                                     &nbsp;&nbsp;|&nbsp;
-                                    <a class="api" href="/">http://matchhistory.na.leagueoflegends.com/en/#match-details/ESPORTSTMNT03/1766665?gameHash=6b872f12ed6c0068</a>
+                                    <a class="api"
+                                        href="/">http://matchhistory.na.leagueoflegends.com/en/#match-details/ESPORTSTMNT03/1766665?gameHash=6b872f12ed6c0068</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        {% for i in 1..2 %} 
+                        {% for i in 1..2 %}
                         <li class="list-group-item">
                             <div class="teams-on-live-hrzntl row">
 
@@ -163,7 +165,9 @@ Final", "Weekly Survival"] %}
                                             </picture>
                                         </a> -->
                                         <span class="{% if i == 2 %}win{% endif %}">
-                                            <a href="/" class="{% if i == 1 %}green{% else %}text-muted{% endif %}">{{random(team)}}</a><br>
+                                            <a href="/" class="{% if i == 1 %}green{% else %}text-muted{% endif %}"
+                                                data-toggle="modal"
+                                                data-target="#modal_team_id">{{random(team)}}</a><br>
                                             <!-- <small tooltip="API ID">3285324238</small> -->
                                         </span>
                                     </div>
@@ -192,24 +196,25 @@ Final", "Weekly Survival"] %}
                                                             class="ml-1 mr-2 far fa-user-circle"></i> выбрать
                                                         игрока</a>
                                                     {% else %}
-                                                    <a href="/" class="playerName">
+                                                    <a href="/" class="playerName" data-toggle="modal"
+                                                        data-target="#modal_player_id">
                                                         <!-- <picture>
                                                             <img class="notsvg" src="/media/logo/nop.svg">
                                                         </picture> -->
                                                         <b>
-                                                        {% if i == 4 %}
-                                                        {% else %}
+                                                            {% if i == 4 %}
+                                                            {% else %}
                                                             <img class="flag mr-2" width="18px"
-                                                            src="https://escorenews.com/media/flags/{{i}}.svg"
-                                                            title="Словакия">
-                                                        {% endif %}
+                                                                src="https://escorenews.com/media/flags/{{i}}.svg"
+                                                                title="Словакия">
+                                                            {% endif %}
                                                         </b>
                                                         <span class="green">{{random(player)}}</span>
                                                     </a>
                                                     {% endif %}
                                                 </td>
-                                                
-                                                
+
+
                                             </tr>
                                             {% endfor %}
                                         </tbody>
@@ -408,6 +413,120 @@ Final", "Weekly Survival"] %}
 
     </div>
     {% include "./tpl/devmenu.html" %}
+
+    <!-- modal_player_id -->
+    <div class="modal fade" id="modal_player_id" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document" width="670px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">
+                        Информация
+                    </h6>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true"> ×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-content">
+                        <table class="table table-striped table-sm pi mb-0">
+                            <tbody>
+                                <tr>
+                                    <th width="200px">API ID игрока:</th>
+                                    <td><span class="api">90240923849023849</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Ник игрока из API: </th>
+                                    <td>Alphari</td>
+                                </tr>
+                                <tr>
+                                    <th>Привязанный игрок:</th>
+                                    <td><a href="#">Alphari</a> <a class="btn-cancel ml-2" href="#">×</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="modal-footer flex-row-reverse">
+                    <button name="button" type="submit"
+                        formaction="/discipline/api/dota2/api_games/5868069040/tournaments/5868069040?action_after_update=refresh_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868069040&amp;api_game%5Bradiant_series_wins%5D=0&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=135&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=Binding%3A%3AUnbind%3A%3ATournament"
+                        method="put" class="btn btn-outline-primary with-icon btn-sm">
+                        <i class="fas fa-plus"></i>
+                        Привязать
+                    </button>
+
+                    <button name="button" type="submit"
+                        formaction="/discipline/api/dota2/api_games/5868069040/tournaments/5868069040?action_after_update=refresh_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868069040&amp;api_game%5Bradiant_series_wins%5D=0&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=135&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=Binding%3A%3AUnbind%3A%3ATournament"
+                        method="put" class="btn btn-outline-danger with-icon btn-sm">
+                        <i class="fas fa-unlink"></i>
+                        Удалить привязку
+                    </button>
+
+                    <a class="btn btn-outline-primary with-icon btn-sm" data-toggle="tooltip" data-placement="top"
+                        href="/gt_tournaments/4702/edit">
+                        <i class="fas fa-pencil-alt"></i>Редактировать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal_team_id -->
+    <div class="modal fade" id="modal_team_id" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document" width="670px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">
+                        Информация
+                    </h6>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true"> ×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-content" id="discipline_api_dota2_api_games_tournaments_modal_body">
+                        <table class="table table-striped table-sm pi mb-0">
+                            <tbody>
+                                <tr>
+                                    <th width="200px">API ID команды:</th>
+                                    <td><span class="api">12780</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Название команды из API: </th>
+                                    <td>{{random(team)}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Привязанная команда:</th>
+                                    <td><a href="#">{{random(team)}}</a> <a class="btn-cancel ml-2" href="#">×</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer flex-row-reverse">
+                    <button name="button" type="submit"
+                        formaction="/discipline/api/dota2/api_games/5868069040/tournaments/5868069040?action_after_update=refresh_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868069040&amp;api_game%5Bradiant_series_wins%5D=0&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=135&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=Binding%3A%3AUnbind%3A%3ATournament"
+                        method="put" class="btn btn-outline-primary with-icon btn-sm">
+                        <i class="fas fa-plus"></i>
+                        Привязать
+                    </button>
+
+                    <button name="button" type="submit"
+                        formaction="/discipline/api/dota2/api_games/5868069040/tournaments/5868069040?action_after_update=refresh_record&amp;api_game%5Bdire_series_wins%5D=0&amp;api_game%5Bdire_team%5D%5Bteam_id%5D=8062461&amp;api_game%5Bdire_team%5D%5Bteam_name%5D=YOUR+SOUL+IS+MINE&amp;api_game%5Bevent_name%5D=Oceanic+Esports+Dota+League+Season+3&amp;api_game%5Bfrom_history%5D=false&amp;api_game%5Bleague_id%5D=12692&amp;api_game%5Bmatch_id%5D=5868069040&amp;api_game%5Bradiant_series_wins%5D=0&amp;api_game%5Bradiant_team%5D%5Bteam_id%5D=8300363&amp;api_game%5Bradiant_team%5D%5Bteam_name%5D=SADBOYS.2&amp;api_game%5Bscoreboard%5D%5Bdire%5D%5Bscore%5D=0&amp;api_game%5Bscoreboard%5D%5Bduration%5D=135&amp;api_game%5Bscoreboard%5D%5Bradiant%5D%5Bscore%5D=0&amp;api_game%5Bstart_time%5D=&amp;filter=12692%2C4702&amp;service_name=Binding%3A%3AUnbind%3A%3ATournament"
+                        method="put" class="btn btn-outline-danger with-icon btn-sm">
+                        <i class="fas fa-unlink"></i>
+                        Удалить привязку
+                    </button>
+
+                    <a class="btn btn-outline-primary with-icon btn-sm" data-toggle="tooltip" data-placement="top"
+                        href="/gt_tournaments/4702/edit">
+                        <i class="fas fa-pencil-alt"></i>Редактировать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

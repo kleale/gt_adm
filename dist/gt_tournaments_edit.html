@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html style="height: auto;">
 <head lang="ru">
@@ -122,8 +123,11 @@
                                     <div class="card-header p-2">
                                         <h5 class="float-right mt-1 mb-1 mr-2">
                                             <span class="badge badge-pill badge-success">
-                                                <i class="fas fa-check"></i>&nbspS;
+                                                <i class="fas fa-check"></i>&nbsp;
                                                 Проверено</span>
+                                            <span class="badge badge-pill badge-danger">
+                                                <i class="fas fa-times"></i>&nbsp;
+                                                Рейтинг</span>
                                         </h5>
                                         <ul class="nav nav-pills">
                                             <li class="nav-item"><a class="nav-link active"
@@ -150,6 +154,10 @@
                                                     data-action="click->edit#track_change" data-remote="true"
                                                     href="/gt_tournaments/4355/edit?gt_tournaments_form_part=places">Призовые
                                                     ($20054)</a></li>
+
+                                            <li class="nav-item"><a class="nav-link" href="">Призовые
+                                                </a></li>
+
                                         </ul>
                                     </div>
                                     <div class="card-body">
@@ -551,6 +559,22 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div
+                                                        class="form-group row boolean optional gt_tournament_db_add form-group-valid">
+                                                        <label class="col-sm-2"></label>
+                                                        <div class="col-sm-10">
+                                                            <div class="custom-control custom-switch"><input
+                                                                    name="gt_tournament[db_add]" type="hidden"
+                                                                    value="0"><input
+                                                                    class="custom-control-input boolean optional"
+                                                                    type="checkbox" value="1"
+                                                                    name="gt_tournament[db_add]"
+                                                                    id="gt_tournament_db_add"><label
+                                                                    class="custom-control-label boolean optional"
+                                                                    for="gt_tournament_db_add">Включить API</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <hr>
 
                                                     <div
@@ -924,6 +948,1069 @@
                                                     method="post" data-disable-with="Сохранить"></div>
                                         </div>
                                     </div>
+
+                                </div>
+
+                                <hr>
+
+                                <div class="card" data-controller="edit-form">
+                                    <div class="card-header p-2">
+                                        <h5 class="float-right mt-1 mb-1 mr-2">
+                                            <span class="badge badge-pill badge-success">
+                                                <i class="fas fa-check"></i>&nbsp;
+                                                Проверено</span>
+                                            <span class="badge badge-pill badge-danger">
+                                                <i class="fas fa-times"></i>&nbsp;
+                                                Рейтинг</span>
+                                        </h5>
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=common">Главная</a>
+                                            </li>
+
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=descriptions">Описания
+                                                    (RU)</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=all_teams">Команды:
+                                                    16 (+0, -0)</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=slots">Слоты
+                                                    (16)</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=places">Призовые
+                                                    ($20054)</a></li>
+
+                                            <li class="nav-item"><a class="nav-link active" href="">Рейтинг
+                                                </a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <table class="table table-striped table-valign-middle table-hover text-nowrap">
+                                            <thead class="dark">
+                                                <tr>
+                                                    <th width="20px"></th>
+                                                    <th width="300px">Команда</th>
+                                                    <th width="20px"></th>
+                                                    <th width="300px">Игрок</th>
+                                                    <th width="100px" class="text-right">Рейтинг за турнир</th>
+                                                    <th width="100px" class="text-right">Текущий рейтинг</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                <tr id="row-60">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/60.png">
+                                                    </td>
+                                                    <td>
+                                                        KG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/60.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Choko
+                                                        <!-- <small>Akram Patarov</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        2
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        10
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-61">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/61.png">
+                                                    </td>
+                                                    <td>
+                                                        VICI
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/61.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Choko
+                                                        <!-- <small>Voronin Danil</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        4
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        2
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-62">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/62.png">
+                                                    </td>
+                                                    <td>
+                                                        Movistar Riders
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/62.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        8
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        4
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-63">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/63.png">
+                                                    </td>
+                                                    <td>
+                                                        Virtus.Pro
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/63.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Aggro
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        8
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        9
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-64">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/64.png">
+                                                    </td>
+                                                    <td>
+                                                        Gambit
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/64.png">
+
+                                                    </td>
+                                                    <td>
+                                                        PAAD1N
+                                                        <!-- <small>Nguyễn Lâm Việt Sinh</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        6
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        3
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-65">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/65.png">
+                                                    </td>
+                                                    <td>
+                                                        Virtus.Pro
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/65.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Aggro
+                                                        <!-- <small>Nguyễn Lâm Việt Sinh</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        2
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-66">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/66.png">
+                                                    </td>
+                                                    <td>
+                                                        Ehome
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/66.png">
+
+                                                    </td>
+                                                    <td>
+                                                        PAAD1N
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        1
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-67">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/67.png">
+                                                    </td>
+                                                    <td>
+                                                        Movistar Riders
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/67.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Aggro
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        7
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        7
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-68">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/68.png">
+                                                    </td>
+                                                    <td>
+                                                        Empire
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/68.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        5
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        10
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-69">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/69.png">
+                                                    </td>
+                                                    <td>
+                                                        Virtus.Pro
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/69.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Akram Patarov</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        2
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        7
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-70">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/70.png">
+                                                    </td>
+                                                    <td>
+                                                        EG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/70.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Bisbo
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        10
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        7
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-71">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/71.png">
+                                                    </td>
+                                                    <td>
+                                                        OG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/71.png">
+
+                                                    </td>
+                                                    <td>
+                                                        PAAD1N
+                                                        <!-- <small>Akram Patarov</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        8
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-72">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/72.png">
+                                                    </td>
+                                                    <td>
+                                                        Mineski
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/72.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Aggro
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        4
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        1
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-73">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/73.png">
+                                                    </td>
+                                                    <td>
+                                                        EG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/73.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Voronin Danil</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        6
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-74">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/74.png">
+                                                    </td>
+                                                    <td>
+                                                        EG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/74.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Bisbo
+                                                        <!-- <small>Nguyễn Lâm Việt Sinh</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        4
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        10
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-75">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/75.png">
+                                                    </td>
+                                                    <td>
+                                                        Gambit
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/75.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Choko
+                                                        <!-- <small>Voronin Danil</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        7
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        8
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-76">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/76.png">
+                                                    </td>
+                                                    <td>
+                                                        Navi
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/76.png">
+
+                                                    </td>
+                                                    <td>
+                                                        PAAD1N
+                                                        <!-- <small>Voronin Danil</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        0
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        7
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-77">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/77.png">
+                                                    </td>
+                                                    <td>
+                                                        VICI
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/77.png">
+
+                                                    </td>
+                                                    <td>
+                                                        PAAD1N
+                                                        <!-- <small>Akram Patarov</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        8
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-78">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/78.png">
+                                                    </td>
+                                                    <td>
+                                                        Mineski
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/78.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        8
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        9
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-79">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/79.png">
+                                                    </td>
+                                                    <td>
+                                                        OG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/79.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Bisbo
+                                                        <!-- <small>Voronin Danil</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        5
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        6
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-80">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/80.png">
+                                                    </td>
+                                                    <td>
+                                                        OG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/80.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Choko
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        2
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        7
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-81">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/81.png">
+                                                    </td>
+                                                    <td>
+                                                        Mineski
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/81.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        4
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-82">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/82.png">
+                                                    </td>
+                                                    <td>
+                                                        KG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/82.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Choko
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        7
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        4
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-83">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/83.png">
+                                                    </td>
+                                                    <td>
+                                                        Virtus.Pro
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/83.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        5
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        5
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-84">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/84.png">
+                                                    </td>
+                                                    <td>
+                                                        KG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/84.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Voronin Danil</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        5
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        1
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-85">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/85.png">
+                                                    </td>
+                                                    <td>
+                                                        Empire
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/85.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Bisbo
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        4
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        1
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-86">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/86.png">
+                                                    </td>
+                                                    <td>
+                                                        OG
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/86.png">
+
+                                                    </td>
+                                                    <td>
+                                                        PAAD1N
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        8
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        6
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-87">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/87.png">
+                                                    </td>
+                                                    <td>
+                                                        Virtus.Pro
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/87.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Bisbo
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        0
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        9
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-88">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/88.png">
+                                                    </td>
+                                                    <td>
+                                                        Navi
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/88.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Bisbo
+                                                        <!-- <small>Bronnikov Roman</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        8
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-89">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/89.png">
+                                                    </td>
+                                                    <td>
+                                                        Navi
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/89.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Nightaliscious
+                                                        <!-- <small>Voronin Danil</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        3
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        9
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                <tr id="row-90">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/90.png">
+                                                    </td>
+                                                    <td>
+                                                        VICI
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/90.png">
+
+                                                    </td>
+                                                    <td>
+                                                        Bisbo
+                                                        <!-- <small>Kang Min-seok</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        10
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        3
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <input type="submit" name="commit" value="Сохранить + Редактировать"
+                                            class="btn btn-primary" />
+                                        <input type="submit" name="commit" value="Сохранить" class="btn btn-primary" />
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>

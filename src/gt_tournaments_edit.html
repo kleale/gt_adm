@@ -29,6 +29,10 @@ Final", "Weekly Survival"] %}
 {% set stageurl = ["stage-2", "main-event", "stage-2", "finals", "latin-america", "north-america", "qualifier",
 "weekly-final", "weekly-survival"] %}
 
+{% set player = ["PAAD1N", "Nightaliscious", "Choko", "Bisbo", "Aggro" ] %}
+{% set playerlong = ["Bronnikov Roman", "Voronin Danil", "Akram Patarov", "Nguyễn Lâm Việt Sinh", "Kang Min-seok" ] %}
+{% set playerurl = ["123-smurf", "nightaliscious", "choko", "Bisbo", "aggro" ] %}
+
 <!DOCTYPE html>
 <html style="height: auto;">
 {% include "./tpl/head.html" %}
@@ -122,8 +126,11 @@ Final", "Weekly Survival"] %}
                                     <div class="card-header p-2">
                                         <h5 class="float-right mt-1 mb-1 mr-2">
                                             <span class="badge badge-pill badge-success">
-                                                <i class="fas fa-check"></i>&nbspS;
+                                                <i class="fas fa-check"></i>&nbsp;
                                                 Проверено</span>
+                                            <span class="badge badge-pill badge-danger">
+                                                <i class="fas fa-times"></i>&nbsp;
+                                                Рейтинг</span>
                                         </h5>
                                         <ul class="nav nav-pills">
                                             <li class="nav-item"><a class="nav-link active"
@@ -150,6 +157,10 @@ Final", "Weekly Survival"] %}
                                                     data-action="click->edit#track_change" data-remote="true"
                                                     href="/gt_tournaments/4355/edit?gt_tournaments_form_part=places">Призовые
                                                     ($20054)</a></li>
+
+                                            <li class="nav-item"><a class="nav-link" href="">Призовые
+                                                </a></li>
+
                                         </ul>
                                     </div>
                                     <div class="card-body">
@@ -551,6 +562,22 @@ Final", "Weekly Survival"] %}
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div
+                                                        class="form-group row boolean optional gt_tournament_db_add form-group-valid">
+                                                        <label class="col-sm-2"></label>
+                                                        <div class="col-sm-10">
+                                                            <div class="custom-control custom-switch"><input
+                                                                    name="gt_tournament[db_add]" type="hidden"
+                                                                    value="0"><input
+                                                                    class="custom-control-input boolean optional"
+                                                                    type="checkbox" value="1"
+                                                                    name="gt_tournament[db_add]"
+                                                                    id="gt_tournament_db_add"><label
+                                                                    class="custom-control-label boolean optional"
+                                                                    for="gt_tournament_db_add">Включить API</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <hr>
 
                                                     <div
@@ -924,6 +951,111 @@ Final", "Weekly Survival"] %}
                                                     method="post" data-disable-with="Сохранить"></div>
                                         </div>
                                     </div>
+
+                                </div>
+
+                                <hr>
+
+                                <div class="card" data-controller="edit-form">
+                                    <div class="card-header p-2">
+                                        <h5 class="float-right mt-1 mb-1 mr-2">
+                                            <span class="badge badge-pill badge-success">
+                                                <i class="fas fa-check"></i>&nbsp;
+                                                Проверено</span>
+                                            <span class="badge badge-pill badge-danger">
+                                                <i class="fas fa-times"></i>&nbsp;
+                                                Рейтинг</span>
+                                        </h5>
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=common">Главная</a>
+                                            </li>
+
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=descriptions">Описания
+                                                    (RU)</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=all_teams">Команды:
+                                                    16 (+0, -0)</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=slots">Слоты
+                                                    (16)</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link"
+                                                    data-action="click->edit#track_change" data-remote="true"
+                                                    href="/gt_tournaments/4355/edit?gt_tournaments_form_part=places">Призовые
+                                                    ($20054)</a></li>
+
+                                            <li class="nav-item"><a class="nav-link active" href="">Рейтинг
+                                                </a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <table class="table table-striped table-valign-middle table-hover text-nowrap">
+                                            <thead class="dark">
+                                                <tr>
+                                                    <th width="20px"></th>
+                                                    <th width="300px">Команда</th>
+                                                    <th width="20px"></th>
+                                                    <th width="300px">Игрок</th>
+                                                    <th width="100px" class="text-right">Рейтинг за турнир</th>
+                                                    <th width="100px" class="text-right">Текущий рейтинг</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in 60..90 %}
+                                                <tr id="row-{{i}}">
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/{{i}}.png">
+                                                    </td>
+                                                    <td>
+                                                        {{random(team)}}
+                                                    </td>
+                                                    <td>
+                                                        <img style="width: 20px; height: 20px; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/flags/0.svg';"
+                                                            src="https://assets.esnadm.com/media/flag/{{i}}.png">
+
+                                                    </td>
+                                                    <td>
+                                                        {{random(player)}}
+                                                        <!-- <small>{{random(playerlong)}}</small>&nbsp;<small>
+                                                        <img
+                                                            style="width: 30px; height: 30px; border-radius: 50%; object-fit: contain;"
+                                                            onerror="this.onerror=null; this.src='https://assets.esnadm.com/media/logo/not.svg';"
+                                                            src="https://assets.esnadm.com/media/logo/_60/p71124.png?WhkV">
+                                                     -->
+                                                    </td>
+                                                    <td class="text-right">
+                                                        {{random(10)}}
+                                                    </td>
+                                                    <td class="text-right bg-light">
+                                                        {{random(10)}}
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <input type="submit" name="commit" value="Сохранить + Редактировать"
+                                            class="btn btn-primary" />
+                                        <input type="submit" name="commit" value="Сохранить" class="btn btn-primary" />
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
